@@ -18,11 +18,10 @@ CREATE TABLE Client (
     prenom      VARCHAR(15)NOT NULL,
     mail        VARCHAR(255)NOT NULL ,
     motDePasse  VARCHAR(255)NOT NULL ,
-    Adresse     VARCHAR(255)NOT NULL,
     mobile      VARCHAR(15)NOT NULL,
-    Sexe        VARCHAR(10)NOT NULL,
+    sexe        VARCHAR(10)NOT NULL,
     age         INT NOT NULL,
-    Taille      FLOAT NOT NULL,
+    taille      FLOAT NOT NULL,
     poids_de_corps FLOAT NOT NULL,
     token VARCHAR(255)
 );
