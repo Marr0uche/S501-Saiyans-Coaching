@@ -48,11 +48,11 @@ CREATE TABLE Document (
 -- Table Produit
 CREATE TABLE Produit (
     idProduit SERIAL PRIMARY KEY,
-    TitreProduit VARCHAR(255),
-    descriptionProduit VARCHAR(255),
-    photoProduit VARCHAR(255),
+    Titre VARCHAR(255),
+    photo VARCHAR(255),
+    Description TEXT,
     prix DECIMAL(10,2),
-    Affichage BOOLEAN
+    ListeTemoinage INT
 );
 
 -- Table Vivre : liaison entre adresse et Client
