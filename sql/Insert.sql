@@ -10,7 +10,7 @@ INSERT INTO Adresse (adresse, ville, region, codePostal, Pays, telephoneFixe)
 VALUES
     ('123 Main St', 'Paris', 'Île-de-France', '75001', 'France', '0145678912'),
     ('456 Elm St', 'Lyon', 'Auvergne-Rhône-Alpes', '69000', 'France', '0478654321'),
-    ('789 Oak St', 'Marseille', 'Provence-Alpes-Côte d\'Azur', '13000', 'France', '0491123456');
+    ('789 Oak St', 'Marseille', 'Provence-Alpes-Côte d''Azur', '13000', 'France', '0491123456');
 
 -- Insertion des données dans la table Vivre
 INSERT INTO Vivre (idClient, idAdresse)
@@ -42,8 +42,8 @@ VALUES
 -- Insertion des données dans la table Article
 INSERT INTO Article (idDocument, titreDocument, descriptionDocument, DatePublication, Image)
 VALUES
-    (3, 'Article A', 'Description de l\'article A', '2024-12-01 10:00:00', 'article_a.jpg'),
-    (4, 'Article B', 'Description de l\'article B', '2024-12-02 11:00:00', 'article_b.jpg');
+    (3, 'Article A', 'Description de l''article A', '2024-12-01 10:00:00', 'article_a.jpg'),
+    (4, 'Article B', 'Description de l''article B', '2024-12-02 11:00:00', 'article_b.jpg');
 
 -- Insertion des données dans la table Acheter
 INSERT INTO Acheter (idClient, idProduit, noteTemoignage, dateTemoignage, avisTemoignage, idPromotion)
