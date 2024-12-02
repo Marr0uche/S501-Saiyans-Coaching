@@ -3,14 +3,19 @@ namespace App\Models;
 use CodeIgniter\Model;
 class ClientModel extends Model
 {
-    protected $table = 'Client';
+    protected $table = 'client';
     protected $primaryKey = 'idclient';
     protected $allowedFields = [
+		'admin',
+		'nom',
+		'prenom',
+		'mail',
+		'motdepasse',
         'sexe',
         'age',
         'taille',
         'poids_de_corps',
-        'produits'
+        'token'
     ];
     protected $returnType = 'array';
 

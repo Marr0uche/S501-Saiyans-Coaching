@@ -6,16 +6,15 @@ use CodeIgniter\Model;
 
 class AdresseModel extends Model
 {
-    protected $table = 'Adresse';
+    protected $table = 'adresse';
     protected $primaryKey = 'idadresse';
     protected $allowedFields = [
         'adresse',
         'ville',
-        'code_postal',
-        'pays',
         'region',
+		'code_postal',
         'telephonefixe',
-        'idutilisateuradresse'
+		'pays'
     ];
     protected $returnType = 'array';
 

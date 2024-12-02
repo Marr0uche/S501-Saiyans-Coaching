@@ -6,13 +6,15 @@ use CodeIgniter\Model;
 
 class ProduitModel extends Model
 {
-    protected $table = 'Produit';
+    protected $table = 'produit';
     protected $primaryKey = 'idproduit';
     protected $allowedFields = [
-        'titre',
-        'photo',
-        'description',
-        'prix'
+        'titreproduit',
+        'photoproduit',
+        'descriptionproduit',
+        'prix',
+		'affichage',
+		'affichageaccueil'
     ];
     protected $returnType = 'array';
 
