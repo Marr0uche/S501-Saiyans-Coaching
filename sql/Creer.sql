@@ -59,6 +59,7 @@ CREATE TABLE Produit (
 CREATE TABLE Vivre(
     idClient INT,
     idAdresse INT,
+    PRIMARY KEY (idClient, idAdresse),
     FOREIGN KEY (idClient) REFERENCES Client(idClient) ON DELETE CASCADE,
     FOREIGN KEY (idAdresse) REFERENCES Adresse(idAdresse) ON DELETE CASCADE
 
@@ -76,6 +77,7 @@ CREATE TABLE Promotion (
 CREATE TABLE Appliquer(
     idPromotion INT,
     idProduit INT,
+    PRIMARY KEY (idPromotion, idProduit),
     FOREIGN KEY (idPromotion) REFERENCES Promotion(idPromotion) ON DELETE CASCADE,
     FOREIGN KEY (idProduit) REFERENCES Produit(idProduit) ON DELETE CASCADE
 
@@ -95,6 +97,7 @@ CREATE TABLE Acheter (
     dateTemoignage TIMESTAMP,
     avisTemoignage VARCHAR(255), 
     idPromotion INT,
+    PRIMARY KEY (idClient, idProduit),
     FOREIGN KEY(idPromotion) REFERENCES Promotion(idPromotion) ON DELETE CASCADE,
     FOREIGN KEY (idClient) REFERENCES Client(idClient) ON DELETE CASCADE,
     FOREIGN KEY (idProduit) REFERENCES Produit(idProduit) ON DELETE CASCADE
