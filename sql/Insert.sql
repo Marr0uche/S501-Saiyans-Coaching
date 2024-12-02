@@ -20,11 +20,11 @@ VALUES
     (3, 3);
 
 -- Insertion des données dans la table Produit
-INSERT INTO Produit (TitreProduit, photoProduit, descriptionProduit, prix, affichage)
+INSERT INTO Produit (TitreProduit, photoProduit, descriptionProduit, prix, affichage,affichageAccueil)
 VALUES
-    ('Produit A', 'photo_a.jpg', 'Description du produit A', 19.99, TRUE),
-    ('Produit B', 'photo_b.jpg', 'Description du produit B', 29.99, TRUE),
-    ('Produit C', 'photo_c.jpg', 'Description du produit C', 15.99, FALSE);
+    ('Produit A', 'photo_a.jpg', 'Description du produit A', 19.99, TRUE,TRUE),
+    ('Produit B', 'photo_b.jpg', 'Description du produit B', 29.99, TRUE,TRUE),
+    ('Produit C', 'photo_c.jpg', 'Description du produit C', 15.99, FALSE, FALSE);
 
 -- Insertion des données dans la table Promotion
 INSERT INTO Promotion (idPromotion, titreDocument, descriptionDocument, active, reductionPromo, codePromo)
