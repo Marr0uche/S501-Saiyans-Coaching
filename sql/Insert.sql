@@ -1,54 +1,59 @@
--- Insérer des données dans la table Client
-INSERT INTO Client (admin, nom, prenom, mail, motDePasse, Adresse, mobile, Sexe, age, Taille, poids_de_corps, token)
-VALUES 
-    (TRUE, 'Doe', 'John', 'john.doe@example.com', 'password123', '123 Main St', '0612345678', 'Homme', 30, 1.75, 70.0, 'token123'),
-    (FALSE, 'Smith', 'Jane', 'jane.smith@example.com', 'password456', '456 Elm St', '0698765432', 'Femme', 25, 1.65, 55.0, 'token456');
+-- Insertion des données dans la table Client
+INSERT INTO Client (admin, nom, prenom, mail, motDePasse, mobile, sexe, age, taille, poidsdecorps, token)
+VALUES
+    (TRUE, 'Admin', 'User', 'admin@example.com', 'hashed_password1', '1234567890', 'Homme', 35, 180.5, 75.0, 'token_admin'),
+    (FALSE, 'John', 'Doe', 'john.doe@example.com', 'hashed_password2', '0987654321', 'Homme', 28, 175.0, 70.0, NULL),
+    (FALSE, 'Jane', 'Smith', 'jane.smith@example.com', 'hashed_password3', '1122334455', 'Femme', 30, 165.0, 60.0, NULL);
 
--- Insérer des données dans la table Adresse
+-- Insertion des données dans la table Adresse
 INSERT INTO Adresse (adresse, ville, region, codePostal, Pays, telephoneFixe)
-VALUES 
-    ('123 Main St', 'Paris', 'Ile-de-France', '75000', 'France', '0145678901'),
-    ('456 Elm St', 'Lyon', 'Auvergne-Rhône-Alpes', '69000', 'France', '0478123456');
+VALUES
+    ('123 Main St', 'Paris', 'Île-de-France', '75001', 'France', '0145678912'),
+    ('456 Elm St', 'Lyon', 'Auvergne-Rhône-Alpes', '69000', 'France', '0478654321'),
+    ('789 Oak St', 'Marseille', 'Provence-Alpes-Côte d\'Azur', '13000', 'France', '0491123456');
 
--- Insérer des données dans la table Produit
-INSERT INTO Produit (TitreProduit, descriptionProduit, photoProduit, prix, Affichage)
-VALUES 
-    ('Chaise ergonomique', 'Chaise confortable pour le travail', 'chaise.jpg', 120.50, TRUE),
-    ('Table basse', 'Table basse en bois massif', 'table.jpg', 95.00, TRUE);
-
--- Insérer des données dans la table Vivre
+-- Insertion des données dans la table Vivre
 INSERT INTO Vivre (idClient, idAdresse)
-VALUES 
+VALUES
     (1, 1),
-    (2, 2);
+    (2, 2),
+    (3, 3);
 
--- Insérer des données dans la table Promotion
+-- Insertion des données dans la table Produit
+INSERT INTO Produit (TitreProduit, photoProduit, descriptionProduit, prix, affichage)
+VALUES
+    ('Produit A', 'photo_a.jpg', 'Description du produit A', 19.99, TRUE),
+    ('Produit B', 'photo_b.jpg', 'Description du produit B', 29.99, TRUE),
+    ('Produit C', 'photo_c.jpg', 'Description du produit C', 15.99, FALSE);
+
+-- Insertion des données dans la table Promotion
 INSERT INTO Promotion (idPromotion, titreDocument, descriptionDocument, active, reductionPromo, codePromo)
-VALUES 
-    (1, 'Promo spéciale', 'Réduction de 10% sur tous les produits', TRUE, 10.00, 'PROMO10'),
-    (2, 'Promo été', 'Réduction de 15% pour les produits d''été', FALSE, 15.00, 'PROMO15');
+VALUES
+    (1, 'Promo de Noël', 'Réduction spéciale pour Noël', TRUE, 10.50, 'NOEL2024'),
+    (2, 'Promo de Printemps', 'Réduction pour le printemps', TRUE, 15.00, 'SPRING2024');
 
--- Insérer des données dans la table Appliquer
+-- Insertion des données dans la table Appliquer
 INSERT INTO Appliquer (idPromotion, idProduit)
-VALUES 
+VALUES
     (1, 1),
     (1, 2),
-    (2, 2);
+    (2, 3);
 
--- Insérer des données dans la table Article
+-- Insertion des données dans la table Article
 INSERT INTO Article (idDocument, titreDocument, descriptionDocument, DatePublication, Image)
-VALUES 
-    (3, 'Guide d''entraînement', 'Guide complet pour s''entraîner efficacement', '2024-01-01 10:00:00', 'guide.jpg'),
-    (4, 'Conseils nutrition', 'Tout savoir sur une alimentation saine', '2024-02-01 12:00:00', 'nutrition.jpg');
+VALUES
+    (3, 'Article A', 'Description de l\'article A', '2024-12-01 10:00:00', 'article_a.jpg'),
+    (4, 'Article B', 'Description de l\'article B', '2024-12-02 11:00:00', 'article_b.jpg');
 
--- Insérer des données dans la table Acheter
+-- Insertion des données dans la table Acheter
 INSERT INTO Acheter (idClient, idProduit, noteTemoignage, dateTemoignage, avisTemoignage, idPromotion)
-VALUES 
-    (1, 1, 5, '2024-01-15 14:30:00', 'Très satisfait du produit', 1),
-    (2, 2, 4, '2024-02-10 16:45:00', 'Bon rapport qualité/prix', 2);
+VALUES
+    (1, 1, 5, '2024-12-01 15:00:00', 'Super produit !', 1),
+    (2, 2, 4, '2024-12-02 12:30:00', 'Bon rapport qualité-prix', 1),
+    (3, 3, 3, '2024-12-03 14:00:00', 'Produit correct mais peut mieux faire', 2);
 
--- Insérer des données dans la table VideoCoaching
+-- Insertion des données dans la table VideoCoaching
 INSERT INTO VideoCoaching (idDocument, titreDocument, descriptionDocument, video)
-VALUES 
-    (5, 'Yoga pour débutants', 'Vidéo d''initiation au yoga', 'yoga.mp4'),
-    (6, 'Fitness avancé', 'Entraînement fitness pour les pros', 'fitness.mp4');
+VALUES
+    (5, 'Vidéo Coaching 1', 'Description de la vidéo de coaching 1', 'video1.mp4'),
+    (6, 'Vidéo Coaching 2', 'Description de la vidéo de coaching 2', 'video2.mp4');
