@@ -51,7 +51,8 @@ CREATE TABLE Produit (
     photoProduit VARCHAR(255),
     descriptionProduit TEXT,
     prix DECIMAL(10,2),
-    affichage BOOLEAN
+    affichage BOOLEAN,
+    affichageAccueil BOOLEAN
 );
 
 -- Table Vivre : liaison entre adresse et Client
