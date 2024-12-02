@@ -55,8 +55,7 @@ CREATE TABLE Produit (
     Titre VARCHAR(255),
     photo VARCHAR(255),
     Description TEXT,
-    prix DECIMAL(10,2),
-    ListeTemoinage INT
+    prix DECIMAL(10,2)
 );
 
 -- Table Acheter : relation entre Client et Produit
