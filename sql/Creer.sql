@@ -16,7 +16,7 @@ CREATE TABLE Client (
     admin BOOLEAN NOT NULL,
     nom         VARCHAR(15)NOT NULL,
     prenom      VARCHAR(15)NOT NULL,
-    AdressEmail VARCHAR(255)NOT NULL ,
+    mail        VARCHAR(255)NOT NULL ,
     motDePasse  VARCHAR(255)NOT NULL ,
     Adresse     VARCHAR(255)NOT NULL,
     mobile      VARCHAR(15)NOT NULL,
