@@ -25,12 +25,12 @@ class Database extends Config
      * @var array<string, mixed>
      */
     public array $default = [
-        'DSN'          => '',
-        'hostname'     => 'localhost',
-        'username'     => '',
-        'password'     => '',
-        'database'     => '',
-        'DBDriver'     => 'MySQLi',
+        'DSN' => 'Postgre://co221148:Galium140105@woody.iut.univ-lehavre.fr:5432',
+        'hostname' => 'woody.iut.univ-lehavre.fr',
+        'username' => 'co221148',
+        'password' => 'Galium140105',
+        'database' => 'co221148',
+        'DBDriver' => 'Postgre',
         'DBPrefix'     => '',
         'pConnect'     => false,
         'DBDebug'      => true,
@@ -41,7 +41,7 @@ class Database extends Config
         'compress'     => false,
         'strictOn'     => false,
         'failover'     => [],
-        'port'         => 3306,
+        'port'         => 5432,
         'numberNative' => false,
         'dateFormat'   => [
             'date'     => 'Y-m-d',
