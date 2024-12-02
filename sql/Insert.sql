@@ -1,5 +1,5 @@
 -- Insérer des données dans la table Client
-INSERT INTO Client (admin, nom, prenom, AdressEmail, motDePasse, Adresse, mobile, Sexe, age, Taille, poids_de_corps, token)
+INSERT INTO Client (admin, nom, prenom, mail, motDePasse, Adresse, mobile, Sexe, age, Taille, poids_de_corps, token)
 VALUES 
     (TRUE, 'Doe', 'John', 'john.doe@example.com', 'password123', '123 Main St', '0612345678', 'Homme', 30, 1.75, 70.0, 'token123'),
     (FALSE, 'Smith', 'Jane', 'jane.smith@example.com', 'password456', '456 Elm St', '0698765432', 'Femme', 25, 1.65, 55.0, 'token456');
