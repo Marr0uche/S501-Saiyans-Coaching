@@ -29,8 +29,8 @@
 				<input type="text" class="form-control" id="prenom" name="prenom" placeholder="Entrez votre prénom" required>
 			</div>
 			<div class="form-group">
-				<label for="email">Email</label>
-				<input type="email" class="form-control" id="email" name="email" placeholder="Entrez votre email" required>
+				<label for="mail">Email</label>
+				<input type="mail" class="form-control" id="mail" name="mail" placeholder="Entrez votre email" required>
 			</div>
 			<div class="form-group">
 				<label for="motdepasse">Mot de passe</label>
@@ -56,8 +56,8 @@
 				<input type="number" class="form-control" id="taille" name="taille" placeholder="Entrez votre taille" required>
 			</div>
 			<div class="form-group">
-				<label for="poids_de_corps">Poids</label>
-				<input type="number" class="form-control" id="poids_de_corps" name="poids_de_corps" placeholder="Entrez votre poids" required>
+				<label for="poidsdecorps">Poids</label>
+				<input type="number" class="form-control" id="poidsdecorps" name="poidsdecorps" placeholder="Entrez votre poids" required>
 			</div>
 			<button type="submit" class="btn btn-primary">S'inscrire</button>
 		</form>

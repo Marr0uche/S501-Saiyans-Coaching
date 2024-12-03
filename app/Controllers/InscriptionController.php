@@ -19,13 +19,13 @@ class InscriptionController extends Controller
 		$validation->setRules([
 			'nom' => 'required|min_length[3]',
 			'prenom' => 'required|min_length[3]',
-			'email' => 'required|valid_email|is_unique[client.mail]',
+			'mail' => 'required|valid_email|is_unique[client.mail]',
 			'motdepasse' => 'required|min_length[6]',
 			'mobile' => 'required|numeric|min_length[10]',
 			'sexe' => 'required',
 			'age' => 'required|numeric|min_length[1]',
 			'taille' => 'required|numeric',
-			'poids_de_corps' => 'required|numeric',
+			'poidsdecorps' => 'required|numeric',
 		]);
 
 		if (!$validation->withRequest($this->request)->run()) {
@@ -37,13 +37,13 @@ class InscriptionController extends Controller
 		$data = [
 			'nom' => $this->request->getPost('nom'),
 			'prenom' => $this->request->getPost('prenom'),
-			'email' => $this->request->getPost('email'),
+			'mail' => $this->request->getPost('mail'),
 			'motdepasse' => password_hash($this->request->getPost('motdepasse'), PASSWORD_DEFAULT),
 			'mobile' => $this->request->getPost('mobile'),
 			'sexe' => $this->request->getPost('sexe'),
 			'age' => $this->request->getPost('age'),
 			'taille' => $this->request->getPost('taille'),
-			'poids_de_corps' => $this->request->getPost('poids_de_corps'),
+			'poidsdecorps' => $this->request->getPost('poidsdecorps'),
 			'admin' => false,
 			'token' => bin2hex(random_bytes(16))
 		];
