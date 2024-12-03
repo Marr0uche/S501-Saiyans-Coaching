@@ -10,7 +10,7 @@ DROP TABLE IF EXISTS Produit CASCADE;
 DROP TABLE IF EXISTS Document CASCADE;
 DROP TABLE IF EXISTS Adresse CASCADE;
 
--- Table Client 
+-- Table Client
 CREATE TABLE Client (
     idClient  SERIAL PRIMARY KEY,
     admin BOOLEAN NOT NULL,
@@ -26,7 +26,7 @@ CREATE TABLE Client (
     token VARCHAR(255)
 );
 
--- Table Adresse 
+-- Table Adresse
 CREATE TABLE Adresse (
     idAdresse  SERIAL PRIMARY KEY,
     adresse VARCHAR(255) NOT NULL,
@@ -93,7 +93,7 @@ CREATE TABLE Acheter (
     idProduit INT,
     noteTemoignage INT,
     dateTemoignage TIMESTAMP,
-    avisTemoignage VARCHAR(255), 
+    avisTemoignage VARCHAR(255),
     idPromotion INT,
     FOREIGN KEY(idPromotion) REFERENCES Promotion(idPromotion) ON DELETE CASCADE,
     FOREIGN KEY (idClient) REFERENCES Client(idClient) ON DELETE CASCADE,
