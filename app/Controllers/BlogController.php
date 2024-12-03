@@ -67,9 +67,64 @@ class BlogController extends Controller
 			'image' => $fileName,
 		];
 
-		$articleModel->insert($data);
+		$articleModel->creerArticle($data);
 		return redirect()->to('/blog');
 	}
+
+	public function modif($id)
+	{
+		$articleModel = new ArticleModel();
+		$article = $articleModel->getArticle($id);
+		if (!$article) {
+			return redirect()->back()->with('error', 'Article non trouvée');
+		}
+
+		return view('Blog/ModifArticleView.php', [
+			'article' => $article
+		]);
+	}
+
+	public function edition()
+	{
+		$articleModel = new ArticleModel();
+		$iddocument = $this->request->getPost('iddocument');
+		echo 'iddocumentController : ' . $iddocument . '<br>';
+
+		$titre = $this->request->getPost('titredocument');
+		$description = $this->request->getPost('descriptiondocument');
+		$supprimerImage = $this->request->getPost('supprimer_image');
+		$article = $articleModel->find($iddocument);
+
+		$data = [
+			'titredocument' => $titre,
+			'descriptiondocument' => $description,
+		];
+
+		$image = $this->request->getFile('image');
+
+		if ($supprimerImage) {
+			if (!empty($article['image']) && file_exists('uploads/' . $article['image'])) {
+				unlink('uploads/' . $article['image']);
+			}
+			$data['image'] = null; 
+		} elseif ($image && $image->isValid() && !$image->hasMoved()) {
+			$newImageName = $image->getRandomName();
+			$image->move('uploads', $newImageName);
+
+			if (!empty($article['image']) && file_exists('uploads/' . $article['image'])) {
+				unlink('uploads/' . $article['image']);
+			}
+			$data['image'] = $newImageName;
+		}
+		
+		$articleModel->majArticle($iddocument, $data);
+		
+		return redirect()->to('/blog');
+		
+	}
+
+	
+	
 
 	public function suppression($idDocArticle)
 	{

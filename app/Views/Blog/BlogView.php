@@ -48,7 +48,7 @@
 	echo $admin;
 	if (true) {
 		?>
-		<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#articleModal">
+		<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ajouterArticleModal">
 			Ajouter un article
 		</button>
 		<?php
@@ -57,10 +57,16 @@
 	?>
 
 	<?php foreach ($articles as $article) : ?>
+		
 		<a href="/blog/suppression/<?= urlencode($article['iddocument']); ?>"
 			onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet article ?');">
 			<p>Supprimer</p>
 		</a>
+
+		<button type="button" class="btn btn-primary" onclick="window.location='/blog/modif/<?=urlencode($article['iddocument']); ?>'">
+			Modifier
+		</button>
+
 		<h5><?= $article['titredocument'] ?></h5>
 		<p><?= $article['descriptiondocument'] ?></p>
 		<p><?= $article['datepublication'] ?></p>
@@ -76,7 +82,7 @@
 		<?= $pager->links('default', 'bootstrap') ?>
 	</div>
 
-	<div class="modal fade" id="articleModal" tabindex="-1" aria-labelledby="articleModalLabel" aria-hidden="true">
+	<div class="modal fade" id="ajouterArticleModal" tabindex="-1" aria-labelledby="articleModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
