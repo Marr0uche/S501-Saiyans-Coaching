@@ -16,14 +16,13 @@ CREATE TABLE Client (
     admin BOOLEAN NOT NULL,
     nom         VARCHAR(15)NOT NULL,
     prenom      VARCHAR(15)NOT NULL,
-    AdressEmail VARCHAR(255)NOT NULL ,
+    mail        VARCHAR(255)NOT NULL ,
     motDePasse  VARCHAR(255)NOT NULL ,
-    Adresse     VARCHAR(255)NOT NULL,
     mobile      VARCHAR(15)NOT NULL,
-    Sexe        VARCHAR(10)NOT NULL,
+    sexe        VARCHAR(10)NOT NULL,
     age         INT NOT NULL,
-    Taille      FLOAT NOT NULL,
-    poids_de_corps FLOAT NOT NULL,
+    taille      FLOAT NOT NULL,
+    poidsdecorps FLOAT NOT NULL,
     token VARCHAR(255)
 );
 
@@ -52,18 +51,19 @@ CREATE TABLE Produit (
     photoProduit VARCHAR(255),
     descriptionProduit TEXT,
     prix DECIMAL(10,2),
-    Affichage BOOLEAN
+    affichage BOOLEAN,
+    affichageAccueil BOOLEAN
 );
 
 -- Table Vivre : liaison entre adresse et Client
 CREATE TABLE Vivre(
     idClient INT,
     idAdresse INT,
+    PRIMARY KEY (idClient, idAdresse),
     FOREIGN KEY (idClient) REFERENCES Client(idClient) ON DELETE CASCADE,
     FOREIGN KEY (idAdresse) REFERENCES Adresse(idAdresse) ON DELETE CASCADE
 
 );
-
 
 -- Table Promotion : hérite de Document
 CREATE TABLE Promotion (
@@ -77,11 +77,11 @@ CREATE TABLE Promotion (
 CREATE TABLE Appliquer(
     idPromotion INT,
     idProduit INT,
+    PRIMARY KEY (idPromotion, idProduit),
     FOREIGN KEY (idPromotion) REFERENCES Promotion(idPromotion) ON DELETE CASCADE,
     FOREIGN KEY (idProduit) REFERENCES Produit(idProduit) ON DELETE CASCADE
 
 );
-
 
 -- Table Article : hérite de Document
 CREATE TABLE Article (
@@ -97,6 +97,7 @@ CREATE TABLE Acheter (
     dateTemoignage TIMESTAMP,
     avisTemoignage VARCHAR(255), 
     idPromotion INT,
+    PRIMARY KEY (idClient, idProduit),
     FOREIGN KEY(idPromotion) REFERENCES Promotion(idPromotion) ON DELETE CASCADE,
     FOREIGN KEY (idClient) REFERENCES Client(idClient) ON DELETE CASCADE,
     FOREIGN KEY (idProduit) REFERENCES Produit(idProduit) ON DELETE CASCADE

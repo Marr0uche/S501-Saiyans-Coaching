@@ -1,0 +1,1141 @@
+ERROR - 2024-12-02 14:36:27 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:186
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php(186): mysqli->real_connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#13 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-12-02 14:36:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: blog]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-02 14:36:31 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:186
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php(186): mysqli->real_connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#13 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-12-02 14:36:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: blog]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-02 15:00:42 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:186
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php(186): mysqli->real_connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#13 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-12-02 15:00:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: blog]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-02 15:00:43 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:186
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php(186): mysqli->real_connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#13 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-12-02 15:00:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: blog]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-02 15:01:09 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:186
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php(186): mysqli->real_connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#13 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-12-02 15:01:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: blog]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-02 15:01:10 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:186
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php(186): mysqli->real_connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#13 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-12-02 15:01:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: blog]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-02 15:01:10 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:186
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php(186): mysqli->real_connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#13 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-12-02 15:01:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: blog]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-02 15:01:10 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:186
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php(186): mysqli->real_connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#13 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-12-02 15:01:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: blog]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-02 15:01:10 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:186
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php(186): mysqli->real_connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#13 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-12-02 15:01:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: blog]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-02 15:01:29 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:186
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php(186): mysqli->real_connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#13 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-12-02 15:01:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: blog]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-02 15:01:57 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:186
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php(186): mysqli->real_connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#13 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-12-02 15:01:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: blog]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-02 15:02:00 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:186
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php(186): mysqli->real_connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#13 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-12-02 15:02:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: blog]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-02 15:02:10 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:186
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php(186): mysqli->real_connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#13 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-12-02 15:02:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: blog]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/BlogController.php(11): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-02 15:02:52 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:186
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php(186): mysqli->real_connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(16): CodeIgniter\BaseModel->findAll()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#13 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(16): CodeIgniter\BaseModel->findAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-12-02 15:02:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: blog]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/BlogController.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-02 15:02:53 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:186
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php(186): mysqli->real_connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(16): CodeIgniter\BaseModel->findAll()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#13 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(16): CodeIgniter\BaseModel->findAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-12-02 15:02:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: blog]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/BlogController.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-02 15:02:53 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:186
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php(186): mysqli->real_connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(16): CodeIgniter\BaseModel->findAll()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#13 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(16): CodeIgniter\BaseModel->findAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-12-02 15:02:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: blog]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/BlogController.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-02 15:02:53 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:186
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php(186): mysqli->real_connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(16): CodeIgniter\BaseModel->findAll()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#13 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(16): CodeIgniter\BaseModel->findAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-12-02 15:02:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: blog]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/BlogController.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-02 15:02:53 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:186
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php(186): mysqli->real_connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(16): CodeIgniter\BaseModel->findAll()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#13 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(16): CodeIgniter\BaseModel->findAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-12-02 15:02:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: blog]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/BlogController.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-02 15:04:25 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:186
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php(186): mysqli->real_connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(16): CodeIgniter\BaseModel->findAll()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#13 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(16): CodeIgniter\BaseModel->findAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-12-02 15:04:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: blog]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/BlogController.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-02 15:04:26 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:186
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php(186): mysqli->real_connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(16): CodeIgniter\BaseModel->findAll()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#13 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(16): CodeIgniter\BaseModel->findAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-12-02 15:04:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: blog]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/BlogController.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-02 15:04:54 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:186
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php(186): mysqli->real_connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(16): CodeIgniter\BaseModel->findAll()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#13 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#3 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Controllers/BlogController.php(16): CodeIgniter\BaseModel->findAll()
+#6 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\BlogController->index()
+#7 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#12 /home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-12-02 15:04:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: blog]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/BlogController.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-02 15:05:48 --> ParseError: syntax error, unexpected end of file
+[Method: GET, Route: blog]
+in APPPATH/Views/Blog/blog.php on line 23.
+ 1 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/BlogController.php(19): view()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-02 15:07:50 --> ErrorException: Undefined array key "title"
+[Method: GET, Route: blog]
+in APPPATH/Views/Blog/blog.php on line 15.
+ 1 APPPATH/Views/Blog/blog.php(15): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Views/Blog/blog.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/BlogController.php(19): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-02 15:11:32 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: blog]
+in APPPATH/Views/Blog/blog.php on line 20.
+ 1 APPPATH/Views/Blog/blog.php(20): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Views/Blog/blog.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/BlogController.php(19): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-02 15:13:05 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: blog]
+in APPPATH/Views/Blog/blog.php on line 20.
+ 1 APPPATH/Views/Blog/blog.php(20): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Views/Blog/blog.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/BlogController.php(28): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-02 15:13:06 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: blog]
+in APPPATH/Views/Blog/blog.php on line 20.
+ 1 APPPATH/Views/Blog/blog.php(20): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Views/Blog/blog.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/BlogController.php(28): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-02 15:16:16 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "App\Views\templates\boostrap_pagination.php"
+[Method: GET, Route: blog]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Pager/Pager.php(130): CodeIgniter\View\View->render()
+ 3 SYSTEMPATH/Pager/Pager.php(87): CodeIgniter\Pager\Pager->displayLinks()
+ 4 APPPATH/Views/Blog/blog.php(20): CodeIgniter\Pager\Pager->links()
+ 5 SYSTEMPATH/View/View.php(234): include('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/app/Views/Blog/blog.php')
+ 6 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 8 APPPATH/Controllers/BlogController.php(28): view()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\BlogController->index()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
