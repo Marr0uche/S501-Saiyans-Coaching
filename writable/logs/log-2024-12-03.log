@@ -1,0 +1,291 @@
+ERROR - 2024-12-03 09:06:44 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Database\Postgre\Connection.php:77
+Stack trace:
+#0 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Database\BaseConnection.php(421): CodeIgniter\Database\Postgre\Connection->connect()
+#1 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query()
+#3 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults()
+#4 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\BaseModel.php(1284): CodeIgniter\Model->countAllResults()
+#5 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\app\Controllers\BlogController.php(25): CodeIgniter\BaseModel->paginate()
+#6 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\CodeIgniter.php(933): App\Controllers\BlogController->index()
+#7 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#12 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-12-03 09:06:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [Postgre]: Call to undefined function CodeIgniter\Database\Postgre\pg_connect()
+[Method: GET, Route: blog]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 4 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults()
+ 5 APPPATH\Controllers\BlogController.php(25): CodeIgniter\BaseModel->paginate()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\utilisateur\\Documents\\GitHub\\S501-Saiyans-Coaching\\public\\index.php')
+ERROR - 2024-12-03 09:28:41 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Database\Postgre\Connection.php:77
+Stack trace:
+#0 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Database\BaseConnection.php(421): CodeIgniter\Database\Postgre\Connection->connect()
+#1 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query()
+#3 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults()
+#4 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\BaseModel.php(1284): CodeIgniter\Model->countAllResults()
+#5 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\app\Controllers\BlogController.php(25): CodeIgniter\BaseModel->paginate()
+#6 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\CodeIgniter.php(933): App\Controllers\BlogController->index()
+#7 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#12 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-12-03 09:28:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [Postgre]: Call to undefined function CodeIgniter\Database\Postgre\pg_connect()
+[Method: GET, Route: blog]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 4 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults()
+ 5 APPPATH\Controllers\BlogController.php(25): CodeIgniter\BaseModel->paginate()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\utilisateur\\Documents\\GitHub\\S501-Saiyans-Coaching\\public\\index.php')
+ERROR - 2024-12-03 09:29:01 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Database\Postgre\Connection.php:77
+Stack trace:
+#0 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Database\BaseConnection.php(421): CodeIgniter\Database\Postgre\Connection->connect()
+#1 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query()
+#3 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults()
+#4 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\BaseModel.php(1284): CodeIgniter\Model->countAllResults()
+#5 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\app\Controllers\BlogController.php(25): CodeIgniter\BaseModel->paginate()
+#6 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\CodeIgniter.php(933): App\Controllers\BlogController->index()
+#7 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#12 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-12-03 09:29:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [Postgre]: Call to undefined function CodeIgniter\Database\Postgre\pg_connect()
+[Method: GET, Route: blog]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 4 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults()
+ 5 APPPATH\Controllers\BlogController.php(25): CodeIgniter\BaseModel->paginate()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\utilisateur\\Documents\\GitHub\\S501-Saiyans-Coaching\\public\\index.php')
+ERROR - 2024-12-03 09:29:01 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Database\Postgre\Connection.php:77
+Stack trace:
+#0 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Database\BaseConnection.php(421): CodeIgniter\Database\Postgre\Connection->connect()
+#1 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query()
+#3 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults()
+#4 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\BaseModel.php(1284): CodeIgniter\Model->countAllResults()
+#5 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\app\Controllers\BlogController.php(25): CodeIgniter\BaseModel->paginate()
+#6 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\CodeIgniter.php(933): App\Controllers\BlogController->index()
+#7 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#12 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-12-03 09:29:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [Postgre]: Call to undefined function CodeIgniter\Database\Postgre\pg_connect()
+[Method: GET, Route: blog]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 4 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults()
+ 5 APPPATH\Controllers\BlogController.php(25): CodeIgniter\BaseModel->paginate()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\utilisateur\\Documents\\GitHub\\S501-Saiyans-Coaching\\public\\index.php')
+ERROR - 2024-12-03 09:29:02 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Database\Postgre\Connection.php:77
+Stack trace:
+#0 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Database\BaseConnection.php(421): CodeIgniter\Database\Postgre\Connection->connect()
+#1 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query()
+#3 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults()
+#4 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\BaseModel.php(1284): CodeIgniter\Model->countAllResults()
+#5 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\app\Controllers\BlogController.php(25): CodeIgniter\BaseModel->paginate()
+#6 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\CodeIgniter.php(933): App\Controllers\BlogController->index()
+#7 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#12 C:\Users\utilisateur\Documents\GitHub\S501-Saiyans-Coaching\system\rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-12-03 09:29:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [Postgre]: Call to undefined function CodeIgniter\Database\Postgre\pg_connect()
+[Method: GET, Route: blog]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 4 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults()
+ 5 APPPATH\Controllers\BlogController.php(25): CodeIgniter\BaseModel->paginate()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\utilisateur\\Documents\\GitHub\\S501-Saiyans-Coaching\\public\\index.php')
+CRITICAL - 2024-12-03 09:42:57 --> InvalidArgumentException: You have not selected a database type to connect to.
+[Method: GET, Route: blog]
+in SYSTEMPATH\Database\Database.php on line 54.
+ 1 SYSTEMPATH\Database\Config.php(84): CodeIgniter\Database\Database->load()
+ 2 SYSTEMPATH\Model.php(155): CodeIgniter\Database\Config::connect()
+ 3 APPPATH\Controllers\BlogController.php(16): CodeIgniter\Model->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\utilisateur\\Documents\\GitHub\\S501-Saiyans-Coaching\\public\\index.php')
+CRITICAL - 2024-12-03 09:44:16 --> InvalidArgumentException: You have not selected a database type to connect to.
+[Method: GET, Route: blog]
+in SYSTEMPATH\Database\Database.php on line 54.
+ 1 SYSTEMPATH\Database\Config.php(84): CodeIgniter\Database\Database->load()
+ 2 SYSTEMPATH\Model.php(155): CodeIgniter\Database\Config::connect()
+ 3 APPPATH\Controllers\BlogController.php(16): CodeIgniter\Model->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\utilisateur\\Documents\\GitHub\\S501-Saiyans-Coaching\\public\\index.php')
+CRITICAL - 2024-12-03 09:44:17 --> InvalidArgumentException: You have not selected a database type to connect to.
+[Method: GET, Route: blog]
+in SYSTEMPATH\Database\Database.php on line 54.
+ 1 SYSTEMPATH\Database\Config.php(84): CodeIgniter\Database\Database->load()
+ 2 SYSTEMPATH\Model.php(155): CodeIgniter\Database\Config::connect()
+ 3 APPPATH\Controllers\BlogController.php(16): CodeIgniter\Model->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\utilisateur\\Documents\\GitHub\\S501-Saiyans-Coaching\\public\\index.php')
+CRITICAL - 2024-12-03 09:44:18 --> InvalidArgumentException: You have not selected a database type to connect to.
+[Method: GET, Route: blog]
+in SYSTEMPATH\Database\Database.php on line 54.
+ 1 SYSTEMPATH\Database\Config.php(84): CodeIgniter\Database\Database->load()
+ 2 SYSTEMPATH\Model.php(155): CodeIgniter\Database\Config::connect()
+ 3 APPPATH\Controllers\BlogController.php(16): CodeIgniter\Model->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\utilisateur\\Documents\\GitHub\\S501-Saiyans-Coaching\\public\\index.php')
+CRITICAL - 2024-12-03 09:45:42 --> InvalidArgumentException: You have not selected a database type to connect to.
+[Method: GET, Route: blog]
+in SYSTEMPATH\Database\Database.php on line 54.
+ 1 SYSTEMPATH\Database\Config.php(84): CodeIgniter\Database\Database->load()
+ 2 SYSTEMPATH\Model.php(155): CodeIgniter\Database\Config::connect()
+ 3 APPPATH\Controllers\BlogController.php(16): CodeIgniter\Model->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\utilisateur\\Documents\\GitHub\\S501-Saiyans-Coaching\\public\\index.php')
+CRITICAL - 2024-12-03 09:45:42 --> InvalidArgumentException: You have not selected a database type to connect to.
+[Method: GET, Route: blog]
+in SYSTEMPATH\Database\Database.php on line 54.
+ 1 SYSTEMPATH\Database\Config.php(84): CodeIgniter\Database\Database->load()
+ 2 SYSTEMPATH\Model.php(155): CodeIgniter\Database\Config::connect()
+ 3 APPPATH\Controllers\BlogController.php(16): CodeIgniter\Model->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\utilisateur\\Documents\\GitHub\\S501-Saiyans-Coaching\\public\\index.php')
+CRITICAL - 2024-12-03 09:45:55 --> InvalidArgumentException: You have not selected a database type to connect to.
+[Method: GET, Route: blog]
+in SYSTEMPATH\Database\Database.php on line 54.
+ 1 SYSTEMPATH\Database\Config.php(84): CodeIgniter\Database\Database->load()
+ 2 SYSTEMPATH\Model.php(155): CodeIgniter\Database\Config::connect()
+ 3 APPPATH\Controllers\BlogController.php(16): CodeIgniter\Model->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\utilisateur\\Documents\\GitHub\\S501-Saiyans-Coaching\\public\\index.php')
+CRITICAL - 2024-12-03 09:45:56 --> InvalidArgumentException: You have not selected a database type to connect to.
+[Method: GET, Route: blog]
+in SYSTEMPATH\Database\Database.php on line 54.
+ 1 SYSTEMPATH\Database\Config.php(84): CodeIgniter\Database\Database->load()
+ 2 SYSTEMPATH\Model.php(155): CodeIgniter\Database\Config::connect()
+ 3 APPPATH\Controllers\BlogController.php(16): CodeIgniter\Model->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\utilisateur\\Documents\\GitHub\\S501-Saiyans-Coaching\\public\\index.php')
+CRITICAL - 2024-12-03 09:45:57 --> InvalidArgumentException: You have not selected a database type to connect to.
+[Method: GET, Route: blog]
+in SYSTEMPATH\Database\Database.php on line 54.
+ 1 SYSTEMPATH\Database\Config.php(84): CodeIgniter\Database\Database->load()
+ 2 SYSTEMPATH\Model.php(155): CodeIgniter\Database\Config::connect()
+ 3 APPPATH\Controllers\BlogController.php(16): CodeIgniter\Model->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\utilisateur\\Documents\\GitHub\\S501-Saiyans-Coaching\\public\\index.php')
+CRITICAL - 2024-12-03 09:45:58 --> InvalidArgumentException: You have not selected a database type to connect to.
+[Method: GET, Route: blog]
+in SYSTEMPATH\Database\Database.php on line 54.
+ 1 SYSTEMPATH\Database\Config.php(84): CodeIgniter\Database\Database->load()
+ 2 SYSTEMPATH\Model.php(155): CodeIgniter\Database\Config::connect()
+ 3 APPPATH\Controllers\BlogController.php(16): CodeIgniter\Model->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\BlogController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\utilisateur\\Documents\\GitHub\\S501-Saiyans-Coaching\\public\\index.php')
+INFO - 2024-12-03 10:05:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
