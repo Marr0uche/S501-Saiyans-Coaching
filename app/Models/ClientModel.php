@@ -11,10 +11,11 @@ class ClientModel extends Model
 		'prenom',
 		'mail',
 		'motdepasse',
+		'mobile',
         'sexe',
         'age',
         'taille',
-        'poids_de_corps',
+        'poidsdecorps',
         'token'
     ];
     protected $returnType = 'array';
