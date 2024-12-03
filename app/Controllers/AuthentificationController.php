@@ -35,7 +35,7 @@ class AuthentificationController extends Controller
 
 		if ($client && password_verify($motdepasse, $client['motdepasse'])) {
 			session()->set('client_id', $client['idclient']);
-			session()->set('status', $client['admin']);
+			session()->set('admin', $client['admin']);
 			return redirect()->to('/dashboard');
 		} else {
 			session()->setFlashdata('error', 'Identifiants incorrects');
