@@ -23,6 +23,16 @@ class ProduitModel extends Model
 		return $this->where('idproduit', $idproduit)->first();
 	}
 
+	public function getProduitAffichage()
+	{
+		return $this->where('affichage',true)->findAll();
+	}
+
+	public function getProduitAffichageAcceuil()
+	{
+		return $this->where('affichageaccueil','t')->findAll();
+	}
+
 	public function creerProduit($produitDonnee)
 	{
 		return $this->insert($produitDonnee);

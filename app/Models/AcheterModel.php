@@ -25,6 +25,10 @@ class AcheterModel extends Model
 	{
 		return $this->where('idclient', $idclient)->where('idproduit', $idproduit)->first();
 	}
+	public function getAcheterProduit($idproduit)
+	{
+		return $this->where('idproduit', $idproduit)->findAll();
+	}
 
 	public function creerAcheter($acheterDonnee)
 	{
