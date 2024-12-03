@@ -1,4 +1,25 @@
 <?php $pager->setSurroundCount(2); ?>
+<style>
+    .pagination .page-link {
+        background-color: black !important; /* Fond jaune */
+        color: white !important;           /* Texte noir */
+        border: 1.5px solid white;           /* Bordure noire */
+        font-weight: bold;                 /* Texte en gras */
+    }
+
+    .pagination .page-link:hover {
+        background-color: black !important; /* Fond noir au survol */
+        color: yellow !important;     
+        border-color: yellow;      /* Texte jaune au survol */
+    }
+
+    .pagination .page-item.active .page-link {
+        background-color: black !important; /* Fond noir pour la page active */
+        color: white !important;           /* Texte jaune pour la page active */
+        border-color: yellow !important;     /* Bordure noire pour la page active */
+    }
+</style>
+
 <nav aria-label="Page navigation">
     <ul class="pagination justify-content-center">
         <?php if ($pager->hasPrevious()) : ?>

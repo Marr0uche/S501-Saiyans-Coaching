@@ -8,4 +8,5 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 
 $routes->get('blog', 'BlogController::index');
-$routes->get('blog/nouveau', 'BlogController::nouveau');
+$routes->post('blog/nouveauTraitement', 'BlogController::nouveauTraitement');
+$routes->get('/blog/suppression/(:num)', 'BlogController::suppression/$1');
