@@ -30,7 +30,7 @@
 </head>
 
 <body>
-	<h1>Blog</h1>
+	<h1>Actualitées</h1>
 
 	<div class="container mt-3">
 		<form method="get" action="">
@@ -51,25 +51,35 @@
 	{
 		?>
 		<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ajouterArticleModal">
-			Ajouter un article
+			Ajouter une actualité
 		</button>
 		<?php
 	}
 
-	foreach ($articles as $article): ?>
-
-
+ 	foreach ($articles as $article): ?>
 		<h2><?= $article['titredocument'] ?></h2>
 		<p><?= $article['descriptiondocument'] ?></p>
-		<p><?= $article['datepublication'] ?></p>
+		<p>
+			<?php 
+				$date = new DateTime($article['datepublication']);
 
-		
+				$formatter = new IntlDateFormatter(
+					'fr_FR', 
+					IntlDateFormatter::LONG, 
+					IntlDateFormatter::NONE
+				);
+
+				echo 'Publié le : ' . $formatter->format($date);
+			?>
+		</p>
+
 		<?php if($article['image'] != null)
 		{
 			$imagePath = base_url('uploads/' . $article['image']);
 			?><img src="<?= $imagePath ?>" alt="Image" class="img-fluid"><?php
 		}
 		?>
+
 		<br>
 		<br>
 		<?php
@@ -81,15 +91,13 @@
 				Modifier
 			</button>
 			<a href="/blog/suppression/<?= urlencode($article['iddocument']); ?>"
-				onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet article ?');">
+				onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette actualité ?');">
 				<p>Supprimer</p>
 			</a>
 			<?php
 		}
-
 		?>
-		
-		
+
 	<?php endforeach; ?>
 
 	<div class="pagination-wrapper pagination justify-content-center">
@@ -121,17 +129,15 @@
 				<?= validation_show_error('image') ?>
 				<br>
 
-				<?= form_hidden('date', date('Y-m-d H:i:s')); ?>
-				<?= form_hidden('blog', 'true'); ?>
+				<?= form_hidden('datepublication', date('d/m/Y')); ?>
+				<?= form_hidden('blog', 'false'); ?>
 
-				<?= form_submit('submit', 'Ajouter l\'article'); ?>
+				<?= form_submit('submit', 'Ajouter l\'actualité'); ?>
 
 				<?= form_close(); ?>
 
 			</div>
 		</div>
 	</div>
+
 </body>
-
-
-</html>
