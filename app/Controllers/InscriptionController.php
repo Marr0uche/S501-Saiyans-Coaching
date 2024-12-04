@@ -9,7 +9,7 @@ class InscriptionController extends Controller
 {
 	public function index()
 	{
-		return view('Utilisateur/InscriptionVue');
+		return view('Utilisateur/InscriptionView');
 	}
 
 	public function creer()
@@ -23,13 +23,13 @@ class InscriptionController extends Controller
 			'motdepasse' => 'required|min_length[6]',
 			'mobile' => 'required|numeric|min_length[10]',
 			'sexe' => 'required',
-			'age' => 'required|numeric|min_length[1]',
+			'datenaissance' => 'required|valid_date[Y-m-d]',
 			'taille' => 'required|numeric',
 			'poidsdecorps' => 'required|numeric',
 		]);
 
 		if (!$validation->withRequest($this->request)->run()) {
-			return view('InscriptionVue', [
+			return view('Utilisateur/InscriptionView', [
 				'validation' => $validation
 			]);
 		}
@@ -41,7 +41,7 @@ class InscriptionController extends Controller
 			'motdepasse' => password_hash($this->request->getPost('motdepasse'), PASSWORD_DEFAULT),
 			'mobile' => $this->request->getPost('mobile'),
 			'sexe' => $this->request->getPost('sexe'),
-			'age' => $this->request->getPost('age'),
+			'datenaissance' => $this->request->getPost('datenaissance'),
 			'taille' => $this->request->getPost('taille'),
 			'poidsdecorps' => $this->request->getPost('poidsdecorps'),
 			'admin' => false,

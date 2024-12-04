@@ -83,7 +83,7 @@ class ProduitController extends Controller{
         $data = [
             'titreproduit' => $this->request->getPost('Titre'),
             'descriptionproduit' => $this->request->getPost('descriptionproduit'),
-            'prix' => $this->request->getPost('prix'),
+            'active' => $this->request->getPost('prix'),
             'affichageaccueil' => $this->request->getPost('dashboard') === 'true', // Assurez-vous que c'est un booléen
             'affichage' => $this->request->getPost('Afficher') === 'true'  // Assurez-vous que c'est un booléen
         ];
@@ -101,9 +101,6 @@ class ProduitController extends Controller{
     }
         // Insérer les données dans la base de données
         $produitModel->creerProduit($data);
-        echo "Insertion des données : ";
-        print_r($data);
-    
         return redirect()->to('/Produit');
     }
     
