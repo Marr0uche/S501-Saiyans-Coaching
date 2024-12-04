@@ -41,3 +41,6 @@ $routes->post('/profile/modifier', 'ProfileController::modifier');
 
 //Promotion
 $routes->get('/promotion/creer','PromotionController::creer');
+
+//Admin
+$routes->get('/admin/board', 'BoardController::board');
