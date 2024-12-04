@@ -8,9 +8,10 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'AuthentificationController::index');
 
 $routes->get('blog', 'BlogController::index');
-$routes->get('blog/nouveau', 'BlogController::nouveau');
-
-
+$routes->post('blog/nouveauTraitement', 'BlogController::nouveauTraitement');
+$routes->get('/blog/suppression/(:num)', 'BlogController::suppression/$1');
+$routes->get('/blog/modif/(:num)', 'BlogController::modif/$1');
+$routes->post('/blog/edition', 'BlogController::edition');
 
 //Affichage des produit dans la page formule
 $routes->get('/Produit','ProduitController::index');

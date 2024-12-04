@@ -15,6 +15,11 @@ class BlogController extends Controller
 	{
 		$articleModel = new ArticleModel();
 		
+		$keyword = $this->request->getGet('keyword');
+		if ($keyword === null) {
+			$keyword = '';
+		}
+		$keyword = strtolower($keyword);
 
 		$configPager = config(Pager::class);
 		$perPage = $configPager->perPage;
@@ -22,26 +27,128 @@ class BlogController extends Controller
     	$currentPage = $this->request->getVar('page') ?? 1; 
 
 		$articles = $articleModel
+					->groupStart()
+						->like('LOWER(titredocument)', $keyword)
+						->orLike('LOWER(descriptiondocument)', $keyword)
+					->groupEnd()
 					->paginate($perPage, 'default');
 
 
-		return view('Blog/blog.php', 
+		return view('Blog/BlogView.php', 
 					['articles' => $articles,
 						   'pager' => $articleModel->pager]);					
 	}
 
-	public function nouveau()
+	public function nouveauTraitement()
 	{
-		$articleModel = new ArticleModel();
-
-		// Vérifie si le statut est passé dans l'URL
-		$idtache = $this->request->getGet('idtache');
-		
-		if (!is_numeric($idtache)) {
-			throw new \CodeIgniter\Exceptions\PageNotFoundException('Identifiant de tâche invalide.');
+		$validationRules = [
+			'titredocument' => 'required|max_length[255]',
+			'descriptiondocument' => 'required',
+		];
+	
+		if (!$this->validate($validationRules)) {
+			return redirect()->back()->withInput()->with('validation', $this->validator);
 		}
 
-		return view('ajout_commentaires.php', ['idtache' => $idtache]);
+		$articleModel = new ArticleModel();
+
+		$file = $this->request->getFile('image');
+		$fileName = null;
+
+		if ($file && $file->isValid() && !$file->hasMoved()) {
+			$fileName = $file->getRandomName();
+			$file->move(WRITEPATH . '../public/uploads', $fileName);
+		}
+
+		$data = [
+			'titredocument' => $this->request->getPost('titredocument'),
+			'descriptiondocument' => $this->request->getPost('descriptiondocument'),
+			'datepublication' => $this->request->getPost('datepublication'),
+			'image' => $fileName,
+		];
+
+		$articleModel->creerArticle($data);
+		return redirect()->to('/blog');
+	}
+
+	public function modif($id)
+	{
+		$articleModel = new ArticleModel();
+		$article = $articleModel->getArticle($id);
+		if (!$article) {
+			return redirect()->back()->with('error', 'Article non trouvée');
+		}
+
+		return view('Blog/ModifArticleView.php', [
+			'article' => $article
+		]);
+	}
+
+	public function edition()
+	{
+		$articleModel = new ArticleModel();
+		$iddocument = $this->request->getPost('iddocument');
+		echo 'iddocumentController : ' . $iddocument . '<br>';
+
+		$titre = $this->request->getPost('titredocument');
+		$description = $this->request->getPost('descriptiondocument');
+		$supprimerImage = $this->request->getPost('supprimer_image');
+		$article = $articleModel->find($iddocument);
+
+		$data = [
+			'titredocument' => $titre,
+			'descriptiondocument' => $description,
+		];
+
+		$image = $this->request->getFile('image');
+
+		if ($supprimerImage) {
+			if (!empty($article['image']) && file_exists('uploads/' . $article['image'])) {
+				unlink('uploads/' . $article['image']);
+			}
+			$data['image'] = null; 
+		} elseif ($image && $image->isValid() && !$image->hasMoved()) {
+			$newImageName = $image->getRandomName();
+			$image->move('uploads', $newImageName);
+
+			if (!empty($article['image']) && file_exists('uploads/' . $article['image'])) {
+				unlink('uploads/' . $article['image']);
+			}
+			$data['image'] = $newImageName;
+		}
+		
+		$articleModel->majArticle($iddocument, $data);
+		
+		return redirect()->to('/blog');
+		
+	}
+
+	
+	
+
+	public function suppression($idDocArticle)
+	{
+		echo 'idDocArticle' . $idDocArticle;
+		$articleModel = new ArticleModel();
+
+		// Récupérer l'article avant de le supprimer
+		$article = $articleModel->find($idDocArticle);
+		echo 'article' . $article['image'];
+    
+		if ($article && !empty($article['image'])) {
+			
+			
+			$imagePath = FCPATH . 'uploads/' . $article['image'];
+			echo 'path' . $imagePath;
+			
+			if (file_exists($imagePath)) {
+				echo 'exists';
+				unlink($imagePath); 
+			}
+		}
+
+		$articleModel->supprimerArticle($idDocArticle);
+		return redirect()->to('/blog');
 	}
 }
 
