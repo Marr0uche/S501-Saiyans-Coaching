@@ -7,11 +7,15 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'AuthentificationController::index');
 
-$routes->get('blog', 'BlogController::index');
-$routes->post('blog/nouveauTraitement', 'BlogController::nouveauTraitement');
-$routes->get('/blog/suppression/(:num)', 'BlogController::suppression/$1');
-$routes->get('/blog/modif/(:num)', 'BlogController::modif/$1');
-$routes->post('/blog/edition', 'BlogController::edition');
+//Blog
+$routes->get('blog', 'ArticleController::indexBlog');
+$routes->post('blog/nouveauTraitement', 'ArticleController::nouveauTraitement');
+$routes->get('/blog/suppression/(:num)', 'ArticleController::suppression/$1');
+$routes->get('/blog/modif/(:num)', 'ArticleController::modif/$1');
+$routes->post('/blog/edition', 'ArticleController::edition');
+
+//Actualités
+$routes->get('actualites', 'ArticleController::indexActu');
 
 //Affichage des produit dans la page formule
 $routes->get('/Produit','ProduitController::index');

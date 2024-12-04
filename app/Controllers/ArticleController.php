@@ -3,7 +3,7 @@ namespace App\Controllers;
 use App\Models\ArticleModel;
 use CodeIgniter\Controller;
 use Config\Pager;
-class BlogController extends Controller
+class ArticleController extends Controller
 {
 
 	public function __construct()
@@ -11,7 +11,7 @@ class BlogController extends Controller
 		helper(['form']);
 	}
 
-	public function index()
+	public function indexActu()
 	{
 		$articleModel = new ArticleModel();
 		
@@ -31,6 +31,37 @@ class BlogController extends Controller
 						->like('LOWER(titredocument)', $keyword)
 						->orLike('LOWER(descriptiondocument)', $keyword)
 					->groupEnd()
+					->where('blog', false)
+					->paginate($perPage, 'default');
+
+
+		return view('Actualite/ActualiteView.php', 
+					['articles' => $articles,
+						   'pager' => $articleModel->pager]);					
+	}
+	
+
+	public function indexBlog()
+	{
+		$articleModel = new ArticleModel();
+		
+		$keyword = $this->request->getGet('keyword');
+		if ($keyword === null) {
+			$keyword = '';
+		}
+		$keyword = strtolower($keyword);
+
+		$configPager = config(Pager::class);
+		$perPage = $configPager->perPage;
+		$perPage = 3;  // Limite des tâches par statut
+    	$currentPage = $this->request->getVar('page') ?? 1; 
+
+		$articles = $articleModel
+					->groupStart()
+						->like('LOWER(titredocument)', $keyword)
+						->orLike('LOWER(descriptiondocument)', $keyword)
+					->groupEnd()
+					->where('blog', true)
 					->paginate($perPage, 'default');
 
 
@@ -70,7 +101,15 @@ class BlogController extends Controller
 		];
 
 		$articleModel->creerArticle($data);
-		return redirect()->to('/blog');
+		echo $data['datepublication'];
+		if($data['blog'] == 1)
+		{
+			return redirect()->to('/blog');
+		}
+		else
+		{
+			return redirect()->to('/actualites');
+		}
 	}
 
 	public function modif($id)
@@ -121,7 +160,14 @@ class BlogController extends Controller
 		
 		$articleModel->majArticle($iddocument, $data);
 		
-		return redirect()->to('/blog');
+		if($article['blog'] == 1)
+		{
+			return redirect()->to('/blog');
+		}
+		else
+		{
+			return redirect()->to('/actualites');
+		}
 		
 	}
 
@@ -150,7 +196,15 @@ class BlogController extends Controller
 		}
 
 		$articleModel->supprimerArticle($idDocArticle);
-		return redirect()->to('/blog');
+
+		if($article['blog'] == 1)
+		{
+			return redirect()->to('/blog');
+		}
+		else
+		{
+			return redirect()->to('/actualites');
+		}
 	}
 }
 
