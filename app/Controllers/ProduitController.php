@@ -7,6 +7,7 @@ use CodeIgniter\Controller;
 use App\Models\ProduitModel;
 use Config\Pager;
 use App\Models\AcheterModel;
+use App\Models\PromotionModel;
 
 
 class ProduitController extends Controller{
@@ -20,16 +21,19 @@ class ProduitController extends Controller{
     {
 
 
-        // Chargement du modèle
+        // Chargement des modèles
         $product = new ProduitModel();
+        $promotion = new PromotionModel();
 
         // Utilisation de la méthode paginate
         $productListe = $product->getProduitAffichage();
+        $promotionListe= $promotion->getActivePromotion();
 
         // Passer les données à la vue
         return view('Produit/ProduitView', [
             'produits' => $productListe,
-        ]);
+            'promotion' =>$promotionListe
+        ]); 
     }
 
     public function indexProduct($idproduit)
@@ -84,17 +88,17 @@ class ProduitController extends Controller{
             'affichage' => $this->request->getPost('Afficher') === 'true'  // Assurez-vous que c'est un booléen
         ];
     
-        // Gérer le fichier téléchargé
-        $fichier = $this->request->getFile('fichier');
-        if ($fichier->isValid() && !$fichier->hasMoved()) {
-            // Déplacer le fichier dans un dossier, ici "uploads"
-            $filePath = 'public/assets/' . $fichier->getName();  // Vous pouvez ajuster le chemin selon vos besoins
-            $fichier->move(WRITEPATH .'public/assets/', $fichier->getName());
-    
-            // Ajouter le chemin du fichier dans les données
-            $data['photoproduit'] = $filePath;
-        }
-    
+        // Traitement de l'image
+        $imageFile = $this->request->getFile('fichier');
+        if ($imageFile && $imageFile->isValid() && !$imageFile->hasMoved()) {
+            // Si une nouvelle image est téléchargée, déplacer le fichier
+            $newImagePath = 'public/assets/' . $imageFile->getName();
+            $imageFile->move('public/assets/', $imageFile->getName());
+            $photoproduit = $newImagePath;
+        } else {
+        // Si aucune image n'est téléchargée, conserver l'ancienne image
+        $photoproduit = $this->request->getPost('photoproduit'); // Utiliser l'image existante
+    }
         // Insérer les données dans la base de données
         $produitModel->creerProduit($data);
         echo "Insertion des données : ";

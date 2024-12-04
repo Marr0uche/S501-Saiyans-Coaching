@@ -22,8 +22,44 @@
         }
     </style>
 </head>
-
 <body>
+<div class="container mt-5">
+    <div id="infoCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">    
+        <?php if (!empty($produits)): ?>
+            <?php
+            $first = true;
+
+            foreach ($promotion as $promo ):
+                $activeClass = $first ? ' active' : '';
+                $first = false; // Marque le premier élément comme actif
+            ?>
+                <div class="carousel-item<?= $activeClass ?>">
+                    <h5><?= esc($promo['reductionpromo'] ); ?></h5>
+                    <h5><?= esc($promo['codepromo']); ?></h5>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5><?= $promo['titredocument'] ?></h5>
+                        <p><?= $promo['descriptiondocument'] ?></p>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+            <?php endif; ?>
+
+        </div>
+        <!-- Contrôles du carrousel -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#infoCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Précédent</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#infoCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Suivant</span>
+        </button>
+    </div>
+</div>
+
+
+
     <div class="container mt-4">
         <div class="row">
             <div class="columns-wrapper">
@@ -168,7 +204,7 @@
                 modal.querySelector('input[name="titreproduit"]').value = titre;
                 modal.querySelector('textarea[name="descriptionproduit"]').value = description;
                 modal.querySelector('input[name="prix"]').value = prix;
-                modal.querySelector('#photo-actuelle').src = photo;
+                modal.querySelector('input[name="fichier"]').src = photo;
                 modal.querySelector('input[name="affichageaccueil"]').checked =affichageacceuil;
                 modal.querySelector('input[name="affichage"]').checked =affichage;
             });

@@ -21,9 +21,9 @@ $routes->get('/produit/unique/(:num)', 'ProduitController::indexProduct/$1');
 //Supression d'un produit
 $routes->get('/produit/suppression/(:num)', 'ProduitController::supprimer/$1');
 
-//Ajout d'un produit 
+//Creer d'un produit 
 $routes->get('/produit/ajoutview','ProduitController::creerView');
-$routes->post('/produit/ajout','ProduitController::creer');
+$routes->post('/produit/creer','ProduitController::creer');
 
 //modification d'un projet
 $routes->post('/produit/modification','ProduitController::modifier');
@@ -35,3 +35,8 @@ $routes->get('authentification/deconnexion', 'AuthentificationController::deconn
 $routes->get('inscription', 'InscriptionController::index');
 $routes->post('inscription/creer', 'InscriptionController::creer');
 
+
+
+
+//Promotion
+$routes->get('/promotion/creer','PromotionController::creer');

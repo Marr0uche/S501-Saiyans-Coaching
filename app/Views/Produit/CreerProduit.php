@@ -13,7 +13,7 @@
         <h1>Créer un produit</h1>
     </header>
 
-	<?= form_open('/produit/ajout', ['enctype' => 'multipart/form-data']); ?>
+	<?= form_open('/produit/creer', ['enctype' => 'multipart/form-data']); ?>
     <?= form_label('Titre du produit :', 'Titre'); ?>
     <?= form_input('Titre', set_value('Titre'), 'required'); ?>
     <?= validation_show_error('Titre') ?>
