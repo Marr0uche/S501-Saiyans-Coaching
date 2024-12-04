@@ -47,7 +47,6 @@
 	<?php
 	$session = session();
 	$admin = $session->get('admin');
-	$admin = true;
 	if ($admin) 
 	{
 		?>
