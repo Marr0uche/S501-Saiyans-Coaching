@@ -46,9 +46,13 @@ $routes->post('/profile/modifier', 'ProfileController::modifier');
 //Promotion
 $routes->get('/promotion/ajoutview','PromotionController::creerView');
 $routes->get('/promotion/creer','PromotionController::creer');
-$routes->get('promo','PromotionController::index()');
-$routes->post('promotion/modifier','PromotionController::modifier()');
-$routes->get('/promotion/suppression/((:num)','PromotionController::supprimer()/$1');
+$routes->get('promo','PromotionController::index');
+$routes->post('promotion/modifier','PromotionController::modifier');
+$routes->get('/promotion/suppression/(:num)','PromotionController::supprimer/$1');
 
 //Admin
 $routes->get('/admin/board', 'BoardController::board');
+
+//Contact
+$routes->get('/contact', 'ContactController::index');
+$routes->post('/contact/send', 'ContactController::send');
