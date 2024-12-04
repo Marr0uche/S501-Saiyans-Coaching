@@ -42,18 +42,15 @@
 			</div>
 			<div class="col-md-6">
 				<label for="sexe" class="form-label">Sexe</label>
-				<select name="sexe" class="form-select" required>
-					<option value="Homme" <?= $client['sexe'] == 'Homme' ? 'selected' : '' ?>>Homme</option>
-					<option value="Femme" <?= $client['sexe'] == 'Femme' ? 'selected' : '' ?>>Femme</option>
-				</select>
+				<input type="text" class="form-control" value="<?= esc($client['sexe']) ?>" disabled>
 			</div>
 			<div class="col-md-6">
 				<label for="taille" class="form-label">Taille (en cm)</label>
-				<input type="number" step="0.1" name="taille" class="form-control" value="<?= esc($client['taille']) ?>" disabled>
+				<input type="number" step="0.1" name="taille" class="form-control" value="<?= esc($client['taille']) ?>" required>
 			</div>
 			<div class="col-md-6">
 				<label for="poidsdecorps" class="form-label">Poids (en kg)</label>
-				<input type="number" step="0.1" name="poidsdecorps" class="form-control" value="<?= esc($client['poidsdecorps']) ?>" disabled>
+				<input type="number" step="0.1" name="poidsdecorps" class="form-control" value="<?= esc($client['poidsdecorps']) ?>" required>
 			</div>
 			<div class="col-md-6">
 				<label for="datenaissance" class="form-label">Date de naissance</label>

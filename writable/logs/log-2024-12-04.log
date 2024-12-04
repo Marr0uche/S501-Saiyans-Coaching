@@ -172,89 +172,61 @@ in SYSTEMPATH/Database/Postgre/Connection.php on line 204.
 13 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
 14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
 15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
-16 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
-INFO - 2024-12-04 13:17:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-04 13:17:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-04 13:19:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-04 13:19:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-04 13:20:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-CRITICAL - 2024-12-04 13:20:36 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
-[Method: GET, Route: dashboard]
-in SYSTEMPATH/Router/Router.php on line 432.
- 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
- 2 SYSTEMPATH/Router/Router.php(432): preg_match()
- 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
- 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
- 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
- 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
- 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
- 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
- 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
-10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
-CRITICAL - 2024-12-04 13:23:45 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
-[Method: GET, Route: dashboard]
-in SYSTEMPATH/Router/Router.php on line 432.
- 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
- 2 SYSTEMPATH/Router/Router.php(432): preg_match()
- 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
- 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
- 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
- 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
- 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
- 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
- 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
-10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
-CRITICAL - 2024-12-04 13:23:54 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
-[Method: GET, Route: Profile]
-in SYSTEMPATH/Router/Router.php on line 432.
- 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
- 2 SYSTEMPATH/Router/Router.php(432): preg_match()
- 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
- 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
- 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
- 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
- 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
- 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
- 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
-10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
-CRITICAL - 2024-12-04 13:24:56 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
-[Method: GET, Route: Profile]
-in SYSTEMPATH/Router/Router.php on line 432.
- 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
- 2 SYSTEMPATH/Router/Router.php(432): preg_match()
- 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
- 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
- 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
- 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
- 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
- 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
- 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
-10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
-INFO - 2024-12-04 13:25:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-04 13:25:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-CRITICAL - 2024-12-04 13:25:45 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
-[Method: GET, Route: dashboard]
-in SYSTEMPATH/Router/Router.php on line 432.
- 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
- 2 SYSTEMPATH/Router/Router.php(432): preg_match()
- 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
- 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
- 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
- 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
- 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
- 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
- 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
-10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
-CRITICAL - 2024-12-04 13:26:29 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
-[Method: GET, Route: dashboard]
-in SYSTEMPATH/Router/Router.php on line 432.
- 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
- 2 SYSTEMPATH/Router/Router.php(432): preg_match()
- 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
- 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
- 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
- 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
- 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
- 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
- 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
-10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+16 SYSTEMPATH/rewrite.php(44): require_once('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 10:03:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 10:04:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 10:05:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 10:05:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 10:05:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 10:05:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 10:05:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 10:06:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-04 10:06:19 --> ErrorException: Undefined array key "dateNaissance"
+[Method: GET, Route: profile]
+in APPPATH/Views/Utilisateur/ProfileView.php on line 46.
+ 1 APPPATH/Views/Utilisateur/ProfileView.php(46): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/app/Views/Utilisateur/ProfileView.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/ProfileController.php(25): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProfileController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 10:06:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-04 10:06:40 --> ErrorException: Undefined array key "dateNaissance"
+[Method: GET, Route: profile]
+in APPPATH/Views/Utilisateur/ProfileView.php on line 46.
+ 1 APPPATH/Views/Utilisateur/ProfileView.php(46): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/app/Views/Utilisateur/ProfileView.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/ProfileController.php(25): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProfileController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 10:07:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-04 10:07:13 --> ErrorException: Undefined array key "dateNaissance"
+[Method: GET, Route: profile]
+in APPPATH/Views/Utilisateur/ProfileView.php on line 46.
+ 1 APPPATH/Views/Utilisateur/ProfileView.php(46): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/app/Views/Utilisateur/ProfileView.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/ProfileController.php(25): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProfileController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 10:07:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 10:08:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

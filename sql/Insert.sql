@@ -1,9 +1,28 @@
--- Insertion des données dans la table Client
-INSERT INTO Client (admin, nom, prenom, mail, motDePasse, mobile, sexe, datenaissance, taille, poidsdecorps, token)
-VALUES
-    (TRUE, 'Admin', 'User', 'admin@example.com', 'hashed_password1', '1234567890', 'Homme', '1990-01-01', 180.5, 75.0, 'token_admin'),
-    (FALSE, 'John', 'Doe', 'john.doe@example.com', 'hashed_password2', '0987654321', 'Homme', '2004-08-12', 175.0, 70.0, NULL),
-    (FALSE, 'Jane', 'Smith', 'jane.smith@example.com', 'hashed_password3', '1122334455', 'Femme', '2001-06-10', 165.0, 60.0, NULL);
+INSERT INTO client (nom, prenom, mail, mobile, sexe, taille, poidsdecorps, datenaissance, motdepasse, admin) VALUES
+-- Moins de 20 ans
+('Dupont', 'Lucas', 'lucas.dupont@mail.com', '0612345678', 'Homme', 175, 65, '2005-06-15', '$2y$10$samplehash12345', false),
+('Martin', 'Emma', 'emma.martin@mail.com', '0623456789', 'Femme', 160, 55, '2007-03-22', '$2y$10$samplehash12345', false),
+('Petit', 'Tom', 'tom.petit@mail.com', '0634567890', 'Homme', 180, 75, '2006-09-11', '$2y$10$samplehash12345', false),
+('Leroy', 'Chloé', 'chloe.leroy@mail.com', '0645678901', 'Femme', 165, 50, '2008-12-05', '$2y$10$samplehash12345', false),
+
+-- Entre 20 et 30 ans
+('Durand', 'Maxime', 'maxime.durand@mail.com', '0656789012', 'Homme', 180, 80, '1995-04-10', '$2y$10$samplehash12345', false),
+('Morel', 'Alice', 'alice.morel@mail.com', '0667890123', 'Femme', 170, 60, '1998-08-17', '$2y$10$samplehash12345', false),
+('Roux', 'Kevin', 'kevin.roux@mail.com', '0678901234', 'Homme', 175, 85, '1993-01-02', '$2y$10$samplehash12345', false),
+('Fournier', 'Claire', 'claire.fournier@mail.com', '0689012345', 'Femme', 160, 55, '1997-06-14', '$2y$10$samplehash12345', false),
+
+-- Entre 31 et 50 ans
+('Garnier', 'Julien', 'julien.garnier@mail.com', '0690123456', 'Homme', 185, 90, '1985-03-23', '$2y$10$samplehash12345', false),
+('Blanc', 'Sophie', 'sophie.blanc@mail.com', '0601234567', 'Femme', 165, 62, '1988-07-30', '$2y$10$samplehash12345', false),
+('Perrot', 'François', 'francois.perrot@mail.com', '0612345678', 'Homme', 178, 88, '1975-05-20', '$2y$10$samplehash12345', false),
+('Fontaine', 'Camille', 'camille.fontaine@mail.com', '0623456789', 'Femme', 170, 65, '1982-09-12', '$2y$10$samplehash12345', false),
+
+-- Plus de 50 ans
+('Dupuis', 'Jean', 'jean.dupuis@mail.com', '0634567890', 'Homme', 170, 78, '1955-04-18', '$2y$10$samplehash12345', false),
+('Bernard', 'Marie', 'marie.bernard@mail.com', '0645678901', 'Femme', 160, 70, '1960-11-02', '$2y$10$samplehash12345', false),
+('Simon', 'Paul', 'paul.simon@mail.com', '0656789012', 'Homme', 165, 85, '1948-03-05', '$2y$10$samplehash12345', false),
+('Lambert', 'Odile', 'odile.lambert@mail.com', '0667890123', 'Femme', 155, 68, '1953-07-19', '$2y$10$samplehash12345', false);
+
 
 -- Insertion des données dans la table Adresse
 INSERT INTO

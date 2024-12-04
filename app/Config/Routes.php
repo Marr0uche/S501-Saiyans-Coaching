@@ -40,8 +40,13 @@ $routes->get('/profile', 'ProfileController::index');
 $routes->post('/profile/modifier', 'ProfileController::modifier');
 
 //Promotion
+<<<<<<< HEAD
 $routes->get('/promotion/ajoutview','PromotionController::creerView');
 $routes->get('/promotion/creer','PromotionController::creer');
 $routes->get('promo','PromotionController::index()');
 $routes->post('promotion/modifier','PromotionController::modifier()');
 $routes->get('/promotion/suppression/((:num)','PromotionController::supprimer()/$1');
+=======
+//Admin
+$routes->get('/admin/board', 'BoardController::board');
+>>>>>>> a84a11726e3a743cd7edb005f15e7beb1fd3ea2a

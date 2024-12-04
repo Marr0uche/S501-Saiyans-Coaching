@@ -28,7 +28,7 @@ class ProfileController extends Controller
 
 	public function modifier()
 	{
-		$clientId = session()->get('idClient');
+		$clientId = session()->get('client_id');
 		if (!$clientId) {
 			return redirect()->to('/authentification');
 		}
@@ -40,7 +40,8 @@ class ProfileController extends Controller
 			'prenom' => 'required|min_length[3]',
 			'mail' => 'required|valid_email',
 			'mobile' => 'required|numeric|min_length[10]',
-			'sexe' => 'required',
+			'taille' => 'required|numeric',
+			'poidsdecorps' => 'required|numeric',
 			'motdepasse' => 'permit_empty|min_length[6]',
 		]);
 
@@ -53,7 +54,8 @@ class ProfileController extends Controller
 			'prenom' => $this->request->getPost('prenom'),
 			'mail' => $this->request->getPost('mail'),
 			'mobile' => $this->request->getPost('mobile'),
-			'sexe' => $this->request->getPost('sexe'),
+			'taille' => $this->request->getPost('taille'),
+			'poidsdecorps' => $this->request->getPost('poidsdecorps'),
 		];
 
 		if ($this->request->getPost('motdepasse')) {
