@@ -15,6 +15,19 @@ class PromotionController extends Controller
     public function __construct(){
 		helper(filenames: ['form']);
 	}
+
+    public function index(){
+
+        $promotionModel = new PromotionModel();
+        $listePromotion = $promotionModel->findAll();
+
+        return view('Promos/PromotionView',['listePromotion' => $listePromotion]);
+
+    }
+
+    public function creerView(){
+        return view('Promotion/CreerPromotionView');
+   }
     
     public function supprimer($idPromos){
         $promos = new PromotionModel();

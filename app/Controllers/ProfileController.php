@@ -16,6 +16,7 @@ class ProfileController extends Controller
 
 		$clientModel = new ClientModel();
 		$client = $clientModel->find($clientId);
+		
 
 		if (!$client) {
 			session()->setFlashdata('error', 'Utilisateur introuvable.');
