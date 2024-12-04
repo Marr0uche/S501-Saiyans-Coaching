@@ -1,58 +1,9 @@
 -- Insertion des données dans la table Client
-INSERT INTO
-	Client (
-		admin,
-		nom,
-		prenom,
-		mail,
-		motDePasse,
-		mobile,
-		sexe,
-		age,
-		taille,
-		poidsdecorps,
-		token
-	)
+INSERT INTO Client (admin, nom, prenom, mail, motDePasse, mobile, sexe, datenaissance, taille, poidsdecorps, token)
 VALUES
-	(
-		TRUE,
-		'Admin',
-		'User',
-		'admin@example.com',
-		'hashed_password1',
-		'1234567890',
-		'Homme',
-		35,
-		180.5,
-		75.0,
-		'token_admin'
-	),
-	(
-		FALSE,
-		'John',
-		'Doe',
-		'john.doe@example.com',
-		'hashed_password2',
-		'0987654321',
-		'Homme',
-		28,
-		175.0,
-		70.0,
-		NULL
-	),
-	(
-		FALSE,
-		'Jane',
-		'Smith',
-		'jane.smith@example.com',
-		'hashed_password3',
-		'1122334455',
-		'Femme',
-		30,
-		165.0,
-		60.0,
-		NULL
-	);
+    (TRUE, 'Admin', 'User', 'admin@example.com', 'hashed_password1', '1234567890', 'Homme', '1990-01-01', 180.5, 75.0, 'token_admin'),
+    (FALSE, 'John', 'Doe', 'john.doe@example.com', 'hashed_password2', '0987654321', 'Homme', '2004-08-12', 175.0, 70.0, NULL),
+    (FALSE, 'Jane', 'Smith', 'jane.smith@example.com', 'hashed_password3', '1122334455', 'Femme', '2001-06-10', 165.0, 60.0, NULL);
 
 -- Insertion des données dans la table Adresse
 INSERT INTO

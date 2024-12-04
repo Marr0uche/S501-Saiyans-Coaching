@@ -44,6 +44,7 @@ class BlogController extends Controller
 		$validationRules = [
 			'titredocument' => 'required|max_length[255]',
 			'descriptiondocument' => 'required',
+			'blog' => 'required',
 		];
 	
 		if (!$this->validate($validationRules)) {
@@ -65,6 +66,7 @@ class BlogController extends Controller
 			'descriptiondocument' => $this->request->getPost('descriptiondocument'),
 			'datepublication' => $this->request->getPost('datepublication'),
 			'image' => $fileName,
+			'blog' => $this->request->getPost('blog'),
 		];
 
 		$articleModel->creerArticle($data);
