@@ -37,7 +37,5 @@ $routes->get('inscription', 'InscriptionController::index');
 $routes->post('inscription/creer', 'InscriptionController::creer');
 
 
-
-
 //Promotion
 $routes->get('/promotion/creer','PromotionController::creer');
