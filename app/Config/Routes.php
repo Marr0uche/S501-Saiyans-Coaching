@@ -16,13 +16,13 @@ $routes->post('/blog/edition', 'BlogController::edition');
 //Affichage des produit dans la page formule
 $routes->get('/Produit','ProduitController::index');
 
-//Détails d'un produit en particulier 
+//Détails d'un produit en particulier
 $routes->get('/produit/unique/(:num)', 'ProduitController::indexProduct/$1');
 
 //Supression d'un produit
 $routes->get('/produit/suppression/(:num)', 'ProduitController::supprimer/$1');
 
-//Creer d'un produit 
+//Creer d'un produit
 $routes->get('/produit/ajoutview','ProduitController::creerView');
 $routes->post('/produit/creer','ProduitController::creer');
 
@@ -36,6 +36,8 @@ $routes->get('authentification/deconnexion', 'AuthentificationController::deconn
 $routes->get('inscription', 'InscriptionController::index');
 $routes->post('inscription/creer', 'InscriptionController::creer');
 
+$routes->get('/profile', 'ProfileController::index');
+$routes->post('/profile/modifier', 'ProfileController::modifier');
 
 //Promotion
 $routes->get('/promotion/creer','PromotionController::creer');

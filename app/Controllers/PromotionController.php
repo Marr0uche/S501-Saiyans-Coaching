@@ -9,7 +9,8 @@ use App\Models\AcheterModel;
 use App\Models\PromotionModel;
 
 
-class PromotionController extends Controller{
+class PromotionController extends Controller
+{
 
     public function __construct(){
 		helper(filenames: ['form']);

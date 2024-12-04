@@ -9,7 +9,7 @@ class AuthentificationController extends Controller
 {
 	public function index()
 	{
-		return view('Utilisateur/AuthentificationVue');
+		return view('Utilisateur/AuthentificationView');
 	}
 
 	public function connexion()
@@ -22,7 +22,7 @@ class AuthentificationController extends Controller
 		]);
 
 		if (!$validation->withRequest($this->request)->run()) {
-			return view('AuthentificationVue', [
+			return view('Utilisateur/AuthentificationView', [
 				'validation' => $validation,
 			]);
 		}

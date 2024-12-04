@@ -48,8 +48,8 @@
 				</select>
 			</div>
 			<div class="form-group">
-				<label for="age">Âge</label>
-				<input type="number" class="form-control" id="age" name="age" placeholder="Entrez votre âge" required>
+				<label>Date de naissance :</label>
+				<input type="date" class="form-control" id="datenaissance" name="datenaissance" placeholder="Entrez votre date de naissance" required>
 			</div>
 			<div class="form-group">
 				<label for="taille">Taille (cm)</label>
