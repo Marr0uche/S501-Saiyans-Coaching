@@ -24,27 +24,27 @@ class Database extends Config
      *
      * @var array<string, mixed>
      */
-    public $default = [
-        'DSN'      => '',
-        'hostname' => 'localhost',
-        'username' => 'sae_user',
-        'password' => 'mdpsae',
-        'database' => 'sae',
-        'dbdriver' => 'Postgre',
-        'dbprefix' => '',
-        'pConnect' => false,
-        'db_debug' => (ENVIRONMENT !== 'production'),
-        'cache_on' => false,
-        'cachedir' => '',
-        'char_set' => 'utf8',
-        'dbcollat' => 'utf8_general_ci',
-        'swap_pre' => '',
-        'encrypt' => false,
-        'compress' => false,
-        'stricton' => false,
-        'failover' => [],
-        'save_queries' => true,
-        'port' => 5432
+    public array $default = [
+        'DSN'          => '',
+        'hostname'     => 'localhost',
+        'username'     => 'sae_user',
+        'password'     => 'mdpsae',
+        'database'     => 'sae',
+        'DBDriver'     => 'Postgre',
+        'DBPrefix'     => '',
+        'pConnect'     => false,
+        'DBDebug'      => true,
+        'charset'      => 'utf8',
+        'DBCollat'     => 'utf8_general_ci',
+        'swapPre'      => '',
+        'encrypt'      => false,
+        'compress'     => false,
+        'strictOn'     => false,
+        'failover'     => [],
+        'port'         => 5432,
+        'options'      => [
+            'sslmode' => 'disable',
+        ],
     ];
 
     public function __construct()

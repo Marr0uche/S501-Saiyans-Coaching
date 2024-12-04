@@ -1,0 +1,278 @@
+INFO - 2024-12-04 09:27:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-04 09:27:44 --> InvalidArgumentException: You have not selected a database type to connect to.
+[Method: POST, Route: authentification/connexion]
+in SYSTEMPATH/Database/Database.php on line 54.
+ 1 SYSTEMPATH/Database/Config.php(84): CodeIgniter\Database\Database->load()
+ 2 SYSTEMPATH/Model.php(155): CodeIgniter\Database\Config::connect()
+ 3 APPPATH/Controllers/AuthentificationController.php(33): CodeIgniter\Model->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthentificationController->connexion()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 09:28:36 --> InvalidArgumentException: You have not selected a database type to connect to.
+[Method: POST, Route: authentification/connexion]
+in SYSTEMPATH/Database/Database.php on line 54.
+ 1 SYSTEMPATH/Database/Config.php(84): CodeIgniter\Database\Database->load()
+ 2 SYSTEMPATH/Model.php(155): CodeIgniter\Database\Config::connect()
+ 3 APPPATH/Controllers/AuthentificationController.php(33): CodeIgniter\Model->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthentificationController->connexion()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 09:31:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 09:31:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 09:34:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 09:36:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 09:36:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 09:41:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 09:55:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 09:55:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 09:56:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 09:56:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 09:56:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 09:56:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 09:56:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-04 09:56:38 --> ErrorException: Undefined variable $client
+[Method: GET, Route: inscription]
+in APPPATH/Views/Utilisateur/InscriptionView.php on line 52.
+ 1 APPPATH/Views/Utilisateur/InscriptionView.php(52): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/app/Views/Utilisateur/InscriptionView.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/InscriptionController.php(12): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\InscriptionController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 09:56:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-04 09:56:55 --> ErrorException: Undefined variable $client
+[Method: GET, Route: inscription]
+in APPPATH/Views/Utilisateur/InscriptionView.php on line 52.
+ 1 APPPATH/Views/Utilisateur/InscriptionView.php(52): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/app/Views/Utilisateur/InscriptionView.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/InscriptionController.php(12): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\InscriptionController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 09:59:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-04 10:00:18 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;dateNaissance&quot; of relation &quot;client&quot; does not exist
+LINE 1: ...&quot;prenom&quot;, &quot;mail&quot;, &quot;motdepasse&quot;, &quot;mobile&quot;, &quot;sexe&quot;, &quot;dateNaiss...
+                                                             ^ in /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:204
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(204): pg_query()
+#2 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+#5 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/BaseModel.php(840): CodeIgniter\Model->doInsert()
+#7 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Model.php(802): CodeIgniter\BaseModel->insert()
+#8 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/app/Controllers/InscriptionController.php(52): CodeIgniter\Model->insert()
+#9 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\InscriptionController->creer()
+#10 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#11 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#12 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#14 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#15 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#16 {main}
+CRITICAL - 2024-12-04 10:00:18 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column &quot;dateNaissance&quot; of relation &quot;client&quot; does not exist
+LINE 1: ...&quot;prenom&quot;, &quot;mail&quot;, &quot;motdepasse&quot;, &quot;mobile&quot;, &quot;sexe&quot;, &quot;dateNaiss...
+                                                             ^
+[Method: POST, Route: inscription/creer]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 5 APPPATH/Controllers/InscriptionController.php(52): CodeIgniter\Model->insert()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\InscriptionController->creer()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 10:00:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column &quot;dateNaissance&quot; of relation &quot;client&quot; does not exist
+LINE 1: ...&quot;prenom&quot;, &quot;mail&quot;, &quot;motdepasse&quot;, &quot;mobile&quot;, &quot;sexe&quot;, &quot;dateNaiss...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 209.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 6 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 7 APPPATH/Controllers/InscriptionController.php(52): CodeIgniter\Model->insert()
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\InscriptionController->creer()
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH/rewrite.php(44): require_once('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 10:00:18 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  column &quot;dateNaissance&quot; of relation &quot;client&quot; does not exist
+LINE 1: ...&quot;prenom&quot;, &quot;mail&quot;, &quot;motdepasse&quot;, &quot;mobile&quot;, &quot;sexe&quot;, &quot;dateNaiss...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 204.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(204): pg_query()
+ 3 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 4 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 6 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 8 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 9 APPPATH/Controllers/InscriptionController.php(52): CodeIgniter\Model->insert()
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\InscriptionController->creer()
+11 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+12 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+13 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+16 SYSTEMPATH/rewrite.php(44): require_once('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 10:02:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-04 10:02:56 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;datenaissance&quot; of relation &quot;client&quot; violates not-null constraint
+DETAIL:  Failing row contains (5, f, Ledoux, Gaétan, gaetanldx@hotmail.com, $2y$10$wrzthftXbpsHmdvjSA3e7uXLSbmfDhBWdAka7FvIyX2.njkjRcc8C, 0768836706, Homme, 174, 78, a1a4c1048689624fe8a50580123de183, null). in /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:204
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(204): pg_query()
+#2 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+#5 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/BaseModel.php(840): CodeIgniter\Model->doInsert()
+#7 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Model.php(802): CodeIgniter\BaseModel->insert()
+#8 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/app/Controllers/InscriptionController.php(52): CodeIgniter\Model->insert()
+#9 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\InscriptionController->creer()
+#10 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#11 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#12 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#14 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#15 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#16 {main}
+CRITICAL - 2024-12-04 10:02:56 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  null value in column &quot;datenaissance&quot; of relation &quot;client&quot; violates not-null constraint
+DETAIL:  Failing row contains (5, f, Ledoux, Gaétan, gaetanldx@hotmail.com, $2y$10$wrzthftXbpsHmdvjSA3e7uXLSbmfDhBWdAka7FvIyX2.njkjRcc8C, 0768836706, Homme, 174, 78, a1a4c1048689624fe8a50580123de183, null).
+[Method: POST, Route: inscription/creer]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 5 APPPATH/Controllers/InscriptionController.php(52): CodeIgniter\Model->insert()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\InscriptionController->creer()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 10:02:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  null value in column &quot;datenaissance&quot; of relation &quot;client&quot; violates not-null constraint
+DETAIL:  Failing row contains (5, f, Ledoux, Gaétan, gaetanldx@hotmail.com, $2y$10$wrzthftXbpsHmdvjSA3e7uXLSbmfDhBWdAka7FvIyX2.njkjRcc8C, 0768836706, Homme, 174, 78, a1a4c1048689624fe8a50580123de183, null).
+in SYSTEMPATH/Database/Postgre/Connection.php on line 209.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 6 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 7 APPPATH/Controllers/InscriptionController.php(52): CodeIgniter\Model->insert()
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\InscriptionController->creer()
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH/rewrite.php(44): require_once('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 10:02:56 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;datenaissance&quot; of relation &quot;client&quot; violates not-null constraint
+DETAIL:  Failing row contains (5, f, Ledoux, Gaétan, gaetanldx@hotmail.com, $2y$10$wrzthftXbpsHmdvjSA3e7uXLSbmfDhBWdAka7FvIyX2.njkjRcc8C, 0768836706, Homme, 174, 78, a1a4c1048689624fe8a50580123de183, null).
+in SYSTEMPATH/Database/Postgre/Connection.php on line 204.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(204): pg_query()
+ 3 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 4 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 6 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 8 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 9 APPPATH/Controllers/InscriptionController.php(52): CodeIgniter\Model->insert()
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\InscriptionController->creer()
+11 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+12 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+13 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+16 SYSTEMPATH/rewrite.php(44): require_once('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 10:03:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 10:04:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 10:05:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 10:05:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 10:05:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 10:05:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 10:05:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 10:06:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-04 10:06:19 --> ErrorException: Undefined array key "dateNaissance"
+[Method: GET, Route: profile]
+in APPPATH/Views/Utilisateur/ProfileView.php on line 46.
+ 1 APPPATH/Views/Utilisateur/ProfileView.php(46): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/app/Views/Utilisateur/ProfileView.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/ProfileController.php(25): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProfileController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 10:06:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-04 10:06:40 --> ErrorException: Undefined array key "dateNaissance"
+[Method: GET, Route: profile]
+in APPPATH/Views/Utilisateur/ProfileView.php on line 46.
+ 1 APPPATH/Views/Utilisateur/ProfileView.php(46): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/app/Views/Utilisateur/ProfileView.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/ProfileController.php(25): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProfileController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 10:07:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-04 10:07:13 --> ErrorException: Undefined array key "dateNaissance"
+[Method: GET, Route: profile]
+in APPPATH/Views/Utilisateur/ProfileView.php on line 46.
+ 1 APPPATH/Views/Utilisateur/ProfileView.php(46): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/app/Views/Utilisateur/ProfileView.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/ProfileController.php(25): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProfileController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 10:07:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 10:08:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
