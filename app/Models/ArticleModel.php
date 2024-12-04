@@ -12,7 +12,8 @@ class ArticleModel extends Model
 		'titredocument',
 		'descriptiondocument',
 		'datepublication',
-        'image'
+        'image',
+        'blog'
     ];
 
     protected $returnType = 'array';

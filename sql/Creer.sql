@@ -20,7 +20,7 @@ CREATE TABLE Client (
     motDePasse  VARCHAR(255)NOT NULL ,
     mobile      VARCHAR(15)NOT NULL,
     sexe        VARCHAR(10)NOT NULL,
-    age         INT NOT NULL,
+    datenaissance DATE NOT NULL,
     taille      FLOAT NOT NULL,
     poidsdecorps FLOAT NOT NULL,
     token VARCHAR(255)
@@ -84,7 +84,8 @@ CREATE TABLE Appliquer(
 -- Table Article : hérite de Document
 CREATE TABLE Article (
     DatePublication TIMESTAMP,
-    Image VARCHAR(255)
+    Image VARCHAR(255),
+    blog BOOLEAN
 )INHERITS (Document);
 
 -- Table Acheter : relation entre Client et Produit
