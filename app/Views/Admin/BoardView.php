@@ -42,11 +42,30 @@
 			</div>
 		</div>
 
-		<h3 class="mt-5">Liste des Utilisateurs</h3>
-		<table class="table table-bordered table-striped mt-3">
+		<h3 class="mt-5">Filtres de Recherche</h3>
+		<div class="row mb-4">
+			<div class="col-md-3">
+				<input type="text" id="filterName" class="form-control" placeholder="Rechercher par Nom">
+			</div>
+			<div class="col-md-3">
+				<input type="text" id="filterPrenom" class="form-control" placeholder="Rechercher par Prénom">
+			</div>
+			<div class="col-md-3">
+				<select id="filterSexe" class="form-select">
+					<option value="">Tous les sexes</option>
+					<option value="Homme">Homme</option>
+					<option value="Femme">Femme</option>
+				</select>
+			</div>
+			<div class="col-md-3">
+				<input type="number" id="filterAge" class="form-control" placeholder="Rechercher par Âge">
+			</div>
+		</div>
+
+		<h3>Liste des Utilisateurs</h3>
+		<table class="table table-bordered table-striped mt-3" id="clientsTable">
 			<thead>
 				<tr>
-					<th>#</th>
 					<th>Nom</th>
 					<th>Prénom</th>
 					<th>Email</th>
@@ -57,14 +76,13 @@
 				</tr>
 			</thead>
 			<tbody>
-				<?php foreach ($clients as $index => $client): ?>
+				<?php foreach ($clients as $client): ?>
 					<tr>
-						<td><?= $index + 1 ?></td>
-						<td><?= esc($client['nom']) ?></td>
-						<td><?= esc($client['prenom']) ?></td>
+						<td class="name"><?= esc($client['nom']) ?></td>
+						<td class="prenom"><?= esc($client['prenom']) ?></td>
 						<td><?= esc($client['mail']) ?></td>
 						<td><?= esc($client['mobile']) ?></td>
-						<td>
+						<td class="age">
 							<?php
 							$birthDate = new DateTime($client['datenaissance']);
 							$age = $birthDate->diff(new DateTime())->y;
@@ -72,7 +90,7 @@
 							?>
 						</td>
 						<td><?= esc($client['poidsdecorps']) ?></td>
-						<td><?= esc($client['sexe']) ?></td>
+						<td class="sexe"><?= esc($client['sexe']) ?></td>
 					</tr>
 				<?php endforeach; ?>
 			</tbody>
@@ -80,10 +98,46 @@
 	</div>
 
 	<script>
+		const filterName = document.getElementById('filterName');
+		const filterPrenom = document.getElementById('filterPrenom');
+		const filterSexe = document.getElementById('filterSexe');
+		const filterAge = document.getElementById('filterAge');
+		const tableRows = document.querySelectorAll('#clientsTable tbody tr');
+
+		function filterUsers() {
+			const nameValue = filterName.value.toLowerCase();
+			const prenomValue = filterPrenom.value.toLowerCase();
+			const sexeValue = filterSexe.value;
+			const ageValue = filterAge.value;
+
+			tableRows.forEach(row => {
+				const name = row.querySelector('.name').textContent.toLowerCase();
+				const prenom = row.querySelector('.prenom').textContent.toLowerCase();
+				const sexe = row.querySelector('.sexe').textContent;
+				const age = row.querySelector('.age').textContent;
+
+				const matchesName = name.includes(nameValue);
+				const matchesPrenom = prenom.includes(prenomValue);
+				const matchesSexe = !sexeValue || sexe === sexeValue;
+				const matchesAge = !ageValue || parseInt(age) === parseInt(ageValue);
+
+				if (matchesName && matchesPrenom && matchesSexe && matchesAge) {
+					row.style.display = '';
+				} else {
+					row.style.display = 'none';
+				}
+			});
+		}
+
+		filterName.addEventListener('input', filterUsers);
+		filterPrenom.addEventListener('input', filterUsers);
+		filterSexe.addEventListener('change', filterUsers);
+		filterAge.addEventListener('input', filterUsers);
+
 		const ageData = <?= json_encode(array_values($stats['ageGroups'])) ?>;
 		const sexData = <?= json_encode(array_values($stats['sexDistribution'])) ?>;
 
-		const ageChart = new Chart(document.getElementById('ageChart'), {
+		new Chart(document.getElementById('ageChart'), {
 			type: 'pie',
 			data: {
 				labels: ['< 20 ans', '20-30 ans', '31-50 ans', '> 50 ans'],
@@ -95,7 +149,7 @@
 			}
 		});
 
-		const sexChart = new Chart(document.getElementById('sexChart'), {
+		new Chart(document.getElementById('sexChart'), {
 			type: 'pie',
 			data: {
 				labels: ['Homme', 'Femme'],
