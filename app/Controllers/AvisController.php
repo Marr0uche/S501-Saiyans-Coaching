@@ -35,6 +35,9 @@ class AvisController extends Controller
 			$avis = $this->request->getPost('avis');
 			$note = $this->request->getPost('note');
 
+			log_message('info', "Avis reçu : " . $avis);
+			log_message('info', "Note reçue : " . $note);
+
 			if ($avis || $note) {
 				if ($avis) {
 					log_message('info', "Mise à jour de l'avis : " . $avis);

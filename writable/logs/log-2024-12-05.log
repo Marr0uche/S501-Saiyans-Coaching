@@ -93,3 +93,48 @@ INFO - 2024-12-05 12:59:22 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-12-05 12:59:22 --> Achat existant trouvé pour le client 6 et le produit 2 : {"idclient":"6","idproduit":"2","notetemoignage":null,"datetemoignage":null,"avistemoignage":null,"idpromotion":null}
 INFO - 2024-12-05 12:59:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-12-05 12:59:36 --> Achat existant trouvé pour le client 6 et le produit 2 : {"idclient":"6","idproduit":"2","notetemoignage":null,"datetemoignage":null,"avistemoignage":null,"idpromotion":null}
+INFO - 2024-12-05 13:21:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 13:21:51 --> Achat existant trouvé pour le client 6 et le produit 2 : {"idclient":"6","idproduit":"2","notetemoignage":null,"datetemoignage":null,"avistemoignage":null,"idpromotion":null}
+INFO - 2024-12-05 13:22:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 13:22:13 --> Achat existant trouvé pour le client 6 et le produit 2 : {"idclient":"6","idproduit":"2","notetemoignage":null,"datetemoignage":null,"avistemoignage":null,"idpromotion":null}
+CRITICAL - 2024-12-05 13:27:17 --> ErrorException: Undefined variable $avis
+[Method: POST, Route: avis/modifier/2]
+in APPPATH/Controllers/AvisController.php on line 81.
+ 1 APPPATH/Controllers/AvisController.php(81): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AvisController->modifier()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-05 13:28:53 --> ErrorException: Undefined variable $avis
+[Method: POST, Route: avis/modifier/2]
+in APPPATH/Views/Utilisateur/AvisView.php on line 24.
+ 1 APPPATH/Views/Utilisateur/AvisView.php(24): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/app/Views/Utilisateur/AvisView.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/AvisController.php(78): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AvisController->modifier()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-05 13:30:32 --> ErrorException: Undefined variable $avis
+[Method: POST, Route: avis/modifier/2]
+in APPPATH/Views/Utilisateur/AvisView.php on line 24.
+ 1 APPPATH/Views/Utilisateur/AvisView.php(24): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/app/Views/Utilisateur/AvisView.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/AvisController.php(78): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AvisController->modifier()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php')
