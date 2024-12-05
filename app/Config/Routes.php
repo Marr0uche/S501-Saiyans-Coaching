@@ -5,7 +5,7 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'AuthentificationController::index');
+$routes->get('/', 'AccueilController::index');
 
 //Blog
 $routes->get('blog', 'ArticleController::indexBlog');
@@ -51,3 +51,7 @@ $routes->post('promotion/modifier','PromotionController::modifier');
 $routes->get('/promotion/suppression/(:num)','PromotionController::supprimer/$1');
 //Admin
 $routes->get('/admin/board', 'BoardController::board');
+
+//Contact
+$routes->get('/contact', 'ContactController::index');
+$routes->post('/contact/send', 'ContactController::send');
