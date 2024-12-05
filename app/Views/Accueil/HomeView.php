@@ -41,11 +41,11 @@
             <ul class="links">
                 <li class="li-responsive"><a href="#">Accueil</a></li>
                 <li class="li-responsive"><a href="#">À propos</a></li>
-                <li class="li-responsive"><a href="#">Programmes</a></li>
+                <li class="li-responsive"><a href="/Produit">Programmes</a></li>
                 <li class="li-responsive"><a href="#">Avant / Après</a></li>
-                <li class="li-responsive"><a href="#">Blog</a></li>
-                <li class="li-responsive"><a href="#">Actualité</a></li>
-                <li class="li-responsive"><a href="#">Contact</a></li>
+                <li class="li-responsive"><a href="/blog">Blog</a></li>
+                <li class="li-responsive"><a href="/actualites">Actualité</a></li>
+                <li class="li-responsive"><a href="/contact">FAQ/Contact</a></li>
                 <div class="divider"></div>
                 <div class="button-burger-menu">
                     <a href="#" class="action-button">Connexion</a>
@@ -132,6 +132,7 @@
                 <?php endforeach; ?>
             <?php endif; ?>
         </section>
+        <a href="/questionnaire" > aller au questionnaire </a>
     </main>
 
     <footer>
