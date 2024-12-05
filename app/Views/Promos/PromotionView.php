@@ -34,12 +34,12 @@
                             <h5 class="card-title"><?= esc($promotion['titredocument']); ?></h5>
                             <p class="card-text"><?= esc($promotion['descriptiondocument']); ?></p>
                             <p class="card-text">reductionpromo : <?= esc($promotion['reductionpromo']); ?> %</p>
-                            <p class="card-text">codepromo : <?= esc($promotion['codepromo']); ?> €</p>
-                            <a href="/promotion/suppression/<?= urlencode($promotion['idproduit']); ?>" class="btnTrash"> supp</a>
+                            <p class="card-text">codepromo : <?= esc($promotion['codepromo']); ?></p>
+                            <a href="/promotion/suppression/<?= urlencode($promotion['iddocument']); ?>" class="btnTrash"> supp</a>
                             <a href="#" class="btn btn-primary" 
                                 data-bs-toggle="modal" 
-                                data-bs-target="#produitModal" 
-                                data-id="<?= esc($promotion['idpromotion']); ?>" 
+                                data-bs-target="#PromotionModal" 
+                                data-id="<?= esc($promotion['iddocument']); ?>" 
                                 data-titre="<?= esc($promotion['titredocument']); ?>" 
                                 data-description="<?= esc($promotion['descriptiondocument']); ?>" 
                                 data-active="<?= esc($promotion['active']); ?>" 
@@ -50,7 +50,7 @@
                             </a>
                         </div>
                     <?php endforeach; ?>
-                    <a href="/promotion/ajoutview" class="btn btn-success mt-3">Ajouter un promotion</a>
+                    <a href="/promotion/ajoutview" class="btn btn-success mt-3">Ajouter une promotion</a>
                 <?php else: ?>
                     <p class="text-muted">Aucun produit disponible.</p>
                 <?php endif; ?>
@@ -124,16 +124,19 @@
                         <?= validation_show_error('code'); ?>
                     </div>
 
-                <div class="mb-3">
-                    <?= form_label('Active', 'active', ['class' => 'form-label']); ?>
-                    <?= form_checkbox('active', 'true', isset($produit['active']) && $produit['active'] === 'true'); ?>
-                    <?= validation_show_error('active'); ?>
-                </div>
+                   
+                    <div class="mb-3">
+                        <?= form_label('Active', 'active', ['class' => 'form-label']); ?>
+                        <?= form_checkbox('active', 'true', false); // Par défaut décoché ?>
+                        <?= validation_show_error('active'); ?>
+                        <span id="activeStatus"></span>
+                    </div>
 
 
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                    <?= form_submit('submit', 'Enregistrer', ['class' => 'btn btn-primary']); ?>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        <?= form_submit('submit', 'Enregistrer', ['class' => 'btn btn-primary']); ?>
+                    </div>
                 </div>
                 <?= form_close(); ?>
             </div>
@@ -142,27 +145,37 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const modal = document.getElementById('PromotionModal');
-            modal.addEventListener('show.bs.modal', function (event) {
-                const button = event.relatedTarget; // Bouton qui a déclenché la modal
-                const id = button.getAttribute('data-id');
-                const titre = button.getAttribute('data-titre');
-                const description = button.getAttribute('data-description');
-                const active = button.getAttribute('data-active');
-                const reduc = button.getAttribute('data-reduction');
-                const code = button.getAttribute('data-codepromo');
+    document.addEventListener('DOMContentLoaded', () => {
+        const modal = document.getElementById('PromotionModal');
+        modal.addEventListener('show.bs.modal', function (event) {
+            const button = event.relatedTarget; // Bouton qui a déclenché la modal
+            const id = button.getAttribute('data-id');
+            const titre = button.getAttribute('data-titre');
+            const description = button.getAttribute('data-description');
+            const active = button.getAttribute('data-active'); // Récupère la valeur de `active`
+            const reduc = button.getAttribute('data-reduction');
+            const code = button.getAttribute('data-codepromo');
 
-                // Remplir les champs de la modal
-                modal.querySelector('input[name="idpromotion"]').value = id;
-                modal.querySelector('input[name="titrepromotion"]').value = titre;
-                modal.querySelector('textarea[name="DescriptionPromotion"]').value = description;
-                modal.querySelector('input[name="reduc"]').value = reduc;
-                modal.querySelector('input[name="active"]').checked =active;
-                modal.querySelector('input[name="code"]').value = code;
-            });
+            // Remplir les champs de la modal
+            modal.querySelector('input[name="idpromotion"]').value = id;
+            modal.querySelector('input[name="titrepromotion"]').value = titre;
+            modal.querySelector('textarea[name="DescriptionPromotion"]').value = description;
+            modal.querySelector('input[name="reduc"]').value = reduc;
+            modal.querySelector('textarea[name="code"]').value = code;
+
+            // Conversion de 't' en 'true' et 'f' en 'false'
+            const activeStatus = active === 't' ? 'True' : (active === 'f' ? 'False' : 'Unknown');
+
+            // Met à jour le label avec la valeur actuelle de `active`
+            const activeStatusLabel = document.getElementById('activeStatus');
+
+            // Gérer la case à cocher pour "active"
+            const checkbox = modal.querySelector('input[name="active"]');
+            checkbox.checked = (active === 't'); // Si active est 't', la case est cochée
         });
-    </script>
+    });
+</script>
+
 </body>
 
 </html>

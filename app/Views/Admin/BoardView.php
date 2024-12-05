@@ -15,7 +15,7 @@
 	</style>
 </head>
 
-<body>
+<>
 	<div class="container mt-5">
 		<h1 class="text-center mb-4">Tableau de Bord Administrateur</h1>
 
@@ -96,6 +96,11 @@
 			</tbody>
 		</table>
 	</div>
+	<div>
+		<a href="/promo">Voir l'ensemble des promos</a>
+		<a href="produit/ajoutview">Ajouter un nouveau produit</a>
+	</div>
+	
 
 	<script>
 		const filterName = document.getElementById('filterName');

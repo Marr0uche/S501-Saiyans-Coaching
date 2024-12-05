@@ -68,7 +68,15 @@ VALUES
 	(2, 2),
 	(3, 3);
 
--- Insertion des données dans la table Produit
+INSERT INTO Document (titreDocument, descriptionDocument)
+VALUES
+    ('Promo de Noël', 'Réduction spéciale pour Noël'),
+    ('Promo de Printemps', 'Réduction pour le printemps'),
+    ('Article A', 'Description de l''article A'),
+    ('Article B', 'Description de l''article B'),
+    ('Vidéo Coaching 1', 'Description de la vidéo de coaching 1'),
+    ('Vidéo Coaching 2', 'Description de la vidéo de coaching 2');
+
 INSERT INTO
 	Produit (
 		TitreProduit,
@@ -103,122 +111,35 @@ VALUES
 		FALSE,
 		FALSE
 	);
-
--- Insertion des données dans la table Promotion
-INSERT INTO
-	Promotion (
-		idPromotion,
-		titreDocument,
-		descriptionDocument,
-		active,
-		reductionPromo,
-		codePromo
-	)
+-- Ensuite, insérez dans les autres tables
+-- Insertion dans Promotion
+INSERT INTO Promotion (idDocument,titreDocument,descriptionDocument, active, reductionPromo, codePromo)
 VALUES
-	(
-		1,
-		'Promo de Noël',
-		'Réduction spéciale pour Noël',
-		TRUE,
-		10.50,
-		'NOEL2024'
-	),
-	(
-		2,
-		'Promo de Printemps',
-		'Réduction pour le printemps',
-		TRUE,
-		15.00,
-		'SPRING2024'
-	);
+    (1,'Promo de Noël','Réduction spéciale pour Noël', TRUE, 10.50, 'NOEL2024'),
+    (2,'Promo de Printemps', 'Réduction pour le printemps', TRUE, 15.00, 'SPRING2024');
 
--- Insertion des données dans la table Appliquer
-INSERT INTO
-	Appliquer (idPromotion, idProduit)
+-- Insertion dans Article
+INSERT INTO Article (idDocument, DatePublication, Image)
 VALUES
-	(1, 1),
-	(1, 2),
-	(2, 3);
+    (3, '2024-12-01 10:00:00', 'article_a.jpg'),
+    (4, '2024-12-02 11:00:00', 'article_b.jpg');
 
--- Insertion des données dans la table Article
-INSERT INTO
-	Article (
-		idDocument,
-		titreDocument,
-		descriptionDocument,
-		DatePublication,
-		Image
-	)
+-- Insertion dans VideoCoaching
+INSERT INTO VideoCoaching (idDocument, video)
 VALUES
-	(
-		3,
-		'Article A',
-		'Description de l''article A',
-		'2024-12-01 10:00:00',
-		'article_a.jpg'
-	),
-	(
-		4,
-		'Article B',
-		'Description de l''article B',
-		'2024-12-02 11:00:00',
-		'article_b.jpg'
-	);
+    (5, 'video1.mp4'),
+    (6, 'video2.mp4');
 
--- Insertion des données dans la table Acheter
-INSERT INTO
-	Acheter (
-		idClient,
-		idProduit,
-		noteTemoignage,
-		dateTemoignage,
-		avisTemoignage,
-		idPromotion
-	)
+-- Insertion dans Appliquer
+INSERT INTO Appliquer (idDocument, idProduit)
 VALUES
-	(
-		1,
-		1,
-		5,
-		'2024-12-01 15:00:00',
-		'Super produit !',
-		1
-	),
-	(
-		2,
-		2,
-		4,
-		'2024-12-02 12:30:00',
-		'Bon rapport qualité-prix',
-		1
-	),
-	(
-		3,
-		3,
-		3,
-		'2024-12-03 14:00:00',
-		'Produit correct mais peut mieux faire',
-		2
-	);
+    (1, 1),
+    (1, 2),
+    (2, 3);
 
--- Insertion des données dans la table VideoCoaching
-INSERT INTO
-	VideoCoaching (
-		idDocument,
-		titreDocument,
-		descriptionDocument,
-		video
-	)
+-- Insertion dans Acheter
+INSERT INTO Acheter (idClient, idProduit, noteTemoignage, dateTemoignage, avisTemoignage, idDocument)
 VALUES
-	(
-		5,
-		'Vidéo Coaching 1',
-		'Description de la vidéo de coaching 1',
-		'video1.mp4'
-	),
-	(
-		6,
-		'Vidéo Coaching 2',
-		'Description de la vidéo de coaching 2',
-		'video2.mp4'
-	);
+    (1, 1, 5, '2024-12-01 15:00:00', 'Super produit !', 1),
+    (2, 2, 4, '2024-12-02 12:30:00', 'Bon rapport qualité-prix', 1),
+    (3, 3, 3, '2024-12-03 14:00:00', 'Produit correct mais peut mieux faire', 2);

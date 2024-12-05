@@ -6,25 +6,28 @@ use CodeIgniter\Model;
 
 class AcheterModel extends Model
 {
-    protected $table = 'acheter';
-    protected $primaryKey = 'idclient';
+	protected $table = 'acheter';
+	protected $primaryKey = ['idclient', 'idproduit'];
 
 	protected $useAutoIncrement = false;
 
-    protected $allowedFields = [
-        'idproduit',
+	protected $allowedFields = [
+		'idproduit',
 		'notetemoignage',
 		'datetemoignage',
 		'avistemoignage',
 		'idpromotion'
-    ];
+	];
 
 	protected $returnType = 'array';
 
-	public function getAcheter($idclient,$idproduit)
+	public function getAcheter($idclient, $idproduit)
 	{
-		return $this->where('idclient', $idclient)->where('idproduit', $idproduit)->first();
+		return $this->where('idclient', $idclient)
+			->where('idproduit', $idproduit)
+			->first();
 	}
+
 	public function getAcheterProduit($idproduit)
 	{
 		return $this->where('idproduit', $idproduit)->findAll();
@@ -37,8 +40,20 @@ class AcheterModel extends Model
 
 	public function majAcheter($idclient, $idproduit, $acheterDonnee)
 	{
-		return $this->where('idclient', $idclient)->where('idproduit', $idproduit)->set($acheterDonnee)->update();
+		$existingRow = $this->where('idclient', $idclient)
+			->where('idproduit', $idproduit)
+			->first();
+
+		if ($existingRow) {
+			return $this->where('idclient', $idclient)
+				->where('idproduit', $idproduit)
+				->set($acheterDonnee)
+				->update();
+		} else {
+			return false;
+		}
 	}
+
 
 	public function supprimerAcheter($idclient, $idproduit)
 	{
