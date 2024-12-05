@@ -87,113 +87,50 @@
                     style="color : #F4E904;">aujourd'hui</span> !</p>
             <a href="#" class="btn">Commencer maintenant !</a>
             <p class="petit-txt-hero">Nous ne partagerons jamais vos informations à qui que ce soit.</p>
+            <div class="container mt-5">
         </section>
+       
 
         <section class="offers">
             <h1>Nos offres :</h1>
         </section>
 
         <section class="wrapper">
-            <div class="pricing-table gprice-single">
-                <div class="head">
-                    <h4 class="title">Saiyan-90 JOURS</h4>
-                </div>
-                <div class="content">
-                    <div class="price">
-                        <h1>189€</h1>
-                    </div>
-                    <div class="periodicity">
-                        <p>Tous les mois</p>
-                    </div>
-                    <div class="infos">
-                        <p class="p-infos">3 mois - 189 €/mois (ou comptant 499€ via formulaire de contact)</p>
-                    </div>
-                    <div class="validity">
-                        <p class="p-validity">Valable 3 mois</p>
-                    </div>
-                    <div class="sign-up">
-                        <a href="#" class="btn bordered radius">SÉLECTIONNER</a>
-                    </div>
-                    <ul>
-                        <li>-Programmes 100% personnalisés</li>
-                        <li class="li-marg-top">-Audios et Vidéos</li>
-                        <li class="li-marg-top">-Programme alimentaire 100% personnalisé</li>
-                        <li class="li-marg-top">-Bilans bi-mensuel et mensuel</li>
-                        <li class="li-marg-top end">-Accès WatsApp 24/7</li>
 
-                    </ul>
+            <?php if (!empty($Acceuilliste)): ?>
+                <?php foreach ($Acceuilliste as $produit): ?>
+                    <div class="pricing-table gprice-single">
+                        <div class="head">
+                            <h4 class="title"><?= esc($produit['titreproduit']); ?></h4>
+                        </div>
+                        <div class="content">
+                            <div class="price">
+                                <h1> <?= esc($produit['prix']); ?> €</h1>
+                            </div>
+                            <div class="periodicity">
+                                <p>Tous les mois</p>
+                            </div>
+                            <div class="infos">
+                                <p class="p-infos"><?= esc($produit['valabilite']); ?> mois - <?= esc($produit['prix']); ?> €/mois </p>
+                            </div>
+                            <div class="validity">
+                                <p class="p-validity">Valable <?= esc($produit['valabilite']); ?> mois</p>
+                            </div>
+                            <div class="sign-up">
+                                <a href="/produit/unique/<?= urlencode($produit['idproduit']); ?>" class="btn bordered radius">SÉLECTIONNER</a>
+                            </div>
+                            <ul>
+                                <li>-Programmes 100% personnalisés</li>
+                                <li class="li-marg-top">-Audios et Vidéos</li>
+                                <li class="li-marg-top">-Programme alimentaire 100% personnalisé</li>
+                                <li class="li-marg-top">-Bilans bi-mensuel et mensuel</li>
+                                <li class="li-marg-top end">-Accès WatsApp 24/7</li>
 
-                </div>
-            </div>
-
-
-
-
-            <div class="pricing-table gprice-single">
-                <div class="head">
-                    <h4 class="title">Saiyan-90 JOURS</h4>
-                </div>
-                <div class="content">
-                    <div class="price">
-                        <h1>189€</h1>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="periodicity">
-                        <p>Tous les mois</p>
-                    </div>
-                    <div class="infos">
-                        <p class="p-infos">3 mois - 189 €/mois (ou comptant 499€ via formulaire de contact)</p>
-                    </div>
-                    <div class="validity">
-                        <p class="p-validity">Valable 3 mois</p>
-                    </div>
-                    <div class="sign-up">
-                        <a href="#" class="btn bordered radius">SÉLECTIONNER</a>
-                    </div>
-                    <ul>
-                        <li>-Programmes 100% personnalisés</li>
-                        <li class="li-marg-top">-Audios et Vidéos</li>
-                        <li class="li-marg-top">-Programme alimentaire 100% personnalisé</li>
-                        <li class="li-marg-top">-Bilans bi-mensuel et mensuel</li>
-                        <li class="li-marg-top end">-Accès WatsApp 24/7</li>
-
-                    </ul>
-
-                </div>
-            </div>
-            <div class="pricing-table gprice-single">
-                <div class="head">
-                    <h4 class="title">Saiyan-90 JOURS</h4>
-                </div>
-                <div class="content">
-                    <div class="price">
-                        <h1>189€</h1>
-                    </div>
-                    <div class="periodicity">
-                        <p>Tous les mois</p>
-                    </div>
-                    <div class="infos">
-                        <p class="p-infos">3 mois - 189 €/mois (ou comptant 499€ via formulaire de contact)</p>
-                    </div>
-                    <div class="validity">
-                        <p class="p-validity">Valable 3 mois</p>
-                    </div>
-                    <div class="sign-up">
-                        <a href="#" class="btn bordered radius">SÉLECTIONNER</a>
-                    </div>
-                    <ul>
-                        <li>-Programmes 100% personnalisés</li>
-                        <li class="li-marg-top">-Audios et Vidéos</li>
-                        <li class="li-marg-top">-Programme alimentaire 100% personnalisé</li>
-                        <li class="li-marg-top">-Bilans bi-mensuel et mensuel</li>
-                        <li class="li-marg-top end">-Accès WatsApp 24/7</li>
-
-                    </ul>
-
-                </div>
-            </div>
-
-
-
+                <?php endforeach; ?>
+            <?php endif; ?>
         </section>
     </main>
 

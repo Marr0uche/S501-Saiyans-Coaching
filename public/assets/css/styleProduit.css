@@ -1,0 +1,108 @@
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.page-container {
+    max-width: 800px;
+    margin: 20px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Section produit */
+.product-card {
+    padding: 20px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.product-description {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.product-price {
+    font-size: 18px;
+    color: #007bff;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Section avis */
+.product-reviews {
+    margin-top: 20px;
+}
+
+.review-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.product-review {
+    padding: 15px;
+    margin: 10px 0;
+    background: #f4f4f4;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review-rating {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff9500;
+}
+
+.review-date {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.review-text {
+    font-size: 14px;
+    color: #444;
+}
+
+/* Bouton retour */
+.btn-back {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-back:hover {
+    background-color: #0056b3;
+}
