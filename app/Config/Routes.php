@@ -49,9 +49,12 @@ $routes->post('/promotion/creer','PromotionController::creer');
 $routes->get('promo','PromotionController::index');
 $routes->post('promotion/modifier','PromotionController::modifier');
 $routes->get('/promotion/suppression/(:num)','PromotionController::supprimer/$1');
+
 //Admin
 $routes->get('/admin/board', 'BoardController::board');
 
 //Contact
 $routes->get('/contact', 'ContactController::index');
 $routes->post('/contact/send', 'ContactController::send');
+$routes->get('avis/modifier/(:num)', 'AvisController::modifier/$1');
+$routes->post('avis/modifier/(:num)', 'AvisController::modifier/$1');
