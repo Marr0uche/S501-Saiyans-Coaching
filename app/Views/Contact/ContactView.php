@@ -66,9 +66,19 @@
 				</div>
 
 				<div class="mb-3">
-					<label for="telephone" class="form-label">Téléphone</label>
-					<input type="text" class="form-control" id="telephone" name="telephone" value="<?= set_value('telephone'); ?>" required>
-				</div>
+					<?php 
+					echo form_label('Téléphone', 'telephone', ['class' => 'form-label']); 
+					echo form_input([
+						'type' => 'tel',
+						'name' => 'telephone',
+						'id' => 'telephone',
+						'value' => set_value('telephone'),
+						'class' => 'form-control',
+						'placeholder' => 'Votre numéro de téléphone',
+						'required' => true
+					]);
+					echo validation_show_error('telephone');
+					?>
 
 				<div class="mb-3">
 					<?php 

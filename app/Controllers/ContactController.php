@@ -66,12 +66,13 @@ class ContactController extends BaseController
 		$nom = $this->request->getPost('nom');
 		$email = $this->request->getPost('email');
 		$message = $this->request->getPost('message');
+		$telephone = $this->request->getPost('telephone');
 
 		$emailService = \Config\Services::email();
 		$emailService->setFrom($email, $nom);
-		$emailService->setTo('contact@saiyans-coaching.com'); 
+		$emailService->setTo('mohamad.marrouche20047@gmail.com'); 
 		$emailService->setSubject('Nouveau message de contact');
-		$emailService->setMessage("Nom : $nom\nEmail : $email\n\nMessage :\n$message");
+		$emailService->setMessage("Nom : $nom\n\n\nEmail : $email\n\nMessage :\n$message");
 
 		if ($emailService->send()) {
 			// Message de succès
