@@ -5,7 +5,7 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'AuthentificationController::index');
+$routes->get('/', 'AccueilController::index');
 
 //Blog
 $routes->get('blog', 'ArticleController::indexBlog');
