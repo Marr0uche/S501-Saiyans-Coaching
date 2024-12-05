@@ -639,3 +639,87 @@ INFO - 2024-12-05 12:52:44 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-12-05 12:52:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-12-05 12:52:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-12-05 12:53:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 13:13:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 13:14:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-05 13:14:37 --> ErrorException: pg_query(): Query failed: ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « promotion_pkey »
+DETAIL:  La clé « (idpromotion)=(1) » existe déjà. in /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:204
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(204): pg_query()
+#2 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+#5 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/BaseModel.php(840): CodeIgniter\Model->doInsert()
+#7 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(802): CodeIgniter\BaseModel->insert()
+#8 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+#9 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Controllers/PromotionController.php(62): App\Models\PromotionModel->creerPromotion()
+#10 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+#11 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#12 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#15 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#16 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#17 {main}
+CRITICAL - 2024-12-05 13:14:37 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « promotion_pkey »
+DETAIL:  La clé « (idpromotion)=(1) » existe déjà.
+[Method: POST, Route: promotion/creer]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 5 APPPATH/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+ 6 APPPATH/Controllers/PromotionController.php(62): App\Models\PromotionModel->creerPromotion()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-05 13:14:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « promotion_pkey »
+DETAIL:  La clé « (idpromotion)=(1) » existe déjà.
+in SYSTEMPATH/Database/Postgre/Connection.php on line 209.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 6 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 7 APPPATH/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+ 8 APPPATH/Controllers/PromotionController.php(62): App\Models\PromotionModel->creerPromotion()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-05 13:14:37 --> [Caused by] ErrorException: pg_query(): Query failed: ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « promotion_pkey »
+DETAIL:  La clé « (idpromotion)=(1) » existe déjà.
+in SYSTEMPATH/Database/Postgre/Connection.php on line 204.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(204): pg_query()
+ 3 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 4 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 6 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 8 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 9 APPPATH/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+10 APPPATH/Controllers/PromotionController.php(62): App\Models\PromotionModel->creerPromotion()
+11 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+12 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-05 13:46:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 13:46:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 13:46:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 13:50:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 13:50:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 13:51:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

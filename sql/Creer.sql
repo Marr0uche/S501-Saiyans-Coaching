@@ -88,9 +88,9 @@ CREATE TABLE
 -- Table Appliquer : Liaison entre Produit et promotion
 CREATE TABLE
 	Appliquer (
-		idPromotion INT,
+		idDocument INT,
 		idProduit INT,
-		FOREIGN KEY (idPromotion) REFERENCES Promotion (idPromotion) ON DELETE CASCADE,
+		FOREIGN KEY (idDocument) REFERENCES Document (idDocument) ON DELETE CASCADE,
 		FOREIGN KEY (idProduit) REFERENCES Produit (idProduit) ON DELETE CASCADE
 	);
 
@@ -109,8 +109,8 @@ CREATE TABLE
 		noteTemoignage INT,
 		dateTemoignage TIMESTAMP,
 		avisTemoignage VARCHAR(255),
-		idPromotion INT,
-		FOREIGN KEY (idPromotion) REFERENCES Promotion (idPromotion) ON DELETE CASCADE,
+		idDocument INT,
+		FOREIGN KEY (idDocument) REFERENCES Document (idDocument) ON DELETE CASCADE,
 		FOREIGN KEY (idClient) REFERENCES Client (idClient) ON DELETE CASCADE,
 		FOREIGN KEY (idProduit) REFERENCES Produit (idProduit) ON DELETE CASCADE
 	);
