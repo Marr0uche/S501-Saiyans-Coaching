@@ -63,6 +63,7 @@ CREATE TABLE
 		photoProduit VARCHAR(255),
 		descriptionProduit TEXT,
 		prix DECIMAL(10, 2),
+		valabilite INT,
 		affichage BOOLEAN,
 		affichageAccueil BOOLEAN
 	);

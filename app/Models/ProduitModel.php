@@ -13,6 +13,7 @@ class ProduitModel extends Model
         'photoproduit',
         'descriptionproduit',
         'prix',
+		'valabilite',
 		'affichage',
 		'affichageaccueil'
     ];
