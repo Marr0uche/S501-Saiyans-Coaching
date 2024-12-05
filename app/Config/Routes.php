@@ -60,5 +60,7 @@ $routes->post('/contact/send', 'ContactController::send');
 //Questionnaire
 $routes->get('/questionnaire', 'QuestionnaireController::index');
 $routes->post('questionnaire/traitementQuestionnaire', 'QuestionnaireController::traitementQuestionnaire');
+
+//Avis
 $routes->get('avis/modifier/(:num)', 'AvisController::modifier/$1');
 $routes->post('avis/modifier/(:num)', 'AvisController::modifier/$1');
