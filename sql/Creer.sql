@@ -79,7 +79,7 @@ CREATE TABLE
 -- Table Promotion : hérite de Document
 CREATE TABLE
 	Promotion (
-		idPromotion INT PRIMARY KEY,
+		idPromotion SERIAL,
 		active BOOLEAN NOT NULL,
 		reductionPromo DECIMAL(10, 2) NOT NULL,
 		codePromo VARCHAR(20)

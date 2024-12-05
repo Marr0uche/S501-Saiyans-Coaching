@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <h1>Créer un produit</h1>
+        <h1>Créer une promotion</h1>
     </header>
 
 	<?= form_open('/promotion/creer'); ?>
@@ -20,10 +20,10 @@
     <p>Le champ titre est requis</p>
     <br>
 
-    <?= form_label('Description de la promotion :', 'descriptionpromotion'); ?>
-    <?= form_textarea('descriptionpromotion', set_value('descriptionpromotion'), 'required'); ?>
-    <?= validation_show_error('descriptionpromotion') ?>
-    <br>
+    <?= form_label('Description de la promotion :', 'descriptiondocument'); ?>
+    <?= form_textarea('descriptiondocument', set_value('descriptiondocument'), 'required'); ?>
+    <?= validation_show_error('descriptiondocument') ?>
+
 
     <?= form_label('Active', 'active'); ?>
     <?= form_checkbox('active', 'true', set_value('active') === 'true'); ?>
@@ -41,7 +41,7 @@
     <?= validation_show_error('codepromo') ?>
     <br>
 
-    <?= form_submit('submit', 'Créer le produit'); ?>
+    <?= form_submit('submit', 'Créer la promotion'); ?>
 
     <?= form_close(); ?>
 </body>

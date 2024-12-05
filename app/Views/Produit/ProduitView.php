@@ -162,24 +162,31 @@
                             <img src="" alt="Photo actuelle" style="max-width: 100%; height: auto;" id="photo-actuelle">
                         </p>
                     </div>
-                       <!-- Checkbox: Afficher sur la page d'accueil -->
-                <div class="mb-3">
-                    <?= form_label('Afficher sur la page d\'accueil', 'affichageaccueil', ['class' => 'form-label']); ?>
-                    <?= form_checkbox('affichageaccueil', 'true', isset($produit['affichageaccueil']) && $produit['affichageaccueil'] === 'true'); ?>
-                    <?= validation_show_error('affichageaccueil'); ?>
-                </div>
+                            <!-- Checkbox: Afficher sur la page d'accueil -->
 
-                <!-- Checkbox: Afficher -->
-                <div class="mb-3">
-                    <?= form_label('Afficher', 'affichage', ['class' => 'form-label']); ?>
-                    <?= form_checkbox('affichage', 'true', isset($produit['affichage']) && $produit['affichage'] === 'true'); ?>
-                    <?= validation_show_error('affichage'); ?>
-                </div>
-           
+                    <div class="mb-3">
+                        <?= form_label('Afficher sur la page d\'accueil', 'affichageaccueil', ['class' => 'form-label']); ?>
+                        <?= form_checkbox(
+                            'affichageaccueil', 
+                            'true', 
+                            isset($produit['affichageaccueil']) && filter_var($produit['affichageaccueil'], FILTER_VALIDATE_BOOLEAN)
+                        ); ?>
+                        <?= validation_show_error('affichageaccueil'); ?>
+                    </div>
 
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                    <?= form_submit('submit', 'Enregistrer', ['class' => 'btn btn-primary']); ?>
+                    <div class="mb-3">
+                        <?= form_label('Afficher', 'affichage', ['class' => 'form-label']); ?>
+                        <?= form_checkbox(
+                            'affichage', 
+                            'true', 
+                            isset($produit['affichage']) && filter_var($produit['affichage'], FILTER_VALIDATE_BOOLEAN)
+                        ); ?>
+                        <?= validation_show_error('affichage'); ?>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        <?= form_submit('submit', 'Enregistrer', ['class' => 'btn btn-primary']); ?>
+                    </div>
                 </div>
                 <?= form_close(); ?>
             </div>
@@ -198,7 +205,7 @@
                 const photo = button.getAttribute('data-photo');
                 const prix = button.getAttribute('data-prix');
                 const affichage = button.getAttribute('data-affichage');
-                const affichageacceuil = button.getAttribute('data-affichageaccueil');
+                const affichageacceuil = button.getAttribute('data-affichageDasboard');
                 // Remplir les champs de la modal
                 modal.querySelector('input[name="idproduit"]').value = id;
                 modal.querySelector('input[name="titreproduit"]').value = titre;

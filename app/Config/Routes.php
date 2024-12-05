@@ -27,7 +27,7 @@ $routes->get('/produit/unique/(:num)', 'ProduitController::indexProduct/$1');
 $routes->get('/produit/suppression/(:num)', 'ProduitController::supprimer/$1');
 
 //Creer d'un produit
-$routes->get('/produit/ajoutview','ProduitController::creerView');
+$routes->get('produit/ajoutview','ProduitController::creerView');
 $routes->post('/produit/creer','ProduitController::creer');
 
 //modification d'un projet
@@ -45,7 +45,7 @@ $routes->post('/profile/modifier', 'ProfileController::modifier');
 
 //Promotion
 $routes->get('/promotion/ajoutview','PromotionController::creerView');
-$routes->get('/promotion/creer','PromotionController::creer');
+$routes->post('/promotion/creer','PromotionController::creer');
 $routes->get('promo','PromotionController::index');
 $routes->post('promotion/modifier','PromotionController::modifier');
 $routes->get('/promotion/suppression/(:num)','PromotionController::supprimer/$1');
