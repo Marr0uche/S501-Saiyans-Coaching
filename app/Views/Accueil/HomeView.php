@@ -28,7 +28,7 @@
                 <li><a href="#">Avant / Après</a></li>
                 <li><a href="/blog">Blog</a></li>
                 <li><a href="/actualites">Actualité</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li><a href="/contact">FAQ/Contact</a></li>
             </ul>
             
             <div class="buttons">
