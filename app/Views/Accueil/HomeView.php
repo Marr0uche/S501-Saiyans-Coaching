@@ -26,9 +26,9 @@
                 <li><a href="#">À propos</a></li>
                 <li><a href="#">Programmes</a></li>
                 <li><a href="#">Avant / Après</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Actualité</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/actualites">Actualité</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
             <div class="buttons">
                 <a href="#" class="action-button">Se connecter</a>
