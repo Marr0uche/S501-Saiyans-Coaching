@@ -232,6 +232,8 @@ INFO - 2024-12-04 10:07:19 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-12-04 10:08:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-12-04 14:19:28 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
 [Method: GET, Route: contac]
+CRITICAL - 2024-12-04 13:46:26 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
 in SYSTEMPATH/Router/Router.php on line 432.
  1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
  2 SYSTEMPATH/Router/Router.php(432): preg_match()
@@ -245,6 +247,9 @@ in SYSTEMPATH/Router/Router.php on line 432.
 10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
 CRITICAL - 2024-12-04 14:19:31 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
 [Method: GET, Route: contact]
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 13:46:41 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
 in SYSTEMPATH/Router/Router.php on line 432.
  1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
  2 SYSTEMPATH/Router/Router.php(432): preg_match()
@@ -259,6 +264,9 @@ in SYSTEMPATH/Router/Router.php on line 432.
 INFO - 2024-12-04 14:20:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-12-04 14:20:13 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
 [Method: GET, Route: contact]
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 13:46:44 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: admin/board]
 in SYSTEMPATH/Router/Router.php on line 432.
  1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
  2 SYSTEMPATH/Router/Router.php(432): preg_match()
@@ -272,6 +280,9 @@ in SYSTEMPATH/Router/Router.php on line 432.
 10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
 CRITICAL - 2024-12-04 14:23:53 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
 [Method: GET, Route: contact]
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 13:46:50 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: admin/board]
 in SYSTEMPATH/Router/Router.php on line 432.
  1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
  2 SYSTEMPATH/Router/Router.php(432): preg_match()
@@ -285,6 +296,12 @@ in SYSTEMPATH/Router/Router.php on line 432.
 10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
 CRITICAL - 2024-12-04 14:24:18 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
 [Method: GET, Route: contact]
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 13:46:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 13:46:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 13:47:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-04 13:47:05 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
 in SYSTEMPATH/Router/Router.php on line 432.
  1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
  2 SYSTEMPATH/Router/Router.php(432): preg_match()
@@ -299,3 +316,383 @@ in SYSTEMPATH/Router/Router.php on line 432.
 INFO - 2024-12-04 14:25:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-12-04 15:12:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-12-04 15:12:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 13:53:20 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:01:55 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 14:02:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 14:02:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-04 14:02:33 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:03:03 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: admin/board]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:03:10 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: admin/board]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 14:03:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-04 14:03:37 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: admin/board]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:13:16 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: admin/board]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:13:17 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: admin/board]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:13:20 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: admin/board]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 14:13:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 14:13:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-04 14:13:45 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:14:42 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:14:43 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:14:43 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:14:43 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:14:43 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:14:44 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:14:44 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:14:44 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:14:44 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:14:45 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:14:45 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:16:00 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:16:01 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:16:01 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:16:01 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:16:01 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:16:01 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:16:02 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:17:49 --> ParseError: syntax error, unexpected token "<<", expecting end of file
+[Method: GET, Route: admin/board]
+in APPPATH/Config/Routes.php on line 49.
+ 1 SYSTEMPATH/CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
