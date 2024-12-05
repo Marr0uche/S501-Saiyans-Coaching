@@ -1,34 +1,107 @@
-INFO - 2024-12-05 08:42:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-05 08:42:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-05 08:42:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-05 08:48:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-05 08:48:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-05 08:48:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-05 08:53:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-05 08:53:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-05 08:54:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-05 09:03:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-05 09:04:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-05 09:04:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-05 09:05:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-05 09:06:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-05 09:06:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-05 09:06:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-05 09:08:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-05 09:08:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-05 09:08:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-05 09:08:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-05 09:08:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-05 09:08:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-05 09:09:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-05 09:11:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-05 09:16:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-05 09:16:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-CRITICAL - 2024-12-05 09:16:59 --> BadMethodCallException: Call to undefined method App\Models\PromotionModel::majProduit
-[Method: POST, Route: promotion/modifier]
-in SYSTEMPATH/Model.php on line 932.
- 1 APPPATH/Controllers/PromotionController.php(83): CodeIgniter\Model->__call()
- 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+INFO - 2024-12-05 09:22:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-05 09:23:00 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: could not translate host name &quot;woody.iut.univ-lehavre.fr&quot; to address: Name or service not known in /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:77
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(77): pg_connect()
+#2 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\Postgre\Connection->connect()
+#3 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#4 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#5 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#6 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#7 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/app/Controllers/AuthentificationController.php(34): CodeIgniter\BaseModel->first()
+#8 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\AuthentificationController->connexion()
+#9 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#10 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#11 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#14 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#15 {main}
+CRITICAL - 2024-12-05 09:23:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: could not translate host name &quot;woody.iut.univ-lehavre.fr&quot; to address: Name or service not known
+[Method: POST, Route: authentification/connexion]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/AuthentificationController.php(34): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthentificationController->connexion()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-05 09:24:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:24:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:25:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:25:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:26:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:26:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:27:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:28:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:28:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:31:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:31:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:32:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:32:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:38:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-05 09:38:59 --> ErrorException: Undefined variable $message
+[Method: GET, Route: avis/modifier/3]
+in APPPATH/Views/errors/html/error_404.php on line 77.
+ 1 APPPATH/Views/errors/html/error_404.php(77): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/app/Views/errors/html/error_404.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/AvisController.php(33): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AvisController->modifier()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-05 09:39:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:39:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:46:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:47:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:54:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:54:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:56:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 10:03:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 10:03:21 --> Achat existant trouvé pour le client 6 et le produit 2 : {"idclient":"6","idproduit":"2","notetemoignage":null,"datetemoignage":null,"avistemoignage":null,"idpromotion":null}
+INFO - 2024-12-05 10:05:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 10:05:45 --> Achat existant trouvé pour le client 6 et le produit 2 : {"idclient":"6","idproduit":"2","notetemoignage":null,"datetemoignage":null,"avistemoignage":null,"idpromotion":null}
+INFO - 2024-12-05 12:23:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 12:23:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 12:24:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 12:24:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 12:24:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 12:24:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 12:24:58 --> Achat existant trouvé pour le client 6 et le produit 2 : {"idclient":"6","idproduit":"2","notetemoignage":null,"datetemoignage":null,"avistemoignage":null,"idpromotion":null}
+INFO - 2024-12-05 12:25:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 12:25:05 --> Achat existant trouvé pour le client 6 et le produit 2 : {"idclient":"6","idproduit":"2","notetemoignage":null,"datetemoignage":null,"avistemoignage":null,"idpromotion":null}
+INFO - 2024-12-05 12:29:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 12:29:54 --> Achat existant trouvé pour le client 6 et le produit 2 : {"idclient":"6","idproduit":"2","notetemoignage":null,"datetemoignage":null,"avistemoignage":null,"idpromotion":null}
+INFO - 2024-12-05 12:30:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 12:30:08 --> Achat existant trouvé pour le client 6 et le produit 2 : {"idclient":"6","idproduit":"2","notetemoignage":null,"datetemoignage":null,"avistemoignage":null,"idpromotion":null}
+INFO - 2024-12-05 12:59:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 12:59:13 --> Achat existant trouvé pour le client 6 et le produit 2 : {"idclient":"6","idproduit":"2","notetemoignage":null,"datetemoignage":null,"avistemoignage":null,"idpromotion":null}
+INFO - 2024-12-05 12:59:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 12:59:22 --> Achat existant trouvé pour le client 6 et le produit 2 : {"idclient":"6","idproduit":"2","notetemoignage":null,"datetemoignage":null,"avistemoignage":null,"idpromotion":null}
+INFO - 2024-12-05 12:59:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 12:59:36 --> Achat existant trouvé pour le client 6 et le produit 2 : {"idclient":"6","idproduit":"2","notetemoignage":null,"datetemoignage":null,"avistemoignage":null,"idpromotion":null}
+INFO - 2024-12-05 13:21:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 13:21:51 --> Achat existant trouvé pour le client 6 et le produit 2 : {"idclient":"6","idproduit":"2","notetemoignage":null,"datetemoignage":null,"avistemoignage":null,"idpromotion":null}
+INFO - 2024-12-05 13:22:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 13:22:13 --> Achat existant trouvé pour le client 6 et le produit 2 : {"idclient":"6","idproduit":"2","notetemoignage":null,"datetemoignage":null,"avistemoignage":null,"idpromotion":null}
+CRITICAL - 2024-12-05 13:27:17 --> ErrorException: Undefined variable $avis
+[Method: POST, Route: avis/modifier/2]
+in APPPATH/Controllers/AvisController.php on line 81.
+ 1 APPPATH/Controllers/AvisController.php(81): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AvisController->modifier()
  3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
  4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
  5 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
@@ -639,87 +712,3 @@ INFO - 2024-12-05 12:52:44 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-12-05 12:52:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-12-05 12:52:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-12-05 12:53:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-05 13:13:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-05 13:14:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-ERROR - 2024-12-05 13:14:37 --> ErrorException: pg_query(): Query failed: ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « promotion_pkey »
-DETAIL:  La clé « (idpromotion)=(1) » existe déjà. in /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:204
-Stack trace:
-#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
-#1 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(204): pg_query()
-#2 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
-#3 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
-#4 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
-#5 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
-#6 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/BaseModel.php(840): CodeIgniter\Model->doInsert()
-#7 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(802): CodeIgniter\BaseModel->insert()
-#8 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
-#9 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Controllers/PromotionController.php(62): App\Models\PromotionModel->creerPromotion()
-#10 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
-#11 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
-#12 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
-#13 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
-#14 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
-#15 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
-#16 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
-#17 {main}
-CRITICAL - 2024-12-05 13:14:37 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « promotion_pkey »
-DETAIL:  La clé « (idpromotion)=(1) » existe déjà.
-[Method: POST, Route: promotion/creer]
-in SYSTEMPATH/Database/BaseConnection.php on line 688.
- 1 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
- 2 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
- 3 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
- 4 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
- 5 APPPATH/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
- 6 APPPATH/Controllers/PromotionController.php(62): App\Models\PromotionModel->creerPromotion()
- 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
- 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
- 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
-10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
-11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
-12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
-13 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
-CRITICAL - 2024-12-05 13:14:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « promotion_pkey »
-DETAIL:  La clé « (idpromotion)=(1) » existe déjà.
-in SYSTEMPATH/Database/Postgre/Connection.php on line 209.
- 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
- 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
- 3 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
- 4 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
- 5 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
- 6 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
- 7 APPPATH/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
- 8 APPPATH/Controllers/PromotionController.php(62): App\Models\PromotionModel->creerPromotion()
- 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
-10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
-11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
-12 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
-13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
-14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
-15 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
-CRITICAL - 2024-12-05 13:14:37 --> [Caused by] ErrorException: pg_query(): Query failed: ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « promotion_pkey »
-DETAIL:  La clé « (idpromotion)=(1) » existe déjà.
-in SYSTEMPATH/Database/Postgre/Connection.php on line 204.
- 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
- 2 SYSTEMPATH/Database/Postgre/Connection.php(204): pg_query()
- 3 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
- 4 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
- 5 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
- 6 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
- 7 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
- 8 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
- 9 APPPATH/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
-10 APPPATH/Controllers/PromotionController.php(62): App\Models\PromotionModel->creerPromotion()
-11 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
-12 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
-13 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
-14 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
-15 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
-16 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
-17 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
-INFO - 2024-12-05 13:46:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-05 13:46:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-05 13:46:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-05 13:50:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-05 13:50:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2024-12-05 13:51:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
