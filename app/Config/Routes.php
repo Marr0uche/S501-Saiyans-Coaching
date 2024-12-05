@@ -55,3 +55,7 @@ $routes->get('/admin/board', 'BoardController::board');
 //Contact
 $routes->get('/contact', 'ContactController::index');
 $routes->post('/contact/send', 'ContactController::send');
+
+//Questionnaire
+$routes->get('/questionnaire', 'QuestionnaireController::index');
+$routes->post('questionnaire/traitementQuestionnaire', 'QuestionnaireController::traitementQuestionnaire');
