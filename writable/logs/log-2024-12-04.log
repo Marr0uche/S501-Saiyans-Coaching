@@ -230,6 +230,8 @@ in APPPATH/Views/Utilisateur/ProfileView.php on line 46.
 12 SYSTEMPATH/rewrite.php(44): require_once('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php')
 INFO - 2024-12-04 10:07:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-12-04 10:08:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-04 14:19:28 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: contac]
 CRITICAL - 2024-12-04 13:46:26 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
 [Method: GET, Route: dashboard]
 in SYSTEMPATH/Router/Router.php on line 432.
@@ -242,6 +244,9 @@ in SYSTEMPATH/Router/Router.php on line 432.
  7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
  9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:19:31 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: contact]
 10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
 CRITICAL - 2024-12-04 13:46:41 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
 [Method: GET, Route: dashboard]
@@ -255,6 +260,10 @@ in SYSTEMPATH/Router/Router.php on line 432.
  7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
  9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 14:20:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-04 14:20:13 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: contact]
 10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
 CRITICAL - 2024-12-04 13:46:44 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
 [Method: GET, Route: admin/board]
@@ -268,6 +277,9 @@ in SYSTEMPATH/Router/Router.php on line 432.
  7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
  9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:23:53 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: contact]
 10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
 CRITICAL - 2024-12-04 13:46:50 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
 [Method: GET, Route: admin/board]
@@ -281,6 +293,9 @@ in SYSTEMPATH/Router/Router.php on line 432.
  7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
  9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:24:18 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: contact]
 10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
 INFO - 2024-12-04 13:46:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-12-04 13:46:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
@@ -297,6 +312,10 @@ in SYSTEMPATH/Router/Router.php on line 432.
  7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
  9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 14:25:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 15:12:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 15:12:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
 CRITICAL - 2024-12-04 13:53:20 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
 [Method: GET, Route: dashboard]

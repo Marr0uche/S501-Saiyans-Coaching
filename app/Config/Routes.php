@@ -51,3 +51,7 @@ $routes->post('promotion/modifier','PromotionController::modifier');
 $routes->get('/promotion/suppression/(:num)','PromotionController::supprimer/$1');
 //Admin
 $routes->get('/admin/board', 'BoardController::board');
+
+//Contact
+$routes->get('/contact', 'ContactController::index');
+$routes->post('/contact/send', 'ContactController::send');
