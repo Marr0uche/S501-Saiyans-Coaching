@@ -30,8 +30,7 @@
                 <li><a href="/actualites">Actualité</a></li>
                 <li><a href="/contact">Contact</a></li>
             </ul>
-
-            <a href="/inscription">Inscription</a>
+            
             <div class="buttons">
                 <a href="authentification" class="action-button">Se connecter</a>
             </div>
