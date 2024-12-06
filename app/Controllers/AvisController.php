@@ -3,81 +3,73 @@
 namespace App\Controllers;
 
 use App\Models\AcheterModel;
-use CodeIgniter\Controller;
+use CodeIgniter\Log\Logger;
 
-class AvisController extends Controller
+class AvisController extends BaseController
 {
-	protected $acheterModel;
-
-	public function __construct()
+	public function ajouter($idProduit)
 	{
-		$this->acheterModel = new AcheterModel();
-	}
+		$logger = service('logger');
+		$logger->info("AvisController::ajouter() appelé avec idProduit = $idProduit");
 
-	public function modifier($idProduit)
-	{
 		$session = session();
-		if (!$session->has('client_id')) {
-			return redirect()->to('/authentification')->with('error', 'Vous devez être connecté pour modifier un avis.');
-		}
-
 		$idClient = $session->get('client_id');
-		$message = '';
 
-		$achatExistant = $this->acheterModel->getAcheter($idClient, $idProduit);
-		if (!$achatExistant) {
-			return view('errors/html/error_404');
+		if (!$idClient) {
+			$logger->warning("Utilisateur non authentifié. Redirection vers la page d'authentification.");
+			return redirect()->to('/authentification');
 		}
 
-		log_message('info', "Achat existant trouvé pour le client $idClient et le produit $idProduit : " . json_encode($achatExistant));
+		$acheterModel = new AcheterModel();
+
+		$achat = $acheterModel->getAcheter($idClient, $idProduit);
+		$logger->info("Vérification de l'achat pour idClient = $idClient et idProduit = $idProduit", [
+			'result' => $achat
+		]);
+
+		if (!$achat) {
+			$logger->warning("L'utilisateur $idClient n'a pas acheté le produit $idProduit. Redirection vers l'accueil.");
+			return redirect()->to('/')->with('error', 'Vous ne pouvez pas donner un avis sur un produit que vous n\'avez pas acheté.');
+		}
 
 		if ($this->request->getMethod() === 'post') {
-			$avis = $this->request->getPost('avis');
-			$note = $this->request->getPost('note');
+			$noteTemoignage = $this->request->getPost('noteTemoignage');
+			$avisTemoignage = $this->request->getPost('avisTemoignage');
+			$dateTemoignage = date('Y-m-d H:i:s');
 
-			log_message('info', "Avis reçu : " . $avis);
-			log_message('info', "Note reçue : " . $note);
+			$logger->info("Requête POST reçue. Données extraites : ", [
+				'noteTemoignage' => $noteTemoignage,
+				'avisTemoignage' => $avisTemoignage,
+				'dateTemoignage' => $dateTemoignage
+			]);
 
-			if ($avis || $note) {
-				if ($avis) {
-					log_message('info', "Mise à jour de l'avis : " . $avis);
-					$resultAvis = $this->acheterModel->update($idClient, $idProduit, ['avistemoignage' => $avis]);
-					if (!$resultAvis) {
-						log_message('error', "Échec de la mise à jour de l'avis pour le produit ID: $idProduit");
-						$message = 'Erreur lors de la mise à jour de votre avis.';
-					}
-				}
+			$supprimé = $acheterModel->supprimerAcheter($idClient, $idProduit);
+			$logger->info("Résultat de la suppression de l'ancien avis :", ['success' => $supprimé]);
 
-				if ($note) {
-					log_message('info', "Mise à jour de la note : " . $note);
-					$resultNote = $this->acheterModel->update($idClient, $idProduit, ['notetemoignage' => $note]);
-					if (!$resultNote) {
-						log_message('error', "Échec de la mise à jour de la note pour le produit ID: $idProduit");
-						$message = 'Erreur lors de la mise à jour de la note.';
-					}
-				}
+			$data = [
+				'idClient' => $idClient,
+				'idProduit' => $idProduit,
+				'notetemoignage' => $noteTemoignage,
+				'datetemoignage' => $dateTemoignage,
+				'avistemoignage' => $avisTemoignage,
+			];
 
-				if ($avis || $note) {
-					log_message('info', "Mise à jour de la date du témoignage : " . date('Y-m-d H:i:s'));
-					$resultDate = $this->acheterModel->update($idClient, $idProduit, ['datetemoignage' => date('Y-m-d H:i:s')]);
-					if (!$resultDate) {
-						log_message('error', "Échec de la mise à jour de la date pour le produit ID: $idProduit");
-						$message = 'Erreur lors de la mise à jour de la date.';
-					}
-				}
+			$result = $acheterModel->creerAcheter($data);
+			$logger->info("Résultat de l'insertion du nouvel avis :", [
+				'data' => $data,
+				'success' => $result
+			]);
 
-				if (empty($message)) {
-					log_message('info', "Avis mis à jour avec succès pour le client ID: $idClient, produit ID: $idProduit");
-					return redirect()->to('/produits/' . $idProduit)->with('success', 'Votre avis a été mis à jour avec succès.');
-				}
+			if ($result) {
+				$logger->info("Avis inséré avec succès pour idClient = $idClient et idProduit = $idProduit.");
+				return redirect()->to('/')->with('message', 'Votre avis a été enregistré avec succès.');
 			} else {
-				$message = 'Tous les champs sont obligatoires.';
+				$logger->error("Échec de l'insertion de l'avis pour idClient = $idClient et idProduit = $idProduit.");
+				return redirect()->back()->with('error', 'Une erreur est survenue. Veuillez réessayer.');
 			}
 		}
 
-		return view('Utilisateur/AvisView', [
-			'idProduit' => $idProduit,
-			'message' => $message
-		]);
+		$logger->info("Affichage du formulaire d'avis pour idProduit = $idProduit");
+		return view('Utilisateur/AvisView', ['idProduit' => $idProduit]);
 	}
 }
