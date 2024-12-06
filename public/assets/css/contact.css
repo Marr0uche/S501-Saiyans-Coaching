@@ -1,0 +1,40 @@
+:root {
+    --noir: #0C0C0C;
+    --blanc: #fff;
+    --jaune: #F4E904;
+    --gris: #737373;
+}
+
+header{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background-color: var(--noir);
+    
+}
+
+main {
+    height: 100vh;
+    background-image: url(../img/img-accueil.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+button,
+.btn {
+    background-color: yellow !important;
+    color: black !important;
+    border: var(--noir) 1px solid;
+    transition: all 0.3s;
+}
+
+button:hover,
+.btn:hover {
+    background-color: black !important;
+    color: yellow !important;
+    border : var(--blanc) 1px solid;
+}

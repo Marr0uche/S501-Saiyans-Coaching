@@ -25,11 +25,11 @@ class Database extends Config
      * @var array<string, mixed>
      */
     public array $default = [
-        'DSN'          => '',
-        'hostname'     => 'localhost',
-        'username'     => 'sae_user',
-        'password'     => 'mdpsae',
-        'database'     => 'sae',
+        'DSN'          => 'Postgre://mm221005:Mohamad12345%@woody.iut.univ-lehavre.fr:5432',
+        'hostname'     => 'woody.iut.univ-lehavre.fr',
+        'username'     => 'mm221005',
+        'password'     => 'Mohamad12345%',
+        'database'     => 'mm221005',
         'DBDriver'     => 'Postgre',
         'DBPrefix'     => '',
         'pConnect'     => false,
@@ -41,14 +41,12 @@ class Database extends Config
         'compress'     => false,
         'strictOn'     => false,
         'failover'     => [],
-        'port'         => 5432,
+        'port'         => 3306,
         'numberNative' => false,
         'dateFormat'   => [
             'date'     => 'Y-m-d',
             'datetime' => 'Y-m-d H:i:s',
-            'time'     => 'H:i:s'],
-        'options'      => [
-            'sslmode' => 'disable',
+            'time'     => 'H:i:s',
         ],
     ];
 
