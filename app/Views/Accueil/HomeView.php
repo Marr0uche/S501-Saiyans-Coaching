@@ -18,20 +18,21 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="#"><img src="<?php echo base_url('assets/img/logo.webp'); ?>" alt="Deviens un Saiyan"
+                <a href="/"><img src="<?php echo base_url('assets/img/logo.webp'); ?>" alt="Deviens un Saiyan"
                         width="80px"></a>
             </div>
             <ul class="links">
                 <li><a href="#">Accueil</a></li>
                 <li><a href="#">À propos</a></li>
-                <li><a href="#">Programmes</a></li>
+                <li><a href="/Produit">Programmes</a></li>
                 <li><a href="#">Avant / Après</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Actualité</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/actualites">Actualité</a></li>
+                <li><a href="/contact">FAQ/Contact</a></li>
             </ul>
+            
             <div class="buttons">
-                <a href="#" class="action-button">Se connecter</a>
+                <a href="authentification" class="action-button">Se connecter</a>
             </div>
 
             <div class="menu-burger-button "><i class="fa-solid fa-bars"></i></div>
@@ -48,7 +49,7 @@
                 <li class="li-responsive"><a href="/contact">FAQ/Contact</a></li>
                 <div class="divider"></div>
                 <div class="button-burger-menu">
-                    <a href="#" class="action-button">Connexion</a>
+                    <a href="authentification" class="action-button">Connexion</a>
                 </div>
             </ul>
 
