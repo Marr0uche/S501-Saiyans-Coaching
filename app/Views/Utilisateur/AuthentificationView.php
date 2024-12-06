@@ -29,6 +29,7 @@
 				<input type="password" class="form-control" id="motdepasse" name="motdepasse" placeholder="Entrez votre mot de passe" required>
 			</div>
 			<button type="submit" class="btn btn-primary">Se connecter</button>
+			<button type="submit" class="btn btn-primary">Creer un compte</button>
 		</form>
 	</div>
 </body>

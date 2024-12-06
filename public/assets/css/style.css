@@ -280,3 +280,76 @@ h4,
         grid-template-columns: 1fr;
     }
 }
+
+/* Dimensions du carrousel */
+#infoCarousel .carousel-inner {
+    height: 15px; /* Hauteur fine */
+}
+
+/* Couleurs de fond et texte */
+.carousel-item {
+    background-color: var(--gris); /* Fond gris */
+    color: var(--blanc); /* Texte blanc */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15px; /* Correspond à la hauteur fine */
+    overflow: hidden;
+}
+
+/* Texte dans la légende */
+.carousel-caption h5 {
+    font-size: 12px; /* Texte petit */
+    margin: 0;
+    color: var(--jaune); /* Texte jaune */
+}
+
+.carousel-caption p {
+    font-size: 10px; /* Texte encore plus petit */
+    margin: 0;
+    color: var(--blanc); /* Texte blanc */
+}
+
+/* Boutons de navigation */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--jaune); /* Icône jaune */
+    border-radius: 50%; /* Cercle */
+    width: 15px;
+    height: 15px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    filter: brightness(1); /* Améliore la visibilité */
+    opacity: 0.8;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1; /* Apparence plus visible au survol */
+}
+
+/* Indicateurs */
+.carousel-indicators [data-bs-target] {
+    background-color: var(--jaune); /* Jaune */
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 2px;
+}
+
+.carousel-indicators .active {
+    background-color: var(--blanc); /* Blanc pour l'indicateur actif */
+}
+
+/* Adaptation mobile */
+@media (max-width: 576px) {
+    .carousel-caption h5 {
+        font-size: 10px; /* Plus petit sur mobile */
+    }
+
+    .carousel-caption p {
+        font-size: 8px; /* Plus petit sur mobile */
+    }
+}

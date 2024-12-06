@@ -62,3 +62,7 @@ $routes->post('/contact/send', 'ContactController::send');
 
 // Avis
 $routes->match(['get', 'post'], 'avis/ajouter/(:num)', 'AvisController::ajouter/$1');
+
+//Questionnaire
+$routes->get('/questionnaire', 'QuestionnaireController::index');
+$routes->post('questionnaire/traitementQuestionnaire', 'QuestionnaireController::traitementQuestionnaire');

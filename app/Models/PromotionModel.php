@@ -27,6 +27,7 @@ class PromotionModel extends Model
 	{
 		return $this->where('active',true)->findAll();
 	}
+	
 
 	public function creerPromotion($promotionDonnee)
 	{
