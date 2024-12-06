@@ -22,7 +22,7 @@
                         width="80px"></a>
             </div>
             <ul class="links">
-                <li><a href="#">Accueil</a></li>
+                <li><a href="/">Accueil</a></li>
                 <li><a href="#">À propos</a></li>
                 <li><a href="/Produit">Programmes</a></li>
                 <li><a href="#">Avant / Après</a></li>
@@ -52,7 +52,7 @@
 
         <div class="menu-burger ">
             <ul class="links">
-                <li class="li-responsive"><a href="#">Accueil</a></li>
+                <li class="li-responsive"><a href="/">Accueil</a></li>
                 <li class="li-responsive"><a href="#">À propos</a></li>
                 <li class="li-responsive"><a href="/Produit">Programmes</a></li>
                 <li class="li-responsive"><a href="#">Avant / Après</a></li>
@@ -111,7 +111,7 @@
             <h1>Entraîne-toi comme un <span class="h1-span" style="color : #F4E904;">Saiyan</span></h1>
             <p>Progresse comme un guerrier : ta transformation commence <span class="h3-span"
                     style="color : #F4E904;">aujourd'hui</span> !</p>
-            <a href="#" class="btn">Commencer maintenant !</a>
+            <a href="/Produit" class="btn">Commencer maintenant !</a>
             <p class="petit-txt-hero">Nous ne partagerons jamais vos informations à qui que ce soit.</p>
             <div class="container mt-5">
         </section>
@@ -166,7 +166,8 @@
                     <p>Si toi aussi tu en as marre de te sentir mal dans ta peau, et que tu veux dire CIAO à tes
                         complexes :</p>
                     <h3>Rejoin les rangs !!!</h3>
-                    <a href="#" class="btn btn-why">Commencer maintenant !</a>
+                    <a href="/Produit" class="btn btn-why">Commencer maintenant !</a>
+                    <a href="/questionnaire" > aller au questionnaire </a>
                 </div>
             </div>
         </section>
@@ -293,12 +294,12 @@
                 </div>
             </div>
         </section>
-        <a href="/questionnaire" > aller au questionnaire </a>
     </main>
+    
     <footer>
         <section class="section-infos">
             <h1>Prêt à embarquer dans cette <span class="h1-span" style="color : #F4E904;">Aventure</span>?</h1>
-            <a href="#" class="btn btn-lato btn-infos">Plus d'informations</a>
+            <a href="/Produit" class="btn btn-lato btn-infos">Plus d'informations</a>
         </section>
         <section class="footers">
 

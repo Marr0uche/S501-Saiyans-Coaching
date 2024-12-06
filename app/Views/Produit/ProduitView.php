@@ -23,6 +23,12 @@
     </style>
 </head>
 <body>
+    <nav class="navbar">
+            <div class="logo">
+                <a href="/"><img src="<?php echo base_url('assets/img/logo.webp'); ?>" alt="Deviens un Saiyan"
+                        width="80px"></a>
+            </div>
+	</nav>
 <div class="container mt-5">
     <div id="infoCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">    
@@ -72,23 +78,33 @@
                             <p class="card-text">Photo : <img src="<?= esc($produit['photoproduit']); ?>" alt="Photo du produit" style="max-width: 100%; height: auto;"></p>
                             <p class="card-text">Prix : <?= esc($produit['prix']); ?> €</p>
 
-                            <a href="/produit/suppression/<?= urlencode($produit['idproduit']); ?>" class="btnTrash"> supp</a>
-                            <a href="#" class="btn btn-primary" 
-                                data-bs-toggle="modal" 
-                                data-bs-target="#produitModal" 
-                                data-id="<?= esc($produit['idproduit']); ?>" 
-                                data-titre="<?= esc($produit['titreproduit']); ?>" 
-                                data-description="<?= esc($produit['descriptionproduit']); ?>" 
-                                data-photo="<?= esc($produit['photoproduit']); ?>" 
-                                data-prix="<?= esc($produit['prix']); ?>" 
-                                data-affichage="<?= esc($produit['affichage']); ?>"
-                                data-affichageDasboard="<?= esc($produit['affichageaccueil']); ?>"
-                                onclick="event.stopPropagation();">
-                                Modifier
-                            </a>
+                            <?php
+                            $session = session();
+                            $admin = $session->get('admin');
+                            if ($admin === 't') : ?>
+                                <a href="/produit/suppression/<?= urlencode($produit['idproduit']); ?>" class="btnTrash"> supp</a>
+                                <a href="#" class="btn btn-primary" 
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#produitModal" 
+                                    data-id="<?= esc($produit['idproduit']); ?>" 
+                                    data-titre="<?= esc($produit['titreproduit']); ?>" 
+                                    data-description="<?= esc($produit['descriptionproduit']); ?>" 
+                                    data-photo="<?= esc($produit['photoproduit']); ?>" 
+                                    data-prix="<?= esc($produit['prix']); ?>" 
+                                    data-affichage="<?= esc($produit['affichage']); ?>"
+                                    data-affichageDasboard="<?= esc($produit['affichageaccueil']); ?>"
+                                    onclick="event.stopPropagation();">
+                                    Modifier
+                                </a>
+                            <?php endif; ?>
                         </div>
-                    <?php endforeach; ?>
-                    <a href="/produit/ajoutview" class="btn btn-success mt-3">Ajouter un produit</a>
+                    <?php endforeach;?>
+
+                    <?php
+                    if ($admin === 't') 
+                    {?>
+                        <a href="/produit/ajoutview" class="btn btn-success mt-3">Ajouter un produit</a>
+                    <?php } ?>
                 <?php else: ?>
                     <p class="text-muted">Aucun produit disponible.</p>
                 <?php endif; ?>

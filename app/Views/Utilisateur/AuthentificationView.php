@@ -10,6 +10,12 @@
 </head>
 
 <body>
+	<nav class="navbar">
+            <div class="logo">
+                <a href="/"><img src="<?php echo base_url('assets/img/logo.webp'); ?>" alt="Deviens un Saiyan"
+                        width="80px"></a>
+            </div>
+	</nav>
 	<div class="container">
 		<h2 class="text-center mt-5">Page de Connexion</h2>
 

@@ -30,6 +30,12 @@
 </head>
 
 <body>
+	<nav class="navbar">
+            <div class="logo">
+                <a href="/"><img src="<?php echo base_url('assets/img/logo.webp'); ?>" alt="Deviens un Saiyan"
+                        width="80px"></a>
+            </div>
+	</nav>
 	<h1>Actualitées</h1>
 
 	<div class="container mt-3">
@@ -47,7 +53,7 @@
 	<?php
 	$session = session();
 	$admin = $session->get('admin');
-	if ($admin) 
+	if ($admin === 't') 
 	{
 		?>
 		<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ajouterArticleModal">
@@ -59,6 +65,14 @@
  	foreach ($articles as $article): ?>
 		<h2><?= $article['titredocument'] ?></h2>
 		<p><?= $article['descriptiondocument'] ?></p>
+
+		<?php if($article['image'] != null)
+		{
+			$imagePath = base_url('uploads/' . $article['image']);
+			?><img src="<?= $imagePath ?>" alt="Image" class="img-fluid"><?php
+		}
+		?>
+		
 		<p>
 			<?php 
 				$date = new DateTime($article['datepublication']);
@@ -72,18 +86,8 @@
 				echo 'Publié le : ' . $formatter->format($date);
 			?>
 		</p>
-
-		<?php if($article['image'] != null)
-		{
-			$imagePath = base_url('uploads/' . $article['image']);
-			?><img src="<?= $imagePath ?>" alt="Image" class="img-fluid"><?php
-		}
-		?>
-
-		<br>
-		<br>
 		<?php
-		if ($admin) 
+		if ($admin === 't') 
 		{
 			?>
 			<button type="button" class="btn btn-primary"

@@ -12,7 +12,7 @@ class BoardController extends Controller
 		$session = session();
 		$admin = $session->get('admin');
 		$connexion = $session->get('client_id');
-		if($admin == null or $connexion === null){
+		if($admin === 'f' or $connexion === null){
 			return redirect()->to('/');
 		}
 

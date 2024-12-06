@@ -16,9 +16,7 @@
 		$session = session();
 		$admin = $session->get('admin');
 		$connexion = $session->get('client_id');
-		if ($admin == null || $connexion === null) {
-			return redirect()->to('/');
-		}
+		
 	?>
 
 	<div class="container mt-5">
