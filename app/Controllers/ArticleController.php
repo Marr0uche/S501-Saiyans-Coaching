@@ -101,8 +101,7 @@ class ArticleController extends Controller
 		];
 
 		$articleModel->creerArticle($data);
-		echo $data['datepublication'];
-		if($data['blog'] == 1)
+		if($data['blog'] === true)
 		{
 			return redirect()->to('/blog');
 		}
@@ -160,7 +159,7 @@ class ArticleController extends Controller
 		
 		$articleModel->majArticle($iddocument, $data);
 		
-		if($article['blog'] == 1)
+		if($article['blog'] == true)
 		{
 			return redirect()->to('/blog');
 		}

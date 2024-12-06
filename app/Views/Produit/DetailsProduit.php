@@ -14,6 +14,13 @@
         $client  = new ClientModel();
     ?>
 
+    <nav class="navbar">
+            <div class="logo">
+                <a href="/"><img src="<?php echo base_url('assets/img/logo.webp'); ?>" alt="Deviens un Saiyan"
+                        width="80px"></a>
+            </div>
+	</nav>
+
     <div class="page-container">
         <!-- Section produit -->
         <div class="product-card">
