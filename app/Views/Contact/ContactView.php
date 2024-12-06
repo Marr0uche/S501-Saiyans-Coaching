@@ -30,7 +30,52 @@
 </head>
 
 <body>
-<section class="container my-5">
+	<section class="container my-5">
+		<h2 class="text-center mb-4">FAQ - Questions Fréquentes</h2>
+		<div class="accordion" id="faqAccordion">
+
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="faqHeading1">
+					<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+						Quels services proposez-vous ?
+					</button>
+				</h2>
+				<div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
+					<div class="accordion-body">
+						Nous proposons des services de coaching sportif personnalisés, incluant des programmes d'entraînement, des conseils nutritionnels et des suivis adaptés à vos besoins.
+					</div>
+				</div>
+			</div>
+
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="faqHeading2">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+						Quels sont vos horaires de coaching ?
+					</button>
+				</h2>
+				<div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
+					<div class="accordion-body">
+						Je peux m'adapter à vos horaires, je sersia joignable par whatsapp !
+					</div>
+				</div>
+			</div>
+
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="faqHeading3">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+						Quels sont vos tarifs pour une séance ou un abonnement mensuel ?
+					</button>
+				</h2>
+				<div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+					<div class="accordion-body">
+						Nos tarifs varient en fonction du type de programme choisi et de la durée du suivi. Regardez notre page produits pour en savoir plus!
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<section class="container my-5">
 		<h2 class="text-center mb-4">Contactez-nous</h2>
 		<div class="row justify-content-center">
 			<div class="col-md-8">

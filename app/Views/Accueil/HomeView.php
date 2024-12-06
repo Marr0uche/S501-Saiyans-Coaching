@@ -18,20 +18,33 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="#"><img src="<?php echo base_url('assets/img/logo.webp'); ?>" alt="Deviens un Saiyan"
+                <a href="/"><img src="<?php echo base_url('assets/img/logo.webp'); ?>" alt="Deviens un Saiyan"
                         width="80px"></a>
             </div>
             <ul class="links">
                 <li><a href="#">Accueil</a></li>
                 <li><a href="#">À propos</a></li>
-                <li><a href="#">Programmes</a></li>
+                <li><a href="/Produit">Programmes</a></li>
                 <li><a href="#">Avant / Après</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Actualité</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/actualites">Actualité</a></li>
+                <li><a href="/contact">FAQ/Contact</a></li>
             </ul>
+            
             <div class="buttons">
-                <a href="#" class="action-button">Se connecter</a>
+                <?php
+                    $session = session();
+                    $client = $session->get('client_id');
+                    if($client === null){
+                        ?>
+                        <a href="authentification" class="action-button">Connexion</a>
+                        <?php
+                    }else{
+                        ?>
+                        <a href="/profile" class="action-button">Mon compte</a>
+                        <?php
+                    }
+                ?>
             </div>
 
             <div class="menu-burger-button "><i class="fa-solid fa-bars"></i></div>
@@ -41,14 +54,27 @@
             <ul class="links">
                 <li class="li-responsive"><a href="#">Accueil</a></li>
                 <li class="li-responsive"><a href="#">À propos</a></li>
-                <li class="li-responsive"><a href="#">Programmes</a></li>
+                <li class="li-responsive"><a href="/Produit">Programmes</a></li>
                 <li class="li-responsive"><a href="#">Avant / Après</a></li>
-                <li class="li-responsive"><a href="#">Blog</a></li>
-                <li class="li-responsive"><a href="#">Actualité</a></li>
-                <li class="li-responsive"><a href="#">Contact</a></li>
+                <li class="li-responsive"><a href="/blog">Blog</a></li>
+                <li class="li-responsive"><a href="/actualites">Actualité</a></li>
+                <li class="li-responsive"><a href="/contact">FAQ/Contact</a></li>
                 <div class="divider"></div>
                 <div class="button-burger-menu">
-                    <a href="#" class="action-button">Connexion</a>
+                    <?php
+                     	$session = session();
+                        $client = $session->get('client_id');
+                        if($client === null){
+                            ?>
+                                <a href="authentification" class="action-button">Connexion</a>
+                            <?php
+                        }else{
+                            ?>
+                                <a href="/profile" class="action-button">Mon compte</a>
+                            <?php
+                        }
+                    ?>
+                    
                 </div>
             </ul>
 
@@ -87,113 +113,50 @@
                     style="color : #F4E904;">aujourd'hui</span> !</p>
             <a href="#" class="btn">Commencer maintenant !</a>
             <p class="petit-txt-hero">Nous ne partagerons jamais vos informations à qui que ce soit.</p>
+            <div class="container mt-5">
         </section>
+       
 
         <section class="offers">
             <h1>Nos offres :</h1>
         </section>
 
-        <section class="wrapper offres">
-            <div class="pricing-table gprice-single">
-                <div class="head">
-                    <h4 class="title">Saiyan-90 JOURS</h4>
-                </div>
-                <div class="content">
-                    <div class="price">
-                        <h1>189€</h1>
-                    </div>
-                    <div class="periodicity">
-                        <p>Tous les mois</p>
-                    </div>
-                    <div class="infos">
-                        <p class="p-infos">3 mois - 189 €/mois (ou comptant 499€ via formulaire de contact)</p>
-                    </div>
-                    <div class="validity">
-                        <p class="p-validity">Valable 3 mois</p>
-                    </div>
-                    <div class="sign-up">
-                        <a href="#" class="btn bordered radius">SÉLECTIONNER</a>
-                    </div>
-                    <ul>
-                        <li>-Programmes 100% personnalisés</li>
-                        <li class="li-marg-top">-Audios et Vidéos</li>
-                        <li class="li-marg-top">-Programme alimentaire 100% personnalisé</li>
-                        <li class="li-marg-top">-Bilans bi-mensuel et mensuel</li>
-                        <li class="li-marg-top end">-Accès WatsApp 24/7</li>
+        <section class="wrapper">
 
-                    </ul>
+            <?php if (!empty($Acceuilliste)): ?>
+                <?php foreach ($Acceuilliste as $produit): ?>
+                    <div class="pricing-table gprice-single">
+                        <div class="head">
+                            <h4 class="title"><?= esc($produit['titreproduit']); ?></h4>
+                        </div>
+                        <div class="content">
+                            <div class="price">
+                                <h1> <?= esc($produit['prix']); ?> €</h1>
+                            </div>
+                            <div class="periodicity">
+                                <p>Tous les mois</p>
+                            </div>
+                            <div class="infos">
+                                <p class="p-infos"><?= esc($produit['valabilite']); ?> mois - <?= esc($produit['prix']); ?> €/mois </p>
+                            </div>
+                            <div class="validity">
+                                <p class="p-validity">Valable <?= esc($produit['valabilite']); ?> mois</p>
+                            </div>
+                            <div class="sign-up">
+                                <a href="/produit/unique/<?= urlencode($produit['idproduit']); ?>" class="btn bordered radius">SÉLECTIONNER</a>
+                            </div>
+                            <ul>
+                                <li>-Programmes 100% personnalisés</li>
+                                <li class="li-marg-top">-Audios et Vidéos</li>
+                                <li class="li-marg-top">-Programme alimentaire 100% personnalisé</li>
+                                <li class="li-marg-top">-Bilans bi-mensuel et mensuel</li>
+                                <li class="li-marg-top end">-Accès WatsApp 24/7</li>
 
-                </div>
-            </div>
-
-
-
-
-            <div class="pricing-table gprice-single">
-                <div class="head">
-                    <h4 class="title">Saiyan-90 JOURS</h4>
-                </div>
-                <div class="content">
-                    <div class="price">
-                        <h1>189€</h1>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="periodicity">
-                        <p>Tous les mois</p>
-                    </div>
-                    <div class="infos">
-                        <p class="p-infos">3 mois - 189 €/mois (ou comptant 499€ via formulaire de contact)</p>
-                    </div>
-                    <div class="validity">
-                        <p class="p-validity">Valable 3 mois</p>
-                    </div>
-                    <div class="sign-up">
-                        <a href="#" class="btn bordered radius">SÉLECTIONNER</a>
-                    </div>
-                    <ul>
-                        <li>-Programmes 100% personnalisés</li>
-                        <li class="li-marg-top">-Audios et Vidéos</li>
-                        <li class="li-marg-top">-Programme alimentaire 100% personnalisé</li>
-                        <li class="li-marg-top">-Bilans bi-mensuel et mensuel</li>
-                        <li class="li-marg-top end">-Accès WatsApp 24/7</li>
-
-                    </ul>
-
-                </div>
-            </div>
-            <div class="pricing-table gprice-single">
-                <div class="head">
-                    <h4 class="title">Saiyan-90 JOURS</h4>
-                </div>
-                <div class="content">
-                    <div class="price">
-                        <h1>189€</h1>
-                    </div>
-                    <div class="periodicity">
-                        <p>Tous les mois</p>
-                    </div>
-                    <div class="infos">
-                        <p class="p-infos">3 mois - 189 €/mois (ou comptant 499€ via formulaire de contact)</p>
-                    </div>
-                    <div class="validity">
-                        <p class="p-validity">Valable 3 mois</p>
-                    </div>
-                    <div class="sign-up">
-                        <a href="#" class="btn bordered radius">SÉLECTIONNER</a>
-                    </div>
-                    <ul>
-                        <li>-Programmes 100% personnalisés</li>
-                        <li class="li-marg-top">-Audios et Vidéos</li>
-                        <li class="li-marg-top">-Programme alimentaire 100% personnalisé</li>
-                        <li class="li-marg-top">-Bilans bi-mensuel et mensuel</li>
-                        <li class="li-marg-top end">-Accès WatsApp 24/7</li>
-
-                    </ul>
-
-                </div>
-            </div>
-
-
-
+                <?php endforeach; ?>
+            <?php endif; ?>
         </section>
 
         <section class="why-not-you">
@@ -330,6 +293,7 @@
                 </div>
             </div>
         </section>
+        <a href="/questionnaire" > aller au questionnaire </a>
     </main>
     <footer>
         <section class="section-infos">
