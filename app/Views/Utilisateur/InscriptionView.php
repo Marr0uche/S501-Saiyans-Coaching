@@ -63,7 +63,7 @@
 				<input type="number" class="form-control" id="taille" name="taille" placeholder="Entrez votre taille" required>
 			</div>
 			<div class="form-group">
-				<label for="poidsdecorps">Poids</label>inscrire
+				<label for="poidsdecorps">Poids</label>
 				<input type="number" class="form-control" id="poidsdecorps" name="poidsdecorps" placeholder="Entrez votre poids" required>
 			</div>
 			<button type="submit" class="btn btn-primary">S'inscrire</button>
