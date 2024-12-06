@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class AcheterModel extends Model
 {
 	protected $table = 'acheter';
-	protected $primaryKey = ['idclient', 'idproduit'];
+	protected $primaryKey = 'idclient';
 
 	protected $useAutoIncrement = false;
 
@@ -16,7 +16,7 @@ class AcheterModel extends Model
 		'notetemoignage',
 		'datetemoignage',
 		'avistemoignage',
-		'idpromotion'
+		'iddocument'
 	];
 
 	protected $returnType = 'array';
@@ -26,6 +26,14 @@ class AcheterModel extends Model
 		return $this->where('idclient', $idclient)
 			->where('idproduit', $idproduit)
 			->first();
+	}
+
+	public function getProduitsAchetes($idClient)
+	{
+		return $this->select('Acheter.idProduit, Produit.TitreProduit')
+			->join('Produit', 'Acheter.idProduit = Produit.idProduit')
+			->where('Acheter.idClient', $idClient)
+			->findAll();
 	}
 
 	public function getAcheterProduit($idproduit)

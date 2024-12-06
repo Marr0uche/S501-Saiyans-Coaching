@@ -1,0 +1,76 @@
+ERROR - 2024-12-06 08:22:48 --> ErrorException: pg_query(): Query failed: ERROR:  relation &quot;Produit&quot; does not exist
+LINE 3: JOIN &quot;Produit&quot; ON &quot;Acheter&quot;.&quot;idProduit&quot; = &quot;Produit&quot;.&quot;idProdu...
+             ^ in /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:204
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(204): pg_query()
+#2 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#5 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#6 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#7 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/app/Models/AcheterModel.php(36): CodeIgniter\BaseModel->findAll()
+#8 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/app/Controllers/AvisController.php(20): App\Models\AcheterModel->getProduitsAchetes()
+#9 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\AvisController->ajouter()
+#10 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#11 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#12 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#14 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#15 /mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#16 {main}
+CRITICAL - 2024-12-06 08:22:48 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  relation &quot;Produit&quot; does not exist
+LINE 3: JOIN &quot;Produit&quot; ON &quot;Acheter&quot;.&quot;idProduit&quot; = &quot;Produit&quot;.&quot;idProdu...
+             ^
+[Method: GET, Route: avis/ajouter]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 4 APPPATH/Models/AcheterModel.php(36): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH/Controllers/AvisController.php(20): App\Models\AcheterModel->getProduitsAchetes()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AvisController->ajouter()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-06 08:22:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  relation &quot;Produit&quot; does not exist
+LINE 3: JOIN &quot;Produit&quot; ON &quot;Acheter&quot;.&quot;idProduit&quot; = &quot;Produit&quot;.&quot;idProdu...
+             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 209.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 6 APPPATH/Models/AcheterModel.php(36): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH/Controllers/AvisController.php(20): App\Models\AcheterModel->getProduitsAchetes()
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AvisController->ajouter()
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH/rewrite.php(44): require_once('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-06 08:22:48 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  relation &quot;Produit&quot; does not exist
+LINE 3: JOIN &quot;Produit&quot; ON &quot;Acheter&quot;.&quot;idProduit&quot; = &quot;Produit&quot;.&quot;idProdu...
+             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 204.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(204): pg_query()
+ 3 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 4 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 6 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 8 APPPATH/Models/AcheterModel.php(36): CodeIgniter\BaseModel->findAll()
+ 9 APPPATH/Controllers/AvisController.php(20): App\Models\AcheterModel->getProduitsAchetes()
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AvisController->ajouter()
+11 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+12 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+13 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+16 SYSTEMPATH/rewrite.php(44): require_once('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php')
