@@ -16,7 +16,7 @@ class AcheterModel extends Model
 		'notetemoignage',
 		'datetemoignage',
 		'avistemoignage',
-		'idpromotion'
+		'iddocument'
 	];
 
 	protected $returnType = 'array';

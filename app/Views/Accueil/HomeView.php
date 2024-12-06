@@ -32,7 +32,19 @@
             </ul>
             
             <div class="buttons">
-                <a href="authentification" class="action-button">Se connecter</a>
+                <?php
+                    $session = session();
+                    $client = $session->get('client_id');
+                    if($client === null){
+                        ?>
+                        <a href="authentification" class="action-button">Connexion</a>
+                        <?php
+                    }else{
+                        ?>
+                        <a href="/profile" class="action-button">Mon compte</a>
+                        <?php
+                    }
+                ?>
             </div>
 
             <div class="menu-burger-button "><i class="fa-solid fa-bars"></i></div>
@@ -49,7 +61,20 @@
                 <li class="li-responsive"><a href="/contact">FAQ/Contact</a></li>
                 <div class="divider"></div>
                 <div class="button-burger-menu">
-                    <a href="authentification" class="action-button">Connexion</a>
+                    <?php
+                     	$session = session();
+                        $client = $session->get('client_id');
+                        if($client === null){
+                            ?>
+                                <a href="authentification" class="action-button">Connexion</a>
+                            <?php
+                        }else{
+                            ?>
+                                <a href="/profile" class="action-button">Mon compte</a>
+                            <?php
+                        }
+                    ?>
+                    
                 </div>
             </ul>
 

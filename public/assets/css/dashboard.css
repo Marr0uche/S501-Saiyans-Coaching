@@ -1,0 +1,67 @@
+body {
+	background: linear-gradient(to right, #F4E904, #121212);
+	color: #fff;
+	font-family: Arial, sans-serif;
+}
+
+h1, h3, h5 {
+	color: #F4E904;
+}
+
+.container {
+	background: rgba(18, 18, 18, 0.95);
+	border-radius: 15px;
+	padding: 20px;
+}
+
+.card {
+	background-color: #1e1e1e;
+	border: none;
+	border-radius: 10px;
+	color: #fff;
+}
+
+.card h5 {
+	color: #F4E904;
+}
+
+.table-responsive {
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.table th, .table td {
+	text-align: center;
+	background-color: #fff;
+	color: #121212;
+}
+
+.chart-container {
+	margin: auto;
+	width: 90%;
+	max-width: 300px;
+}
+
+input, select, .form-control {
+	border: 1px solid #F4E904;
+	border-radius: 5px;
+	background: #121212;
+	color: #fff;
+}
+
+input::placeholder, select option {
+	color: #ccc;
+}
+
+button {
+	background: linear-gradient(to right, #F4E904, #121212);
+	border: none;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 25px;
+	cursor: pointer;
+}
+
+button:hover {
+	background: linear-gradient(to right, #121212, #F4E904);
+}

@@ -7,6 +7,8 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'AccueilController::index');
 
+$routes->get('/accueil', 'AccueilController::index');
+
 //Blog
 $routes->get('blog', 'ArticleController::indexBlog');
 $routes->post('blog/nouveauTraitement', 'ArticleController::nouveauTraitement');

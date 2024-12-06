@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Connexion</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel = "stylesheet" href="<?php echo base_url('assets/css/Connexion.css'); ?>">	
 </head>
 
 <body>
@@ -29,7 +30,9 @@
 				<input type="password" class="form-control" id="motdepasse" name="motdepasse" placeholder="Entrez votre mot de passe" required>
 			</div>
 			<button type="submit" class="btn btn-primary">Se connecter</button>
-			<button type="submit" class="btn btn-primary">Creer un compte</button>
+			<button type="submit" class="btn btn-primary" onclick="window.location='inscription'">Creer un compte</button>
+
+
 		</form>
 	</div>
 </body>
