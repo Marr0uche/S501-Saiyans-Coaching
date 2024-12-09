@@ -63,7 +63,10 @@
                             onclick="window.location='/produit/unique/<?= urlencode($produit['idproduit']); ?>'">
                             <h5 class="card-title"><?= esc($produit['titreproduit']); ?></h5>
                             <p class="card-text"><?= esc($produit['descriptionproduit']); ?></p>
-                            <p class="card-text">Photo : <img src="<?= esc($produit['photoproduit']); ?>" alt="Photo du produit" style="max-width: 100%; height: auto;"></p>
+                            <?php
+                                $imagePath = base_url('uploads/' . $produit['photoproduit']);
+                                ?><img src="<?= $imagePath ?>" alt="Image" class="img-fluid"><?php
+                            ?>
                             <p class="card-text">Prix : <?= esc($produit['prix']); ?> €</p>
                         </div>
                     <?php endforeach;?>
