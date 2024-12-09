@@ -70,3 +70,6 @@ $routes->match(['get', 'post'], 'avis/ajouter/(:num)', 'AvisController::ajouter/
 //Questionnaire
 $routes->get('/questionnaire', 'QuestionnaireController::index');
 $routes->post('questionnaire/traitementQuestionnaire', 'QuestionnaireController::traitementQuestionnaire');
+
+// A propos
+$routes->get('/A_propos', 'AProposController::index');
