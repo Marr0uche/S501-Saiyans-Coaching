@@ -111,7 +111,7 @@ class ProduitController extends Controller{
         $data = [
             'titreproduit' => $this->request->getPost('Titre'),
             'descriptionproduit' => $this->request->getPost('descriptionproduit'),
-            'active' => $this->request->getPost('prix'),
+            'prix' => $this->request->getPost('prix'),
             'affichageaccueil' => $this->request->getPost('dashboard') === 'true', // Assurez-vous que c'est un booléen
             'affichage' => $this->request->getPost('Afficher') === 'true'  // Assurez-vous que c'est un booléen
         ];

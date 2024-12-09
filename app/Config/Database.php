@@ -27,9 +27,9 @@ class Database extends Config
   	public $default = [
 		'DSN'          => '',
 		'hostname'     => 'localhost',
-		'username'     => 'sae_user', // ou votre nom d'utilisateur DB
-		'password'     => 'mdpsae',
-		'database'     => 'sae', // ou le nom de votre DB
+		'username'     => 'postgres', // ou votre nom d'utilisateur DB
+		'password'     => '',
+		'database'     => 'sayancoaching', // ou le nom de votre DB
 		'DBDriver'     => 'Postgre',
 		'DBPrefix'     => '',
 		'pConnect'     => false,
