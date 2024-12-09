@@ -101,7 +101,7 @@ class ArticleController extends Controller
 		];
 
 		$articleModel->creerArticle($data);
-		if($data['blog'] === true)
+		if($data['blog'] === 'true')
 		{
 			return redirect()->to('/blog');
 		}
