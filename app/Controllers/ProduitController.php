@@ -44,8 +44,12 @@ class ProduitController extends Controller{
         $product = new ProduitModel();
         $promotion = new PromotionModel();
 
+		$configPager = config(Pager::class);
+		$perPage = 2;
+		
+
         // Utilisation de la méthode paginate
-        $productListe = $product->getProduitAffichage();
+        $productListe = $product->findAll();
         $promotionListe= $promotion->getActivePromotion();
 
         // Passer les données à la vue
@@ -62,14 +66,19 @@ class ProduitController extends Controller{
         $product = new ProduitModel();
         $achat = new AcheterModel();
 
-        $listeAchat = $achat->getAcheterProduit($idproduit);
+		$perPage = 3;
+		$prod = $product->getProduit($idproduit);
 
-        $prod = $product->getProduit($idproduit);
+
+        $listeAchat = $achat->where('idproduit', $idproduit)->paginate($perPage,'group_achats');
+
+   	 	$pager = $achat->pager;
 
         // Passer les données à la vue
         return view('Produit/DetailsProduit', [
             'produit' => $prod,
-            'achats' => $listeAchat
+            'achats' => $listeAchat,
+			'pager' => $pager
         ]);
     }
     public function supprimer($idProduit)

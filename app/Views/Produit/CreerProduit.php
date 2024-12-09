@@ -6,47 +6,45 @@
     <title>Créer un produit</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="/assets/css/StyleNavbar.css" rel="stylesheet">
-    <link href="/assets/css/ajout_taches.css" rel="stylesheet">
+    <link href="/assets/css/creerProduit.css" rel="stylesheet">
+	
 </head>
 <body>
     <header>
         <h1>Créer un produit</h1>
     </header>
 
-	<?= form_open('/produit/creer', ['enctype' => 'multipart/form-data']); ?>
-    <?= form_label('Titre du produit :', 'Titre'); ?>
-    <?= form_input('Titre', set_value('Titre'), 'required'); ?>
-    <?= validation_show_error('Titre') ?>
-    <p>Le champ titre est requis</p>
-    <br>
+<form action="/produit/creer" method="post" enctype="multipart/form-data">
+    <label for="Titre">Titre du produit :</label>
+    <input type="text" id="Titre" name="Titre" value="<?= set_value('Titre') ?>" required>
+    <p class="error"><?= validation_show_error('Titre') ?></p>
 
-    <?= form_label('Description du produit :', 'descriptionproduit'); ?>
-    <?= form_textarea('descriptionproduit', set_value('descriptionproduit'), 'required'); ?>
-    <?= validation_show_error('descriptionproduit') ?>
-    <br>
+    <label for="descriptionproduit">Description du produit :</label>
+    <textarea id="descriptionproduit" name="descriptionproduit" required><?= set_value('descriptionproduit') ?></textarea>
+    <p class="error"><?= validation_show_error('descriptionproduit') ?></p>
 
-    <?= form_label('Prix :', 'prix'); ?>
-    <?= form_input('prix', set_value('prix'),'required'); ?>
-    <?= validation_show_error('prix') ?>
-    <br>
+    <label for="prix">Prix :</label>
+    <input type="text" id="prix" name="prix" value="<?= set_value('prix') ?>" required>
+    <p class="error"><?= validation_show_error('prix') ?></p>
 
-    <?= form_label('Choisir une image :', 'fichier'); ?>
-    <?= form_upload('fichier'); ?>
-    <?= validation_show_error('fichier'); ?>
-    <br>
+    <label for="fichier">Choisir une image :</label>
+    <input type="file" id="fichier" name="fichier">
+    <p class="error"><?= validation_show_error('fichier') ?></p>
 
-    <?= form_label('Afficher sur le dashboard', 'dashboard'); ?>
-    <?= form_checkbox('dashboard', 'true', set_value('dashboard') === 'true'); ?>
-    <?= validation_show_error('dashboard'); ?>
-    <br>
+    <label>
+        <input type="checkbox" name="dashboard" value="true" <?= set_value('dashboard') === 'true' ? 'checked' : '' ?>>
+        Afficher sur le dashboard
+    </label>
+    <p class="error"><?= validation_show_error('dashboard') ?></p>
 
-    <?= form_label('Afficher', 'Afficher'); ?>
-    <?= form_checkbox('Afficher', 'true', set_value('Afficher') === 'true'); ?>
-    <?= validation_show_error('Afficher'); ?>
-    <br>
+    <label>
+        <input type="checkbox" name="Afficher" value="true" <?= set_value('Afficher') === 'true' ? 'checked' : '' ?>>
+        Afficher
+    </label>
+    <p class="error"><?= validation_show_error('Afficher') ?></p>
 
-    <?= form_submit('submit', 'Créer le produit'); ?>
+    <input type="submit" value="Créer le produit">
+</form>
 
-    <?= form_close(); ?>
 </body>
 </html>
