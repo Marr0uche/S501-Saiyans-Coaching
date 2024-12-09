@@ -53,8 +53,8 @@
 				<div class="card shadow-sm rounded-4 bg-gradient text-white">
 					<div class="card-body">
 						<h5 class="card-title">Poids Moyen par Sexe</h5>
-						<p>Hommes : <strong><?= round($stats['averageWeight']['Homme'], 2) ?> kg</strong></p>
-						<p>Femmes : <strong><?= round($stats['averageWeight']['Femme'], 2) ?> kg</strong></p>
+						<p>Hommes : <strong id="poidsHomme"><?= round($stats['averageWeight']['Homme'], 2) ?> kg</strong></p>
+						<p>Femmes : <strong id="poidsFemme"><?= round($stats['averageWeight']['Femme'], 2) ?> kg</strong></p>
 					</div>
 				</div>
 			</div>
@@ -229,6 +229,79 @@
 			filterPrenom.addEventListener('input', filterUsers);
 			filterSexe.addEventListener('change', filterUsers);
 			filterAge.addEventListener('input', filterUsers);
+		</script>
+
+		<script>
+			const poidsHommeElement = document.getElementById('poidsHomme'); // Élément pour poids moyen des hommes
+			const poidsFemmeElement = document.getElementById('poidsFemme'); // Élément pour poids moyen des femmes
+
+			// Fonction pour mettre à jour les poids moyens en fonction des filtres
+			function updateWeights() {
+				const visibleRows = Array.from(document.querySelectorAll('#clientsTable tbody tr'))
+					.filter(row => row.style.display !== 'none'); // Lignes visibles après filtrage
+
+				let totalPoidsHomme = 0;
+				let totalPoidsFemme = 0;
+				let countHomme = 0;
+				let countFemme = 0;
+
+				// Calcul des poids moyens pour les lignes visibles
+				visibleRows.forEach(row => {
+					const poids = parseFloat(row.querySelector('td:nth-child(6)').textContent.trim()); // Colonne Poids
+					const sexe = row.querySelector('td:nth-child(8)').textContent.trim(); // Colonne Sexe
+
+					if (sexe === 'Homme') {
+						totalPoidsHomme += poids;
+						countHomme++;
+					} else if (sexe === 'Femme') {
+						totalPoidsFemme += poids;
+						countFemme++;
+					}
+				});
+
+				// Mise à jour des poids moyens dans la carte
+				const avgPoidsHomme = countHomme > 0 ? (totalPoidsHomme / countHomme).toFixed(2) : '0';
+				const avgPoidsFemme = countFemme > 0 ? (totalPoidsFemme / countFemme).toFixed(2) : '0';
+
+				poidsHommeElement.textContent = `${avgPoidsHomme} kg`;
+				poidsFemmeElement.textContent = `${avgPoidsFemme} kg`;
+			}
+
+			// Fonction existante pour filtrer les utilisateurs
+			function filterUsers() {
+				const filterName = document.getElementById('filterName').value.toLowerCase();
+				const filterPrenom = document.getElementById('filterPrenom').value.toLowerCase();
+				const filterSexe = document.getElementById('filterSexe').value;
+				const filterAge = document.getElementById('filterAge').value;
+
+				const tableRows = document.querySelectorAll('#clientsTable tbody tr');
+
+				tableRows.forEach(row => {
+					const name = row.querySelector('.name').textContent.toLowerCase();
+					const prenom = row.querySelector('.prenom').textContent.toLowerCase();
+					const sexe = row.querySelector('.sexe').textContent.trim();
+					const age = parseInt(row.querySelector('.age').textContent.trim(), 10);
+
+					const matchesName = !filterName || name.includes(filterName);
+					const matchesPrenom = !filterPrenom || prenom.includes(filterPrenom);
+					const matchesSexe = !filterSexe || sexe === filterSexe;
+					const matchesAge = !filterAge || parseInt(filterAge, 10) === age;
+
+					if (matchesName && matchesPrenom && matchesSexe && matchesAge) {
+						row.style.display = '';
+					} else {
+						row.style.display = 'none';
+					}
+				});
+
+				updateWeights(); // Mise à jour des poids moyens après filtrage
+			}
+
+			// Ajout des écouteurs d'événements
+			document.getElementById('filterName').addEventListener('input', filterUsers);
+			document.getElementById('filterPrenom').addEventListener('input', filterUsers);
+			document.getElementById('filterSexe').addEventListener('change', filterUsers);
+			document.getElementById('filterAge').addEventListener('input', filterUsers);
 		</script>
 	</main>
 </body>
