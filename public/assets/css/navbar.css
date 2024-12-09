@@ -1,9 +1,10 @@
 /*------------------ GLOBAL STYLES ------------------*/
-li {
+.links li{
     list-style: none; /* Supprime les puces des éléments de liste */
 }
 
-a {
+.navbar a,
+.menu-burger a {
     text-decoration: none; /* Supprime le soulignement des liens */
     color: #fff; /* Définit la couleur blanche par défaut */
     font-size: 1rem; /* Taille de police standard */
@@ -25,6 +26,7 @@ header {
 }
 
 /*------------------ NAVBAR ------------------*/
+
 .navbar {
     width: 100%;
     max-width: 1200px; /* Limite la largeur maximale */
