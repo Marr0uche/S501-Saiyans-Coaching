@@ -90,6 +90,7 @@
 						<th>Mobile</th>
 						<th>Âge</th>
 						<th>Poids (kg)</th>
+						<th>Taille (cm) </th>
 						<th>Sexe</th>
 					</tr>
 				</thead>
@@ -109,6 +110,7 @@
 									?>
 								</td>
 								<td><?= esc($client['poidsdecorps']) ?></td>
+								<td><?= esc($client['taille'])?></td>
 								<td class="sexe"><?= esc($client['sexe']) ?></td>
 							</tr>
 						<?php endif; ?>
