@@ -106,27 +106,26 @@ class ProduitController extends Controller{
         }
     
         $produitModel = new ProduitModel();
-        
+    
+        // Traitement de l'image
+        $file = $this->request->getFile('fichier');
+		$fileName = null;
+
+		if ($file && $file->isValid() && !$file->hasMoved()) {
+			$fileName = $file->getRandomName();
+			$file->move(WRITEPATH . '../public/uploads', $fileName);
+		}
+
         // Récupérer les données du formulaire
         $data = [
             'titreproduit' => $this->request->getPost('Titre'),
             'descriptionproduit' => $this->request->getPost('descriptionproduit'),
             'prix' => $this->request->getPost('prix'),
             'affichageaccueil' => $this->request->getPost('dashboard') === 'true', // Assurez-vous que c'est un booléen
-            'affichage' => $this->request->getPost('Afficher') === 'true'  // Assurez-vous que c'est un booléen
+            'affichage' => $this->request->getPost('Afficher') === 'true' , // Assurez-vous que c'est un booléen
+            'photoproduit' => $fileName
         ];
-    
-        // Traitement de l'image
-        $imageFile = $this->request->getFile('fichier');
-        if ($imageFile && $imageFile->isValid() && !$imageFile->hasMoved()) {
-            // Si une nouvelle image est téléchargée, déplacer le fichier
-            $newImagePath = 'public/assets/' . $imageFile->getName();
-            $imageFile->move('public/assets/', $imageFile->getName());
-            $photoproduit = $newImagePath;
-        } else {
-        // Si aucune image n'est téléchargée, conserver l'ancienne image
-        $photoproduit = $this->request->getPost('photoproduit'); // Utiliser l'image existante
-    }
+
         // Insérer les données dans la base de données
         $produitModel->creerProduit($data);
         return redirect()->to('/Produit');
