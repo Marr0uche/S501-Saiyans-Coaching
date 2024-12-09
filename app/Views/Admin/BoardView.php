@@ -94,40 +94,42 @@
 
         <h3 class="mt-5">Liste des Utilisateurs</h3>
         <div class="table-responsive">
-            <table class="table table-bordered table-hover text-center">
-                <thead class="table-dark">
-                    <tr>
-                        <th>Nom</th>
-                        <th>Prénom</th>
-                        <th>Email</th>
-                        <th>Mobile</th>
-                        <th>Âge</th>
-                        <th>Poids (kg)</th>
-                        <th>Sexe</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($clients as $client): ?>
+        	<table id="clientsTable" class="table table-bordered table-hover text-center">
+				<thead class="table-dark">
+					<tr>
+						<th class="name">Nom</th>
+						<th class="prenom">Prénom</th>
+						<th>Email</th>
+						<th>Mobile</th>
+						<th class="age">Âge</th>
+						<th>Poids (kg)</th>
+						<th>Taille (cm)</th>
+						<th class="sexe">Sexe</th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php foreach ($clients as $client): ?>
 						<?php if ($client['idclient'] != $connexion): ?>
-                        <tr>
-                            <td><?= esc($client['nom']) ?></td>
-                            <td><?= esc($client['prenom']) ?></td>
-                            <td><?= esc($client['mail']) ?></td>
-                            <td><?= esc($client['mobile']) ?></td>
-                            <td class="age">
-							<?php
-							$birthDate = new DateTime($client['datenaissance']);
-							$age = $birthDate->diff(new DateTime())->y;
-							echo $age;
-							?>
-								</td>
-                            <td><?= esc($client['poidsdecorps']) ?></td>
-                            <td><?= esc($client['sexe']) ?></td>
-                        </tr>
-					<?php endif; ?>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
+						<tr>
+							<td class="name"><?= esc($client['nom']) ?></td>
+							<td class="prenom"><?= esc($client['prenom']) ?></td>
+							<td><?= esc($client['mail']) ?></td>
+							<td><?= esc($client['mobile']) ?></td>
+							<td class="age">
+								<?php
+								$birthDate = new DateTime($client['datenaissance']);
+								$age = $birthDate->diff(new DateTime())->y;
+								echo $age;
+								?>
+							</td>
+							<td><?= esc($client['poidsdecorps']) ?></td>
+							<td><?= esc($client['taille']) ?></td>
+							<td class="sexe"><?= esc($client['sexe']) ?></td>
+						</tr>
+						<?php endif; ?>
+					<?php endforeach; ?>
+				</tbody>
+		</table>
         </div>
 	<script>
 		// Fonction de filtrage
@@ -146,11 +148,11 @@
 			tableRows.forEach(row => {
 				const name = row.querySelector('.name').textContent.toLowerCase();
 				const prenom = row.querySelector('.prenom').textContent.toLowerCase();
-				const sexe = row.querySelector('.sexe').textContent;
-				const age = row.querySelector('.age').textContent;
+				const sexe = row.querySelector('.sexe').textContent.trim();
+				const age = row.querySelector('.age').textContent.trim();
 
-				const matchesName = name.includes(nameValue);
-				const matchesPrenom = prenom.includes(prenomValue);
+				const matchesName = !nameValue || name.includes(nameValue);
+				const matchesPrenom = !prenomValue || prenom.includes(prenomValue);
 				const matchesSexe = !sexeValue || sexe === sexeValue;
 				const matchesAge = !ageValue || parseInt(age) === parseInt(ageValue);
 
