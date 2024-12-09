@@ -30,6 +30,15 @@
 </head>
 
 <body>
+	<header>
+	<nav class="navbar">
+            <div class="logo">
+                <a href="/"><img src="<?php echo base_url('assets/img/logo.webp'); ?>" alt="Deviens un Saiyan"
+                        width="80px"></a>
+            </div>
+	</nav>
+	</header>
+	
 	<h1>Blog</h1>
 
 	<div class="container mt-3">
@@ -47,7 +56,7 @@
 	<?php
 	$session = session();
 	$admin = $session->get('admin');
-	if ($admin) 
+	if ($admin === 't') 
 	{
 		?>
 		<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ajouterArticleModal">
@@ -61,7 +70,6 @@
 
 		<h2><?= $article['titredocument'] ?></h2>
 		<p><?= $article['descriptiondocument'] ?></p>
-		<p><?= $article['datepublication'] ?></p>
 
 		
 		<?php if($article['image'] != null)
@@ -70,10 +78,22 @@
 			?><img src="<?= $imagePath ?>" alt="Image" class="img-fluid"><?php
 		}
 		?>
-		<br>
-		<br>
+		
+		<p>
+			<?php 
+				$date = new DateTime($article['datepublication']);
+
+				$formatter = new IntlDateFormatter(
+					'fr_FR', 
+					IntlDateFormatter::LONG, 
+					IntlDateFormatter::NONE
+				);
+
+				echo 'Publié le : ' . $formatter->format($date);
+			?>
+		</p>
 		<?php
-		if ($admin) 
+		if ($admin === 't') 
 		{
 			?>
 			<button type="button" class="btn btn-primary"
@@ -120,8 +140,8 @@
 				<?= form_upload('image', '', ['id' => 'image']); ?>
 				<?= validation_show_error('image') ?>
 				<br>
-
-				<?= form_hidden('date', date('Y-m-d H:i:s')); ?>
+				
+				<?= form_hidden('datepublication', date('Y-m-d H:i:s')); ?>
 				<?= form_hidden('blog', 'true'); ?>
 
 				<?= form_submit('submit', 'Ajouter l\'article'); ?>

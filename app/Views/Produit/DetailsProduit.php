@@ -6,13 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produit en Détail</title>
     <link rel="stylesheet" href="/assets/css/styleProduit.css">
+	<link rel="stylesheet" href="/assets/css/pagination.css">
+
+
+
+
+
+
 </head>
 
 <body>
     <?php 
         use App\Models\ClientModel;
+		use Config\Pager;
+
         $client  = new ClientModel();
     ?>
+
+    <nav class="navbar">
+            <div class="logo">
+                <a href="/"><img src="<?php echo base_url('assets/img/logo.webp'); ?>" alt="Deviens un Saiyan"
+                        width="80px"></a>
+            </div>
+	</nav>
 
     <div class="page-container">
         <!-- Section produit -->
@@ -35,6 +51,9 @@
                     </div>
                 <?php endforeach; ?>
             </div>
+			<div class="pagination-container">
+				<?= $pager->links('group_achats', 'custom_pagination') ?>
+			</div>
         <?php else: ?>
             <p class="no-reviews">Aucun avis n'est disponible pour ce produit.</p>
         <?php endif; ?>
