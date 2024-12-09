@@ -18,6 +18,7 @@
 
 	<div class="container">
 		<h2 class="text-center mt-5">Page d'Inscription</h2>
+		<h5> Tous les champs sont obligatoires	</h5>
 
 		<?php if (session()->getFlashdata('error')): ?>
 			<div class="alert alert-danger">
