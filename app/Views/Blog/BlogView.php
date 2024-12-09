@@ -78,6 +78,7 @@
 			?><img src="<?= $imagePath ?>" alt="Image" class="img-fluid"><?php
 		}
 		?>
+		
 		<p>
 			<?php 
 				$date = new DateTime($article['datepublication']);
@@ -139,8 +140,8 @@
 				<?= form_upload('image', '', ['id' => 'image']); ?>
 				<?= validation_show_error('image') ?>
 				<br>
-
-				<?= form_hidden('date', date('Y-m-d H:i:s')); ?>
+				
+				<?= form_hidden('datepublication', date('Y-m-d H:i:s')); ?>
 				<?= form_hidden('blog', 'true'); ?>
 
 				<?= form_submit('submit', 'Ajouter l\'article'); ?>

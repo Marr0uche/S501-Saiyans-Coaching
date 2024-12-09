@@ -24,22 +24,31 @@ class Database extends Config
      *
      * @var array<string, mixed>
      */
-  	public $default = [
-		'DSN'          => '',
-		'hostname'     => 'localhost',
-		'username'     => 'sae_user', // ou votre nom d'utilisateur DB
-		'password'     => 'mdpsae',
-		'database'     => 'sae', // ou le nom de votre DB
-		'DBDriver'     => 'Postgre',
-		'DBPrefix'     => '',
-		'pConnect'     => false,
-		'DBDebug'      => true,
-		'charset'      => 'utf8',
-		'DBCollat'     => 'utf8_general_ci',
-		'port'         => 5432, // Assurez-vous que c'est bien le bon port
-		'encrypt'      => false,
-	];
-
+    public array $default = [
+        'DSN'          => 'Postgre://mm221005:Mohamad12345%@woody.iut.univ-lehavre.fr:5432',
+        'hostname'     => 'woody.iut.univ-lehavre.fr',
+        'username'     => 'mm221005',
+        'password'     => 'Mohamad12345%',
+        'database'     => 'mm221005',
+        'DBDriver'     => 'Postgre',
+        'DBPrefix'     => '',
+        'pConnect'     => false,
+        'DBDebug'      => true,
+        'charset'      => 'utf8',
+        'DBCollat'     => 'utf8_general_ci',
+        'swapPre'      => '',
+        'encrypt'      => false,
+        'compress'     => false,
+        'strictOn'     => false,
+        'failover'     => [],
+        'port'         => 3306,
+        'numberNative' => false,
+        'dateFormat'   => [
+            'date'     => 'Y-m-d',
+            'datetime' => 'Y-m-d H:i:s',
+            'time'     => 'H:i:s',
+        ],
+    ];
 
     public function __construct()
     {
