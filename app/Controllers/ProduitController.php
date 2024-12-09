@@ -36,6 +36,25 @@ class ProduitController extends Controller{
         ]); 
     }
 
+	   public function indexDashboard()
+    {
+
+
+        // Chargement des modèles
+        $product = new ProduitModel();
+        $promotion = new PromotionModel();
+
+        // Utilisation de la méthode paginate
+        $productListe = $product->getProduitAffichage();
+        $promotionListe= $promotion->getActivePromotion();
+
+        // Passer les données à la vue
+        return view('Admin/Gestionproduit', [
+            'produits' => $productListe,
+            'promotion' =>$promotionListe
+        ]); 
+    }
+
     public function indexProduct($idproduit)
     {
         

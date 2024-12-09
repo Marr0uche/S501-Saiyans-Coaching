@@ -7,20 +7,8 @@
     <title>Liste des Produits</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <style>
-        /* Exemple de style CSS pour task-card */
-        .task-card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 16px;
-            margin: 8px 0;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .task-card:hover {
-            background-color: #f9f9f9;
-        }
-    </style>
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/produit.css'); ?>">
+
 </head>
 <body>
     <nav class="navbar">
