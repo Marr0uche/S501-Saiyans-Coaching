@@ -142,6 +142,7 @@ button:hover{
     font-size: 1rem;
     font-weight: bold;
     display: block;
+    color: var(--blanc);
 }
 
 .form-control {
@@ -191,9 +192,15 @@ textarea.form-control {
 
 /* Messages d'erreur */
 .validation-error {
-    color: red;
+    color: var(--jaune);
     font-size: 0.875rem;
     margin-top: 0.25rem;
+}
+
+.help-block {
+    color: var(--jaune);
+    font-weight: bold;
+    font-size: 0.875rem;
 }
 
 /* Mise en page */
