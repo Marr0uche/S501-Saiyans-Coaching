@@ -73,3 +73,8 @@ $routes->post('questionnaire/traitementQuestionnaire', 'QuestionnaireController:
 
 // A propos
 $routes->get('/A_propos', 'AProposController::index');
+
+$routes->get('mdp-oublie', 'MdpOublieController::demanderEmail');
+$routes->post('mdp-oublie/envoyer', 'MdpOublieController::envoyerEmail');
+$routes->get('mdp-oublie/reinitialiser/(:segment)', 'MdpOublieController::afficherFormulaireReinitialisation/$1');
+$routes->post('mdp-oublie/reinitialiser', 'MdpOublieController::reinitialiserMotDePasse');
