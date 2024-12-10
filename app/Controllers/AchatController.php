@@ -24,6 +24,22 @@ class AchatController extends Controller{
         ]);
     }
 
+    public function ajouter($produitId)
+    {
+        $acheterModel = new AcheterModel();
+
+        $session = session();
+        $clientId = $session->get('client_id');
+
+        $acheterModel->ajouterAchat($produitId,$clientId);
+        return redirect()->to('/achat/confirme')->with('message', 'Achat confirmé')->setHeader('Refresh', '5;url=/produit');
+    }
+
+    public function confirme()
+    {
+        return view('Achat/AchatConfirme');
+    }
+
 }
 
 
