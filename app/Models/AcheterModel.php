@@ -50,6 +50,20 @@ class AcheterModel extends Model
 		return $this->insert($acheterDonnee);
 	}
 
+	public function ajouterAchat($idproduit, $idclient)
+	{
+		$acheterDonnee = [
+			'idclient' => $idclient,
+			'idproduit' => $idproduit,
+			'notetemoignage' => null,
+			'datetemoignage' => null,
+			'avistemoignage' => null,
+			'iddocument' => null
+		];
+
+		return $this->insert($acheterDonnee);
+	}
+
 	
     public function majAcheter($idclient, $idproduit, $acheterDonnee)
     {

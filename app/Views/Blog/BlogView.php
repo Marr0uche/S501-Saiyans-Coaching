@@ -75,7 +75,7 @@
 		<?php if($article['image'] != null)
 		{
 			$imagePath = base_url('uploads/' . $article['image']);
-			?><img src="<?= $imagePath ?>" alt="Image" class="img-fluid"><?php
+			?><img src="<?= $imagePath ?>" alt="" class="img-fluid"><?php
 		}
 		?>
 		

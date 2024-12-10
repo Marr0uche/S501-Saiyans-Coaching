@@ -7,12 +7,6 @@
     <title>Produit en Détail</title>
     <link rel="stylesheet" href="/assets/css/styleProduit.css">
 	<link rel="stylesheet" href="/assets/css/pagination.css">
-
-
-
-
-
-
 </head>
 
 <body>
@@ -59,6 +53,9 @@
         <?php else: ?>
             <p class="no-reviews">Aucun avis n'est disponible pour ce produit.</p>
         <?php endif; ?>
+
+        <!-- Bouton acheter-->
+        <a href="/achat/ajouter/<?= esc($produit['idproduit']); ?>" class="btn-buy">Acheter</a>
 
         <!-- Bouton retour -->
         <a href="/Produit" class="btn-back">Retour</a>
