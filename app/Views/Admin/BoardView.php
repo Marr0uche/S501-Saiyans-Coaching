@@ -5,6 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Tableau de Bord Administrateur</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<link rel="stylesheet" href="<?php echo base_url('assets/css/dashboard.css'); ?>">
 </head>
@@ -18,20 +20,9 @@
 	<header class="bg-dark py-3">
 		<div class="container d-flex justify-content-between align-items-center">
 			<h1 class="text-light">Tableau de Bord Administrateur</h1>
-			<div class="menu-burger-container">
-				<div class="menu-burger-button text-light">
-					<i class="fa-solid fa-bars fa-xl"></i>
-				</div>
-				<div class="menu-burger bg-dark">
-					<ul class="list-unstyled">
-						<li><a href="produit/dashboard">Produit</a></li>
-						<li><a href="/Produit">Programmes</a></li>
-						<li><a href="#">Avant / Après</a></li>
-						<li><a href="/blog">Blog</a></li>
-						<li><a href="/actualites">Actualité</a></li>
-						<li><a href="/contact">FAQ/Contact</a></li>
-					</ul>
-				</div>
+			<a href="/produit/dashboard" class="menu-gear-button text-light">
+				<i class="fa-solid fa-cog fa-2xl"></i>
+			</a>
 			</div>
 		</div>
 	</header>

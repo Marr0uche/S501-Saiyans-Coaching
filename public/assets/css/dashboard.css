@@ -144,3 +144,86 @@ header {
     backdrop-filter: blur(100px); /* Flou de fond */
     z-index: 1000; /* Superpose les autres éléments */
 }
+.menu-gear-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.menu-gear-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #343a40; /* Couleur de fond */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Forme circulaire */
+    text-decoration: none; /* Supprime le soulignement */
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre */
+}
+
+.menu-gear-button:hover {
+    background-color: #495057; /* Couleur au survol */
+}
+
+.menu-gear-button i {
+    font-size: 1.5rem; /* Taille de l'icône */
+    color: white; /* Couleur de l'icône */
+}
+
+
+:root {
+    --main-bg: #f8f9fa;
+    --sidebar-bg: #121212;
+    --highlight: #F4E904;
+    --text-color: #333;
+    --form-bg: #fff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: var(--main-bg);
+}
+
+.container-dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    background: var(--sidebar-bg);
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.sidebar i {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 1.5rem 0;
+    cursor: pointer;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.sidebar i:hover {
+    transform: scale(1.2);
+    color: var(--highlight);
+}
+
+.dashboard-section {
+    flex: 1;
+    padding: 2rem;
+}
+
+.dashboard-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 2rem;
+}
