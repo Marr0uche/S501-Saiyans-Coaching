@@ -35,7 +35,7 @@ $routes->post('/produit/creer', 'ProduitController::creer');
 $routes->post('/produit/modification', 'ProduitController::modifier');
 
 //Gestion de produit
-$routes->get('admin/produit/dashboard', 'ProduitController::indexDashboard');
+$routes->get('/produit/dashboard', 'ProduitController::indexDashboard');
 
 // Authentification
 $routes->get('authentification', 'AuthentificationController::index');

@@ -113,3 +113,134 @@ in APPPATH/Views/Produit/DetailsProduit.php on line 53.
  8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
  9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
 10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-10 13:03:45 --> ErrorException: Undefined array key "nompromotion"
+[Method: GET, Route: produit/dashboard]
+in APPPATH/Views/Admin/Gestionproduit.php on line 113.
+ 1 APPPATH/Views/Admin/Gestionproduit.php(113): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Views/Admin/Gestionproduit.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/ProduitController.php(56): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProduitController->indexDashboard()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-10 13:03:46 --> ErrorException: Undefined array key "nompromotion"
+[Method: GET, Route: produit/dashboard]
+in APPPATH/Views/Admin/Gestionproduit.php on line 113.
+ 1 APPPATH/Views/Admin/Gestionproduit.php(113): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Views/Admin/Gestionproduit.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/ProduitController.php(56): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProduitController->indexDashboard()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-10 13:05:47 --> ErrorException: Undefined array key "pourcentage"
+[Method: GET, Route: produit/dashboard]
+in APPPATH/Views/Admin/Gestionproduit.php on line 117.
+ 1 APPPATH/Views/Admin/Gestionproduit.php(117): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Views/Admin/Gestionproduit.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/ProduitController.php(56): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProduitController->indexDashboard()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-10 13:06:42 --> ErrorException: Undefined array key "datedebut"
+[Method: GET, Route: produit/dashboard]
+in APPPATH/Views/Admin/Gestionproduit.php on line 118.
+ 1 APPPATH/Views/Admin/Gestionproduit.php(118): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Views/Admin/Gestionproduit.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/ProduitController.php(56): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProduitController->indexDashboard()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-10 13:06:43 --> ErrorException: Undefined array key "datedebut"
+[Method: GET, Route: produit/dashboard]
+in APPPATH/Views/Admin/Gestionproduit.php on line 118.
+ 1 APPPATH/Views/Admin/Gestionproduit.php(118): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Views/Admin/Gestionproduit.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/ProduitController.php(56): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProduitController->indexDashboard()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-10 13:13:59 --> ErrorException: Undefined variable $order
+[Method: GET, Route: produit/dashboard]
+in APPPATH/Views/Admin/Gestionproduit.php on line 52.
+ 1 APPPATH/Views/Admin/Gestionproduit.php(52): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Views/Admin/Gestionproduit.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/ProduitController.php(56): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProduitController->indexDashboard()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-10 13:15:35 --> ErrorException: Undefined variable $order
+[Method: GET, Route: produit/dashboard]
+in APPPATH/Views/Admin/Gestionproduit.php on line 52.
+ 1 APPPATH/Views/Admin/Gestionproduit.php(52): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Views/Admin/Gestionproduit.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/ProduitController.php(56): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProduitController->indexDashboard()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-10 13:18:04 --> ParseError: syntax error, unexpected token ";", expecting ")"
+[Method: GET, Route: produit/dashboard]
+in APPPATH/Views/Admin/Gestionproduit.php on line 71.
+ 1 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/ProduitController.php(59): view()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProduitController->indexDashboard()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-10 13:21:06 --> ParseError: syntax error, unexpected double-quoted string "", expecting "," or ";"
+[Method: GET, Route: produit/dashboard]
+in APPPATH/Views/Admin/Gestionproduit.php on line 90.
+ 1 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/ProduitController.php(59): view()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProduitController->indexDashboard()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
