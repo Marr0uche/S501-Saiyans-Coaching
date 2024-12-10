@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deviens un Saiyan</title>
     <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css'); ?>">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/navbar.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/navbaraccueil.css'); ?>">
     <link rel="stylesheet" href="<?php echo base_url('assets/css/footer.css'); ?>">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
@@ -16,13 +16,11 @@
 </head>
 
 <body>
-    <?php echo view('elements/Navbar'); ?>
-
-
+    <?php echo view('elements/NavbarAccueil', ['promotions'=>$promotion]); ?>
 
     <main>
         <section class="hero">
-            <h3>SAYANS COACHING</h3>
+            <h3>SAIYANS COACHING</h3>
             <h1>Entraîne-toi comme un <span class="h1-span" style="color : #F4E904;">Saiyan</span></h1>
             <p>Progresse comme un guerrier : ta transformation commence <span class="h3-span"
                     style="color : #F4E904;">aujourd'hui</span> !</p>
@@ -30,7 +28,6 @@
             <p class="petit-txt-hero">Nous ne partagerons jamais vos informations à qui que ce soit.</p>
             <div class="container mt-5">
         </section>
-
 
         <section class="offers">
             <h1>Nos offres :</h1>
