@@ -37,7 +37,7 @@ class AcheterModel extends Model
 	}
 
 	public function getCommentaire($idclient){
-		return $this->where('idclient',$idclient);
+		return $this->where('idclient',$idclient)->findAll();
 	}
 
 	public function getAcheterProduit($idproduit)

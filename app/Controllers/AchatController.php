@@ -15,12 +15,12 @@ class AchatController extends Controller{
 
         $achat = new AcheterModel();
         $listeAchat = $achat->getProduitsAchetes($clientId);
-        $listeCommentaire = $achat->getCommentaire($clientId);
+        $commentaire = $achat->getCommentaire($clientId);
 
     
         return view('Produit/ProduitClientView',[
             'achat'=>$listeAchat,
-            'commentaire'=>$listeCommentaire
+            'commentaire'=>$commentaire
         ]);
     }
 

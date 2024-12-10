@@ -25,7 +25,7 @@ class Email extends BaseConfig
      */
     public string $mailPath = '/usr/sbin/sendmail';
 
-     /**
+    /**
      * SMTP Server Hostname
      */
     public string $SMTPHost = 'smtp.googlemail.com';
@@ -33,12 +33,12 @@ class Email extends BaseConfig
     /**
      * SMTP Username
      */
-    public string $SMTPUser = 'mohamad.marrouche20047@gmail.com';
+    public string $SMTPUser = 'mitsukiikha76@gmail.com';
 
     /**
      * SMTP Password
      */
-    public string $SMTPPass = 'gyit itac tswc mjhr ';
+    public string $SMTPPass = 'thte pgxm womq fmyc';
 
     /**
      * SMTP Port
@@ -82,7 +82,7 @@ class Email extends BaseConfig
     /**
      * Character set (utf-8, iso-8859-1, etc.)
      */
-    public string $charset = 'UTF-8';
+    public string $charset = 'utf-8';
 
     /**
      * Whether to validate the email address

@@ -112,7 +112,6 @@ in SYSTEMPATH/Database/BaseConnection.php on line 467.
 11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
 12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
 13 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
-<<<<<<< HEAD
 CRITICAL - 2024-12-09 11:56:41 --> ArgumentCountError: Too few arguments to function CodeIgniter\Router\RouteCollection::get(), 1 passed in /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Config/Routes.php on line 76 and at least 2 expected
 [Method: GET, Route: profile]
 in SYSTEMPATH/Router/RouteCollection.php on line 1051.
@@ -1520,39 +1519,3 @@ in APPPATH/Views/Produit/ProduitClientView.php on line 41.
 10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
 11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
 12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
-=======
-CRITICAL - 2024-12-09 12:28:08 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Navbar.php"
-[Method: GET, Route: contact]
-in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
- 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
- 2 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
- 3 APPPATH/Views/Contact/ContactView.php(23): view()
- 4 SYSTEMPATH/View/View.php(234): include('/home/etudiant/rt221105/TP/s5/SAE/S501-Saiyans-Coaching/app/Views/Contact/ContactView.php')
- 5 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 6 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
- 7 APPPATH/Controllers/ContactController.php(12): view()
- 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ContactController->index()
- 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
-10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
-11 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
-12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
-13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
-14 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/rt221105/TP/s5/SAE/S501-Saiyans-Coaching/public/index.php')
-CRITICAL - 2024-12-09 12:28:32 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/Navbar.php"
-[Method: GET, Route: contact]
-in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
- 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
- 2 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
- 3 APPPATH/Views/Contact/ContactView.php(23): view()
- 4 SYSTEMPATH/View/View.php(234): include('/home/etudiant/rt221105/TP/s5/SAE/S501-Saiyans-Coaching/app/Views/Contact/ContactView.php')
- 5 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 6 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
- 7 APPPATH/Controllers/ContactController.php(12): view()
- 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ContactController->index()
- 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
-10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
-11 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
-12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
-13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
-14 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/rt221105/TP/s5/SAE/S501-Saiyans-Coaching/public/index.php')
->>>>>>> bd770145eeb52be7cb974f47369a6f6edf84b02d

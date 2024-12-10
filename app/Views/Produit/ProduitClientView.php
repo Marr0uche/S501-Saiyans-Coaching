@@ -17,58 +17,65 @@
                     width="80px"></a>
         </div>
     </nav>
-    
     <div class="container mt-4">
     <div class="row">
         <div class="columns-wrapper">
             <?php if (!empty($achat)): ?>
                 <?php foreach ($achat as $produit): ?>
-                    <div class="task-card">
-                        <h5 class="card-title"><?= esc($produit['titreproduit']); ?></h5>
-                        <p class="card-text"><?= esc($produit['descriptionproduit']); ?></p>
-                        <?php
-                            $imagePath = base_url('uploads/' . $produit['photoproduit']);
-                        ?>
-                        <img src="<?= $imagePath ?>" alt="Image" class="img-fluid">
-                        <p class="card-text">Prix : <?= esc($produit['prix']); ?> €</p>
+                    <div class="card mb-4">
+                        <!-- Section produit -->
+                        <div class="card-body">
+                            <h5 class="card-title"><?= esc($produit['titreproduit']); ?></h5>
+                            <p class="card-text"><?= esc($produit['descriptionproduit']); ?></p>
+                            <div class="product-image text-center mb-3">
+                                <?php
+                                    $imagePath = base_url('uploads/' . $produit['photoproduit']);
+                                ?>
+                                <img src="<?= $imagePath ?>" alt="Image du produit" class="img-fluid rounded">
+                            </div>
+                            <p class="card-text"><strong>Prix :</strong> <?= esc($produit['prix']); ?> €</p>
+                        </div>
+                        
+                        <!-- Section commentaires -->
+                        <div class="card-footer bg-light">
+                            <?php 
+                            $commentaireAssocie = array_filter($commentaire, function ($achat) use ($produit) {
+                                return $achat['idproduit'] == $produit['idproduit'];
+                            });
+                            ?>
+                            
+                            <?php if (!empty($commentaireAssocie)): ?>
+                                <?php foreach ($commentaireAssocie as $achat): ?>
+                                    <?php if ($achat['notetemoignage'] !== null): ?>
+                                        <div class="product-reviews mb-3">
+                                            <h6 class="review-title text-primary">Votre Avis :</h6>
+                                            <p class="review-rating mb-1"><strong>Note :</strong> <?= esc($achat['notetemoignage']); ?> ⭐</p>
+                                            <p class="review-date mb-1"><strong>Date :</strong> <?= esc($achat['datetemoignage']); ?></p>
+                                            <p class="review-text"><strong>Commentaire :</strong> <?= esc($achat['avistemoignage']); ?></p>
+                                        </div>
+                                        <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#ajouterAvisModal" data-idproduit="<?= $produit['idproduit'] ?>" data-note="<?= esc($achat['notetemoignage']); ?>"  data-avis="<?= esc($achat['avistemoignage']); ?>">
+                                            Modifier votre commentaire
+                                        </button>
+                                    <?php else: ?>
+                                        <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#ajouterAvisModal" data-idproduit="<?= $produit['idproduit'] ?>">
+                                            Ajouter un commentaire
+                                        </button>
+                                    <?php endif; ?>
+                                <?php endforeach; ?>
+                            <?php else: ?>
+                                <p class="text-muted">Aucun commentaire pour ce produit.</p>
+                                <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#ajouterAvisModal" data-idproduit="<?= $produit['idproduit'] ?>">
+                                    Ajouter un commentaire
+                                </button>
+                            <?php endif; ?>
+                        </div>
                     </div>
-
-                    <!-- Vérifier s'il y a des commentaires -->
-                    <?php if (isset($commentaire) && !empty($commentaire)): ?>
-                        <div class="product-reviews">
-                            <?php foreach ($commentaire as $achat): ?>
-                                <?php if (isset($achat['notetemoignage']) && $achat['notetemoignage'] !== null): ?>
-                                    <div class="product-review">
-                                        <p class="review-rating">Note : <?= esc($achat['notetemoignage']); ?> ⭐</p>
-                                        <?php if (isset($achat['datetemoignage'])): ?>
-                                            <p class="review-date">Date : <?= esc($achat['datetemoignage']); ?></p>
-                                        <?php endif; ?>
-                                        <?php if (isset($achat['avistemoignage'])): ?>
-                                            <p class="review-text"><?= esc($achat['avistemoignage']); ?></p>
-                                        <?php endif; ?>
-                                    </div>
-                                <?php endif; ?>
-                            <?php endforeach; ?>
-                        </div>
-                        </div>
-                        <!-- Bouton pour modifier le commentaire si des avis existent -->
-                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#ajouterAvisModal" data-idproduit="<?= $produit['idproduit'] ?>">
-                            Modifier votre commentaire
-                        </button>
-                    <?php else: ?>
-                        <p class="no-reviews">Vous n'avez laissez aucun avis sur ce produit.</p>
-                        <!-- Bouton pour ajouter un commentaire si aucun avis n'existe -->
-                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#ajouterAvisModal" data-idproduit="<?= $produit['idproduit'] ?>">
-                            Ajouter un commentaire
-                        </button>
-                    <?php endif; ?>
-
                 <?php endforeach; ?>
             <?php endif; ?>
         </div>
     </div>
+</div>
 
-    </div>
 
     <div class="modal fade" id="ajouterAvisModal" tabindex="-1" aria-labelledby="ajouterAvisModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -107,10 +114,18 @@
             
             // Récupérer l'ID du produit depuis l'attribut 'data-idproduit'
             var idProduit = button.getAttribute('data-idproduit');
-            
+            var note      = button.getAttribute('data-note');
+            var avis      = button.getAttribute('data-avis');         
             // Récupérer le champ caché dans la modal et lui attribuer l'ID du produit
             var modalBodyInput = myModal.querySelector('#idProduit');
             modalBodyInput.value = idProduit;
+
+
+            var modalBodyInputNote =myModal.querySelector('#noteTemoignage');
+            modalBodyInputNote.value = note || '';
+
+            var modalBodyInputAvis =myModal.querySelector('#avisTemoignage');
+            modalBodyInputAvis.value = avis || '';
 
             // Mettre à jour l'action du formulaire avec l'ID du produit
             var form = myModal.querySelector('#formAvis');

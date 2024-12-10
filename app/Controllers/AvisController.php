@@ -26,18 +26,9 @@ class AvisController extends BaseController
         // Chargement du modèle
         $acheterModel = new AcheterModel();
 
-        // Vérification si un avis existe déjà pour ce produit et ce client
-        $existingAvis = $acheterModel->getAcheter($clientId, $idProduit);
+        $acheterModel->majAcheter($clientId, $idProduit, $data);
+        session()->setFlashdata('success', 'Votre avis a été mis à jour avec succès.');
         
-        if ($existingAvis) {
-            // Mise à jour de l'avis
-            $acheterModel->majAcheter($clientId, $idProduit, $data);
-            session()->setFlashdata('success', 'Votre avis a été mis à jour avec succès.');
-        } else {
-            // Création d'un nouvel avis
-            $acheterModel->creerAcheter($data);
-            session()->setFlashdata('success', 'Votre avis a été ajouté avec succès.');
-        }
 
         return redirect()->to('/achat/'.$clientId);  
     }
