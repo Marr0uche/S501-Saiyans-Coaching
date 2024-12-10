@@ -56,6 +56,7 @@ $routes->post('/promotion/creer', 'PromotionController::creer');
 $routes->get('promo', 'PromotionController::index');
 $routes->post('promotion/modifier', 'PromotionController::modifier');
 $routes->get('/promotion/suppression/(:num)', 'PromotionController::supprimer/$1');
+$routes->post('promo/valider', 'PromotionController::valider');
 
 // Admin
 $routes->get('/admin/board', 'BoardController::board');

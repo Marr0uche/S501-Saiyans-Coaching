@@ -50,7 +50,7 @@ class AcheterModel extends Model
 		return $this->insert($acheterDonnee);
 	}
 
-	public function ajouterAchat($idproduit, $idclient)
+	public function ajouterAchat($idproduit, $idclient,$idDocument = null)
 	{
 		$acheterDonnee = [
 			'idclient' => $idclient,
@@ -58,7 +58,7 @@ class AcheterModel extends Model
 			'notetemoignage' => null,
 			'datetemoignage' => null,
 			'avistemoignage' => null,
-			'iddocument' => null
+			'iddocument' => $idDocument
 		];
 
 		return $this->insert($acheterDonnee);

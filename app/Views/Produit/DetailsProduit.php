@@ -30,7 +30,21 @@
             <img src="<?= esc($produit['photoproduit']); ?>" alt="Photo du produit" class="product-image">
             <h1 class="product-title"><?= esc($produit['titreproduit']); ?></h1>
             <p class="product-description"><?= esc($produit['descriptionproduit']); ?></p>
-            <p class="product-price">Prix : <?= esc($produit['prix']); ?> €</p>
+            <?php 
+            $session = session();
+            $promo = $session->get('codepromo');
+            if ($promo):?>
+                <!-- Affichage du prix barré et du prix réduit -->
+                <p class="product-price">
+                    <span class="price-original"><?= esc($produit['prix']); ?> €</span>
+                    <span class="price-reduced">
+                        <?= number_format( esc($produit['prix'] - ($produit['prix'] * esc($promo['reductionpromo'] / 100))), 2, ',', ' '); ?>€
+                    </span>
+                </p>
+            <?php else: ?>
+                 <!-- Affichage du prix normal -->
+                <p class="product-price">Prix : <?= esc($produit['prix']); ?> €</p>
+            <?php endif; ?>
         </div>
 
         <!-- Section avis -->
@@ -52,10 +66,29 @@
             <p class="no-reviews">Aucun avis n'est disponible pour ce produit.</p>
         <?php endif; ?>
 
-        <!-- Bouton acheter-->
+        <?= form_open('promo/valider'); ?>
+
+        <?= form_label('Code Promo:', 'codepromo'); ?>
+        <?= form_input('codepromo', set_value('codepromo')); ?>
+        <?= validation_show_error('codepromo') ?>
+
+        <?= form_submit('submit', 'Appliquer'); ?>
+
+		<?= form_close(); ?>
+        <?php if (session()->getFlashdata('error')): ?>
+            <div class="alert alert-danger">
+                <?= session()->getFlashdata('error'); ?>
+            </div>
+        <?php endif; ?>
+
+        <?php if (session()->getFlashdata('success')): ?>
+            <div class="alert alert-success">
+                <?= session()->getFlashdata('success'); ?>
+            </div>
+        <?php endif; ?>
+
         <a href="/achat/ajouter/<?= esc($produit['idproduit']); ?>" class="btn-buy">Acheter</a>
 
-        <!-- Bouton retour -->
         <a href="/Produit" class="btn-back">Retour</a>
     </div>
 </body>
