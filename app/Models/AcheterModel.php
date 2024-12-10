@@ -30,10 +30,14 @@ class AcheterModel extends Model
 
 	public function getProduitsAchetes($idClient)
 	{
-		return $this->select('Acheter.idProduit, Produit.TitreProduit')
-			->join('Produit', 'Acheter.idProduit = Produit.idProduit')
-			->where('Acheter.idClient', $idClient)
+		return $this->select('produit.*')
+			->join('produit', 'acheter.idproduit = produit.idproduit')
+			->where('acheter.idclient', $idClient)
 			->findAll();
+	}
+
+	public function getCommentaire($idclient){
+		return $this->where('idclient',$idclient)->findAll();
 	}
 
 	public function getAcheterProduit($idproduit)
@@ -46,21 +50,36 @@ class AcheterModel extends Model
 		return $this->insert($acheterDonnee);
 	}
 
-	public function majAcheter($idclient, $idproduit, $acheterDonnee)
+	public function ajouterAchat($idproduit, $idclient,$idDocument = null)
 	{
-		$existingRow = $this->where('idclient', $idclient)
-			->where('idproduit', $idproduit)
-			->first();
+		$acheterDonnee = [
+			'idclient' => $idclient,
+			'idproduit' => $idproduit,
+			'notetemoignage' => null,
+			'datetemoignage' => null,
+			'avistemoignage' => null,
+			'iddocument' => $idDocument
+		];
 
-		if ($existingRow) {
-			return $this->where('idclient', $idclient)
-				->where('idproduit', $idproduit)
-				->set($acheterDonnee)
-				->update();
-		} else {
-			return false;
-		}
+		return $this->insert($acheterDonnee);
 	}
+
+	
+    public function majAcheter($idclient, $idproduit, $acheterDonnee)
+    {
+        $existingRow = $this->where('idclient', $idclient)
+            ->where('idproduit', $idproduit)
+            ->first();
+
+        if ($existingRow) {
+            return $this->where('idclient', $idclient)
+                ->where('idproduit', $idproduit)
+                ->set($acheterDonnee)
+                ->update();
+        } else {
+            return false;
+        }
+    }
 
 
 	public function supprimerAcheter($idclient, $idproduit)

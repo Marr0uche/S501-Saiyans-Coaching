@@ -1,0 +1,23 @@
+/* Carousel */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+	background-color: transparent;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    text-align: center;
+    background: #f9f9f9;
+	background-color: transparent;
+}
