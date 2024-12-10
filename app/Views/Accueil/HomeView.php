@@ -81,7 +81,6 @@
                         complexes :</p>
                     <h3>Rejoin les rangs !!!</h3>
                     <a href="/Produit" class="btn btn-why">Commencer maintenant !</a>
-                    <a href="/questionnaire"> aller au questionnaire </a>
                 </div>
             </div>
         </section>
@@ -213,6 +212,7 @@
         <section class="section-infos">
             <h1>Prêt à embarquer dans cette <span class="h1-span" style="color : #F4E904;">Aventure</span>?</h1>
             <a href="/Produit" class="btn btn-lato btn-infos">Plus d'informations</a>
+            <a href="/questionnaire" class="btn btn-lato btn-infos"> aller au questionnaire </a>
         </section>
 
         <?php echo view('elements/Footer'); ?>
