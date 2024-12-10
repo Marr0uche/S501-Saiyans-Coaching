@@ -29,6 +29,9 @@ class ProduitController extends Controller{
         $productListe = $product->getProduitAffichage();
         $promotionListe= $promotion->getActivePromotion();
 
+        $session = session();
+        $session->remove('codepromo');
+
         // Passer les données à la vue
         return view('Produit/ProduitView', [
             'produits' => $productListe,

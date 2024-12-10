@@ -10,9 +10,8 @@ use App\Models\ProduitModel;
 class AchatController extends Controller{
 
 
-    public function indexAchat($clientId){
-
-
+    public function indexAchat($clientId)
+    {
         $achat = new AcheterModel();
         $listeAchat = $achat->getProduitsAchetes($clientId);
         $commentaire = $achat->getCommentaire($clientId);
@@ -31,15 +30,19 @@ class AchatController extends Controller{
         $session = session();
         $clientId = $session->get('client_id');
 
-        $acheterModel->ajouterAchat($produitId,$clientId);
-        return redirect()->to('/achat/confirme')->with('message', 'Achat confirmé')->setHeader('Refresh', '5;url=/produit');
+        $promo = $session->get('codepromo');
+        $idDocument = $promo ? $promo['iddocument'] : null;
+
+        $acheterModel->ajouterAchat($produitId, $clientId, $idDocument);
+
+        $session->remove('codepromo');
+        return view('Achat/AchatConfirme');
     }
 
     public function confirme()
     {
         return view('Achat/AchatConfirme');
     }
-
 }
 
 
