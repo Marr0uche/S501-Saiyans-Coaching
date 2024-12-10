@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liste des Produits</title>
     <link rel="stylesheet" href="<?php echo base_url('assets/css/produit.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/navbaraccueil.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/footer.css'); ?>">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
@@ -14,11 +16,8 @@
 </head>
 
 <body>
-    <nav>
-        <div class="logo">
-            <a href="/"><img src="<?php echo base_url('assets/img/logo.webp'); ?>" alt="Deviens un Saiyan"></a>
-        </div>
-    </nav>
+
+    <?php echo view('elements/NavbarAccueil', ['promotions' => $promotion]); ?>
 
     <section class="offers">
         <h1>Nos offres :</h1>
@@ -35,20 +34,24 @@
                         <div class="price">
                             <h1> <?= esc($produit['prix']); ?> €</h1>
                         </div>
-                        <div class="periodicity">
+
+                        <div class="periodicity" style="--order: 0;">
                             <p>Tous les mois</p>
                         </div>
-                        <div class="infos">
-                            <p class="p-infos"><?= esc($produit['valabilite']); ?> mois - <?= esc($produit['prix']); ?>
+                        <div class="infos" style="--order: 1;">
+                            <p class="p-infos"><?= esc($produit['valabilite']); ?><?= esc($produit['prix']); ?>
                                 €/mois </p>
                         </div>
-                        <div class="validity">
+                        <div class="validity" style="--order: 2;">
                             <p class="p-validity">Valable <?= esc($produit['valabilite']); ?> mois</p>
                         </div>
+
                         <div class="sign-up">
                             <a href="/produit/unique/<?= urlencode($produit['idproduit']); ?>"
                                 class="btn bordered radius">SÉLECTIONNER</a>
                         </div>
+
+
 
                         <div class="footer-produit">
                             <ul>
@@ -95,27 +98,8 @@
         </div>
     </div>-->
 
-    <script>
-        let currentSlide = 0;
 
-        function showSlide(index) {
-            const slides = document.querySelectorAll('.carousel-item');
-            const totalSlides = slides.length;
-            currentSlide = (index + totalSlides) % totalSlides;
-            const offset = -currentSlide * 100;
-            document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
-        }
-
-        function prevSlide() {
-            showSlide(currentSlide - 1);
-        }
-
-        function nextSlide() {
-            showSlide(currentSlide + 1);
-        }
-
-        showSlide(0); // Initial display
-    </script>
+    <?php echo view('elements/Footer'); ?>
 </body>
 
 </html>
