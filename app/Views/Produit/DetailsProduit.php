@@ -33,12 +33,14 @@
             <?php 
             $session = session();
             $promo = $session->get('codepromo');
+            $prixreel = $produit['prix'];
             if ($promo):?>
                 <!-- Affichage du prix barré et du prix réduit -->
                 <p class="product-price">
                     <span class="price-original"><?= esc($produit['prix']); ?> €</span>
                     <span class="price-reduced">
-                        <?= number_format( esc($produit['prix'] - ($produit['prix'] * esc($promo['reductionpromo'] / 100))), 2, ',', ' '); ?>€
+                        <?= $prixreel = number_format( esc($produit['prix'] - ($produit['prix'] * esc($promo['reductionpromo'] / 100))), 2, '.', ' '); ?>
+                        €
                     </span>
                 </p>
             <?php else: ?>
@@ -89,7 +91,7 @@
             </div>
         <?php endif; ?>
 
-        <a href="/achat/ajouter/<?= esc($produit['idproduit']); ?>" class="btn-buy">Acheter</a>
+        <a href="/paiement/<?= esc($produit['idproduit']); ?>/<?= urlencode($prixreel); ?>" class="btn-buy">Acheter</a>
 
         <a href="/Produit" class="btn-back">Retour</a>
     </div>

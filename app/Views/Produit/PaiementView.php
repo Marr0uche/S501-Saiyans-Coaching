@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Paiement</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/assets/css/styleProduit.css">
 </head>
 
 <body>
@@ -21,9 +21,9 @@
 		<div class="card">
 			<div class="card-body">
 				<h5 class="card-title">Informations sur le produit</h5>
-				<p><strong>Produit : </strong><?= esc($produit['TitreProduit']) ?></p>
-				<p><strong>Description : </strong><?= esc($produit['descriptionProduit']) ?></p>
-				<p><strong>Prix : </strong><?= number_format($produit['prix'], 2) ?> €</p>
+				<p><strong>Produit : </strong><?= esc($produit['titreproduit']) ?></p>
+				<p><strong>Description : </strong><?= esc($produit['descriptionproduit']) ?></p>
+				<p><strong>Prix : </strong><?= $prixreel ?> €</p>
 
 				<h5 class="mt-4">Informations sur le client</h5>
 				<p><strong>Nom : </strong><?= esc($client['nom']) ?> <?= esc($client['prenom']) ?></p>
@@ -31,10 +31,7 @@
 			</div>
 		</div>
 
-		<form action="<?= site_url('paiement/traiter') ?>" method="POST" class="mt-4">
-			<?= csrf_field() ?>
-			<button type="submit" class="btn btn-success btn-block">Payer <?= number_format($produit['prix'], 2) ?> €</button>
-		</form>
+		<a href="/achat/ajouter/<?= esc($produit['idproduit']); ?>" class="btn-buy">Payer</a>
 	</div>
 </body>
 

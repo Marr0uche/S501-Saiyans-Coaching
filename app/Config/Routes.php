@@ -87,5 +87,5 @@ $routes->get('mdp-oublie/reinitialiser/(:segment)', 'MdpOublieController::affich
 $routes->post('mdp-oublie/reinitialiser', 'MdpOublieController::reinitialiserMotDePasse');
 
 // Paiement
-$routes->get('paiement', 'PaiementController::afficherPagePaiement');
+$routes->get('/paiement/(:num)/(:any)', 'PaiementController::afficherPagePaiement/$1/$2');
 $routes->post('paiement/traiter', 'PaiementController::traiterPaiement');

@@ -7,11 +7,14 @@ use App\Models\ProduitModel;
 
 class PaiementController extends BaseController
 {
-	public function afficherPagePaiement()
+	public function afficherPagePaiement($produitId,$prixreel)
 	{
 		$session = session();
 		$clientId = $session->get('client_id');
-		$produitId = $session->get('produit_id');
+
+		if (!$clientId) {
+			return redirect()->to('/authentification')->with('error', 'Veuillez vous connecter pour continuer.');
+		}
 
 		if (!$clientId || !$produitId) {
 			return redirect()->to('/')->with('error', 'Session invalide ou expirée.');
@@ -27,22 +30,10 @@ class PaiementController extends BaseController
 			return redirect()->to('/')->with('error', 'Données non trouvées.');
 		}
 
-		return view('PaiementView', [
+		return view('Produit/PaiementView', [
 			'client' => $client,
 			'produit' => $produit,
+			'prixreel' => $prixreel
 		]);
-	}
-
-	public function traiterPaiement()
-	{
-		$session = session();
-		$clientId = $session->get('client_id');
-		$produitId = $session->get('produit_id');
-
-		if (!$clientId || !$produitId) {
-			return redirect()->to('/')->with('error', 'Session invalide ou expirée.');
-		}
-
-		return redirect()->to('/confirmation')->with('success', 'Paiement effectué avec succès.');
 	}
 }
