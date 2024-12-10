@@ -159,7 +159,7 @@ class ArticleController extends Controller
 		
 		$articleModel->majArticle($iddocument, $data);
 		
-		if($article['blog'] == true)
+		if($article['blog'] === 't')
 		{
 			return redirect()->to('/blog');
 		}
@@ -175,12 +175,10 @@ class ArticleController extends Controller
 
 	public function suppression($idDocArticle)
 	{
-		echo 'idDocArticle' . $idDocArticle;
 		$articleModel = new ArticleModel();
 
 		// Récupérer l'article avant de le supprimer
 		$article = $articleModel->find($idDocArticle);
-		echo 'article' . $article['image'];
     
 		if ($article && !empty($article['image'])) {
 			
@@ -196,7 +194,8 @@ class ArticleController extends Controller
 
 		$articleModel->supprimerArticle($idDocArticle);
 
-		if($article['blog'] == 1)
+
+		if($article['blog'] === 't')
 		{
 			return redirect()->to('/blog');
 		}

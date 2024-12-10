@@ -129,7 +129,7 @@
 
 				<div class="form-group-img">
 					<?= form_label('Image:', 'image'); ?>
-					<?= form_upload('image', set_value('image'), ['required' => true]); ?>
+					<?= form_upload('image', set_value('image')); ?>
 					<?= validation_show_error('image') ?>
 				</div>
 				<br>
