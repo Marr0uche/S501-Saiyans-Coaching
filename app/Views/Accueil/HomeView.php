@@ -34,7 +34,6 @@
         </section>
 
         <section class="wrapper">
-
             <?php if (!empty($Acceuilliste)): ?>
                 <?php foreach ($Acceuilliste as $produit): ?>
                     <div class="pricing-table gprice-single">
