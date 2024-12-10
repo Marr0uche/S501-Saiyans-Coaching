@@ -6,15 +6,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Connexion</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-	<link rel = "stylesheet" href="<?php echo base_url('assets/css/Connexion.css'); ?>">	
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/Connexion.css'); ?>">
 </head>
 
 <body>
 	<nav class="navbar">
-            <div class="logo">
-                <a href="/"><img src="<?php echo base_url('assets/img/logo.webp'); ?>" alt="Deviens un Saiyan"
-                        width="80px"></a>
-            </div>
+		<div class="logo">
+			<a href="/"><img src="<?php echo base_url('assets/img/logo.webp'); ?>" alt="Deviens un Saiyan"
+					width="80px"></a>
+		</div>
 	</nav>
 	<div class="container">
 		<h2 class="text-center mt-5">Page de Connexion</h2>
@@ -36,10 +36,12 @@
 				<input type="password" class="form-control" id="motdepasse" name="motdepasse" placeholder="Entrez votre mot de passe" required>
 			</div>
 			<button type="submit" class="btn btn-primary">Se connecter</button>
-			<button type="submit" class="btn btn-primary" onclick="window.location='inscription'">Creer un compte</button>
-
-
+			<button type="button" class="btn btn-primary" onclick="window.location='inscription'">Créer un compte</button>
 		</form>
+
+		<div class="text-center mt-3">
+			<a href="<?= site_url('mdp-oublie') ?>" class="text-muted">Mot de passe oublié ?</a>
+		</div>
 	</div>
 </body>
 
