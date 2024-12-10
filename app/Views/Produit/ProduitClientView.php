@@ -31,7 +31,7 @@
                                 <?php
                                     $imagePath = base_url('uploads/' . $produit['photoproduit']);
                                 ?>
-                                <img src="<?= $imagePath ?>" alt="Image du produit" class="img-fluid rounded">
+                                <img src="<?= $imagePath ?>" alt="" class="img-fluid rounded">
                             </div>
                             <p class="card-text"><strong>Prix :</strong> <?= esc($produit['prix']); ?> €</p>
                         </div>
