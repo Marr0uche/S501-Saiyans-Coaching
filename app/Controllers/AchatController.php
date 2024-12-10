@@ -15,13 +15,29 @@ class AchatController extends Controller{
 
         $achat = new AcheterModel();
         $listeAchat = $achat->getProduitsAchetes($clientId);
-        $listeCommentaire = $achat->getCommentaire($clientId);
+        $commentaire = $achat->getCommentaire($clientId);
 
     
         return view('Produit/ProduitClientView',[
             'achat'=>$listeAchat,
-            'commentaire'=>$listeCommentaire
+            'commentaire'=>$commentaire
         ]);
+    }
+
+    public function ajouter($produitId)
+    {
+        $acheterModel = new AcheterModel();
+
+        $session = session();
+        $clientId = $session->get('client_id');
+
+        $acheterModel->ajouterAchat($produitId,$clientId);
+        return redirect()->to('/achat/confirme')->with('message', 'Achat confirmé')->setHeader('Refresh', '5;url=/produit');
+    }
+
+    public function confirme()
+    {
+        return view('Achat/AchatConfirme');
     }
 
 }

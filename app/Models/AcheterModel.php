@@ -37,7 +37,7 @@ class AcheterModel extends Model
 	}
 
 	public function getCommentaire($idclient){
-		return $this->where('idclient',$idclient);
+		return $this->where('idclient',$idclient)->findAll();
 	}
 
 	public function getAcheterProduit($idproduit)
@@ -47,6 +47,20 @@ class AcheterModel extends Model
 
 	public function creerAcheter($acheterDonnee)
 	{
+		return $this->insert($acheterDonnee);
+	}
+
+	public function ajouterAchat($idproduit, $idclient)
+	{
+		$acheterDonnee = [
+			'idclient' => $idclient,
+			'idproduit' => $idproduit,
+			'notetemoignage' => null,
+			'datetemoignage' => null,
+			'avistemoignage' => null,
+			'iddocument' => null
+		];
+
 		return $this->insert($acheterDonnee);
 	}
 

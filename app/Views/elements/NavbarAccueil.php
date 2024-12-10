@@ -69,7 +69,7 @@
                 foreach ($promotion as $promo): ?>
                     <div class="carousel-item">
 						<pre class="promo-pre">
-							<?= esc($promo['reductionpromo']); ?>%     <?= esc($promo['codepromo']); ?>     <?= esc($promo['titredocument']); ?>
+							<?= esc($promo['reductionpromo']); ?>%     <?= esc('CODE : ' . $promo['codepromo']); ?>     <?= esc($promo['titredocument']); ?>
 						</pre>
                     </div>
                 <?php endforeach; ?>
