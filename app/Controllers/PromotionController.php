@@ -25,6 +25,30 @@ class PromotionController extends Controller
 
     }
 
+    public function valider()
+    {
+        $codepromo = $this->request->getPost('codepromo');
+
+        $promotionModel = new PromotionModel();
+
+        $promotion = $promotionModel->where('codepromo', $codepromo)
+                                    ->where('active', true)
+                                    ->first();
+
+        if (!$promotion) {
+            return redirect()->back()->with('error', 'Le code promo est invalide ou inactif.');
+        }
+
+        // Stocker le code promo valide dans la session
+        $session = session();
+        $session->set('codepromo', $promotion);
+
+        $promo = $session->get('codepromo');
+        echo $promo['reductionpromo'];
+
+        return redirect()->back()->with('success', 'Code promo appliqué avec succès.');
+    }
+
     public function creerView(){
         return view('Promos/CreerPromoView');
    }

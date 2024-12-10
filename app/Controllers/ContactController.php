@@ -48,7 +48,7 @@ class ContactController extends BaseController
 			],
 			'message' => [
 				'label' => 'Message',
-				'rules' => 'required|min_length[10]|max_length[1000]',
+				'rules' => 'required',
 				'errors' => [
 					'required' => 'Le champ {field} est obligatoire.',
 					'min_length' => 'Le champ {field} doit contenir au moins {param} caractères.',
@@ -56,6 +56,7 @@ class ContactController extends BaseController
 				]
 			]
 		]);
+
 
 		// Vérifier si les données sont valides
 		if (!$this->validate($validation->getRules())) {
@@ -72,7 +73,7 @@ class ContactController extends BaseController
 		$emailService->setFrom($email, $nom);
 		$emailService->setTo('mohamad.marrouche20047@gmail.com'); 
 		$emailService->setSubject('Nouveau message de contact');
-		$emailService->setMessage("Nom : $nom\n\n\nEmail : $email\n\nMessage :\n$message");
+		$emailService->setMessage("Nom : $nom\nEmail : $email\n\nMessage :\n$message");
 
 		if ($emailService->send()) {
 			// Message de succès

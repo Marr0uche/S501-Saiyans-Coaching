@@ -79,7 +79,7 @@
 					<input type="number" class="form-control" id="poidsdecorps" name="poidsdecorps" placeholder="Poids" required>
 				</div>
 			</div>
-
+			<button type="submit" class="btn btn-primary btn-block">Retour</button>
 			<button type="submit" class="btn btn-primary btn-block">S'inscrire</button>
 		</form>
 	</div>
