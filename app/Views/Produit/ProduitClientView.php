@@ -32,7 +32,7 @@
                                     ?>
                                     <img src="<?= $imagePath ?>" alt="" class="img-fluid rounded">
                                 </div>
-                                <p class="card-text"><strong>Prix :</strong> <?= esc($produit['prix']); ?> €</p>
+                                <p class="card-text-price"><strong>Prix :</strong> <?= esc($produit['prix']); ?> €</p>
                             </div>
 
                             <!-- Section commentaires -->
@@ -64,7 +64,7 @@
                                             Modifier votre commentaire
                                         </button>
                                     <?php else: ?>
-                                        <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal"
+                                        <button type="button" class="btn btn-comm btn-outline-secondary btn-sm" data-bs-toggle="modal"
                                             data-bs-target="#ajouterAvisModal" data-idproduit="<?= $produit['idproduit'] ?>">
                                             Ajouter un commentaire
                                         </button>
@@ -72,7 +72,7 @@
                                     <?php endif; ?>
                                 <?php else: ?>
                                     <p class="text-muted">Aucun commentaire pour ce produit.</p>
-                                    <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal"
+                                    <button type="button" class="btn btn-comm btn-outline-secondary btn-sm" data-bs-toggle="modal"
                                         data-bs-target="#ajouterAvisModal" data-idproduit="<?= $produit['idproduit'] ?>">
                                         Ajouter un commentaire
                                     </button>

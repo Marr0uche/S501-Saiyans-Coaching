@@ -24,13 +24,12 @@ class Database extends Config
      *
      * @var array<string, mixed>
      */
-
-     public array $default = [
+    public $default = [
         'DSN'          => '',
         'hostname'     => 'localhost',
-        'username'     => 'postgres',
-        'password'     => 'toto',
-        'database'     => 'saiyan',
+        'username'     => 'postgres', // ou votre nom d'utilisateur DB
+        'password'     => '',
+        'database'     => 'sayancoaching', // ou le nom de votre DB
         'DBDriver'     => 'Postgre',
         'DBPrefix'     => '',
         'pConnect'     => false,

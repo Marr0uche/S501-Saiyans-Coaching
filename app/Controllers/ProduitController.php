@@ -113,34 +113,68 @@ class ProduitController extends Controller{
 		return redirect()->to('/produit/dashboard');
 	}
 
-    public function creer() {
-
-        $produitModel = new ProduitModel();
+   public function creer() {
+    $produitModel = new ProduitModel();
     
-        // Traitement de l'image
-        $file = $this->request->getFile('fichier');
-        $fileName = null;
+    // Règles de validation
+    $rules = [
+        'titreproduit' => 'required|max_length[20]', // Le titre ne doit pas dépasser 100 caractères
+        'descriptionproduit' => 'required|max_length[255]', // La description ne doit pas dépasser 255 caractères
+        'prix' => 'required|numeric|greater_than[0]', // Le prix doit être un nombre positif
+        'fichier' => 'is_image[fichier]|mime_in[fichier,image/jpg,image/jpeg,image/png]|max_size[fichier,2048]', // Photo optionnelle avec vérifications
+    ];
     
-        if ($file && $file->isValid() && !$file->hasMoved()) {
-            $fileName = $file->getRandomName();
-            $file->move(WRITEPATH . '../public/uploads', $fileName);
-        }
+    // Messages personnalisés
+    $messages = [
+        'titreproduit' => [
+            'required' => 'Le titre du produit est obligatoire.',
+            'max_length' => 'Le titre du produit ne peut pas dépasser 20 caractères.'
+        ],
+        'descriptionproduit' => [
+            'required' => 'La description du produit est obligatoire.',
+            'max_length' => 'La description du produit ne peut pas dépasser 255 caractères.'
+        ],
+        'prix' => [
+            'required' => 'Le prix est obligatoire.',
+            'numeric' => 'Le prix doit être un nombre.',
+            'greater_than' => 'Le prix doit être supérieur à 0.'
+        ],
+        'fichier' => [
+            'is_image' => 'Le fichier téléchargé doit être une image.',
+            'mime_in' => 'Seuls les formats JPG, JPEG et PNG sont autorisés.',
+            'max_size' => 'La taille de l\'image ne doit pas dépasser 2 Mo.'
+        ]
+    ];
     
-        // Récupérer les données du formulaire
-        $data = [
-            'titreproduit' => $this->request->getPost('titreproduit'),
-            'descriptionproduit' => $this->request->getPost('descriptionproduit'),
-            'prix' => $this->request->getPost('prix'),
-            'affichageaccueil' => $this->request->getPost('affichageacceuil') === 'on', // Convertir booléen
-            'affichage' => $this->request->getPost('affichage') === 'on', // Convertir booléen
-            'photoproduit' => $fileName
-        ];
-    
-        // Insérer les données dans la base de données
-        $produitModel->creerProduit($data);
-        return redirect()->to('/produit/dashboard')->with('success', 'Produit ajouté avec succès.');
+    // Validation des données
+    if (!$this->validate($rules, $messages)) {
+        return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
     }
     
+    // Traitement de l'image
+    $file = $this->request->getFile('fichier');
+    $fileName = null;
+    
+    if ($file && $file->isValid() && !$file->hasMoved()) {
+        $fileName = $file->getRandomName();
+        $file->move(WRITEPATH . '../public/uploads', $fileName);
+    }
+    
+    // Récupérer les données du formulaire
+    $data = [
+        'titreproduit' => $this->request->getPost('titreproduit'),
+        'descriptionproduit' => $this->request->getPost('descriptionproduit'),
+        'prix' => $this->request->getPost('prix'),
+        'affichageaccueil' => $this->request->getPost('affichageacceuil') === 'on',
+        'affichage' => $this->request->getPost('affichage') === 'on',
+        'photoproduit' => $fileName
+    ];
+    
+    // Insérer les données dans la base de données
+    $produitModel->creerProduit($data);
+    return redirect()->to('/produit/dashboard')->with('success', 'Produit ajouté avec succès.');
+}
+
     
     public function creerView(){
          return view('Produit/CreerProduit');
