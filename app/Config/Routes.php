@@ -79,6 +79,7 @@ $routes->get('/achat/ajouter/(:num)', 'AchatController::ajouter/$1');
 $routes->get('/achat/confirme', 'AchatController::confirme');
 // A propos
 $routes->get('/A_propos', 'AProposController::index');
+$routes->get('/avant-apres', 'AvantApresController::index');
 
 // Mot de passe oublié
 $routes->get('mdp-oublie', 'MdpOublieController::demanderEmail');
