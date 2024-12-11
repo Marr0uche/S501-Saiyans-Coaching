@@ -1,0 +1,108 @@
+:root {
+	--noir: #0C0C0C;
+	--blanc: #fff;
+	--jaune: #F4E904;
+	--gris: #737373;
+}
+
+body {
+	background-color: var(--noir);
+	background-image: url(../img/img-paiement.webp);
+	/* Remplacer avec l'image de fond souhaitée */
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.page-container {
+	max-width: 80%;
+	margin: 2rem auto;
+	padding: 2rem;
+	background-color: rgba(12, 12, 12, 0.9);
+	border: 1px solid var(--gris);
+	border-radius: 8px;
+	text-align: center;
+}
+
+h2 {
+	font-size: 2rem;
+	color: var(--jaune);
+	margin-bottom: 20px;
+}
+
+.card {
+	margin-bottom: 2rem;
+	background-color: rgba(255, 255, 255, 0.1);
+	padding: 1.5rem;
+	border-radius: 8px;
+	color: var(--blanc);
+}
+
+.card-body {
+	text-align: left;
+}
+
+.card-title {
+	font-size: 1.5rem;
+	color: var(--jaune);
+	margin-bottom: 1rem;
+}
+
+.card-body p {
+	font-size: 1rem;
+	margin-bottom: 1rem;
+	color: var(--gris);
+}
+
+.alert {
+	padding: 1rem;
+	margin-bottom: 1rem;
+	border-radius: 5px;
+	font-size: 1rem;
+	text-align: center;
+}
+
+.alert-danger {
+	background-color: #f8d7da;
+	color: #721c24;
+	border: 1px solid #f5c6cb;
+}
+
+.btn-buy,
+.btn-back {
+	display: inline-block;
+	background-color: var(--jaune);
+	color: var(--noir);
+	padding: 0.8rem 1.5rem;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: background-color 0.3s;
+	margin-top: 20px;
+}
+
+.btn-buy:hover,
+.btn-back:hover {
+	background-color: var(--gris);
+	color: var(--blanc);
+}
+
+.btn-back {
+	background-color: var(--gris);
+}
+
+@media (max-width: 768px) {
+	.page-container {
+		max-width: 100%;
+		padding: 1rem;
+	}
+
+	.btn-buy,
+	.btn-back {
+		width: 100%;
+		text-align: center;
+	}
+}
