@@ -296,6 +296,7 @@ body {
 
 }
 
+
 /* Product image styling */
 .product-image {
     margin: 20px 0;
@@ -338,6 +339,8 @@ body {
     border-left: 1px solid #e5e5e5;
     text-align: center;
     color: var(--blanc);
+    /*dont shrink*/
+    flex-shrink: 0;
 }
 
 /* Review styling */
@@ -357,6 +360,14 @@ body {
 .review-text {
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
+}
+
+.review-text {
+    white-space: nowrap;        /* Empêche le retour à la ligne */
+    overflow: hidden;           /* Masque le texte qui déborde */
+    text-overflow: ellipsis;    /* Affiche "..." pour le texte tronqué */
+    width: 200px;  
+    cursor: pointer;
 }
 
 /* Buttons */
@@ -389,6 +400,8 @@ body {
     .card-footer {
         font-size: 0.8rem;
         padding: 5px 10px;
+        margin-top: calc(100rem + 300%) !important;
+
     }
 
     .btn-comm {
@@ -407,6 +420,47 @@ body {
         width: 100%;
         /* One card per row */
     }
+}
+
+/* Styles pour la modale */
+.modal {
+    display: none;              /* Cachée par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fond sombre transparent */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--noir);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 80%;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content #modal-text {
+    word-wrap: break-word !important;
+    /* Force les mots trop longs à se couper */
+    overflow-wrap: break-word !important;
+    /* Alternatif moderne pour couper les mots */
+    white-space: normal  !important;
+
+    padding: 20px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 
