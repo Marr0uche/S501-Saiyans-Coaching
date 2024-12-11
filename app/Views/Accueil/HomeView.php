@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <?php echo view('elements/NavbarAccueil', ['promotions'=>$promotion]); ?>
+    <?php echo view('elements/NavbarAccueil', ['promotions' => $promotion]); ?>
 
     <main>
         <section class="hero">
@@ -44,28 +44,42 @@
                             <div class="price">
                                 <h1> <?= esc($produit['prix']); ?> €</h1>
                             </div>
-                            <div class="periodicity">
+
+                            <div class="periodicity" style="--order: 0;">
                                 <p>Tous les mois</p>
                             </div>
-                            <div class="infos">
-                                <p class="p-infos"><?= esc($produit['valabilite']); ?> mois - <?= esc($produit['prix']); ?>
+                            <div class="infos" style="--order: 1;">
+                                <p class="p-infos"><?= esc($produit['valabilite']); ?><?= esc($produit['prix']); ?>
                                     €/mois </p>
                             </div>
-                            <div class="validity">
+                            <div class="validity" style="--order: 2;">
                                 <p class="p-validity">Valable <?= esc($produit['valabilite']); ?> mois</p>
                             </div>
+
                             <div class="sign-up">
                                 <a href="/produit/unique/<?= urlencode($produit['idproduit']); ?>"
                                     class="btn bordered radius">SÉLECTIONNER</a>
                             </div>
-                            <ul>
-                                <li>-Programmes 100% personnalisés</li>
-                                <li class="li-marg-top">-Audios et Vidéos</li>
-                                <li class="li-marg-top">-Programme alimentaire 100% personnalisé</li>
-                                <li class="li-marg-top">-Bilans bi-mensuel et mensuel</li>
-                                <li class="li-marg-top end">-Accès WatsApp 24/7</li>
 
-                            </ul>
+
+
+                            <div class="footer-produit <?= empty($produit['photoproduit']) ? 'no-image' : ''; ?>">
+                                <ul>
+                                    <li>-Programmes 100% personnalisés</li>
+                                    <li class="li-marg-top">-Audios et Vidéos</li>
+                                    <li class="li-marg-top">-Programme alimentaire 100% personnalisé</li>
+                                    <li class="li-marg-top">-Bilans bi-mensuel et mensuel</li>
+                                    <li class="li-marg-top end">-Accès WatsApp 24/7</li>
+
+                                </ul>
+
+                                <div class="img">
+                                    <?php if ($produit['photoproduit']): ?>
+                                        <img class="imgProduit" src="<?= base_url('uploads/' . $produit['photoproduit']); ?>"
+                                            alt="">
+                                    <?php endif; ?>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 <?php endforeach; ?>
@@ -246,6 +260,17 @@
         });
     });
 
+    document.querySelectorAll('.pricing-table .footer-produit').forEach(footer => {
+        const img = footer.querySelector('.imgProduit'); // Vérifie s'il y a une image
+        if (!img) {
+            footer.classList.add('no-image'); // Ajoute la classe no-image si aucune image
+        }
+    });
+
+
+
 </script>
+
+
 
 </html>

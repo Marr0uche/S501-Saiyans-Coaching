@@ -115,191 +115,342 @@ h4,
     }
 }
 
-/*programmes*/
-
+/* Wrapper */
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 15px;
-    margin: 50px;
-    padding: 0px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap : 1rem;
+    padding: 40px 20px;
 }
 
-.offres {
-    margin-bottom: 4.75rem;
-}
-
+/* Pricing Table */
 .pricing-table {
-    box-shadow: 0px 0px 18px var(--gris);
-    text-align: center;
-    padding-top: 30px;
-    border-radius: 5px;
-    position: relative;
-    background-color: var(--noir);
-    border: 1px solid var(--blanc);
-    transition: all 0.5s ease;
+    background-color: rgba(12, 12, 12, 0.6);
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease; 
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: var(--gris) 2px solid;
 }
 
 .pricing-table:hover {
-    box-shadow: 0px 0px 18px var(--jaune);
-    border: 1px solid var(--jaune);
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
+    border: var(--jaune) 2px solid;
 }
 
+/* Head Section */
 .pricing-table .head {
-    border-bottom: 1px solid var(--blanc);
-    padding-bottom: 50px;
-    transition: all 0.5s ease;
+    background-color: var(--noir);
+    color: var(--blanc);
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    transition: all 0.3s ease;
 }
-
-.pricing-table:hover .head {
-    border-bottom: 1px solid var(--jaune);
+.pricing-table:hover .head{
+    background-color: rgba(12, 12, 12, 0.8);
+    color: var(--jaune);
 }
 
 .pricing-table .head .title {
-    margin-bottom: 20px;
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--jaune);
-    transition: all 0.5s ease;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
-.pricing-table .content .price {
-    background: var(--noir);
-    width: 90px;
-    height: 90px;
-    margin: auto;
-    line-height: 90px;
-    border-radius: 5px;
-    border: 5px solid var(--noir);
-    margin-top: -50px;
-    transition: all 0.5s ease;
+/* Content Section */
+.pricing-table .content {
+    padding: 20px;
+    width: 100%;
 }
-
-.pricing-table:hover .content .price {
-    transform: scale(1.01);
-    border: 5px solid var(--jaune);
-}
-
-
 
 .pricing-table .content .price h1 {
+    font-size: 2em;
     color: var(--blanc);
-    font-size: 1.5rem;
-    font-weight: 700;
-    transition: all 0.5s ease;
-}
-.pricing-table:hover .content .price h1 {
-    transform: scale(1.3);
+    margin: 10px 0;
+    text-align: center;
 }
 
-.pricing-table .periodicity p {
-    font-size: 14px;
+.pricing-table .content .periodicity,
+.pricing-table .content .infos,
+.pricing-table .content .validity {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.pricing-table .content p {
+    font-size: 0.9em;
+}
+
+/* Sign-Up Button */
+.pricing-table .content .sign-up {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.pricing-table .content .sign-up .btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgba(12, 12, 12, 0.9);
     color: var(--blanc);
-    margin-top: 3px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1em;
+    font-weight: bold;
+    border: 2px solid var(--jaune);
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.infos {
-    width: 70%;
-    margin: auto;
+.pricing-table .content .sign-up .btn:hover {
+    background-color: var(--jaune);
+    color: var(--noir);
 }
 
-.p-infos {
-    font-size: 14px;
-    color: var(--blanc);
-    margin-top: 24px;
-}
-
-.p-validity {
-    font-size: 14px;
-    color: var(--blanc);
-    margin-top: 24px;
-    margin-bottom: 32px;
-}
-
+/* Features List */
 .pricing-table .content ul {
-    padding-top: 32px;
-    border-top: 1px solid var(--blanc);
-    background-color: var(--gris);
-    padding-bottom: 32px;
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: auto;
 }
 
 .pricing-table .content ul li {
-    margin-top: 1rem !important;
-    font-size: 14px;
+    font-size: 0.9em;
+    color: var(--blanc) !important;
+    padding: 5px 0;
+    transition: all 0.3s ease; 
+}
+
+.pricing-table:hover .content ul li {
     color: var(--blanc);
 }
 
-.pricing-table .content ul .li-marg-top {
-    margin-top: 30px;
+.pricing-table .content ul li.li-marg-top {
+    margin-top: 10px;
+}
+
+.pricing-table .footer-produit {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    justify-content: space-between ;
+    border-top: var(--blanc) 1px solid; 
+    margin-top: 1rem; 
+    padding-top: 1rem; 
 }
 
 
-.pricing-table .content .sign-up {
-    background: var(--blanc);
-    border-radius: 5px;
-    font-weight: 500;
-    position: relative;
-    display: inline-block;
-    margin-bottom: 32px;
+/* Si aucune image n'est présente, on recentre la liste */
+.pricing-table .footer-produit.no-image {
+    grid-template-columns: 1fr; /* Une seule colonne */
+    justify-items: center; /* Centre le contenu horizontalement */
+    text-align: center; /* Centre le texte des listes */
 }
 
-
-.pricing-table .btn {
-    background: var(--blanc);
-    color: var(--noir);
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-weight: 500;
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-    transition: all 0.5s ease;
-    text-decoration: none;
-
+.pricing-table .img .imgProduit {
+    max-width: 300px; 
+    max-height: 200px; 
+    width: auto;
+    height: auto; 
+    display: block; 
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    margin-left: auto;
 }
 
-.pricing-table:hover .btn {
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
-}
+@media screen and (max-width: 1572px) {
+    .pricing-table{
+        width: 400px;
+    }
 
-.pricing-table .btn:hover {
-    box-shadow: 0px 0px 15px var(--jaune) ;
-    background: var(--jaune);
-}
 
-.pricing-table .btn.bordered {
-    color: #333;
-}
+    .pricing-table .content .sign-up .btn {
+        font-size: 0.9em;
+    }
 
-.pricing-table .btn.bordered:after {
-    background: var(--blanc);
-    border-radius: 5px;
-    content: "";
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: -1;
-}
-
-.pricing-table:hover .btn.bordered:after {
-    opacity: 0;
-    transform: scale(0);
-}
-
-@media screen and (max-width:768px) {
-    .wrapper {
-        grid-template-columns: 1fr;
+    .pricing-table .content ul li {
+        font-size: 0.8em;
     }
 }
 
-@media screen and (max-width:600px) {
-    .wrapper {
-        grid-template-columns: 1fr;
+@media screen and (max-width: 1275px) {
+    .pricing-table{
+        width: 300px;
+    }
+
+    /*réduire les fontsize*/
+    .pricing-table .content .price h1 {
+        font-size: 1.5em;
+    }
+
+
+    .pricing-table .content .periodicity,
+    .pricing-table .content .infos,
+    .pricing-table .content .validity {
+        font-size: 0.9em;
+    }
+
+    .pricing-table .content .sign-up .btn {
+        font-size: 0.8em;
+    }
+
+    .pricing-table .content ul li {
+        font-size: 0.7em;
+    }
+
+    .pricing-table .img .imgProduit {
+        max-width: 250px; 
+        max-height: 175px; 
+    }
+}   
+
+@media screen and (max-width: 990px) {
+
+    .pricing-table{
+        width: 400px;
+    }
+    .pricing-table .footer-produit{
+        grid-template-columns: 1fr; /* Une seule colonne */
+        justify-items: center; /* Centre le contenu horizontalement */
+        text-align: center; /* Centre le texte des listes */
+    }
+
+    .pricing-table .img .imgProduit {
+        margin-top: 0.5rem !important;
     }
 }
+
+@media screen and (max-width: 856px) {
+
+    .pricing-table{
+        width: 300px;
+    }
+    .pricing-table .footer-produit{
+        grid-template-columns: 1fr; /* Une seule colonne */
+        justify-items: center; /* Centre le contenu horizontalement */
+        text-align: center; /* Centre le texte des listes */
+    }
+
+    .pricing-table .img .imgProduit {
+        margin-top: 0.5rem !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .pricing-table{
+        width: 400px;
+    }
+
+    /*réduire les fontsize*/
+    .pricing-table .content .price h1 {
+        font-size: 1.5em;
+    }
+
+    .pricing-table .content .sign-up .btn {
+        font-size: 0.8em;
+    }
+
+    .pricing-table .content ul li {
+        font-size: 0.7em;
+    }
+
+    .pricing-table .img .imgProduit {
+        max-width: 250px; 
+        max-height: 175px; 
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .pricing-table{
+        width: 300px;
+    }
+
+    /*réduire les fontsize*/
+    .pricing-table .content .price h1 {
+        font-size: 1.5em;
+    }
+
+    .pricing-table .content .sign-up .btn {
+        font-size: 0.8em;
+    }
+
+    .pricing-table .content ul li {
+        font-size: 0.7em;
+    }
+
+    .pricing-table .img .imgProduit {
+        max-width: 200px; 
+        max-height: 150px; 
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .pricing-table{
+        width: 275px;
+    }
+
+    /*réduire les fontsize*/
+    .pricing-table .content .price h1 {
+        font-size: 1.5em;
+    }
+
+    .pricing-table .content .sign-up .btn {
+        font-size: 0.8em;
+    }
+
+    .pricing-table .content ul li {
+        font-size: 0.7em;
+    }
+
+    .pricing-table .img .imgProduit {
+        max-width: 150px; 
+        max-height: 100px; 
+    }
+}
+
+
+
+
+
+.periodicity, .infos, .validity {
+    color: var(--blanc) !important;
+    opacity: 1; 
+}
+
+@keyframes lightUp {
+    0% {
+        color: var(--blanc);
+        opacity: 1; 
+    }
+    50% {
+        color: var(--gris);
+        opacity: 0.6; 
+    }
+    100% {
+        color: var(--blanc);
+        opacity: 1; 
+    }
+}
+
+.periodicity {
+    animation: lightUp 5s infinite;
+    animation-delay: 0s;
+}
+
+.infos {
+    animation: lightUp 5s infinite;
+    animation-delay: 1.75s;
+}
+
+.validity {
+    animation: lightUp 5s infinite;
+    animation-delay: 3s;
+}
+
 
 
 /*--------------FIN STYLE OFFRES---------------*/
@@ -310,7 +461,6 @@ h4,
     position: relative;
     height: 100vh;
     background: url('../img/img-accueil-2.webp') center/cover no-repeat;
-    /* Remplacez 'background-image.jpg' par votre image */
     display: flex;
     align-items: center;
     justify-content: center;
