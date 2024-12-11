@@ -40,31 +40,29 @@
                         <div class="card-footer bg-light">
                             <?php 
                             $commentaireAssocie = array_filter($commentaire, function ($achat) use ($produit) {
-                                return $achat['idproduit'] == $produit['idproduit'];
+                                return ($achat['idproduit'] == $produit['idproduit'])&& $achat['notetemoignage'] === null;
                             });
-                              // Récupérer seulement le premier commentaire (s'il existe)
+                            // Récupérer seulement le premier commentaire (s'il existe)
                             $commentaireAssocie = array_values($commentaireAssocie); // Réindexe le tableau
-                            $premierCommentaire = $commentaireAssocie[0] ?? null
+                            $premierCommentaire = $commentaireAssocie[0] ?? null; // Récupère le premier commentaire, ou null si vide
                             ?>
-                            
-                            <?php if (!empty($commentaireAssocie !== null)): ?>
-                                <?php foreach ($commentaireAssocie as $achat): ?>
-                                    <?php if ($achat['notetemoignage'] !== null): ?>
-                                        <div class="product-reviews mb-3">
-                                            <h6 class="review-title text-primary">Votre Avis :</h6>
-                                            <p class="review-rating mb-1"><strong>Note :</strong> <?= esc($achat['notetemoignage']); ?> ⭐</p>
-                                            <p class="review-date mb-1"><strong>Date :</strong> <?= esc($achat['datetemoignage']); ?></p>
-                                            <p class="review-text"><strong>Commentaire :</strong> <?= esc($achat['avistemoignage']); ?></p>
-                                        </div>
-                                        <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#ajouterAvisModal" data-idproduit="<?= $produit['idproduit'] ?>" data-note="<?= esc($achat['notetemoignage']); ?>"  data-avis="<?= esc($achat['avistemoignage']); ?>">
-                                            Modifier votre commentaire
-                                        </button>
-                                    <?php else: ?>
-                                        <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#ajouterAvisModal" data-idproduit="<?= $produit['idproduit'] ?>">
-                                            Ajouter un commentaire
-                                        </button>
-                                    <?php endif; ?>
-                                <?php endforeach; ?>
+
+                            <?php if ($premierCommentaire !== null): ?>
+                                <?php if ($premierCommentaire['notetemoignage'] !== null): ?>
+                                    <div class="product-reviews mb-3">
+                                        <h6 class="review-title text-primary">Votre Avis :</h6>
+                                        <p class="review-rating mb-1"><strong>Note :</strong> <?= esc($premierCommentaire['notetemoignage']); ?> ⭐</p>
+                                        <p class="review-date mb-1"><strong>Date :</strong> <?= esc($premierCommentaire['datetemoignage']); ?></p>
+                                        <p class="review-text"><strong>Commentaire :</strong> <?= esc($premierCommentaire['avistemoignage']); ?></p>
+                                    </div>
+                                    <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#ajouterAvisModal" data-idproduit="<?= $produit['idproduit'] ?>" data-note="<?= esc($premierCommentaire['notetemoignage']); ?>" data-avis="<?= esc($premierCommentaire['avistemoignage']); ?>">
+                                        Modifier votre commentaire
+                                    </button>
+                                <?php else: ?>
+                                    <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#ajouterAvisModal" data-idproduit="<?= $produit['idproduit'] ?>">
+                                        Ajouter un commentaire
+                                    </button>
+                                <?php endif; ?>
                             <?php else: ?>
                                 <p class="text-muted">Aucun commentaire pour ce produit.</p>
                                 <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#ajouterAvisModal" data-idproduit="<?= $produit['idproduit'] ?>">
