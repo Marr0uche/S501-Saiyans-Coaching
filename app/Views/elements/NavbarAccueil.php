@@ -104,10 +104,18 @@
 
     function showSlide(index) {
         const slidesCar = document.querySelectorAll('.carousel-item');
+        const carouselInner = document.querySelector('.carousel-inner');
         const totalSlides = slidesCar.length;
-        currentSlide = (index + totalSlides) % totalSlides;
-        const offset = -currentSlide * 100;
-        document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
+
+        // Ajuster la largeur dynamique de chaque slide
+        const slideWidth = slidesCar[0].offsetWidth;
+
+        // Calcul de l'offset en fonction de la largeur réelle du slide
+        currentSlide = (index + totalSlides) % totalSlides; // Boucle circulaire
+        const offset = -currentSlide * slideWidth;
+
+        // Appliquer la transformation
+        carouselInner.style.transform = `translateX(${offset}px)`;
     }
 
     function prevSlide() {
@@ -118,10 +126,19 @@
         showSlide(currentSlide + 1);
     }
 
-    showSlide(0); // Initial display
+    // Initial display
+    window.addEventListener('load', () => {
+        showSlide(0);
 
-    // Change slide every 5 seconds
-    setInterval(() => {
-        nextSlide();
-    }, 5000);
+        // Change slide every 5 seconds
+        setInterval(() => {
+            nextSlide();
+        }, 5000);
+    });
+
+    // Recalculer l'offset sur redimensionnement de l'écran
+    window.addEventListener('resize', () => {
+        showSlide(currentSlide);
+    });
+
 </script>

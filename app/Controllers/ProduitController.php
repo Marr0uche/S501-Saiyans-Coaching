@@ -109,7 +109,7 @@ class ProduitController extends Controller{
         ];
     
         if (!$this->validate($validationRules)) {
-            return redirect()->to('/Produit');
+            return redirect()->to('/produit/dashboard');
         }
     
         $produitModel = new ProduitModel();
@@ -128,14 +128,14 @@ class ProduitController extends Controller{
             'titreproduit' => $this->request->getPost('Titre'),
             'descriptionproduit' => $this->request->getPost('descriptionproduit'),
             'prix' => $this->request->getPost('prix'),
-            'affichageaccueil' => $this->request->getPost('dashboard') === 'true', // Assurez-vous que c'est un booléen
-            'affichage' => $this->request->getPost('Afficher') === 'true' , // Assurez-vous que c'est un booléen
+            'affichageaccueil' => $this->request->getPost('dashboard') ?? false, // Assurez-vous que c'est un booléen
+            'affichage' => $this->request->getPost('Afficher')?? false , // Assurez-vous que c'est un booléen
             'photoproduit' => $fileName
         ];
 
         // Insérer les données dans la base de données
         $produitModel->creerProduit($data);
-        return redirect()->to('/Produit');
+        return redirect()->to('/produit/dashboard');
     }
     
     public function creerView(){
@@ -143,6 +143,18 @@ class ProduitController extends Controller{
     }
     public function modifier()
 	{
+        $validationRules = [
+            'titreproduit' => 'required|min_length[3]|max_length[255]',
+            'descriptionproduit' => 'permit_empty|max_length[1000]',
+            'prix' => 'required|numeric',
+            'affichage' => 'permit_empty|in_list[true,false]',
+            'affichageaccueil' => 'permit_empty|in_list[true,false]',
+        ];
+        
+        if (!$this->validate($validationRules)) {
+            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+        }
+        
 		$produitModel = new ProduitModel();
 
 		$idProduit = $this->request->getPost('idproduit');
@@ -156,8 +168,8 @@ class ProduitController extends Controller{
 			'photoproduit' => $this->request->getPost('fichier'),
             'descriptionproduit' => $this->request->getPost('descriptionproduit'),
 			'prix' => $this->request->getPost('prix'),
-            'affichage' => $this->request->getPost('affichage'),
-			'affichageaccueil' => $this->request->getPost('affichageaccueil'),
+            'affichage' => $this->request->getPost('affichage')=== 't' ? true : false,
+			'affichageaccueil' => $this->request->getPost('affichageacceuil') === 't' ? true : false ,
 		];
 
 		if ($produitModel->majProduit($idProduit, $data)) {

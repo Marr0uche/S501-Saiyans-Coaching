@@ -53,7 +53,9 @@ $routes->post('/profile/modifier', 'ProfileController::modifier');
 // Promotion
 $routes->get('/promotion/ajoutview', 'PromotionController::creerView');
 $routes->post('/promotion/creer', 'PromotionController::creer');
-$routes->get('promo', 'PromotionController::index');
+$routes->get('/promo', 'PromotionController::index');
+$routes->get('produit/promo', 'PromotionController::index');
+
 $routes->post('promotion/modifier', 'PromotionController::modifier');
 $routes->get('/promotion/suppression/(:num)', 'PromotionController::supprimer/$1');
 $routes->post('promo/valider', 'PromotionController::valider');
@@ -77,6 +79,7 @@ $routes->get('/achat/(:num)', 'AchatController::indexAchat/$1');
 
 $routes->get('/achat/ajouter/(:num)', 'AchatController::ajouter/$1');
 $routes->get('/achat/confirme', 'AchatController::confirme');
+
 // A propos
 $routes->get('/A_propos', 'AProposController::index');
 $routes->get('/avant-apres', 'AvantApresController::index');
@@ -90,3 +93,6 @@ $routes->post('mdp-oublie/reinitialiser', 'MdpOublieController::reinitialiserMot
 // Paiement
 $routes->get('/paiement/(:num)/(:any)', 'PaiementController::afficherPagePaiement/$1/$2');
 $routes->post('paiement/traiter', 'PaiementController::traiterPaiement');
+
+//Cgv
+$routes->get('conditions-generales', 'CgvController::index');

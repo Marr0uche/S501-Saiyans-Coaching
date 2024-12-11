@@ -24,7 +24,6 @@ class Database extends Config
      *
      * @var array<string, mixed>
      */
-  
      public array $default = [
         'DSN'          => 'Postgre://mm221005:Mohamad12345%@woody.iut.univ-lehavre.fr:5432',
         'hostname'     => 'woody.iut.univ-lehavre.fr',
