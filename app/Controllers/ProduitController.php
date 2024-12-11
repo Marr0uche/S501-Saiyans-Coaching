@@ -39,8 +39,7 @@ class ProduitController extends Controller{
         ]); 
     }
 
-	   public function indexDashboard()
-    {
+	public function indexDashboard(){
 
 
         // Chargement des modèles
@@ -97,46 +96,33 @@ class ProduitController extends Controller{
 	}
 
     public function creer() {
-        $validationRules = [
-            'fichier' => [
-                'rules' => 'uploaded[fichier]|mime_in[fichier,image/jpg,image/jpeg,image/png]|max_size[fichier,2048]',
-                'errors' => [
-                    'uploaded' => 'Vous devez sélectionner un fichier.',
-                    'mime_in' => 'Seuls les fichiers JPG et PNG sont autorisés.',
-                    'max_size' => 'La taille du fichier ne doit pas dépasser 2MB.'
-                ],
-            ],
-        ];
-    
-        if (!$this->validate($validationRules)) {
-            return redirect()->to('/produit/dashboard');
-        }
-    
+
         $produitModel = new ProduitModel();
     
         // Traitement de l'image
         $file = $this->request->getFile('fichier');
-		$fileName = null;
-
-		if ($file && $file->isValid() && !$file->hasMoved()) {
-			$fileName = $file->getRandomName();
-			$file->move(WRITEPATH . '../public/uploads', $fileName);
-		}
-
+        $fileName = null;
+    
+        if ($file && $file->isValid() && !$file->hasMoved()) {
+            $fileName = $file->getRandomName();
+            $file->move(WRITEPATH . '../public/uploads', $fileName);
+        }
+    
         // Récupérer les données du formulaire
         $data = [
-            'titreproduit' => $this->request->getPost('Titre'),
+            'titreproduit' => $this->request->getPost('titreproduit'),
             'descriptionproduit' => $this->request->getPost('descriptionproduit'),
             'prix' => $this->request->getPost('prix'),
-            'affichageaccueil' => $this->request->getPost('dashboard') ?? false, // Assurez-vous que c'est un booléen
-            'affichage' => $this->request->getPost('Afficher')?? false , // Assurez-vous que c'est un booléen
+            'affichageaccueil' => $this->request->getPost('affichageacceuil') === 'on', // Convertir booléen
+            'affichage' => $this->request->getPost('affichage') === 'on', // Convertir booléen
             'photoproduit' => $fileName
         ];
-
+    
         // Insérer les données dans la base de données
         $produitModel->creerProduit($data);
-        return redirect()->to('/produit/dashboard');
+        return redirect()->to('/produit/dashboard')->with('success', 'Produit ajouté avec succès.');
     }
+    
     
     public function creerView(){
          return view('Produit/CreerProduit');

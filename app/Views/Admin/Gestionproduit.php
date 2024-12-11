@@ -325,96 +325,98 @@
         </div>
     </div>
 
-    <!-- Modal pour l'ajout de produit -->
     <div class="modal fade" id="ajoutProduitModal" tabindex="-1" aria-labelledby="ajoutProduitModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="ajoutProduitModalLabel">Ajouter un Produit</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <?= form_open('/produit/creer', ['enctype' => 'multipart/form-data', 'id' => 'ajoutProduitForm']); ?>
-                <div class="modal-body">
-                    <!-- Nom -->
-                    <div class="form-group">
-                        <?= form_label('Nom du produit', 'titreproduit'); ?>
-                        <?= form_input([
-                            'name' => 'titreproduit',
-                            'id' => 'titreproduit',
-                            'class' => 'form-control',
-                            'required' => true,
-                            'placeholder' => 'Ex : Nom du produit...',
-                        ]); ?>
-                    </div>
-                    <br>
-                    <!-- Description -->
-                    <div class="form-group">
-                        <?= form_label('Description', 'descriptionproduit'); ?>
-                        <?= form_textarea([
-                            'name' => 'descriptionproduit',
-                            'id' => 'descriptionproduit',
-                            'class' => 'form-control',
-                            'rows' => 3,
-                            'required' => true,
-                            'placeholder' => 'Brève description du produit...',
-                        ]); ?>
-                    </div>
-                    <br>
-                    <!-- Prix -->
-                    <div class="form-group">
-                        <?= form_label('Prix (€)', 'prix'); ?>
-                        <?= form_input([
-                            'name' => 'prix',
-                            'id' => 'prix',
-                            'class' => 'form-control',
-                            'type' => 'number',
-                            'step' => '0.01',
-                            'required' => true,
-                            'placeholder' => 'Ex : 19.99',
-                        ]); ?>
-                    </div>
-                    <br>
-                    <!-- Image -->
-                    <div class="form-group">
-                        <?= form_label('Image du produit', 'fichier'); ?>
-                        <?= form_upload([
-                            'name' => 'fichier',
-                            'id' => 'fichier',
-                            'class' => 'form-control',
-                            'accept' => 'image/*',
-                        ]); ?>
-                    </div>
-                    <br>
-                    <!-- Affichage -->
-                    <div class="form-check form-switch">
-                        <?= form_checkbox([
-                            'name' => 'affichage',
-                            'id' => 'affichage',
-                            'class' => 'form-check-input',
-                        ]); ?>
-                        <?= form_label('Afficher le produit', 'affichage'); ?>
-                    </div>
-                    <br>
-                    <!-- Affichage sur l'accueil -->
-                    <div class="form-check form-switch">
-                        <?= form_checkbox([
-                            'name' => 'affichageacceuil',
-                            'id' => 'affichageacceuil',
-                            'class' => 'form-check-input',
-                        ]); ?>
-                        <?= form_label('Afficher sur l\'accueil', 'affichageacceuil'); ?>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                    <?= form_submit('submit', 'Enregistrer', ['class' => 'btn btn-primary']); ?>
-                </div>
-                <?= form_close(); ?>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ajoutProduitModalLabel">Ajouter un Produit</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+            <?= form_open('/produit/creer', ['enctype' => 'multipart/form-data', 'id' => 'ajoutProduitForm']); ?>
+            <div class="modal-body">
+                <!-- Nom -->
+                <div class="form-group">
+                    <?= form_label('Nom du produit', 'titreproduit'); ?>
+                    <?= form_input([
+                        'name' => 'titreproduit',
+                        'id' => 'titreproduit',
+                        'class' => 'form-control',
+                        'required' => true,
+                        'placeholder' => 'Ex : Nom du produit...',
+                    ]); ?>
+                </div>
+                <br>
+                <!-- Description -->
+                <div class="form-group">
+                    <?= form_label('Description', 'descriptionproduit'); ?>
+                    <?= form_textarea([
+                        'name' => 'descriptionproduit',
+                        'id' => 'descriptionproduit',
+                        'class' => 'form-control',
+                        'rows' => 3,
+                        'required' => true,
+                        'placeholder' => 'Brève description du produit...',
+                    ]); ?>
+                </div>
+                <br>
+                <!-- Prix -->
+                <div class="form-group">
+                    <?= form_label('Prix (€)', 'prix'); ?>
+                    <?= form_input([
+                        'name' => 'prix',
+                        'id' => 'prix',
+                        'class' => 'form-control',
+                        'type' => 'number',
+                        'step' => '0.01',
+                        'required' => true,
+                        'placeholder' => 'Ex : 19.99',
+                    ]); ?>
+                </div>
+                <br>
+                <!-- Image -->
+                <div class="form-group">
+                    <?= form_label('Image du produit', 'fichier'); ?>
+                    <?= form_upload([
+                        'name' => 'fichier',
+                        'id' => 'fichier',
+                        'class' => 'form-control',
+                        'accept' => 'image/*',
+                    ]); ?>
+                </div>
+                <br>
+                <!-- Affichage -->
+                <div class="form-check form-switch">
+                    <?= form_checkbox([
+                        'name' => 'affichage',
+                        'id' => 'affichage',
+                        'class' => 'form-check-input',
+                        'value' => 'on',
+                    ]); ?>
+                    <?= form_label('Afficher le produit', 'affichage'); ?>
+                </div>
+                <br>
+                <!-- Affichage sur l'accueil -->
+                <div class="form-check form-switch">
+                    <?= form_checkbox([
+                        'name' => 'affichageacceuil',
+                        'id' => 'affichageacceuil',
+                        'class' => 'form-check-input',
+                        'value' => 'on',
+                    ]); ?>
+                    <?= form_label('Afficher sur l\'accueil', 'affichageacceuil'); ?>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                <?= form_submit('submit', 'Enregistrer', ['class' => 'btn btn-primary']); ?>
+            </div>
+            <?= form_close(); ?>
         </div>
     </div>
-    <!-- Modal pour l'ajout de promotion -->
-    <!-- Modal pour la création de promotion -->
+</div>
+
+
+
     <div class="modal fade" id="ajoutPromoModal" tabindex="-1" aria-labelledby="promotionModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
