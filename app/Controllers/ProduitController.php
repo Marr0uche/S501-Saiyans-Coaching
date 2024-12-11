@@ -46,22 +46,40 @@ class ProduitController extends Controller{
         $product = new ProduitModel();
         $promotion = new PromotionModel();
 
-        $order = strtoupper($this->request->getVar('order')) === 'ASC' ? 'ASC' : 'DESC';
+        $orderbyProd = $this->request->getVar('orderbyProd') ?? 'idproduit';
+        $orderProd = strtoupper($this->request->getVar('orderProd')) === 'ASC' ? 'ASC' : 'DESC';
 
+        $validColumnsProd = ['idproduit', 'titreproduit', 'descriptionproduit', 'prix'];
+		if (!in_array($orderbyProd, $validColumnsProd)) {
+			$orderbyProd = 'idproduit';
+		}
+
+
+        /*orderby Prom*/
+        $orderbyProm = $this->request->getVar('orderbyProm') ?? 'iddocument';
+        $orderProm = strtoupper($this->request->getVar('orderProm')) === 'ASC' ? 'ASC' : 'DESC';
+
+        $validColumnsProm = ['iddocument', 'titredocument', 'descriptiondocument', 'reductionpromo','codepromo'];
+		if (!in_array($orderbyProm, $validColumnsProm)) {
+			$orderbyProm = 'iddocument';
+		}
 
 		$configPager = config(Pager::class);
 		$perPage = 2;
 		
 
         // Utilisation de la méthode paginate
-        $productListe = $product->findAll();
-        $promotionListe= $promotion->findAll();
+        $productListe = $product->orderBy($orderbyProd, $orderProd)
+                                ->findAll();
+        $promotionListe= $promotion->orderBy($orderbyProm, $orderProm)
+                                   ->findAll();
 
         // Passer les données à la vue
         return view('Admin/Gestionproduit', [
             'produits' => $productListe,
             'promotions' =>$promotionListe,
-            'order' => $order
+            'orderProd' => $orderProd,
+            'orderProm' => $orderProm,
         ]); 
     }
 
@@ -129,17 +147,7 @@ class ProduitController extends Controller{
     }
     public function modifier()
 	{
-        $validationRules = [
-            'titreproduit' => 'required|min_length[3]|max_length[255]',
-            'descriptionproduit' => 'permit_empty|max_length[1000]',
-            'prix' => 'required|numeric',
-            'affichage' => 'permit_empty|in_list[true,false]',
-            'affichageaccueil' => 'permit_empty|in_list[true,false]',
-        ];
-        
-        if (!$this->validate($validationRules)) {
-            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
-        }
+      
         
 		$produitModel = new ProduitModel();
 
@@ -149,16 +157,34 @@ class ProduitController extends Controller{
 			return redirect()->back()->with('error', 'ID Projet invalide.');
 		}
 
-		$data = [
-			'titreproduit' => $this->request->getPost('titreproduit'),
-			'photoproduit' => $this->request->getPost('fichier'),
-            'descriptionproduit' => $this->request->getPost('descriptionproduit'),
-			'prix' => $this->request->getPost('prix'),
-            'affichage' => $this->request->getPost('affichage')=== 't' ? true : false,
-			'affichageaccueil' => $this->request->getPost('affichageacceuil') === 't' ? true : false ,
-		];
+        $affichage = $this->request->getPost('affichage');
+        $affichageAcceuil = $this->request->getPost('affichageacceuil');
 
-		if ($produitModel->majProduit($idProduit, $data)) {
+
+        if (isset($affichage)) {
+            $affichage = true;
+        }else
+        {
+            $affichage = 'f';
+        }
+
+        if (isset($affichageAcceuil)) {
+            $affichageAcceuil = true;
+        }else
+        {
+            $affichageAcceuil = 'f';
+        }
+
+        $data = [
+            'titreproduit' => $this->request->getPost('titreproduit'),
+            'photoproduit' => $this->request->getPost('fichier'),
+            'descriptionproduit' => $this->request->getPost('descriptionproduit'),
+            'prix' => $this->request->getPost('prix'),
+            'affichage' => $affichage,
+            'affichageaccueil' => $affichageAcceuil
+        ];
+
+        if ($produitModel->majProduit($idProduit, $data)) {
 			return redirect()->to('/produit/dashboard')->with('message', 'Projet modifié avec succès.');
 		} else {
 			return redirect()->back()->with('error', 'Erreur lors de la modification du projet.');
