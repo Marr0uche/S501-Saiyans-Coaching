@@ -63,8 +63,9 @@
                             <?php foreach ($produits as $produit): ?>
                                 <tr>
                                     <td><?= esc($produit['idproduit']); ?></td>
-                                    <td>
-                                        <img src="<?= esc($produit['photoproduit']); ?>" alt="Image du produit" style="width: 60px; height: auto;">
+                                    <td><?php
+                                        $imagePath = base_url('uploads/' . $produit['photoproduit']);
+						                ?><img src="<?= $imagePath ?>" alt="" style="width:20%;">
                                     </td>
                                     <td><?= esc($produit['titreproduit']); ?></td>
                                     <td><?= esc($produit['descriptionproduit']); ?></td>
