@@ -1,5 +1,5 @@
 <footer>
-        <section class="footers">
+	<section class="footers">
 
             <div class="footer-content">
                 <div class="footer-content-left">
@@ -13,12 +13,12 @@
                 <div class="footer-content-right">
                     <ul>
                         <li><a href="#">Accueil</a></li>
-                        <li><a href="#">À propos</a></li>
-                        <li><a href="#">Programmes</a></li>
+                        <li><a href="/A_propos">À propos</a></li>
+                        <li><a href="/Produit">Programmes</a></li>
                         <li><a href="#">Avant / Après</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Actualité</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/actualites">Actualité</a></li>
+                        <li><a href="/contact">FAQ/Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -27,3 +27,5 @@
             </div>
         </section>
     </footer>
+
+    

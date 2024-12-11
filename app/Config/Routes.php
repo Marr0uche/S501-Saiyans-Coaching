@@ -79,6 +79,7 @@ $routes->get('/achat/(:num)', 'AchatController::indexAchat/$1');
 
 $routes->get('/achat/ajouter/(:num)', 'AchatController::ajouter/$1');
 $routes->get('/achat/confirme', 'AchatController::confirme');
+
 // A propos
 $routes->get('/A_propos', 'AProposController::index');
 
@@ -91,3 +92,6 @@ $routes->post('mdp-oublie/reinitialiser', 'MdpOublieController::reinitialiserMot
 // Paiement
 $routes->get('/paiement/(:num)/(:any)', 'PaiementController::afficherPagePaiement/$1/$2');
 $routes->post('paiement/traiter', 'PaiementController::traiterPaiement');
+
+//Cgv
+$routes->get('conditions-generales', 'CgvController::index');

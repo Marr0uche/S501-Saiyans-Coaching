@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Inscription</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-	<link rel="stylesheet" href="<?php echo base_url('assets/css/Connexion.css'); ?>">
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/inscription.css'); ?>">
 </head>
 
 <body>
@@ -83,6 +83,7 @@
 			<button type="submit" class="btn btn-primary btn-block">S'inscrire</button>
 		</form>
 	</div>
+	
 </body>
 
 </html>
