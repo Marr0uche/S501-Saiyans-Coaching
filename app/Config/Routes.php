@@ -53,7 +53,9 @@ $routes->post('/profile/modifier', 'ProfileController::modifier');
 // Promotion
 $routes->get('/promotion/ajoutview', 'PromotionController::creerView');
 $routes->post('/promotion/creer', 'PromotionController::creer');
-$routes->get('promo', 'PromotionController::index');
+$routes->get('/promo', 'PromotionController::index');
+$routes->get('produit/promo', 'PromotionController::index');
+
 $routes->post('promotion/modifier', 'PromotionController::modifier');
 $routes->get('/promotion/suppression/(:num)', 'PromotionController::supprimer/$1');
 $routes->post('promo/valider', 'PromotionController::valider');

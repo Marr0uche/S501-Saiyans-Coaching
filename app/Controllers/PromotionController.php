@@ -57,7 +57,7 @@ class PromotionController extends Controller
         $promos = new PromotionModel();
 
 		$promos->supprimerPromotion($idPromos);
-		return redirect()->to('promo');
+		return redirect()->to('/produit/dashboard');
 	}
 
     public function creer() {
@@ -84,7 +84,7 @@ class PromotionController extends Controller
             return redirect()->back()->withInput()->with('errors', $promos->errors());
         }
         $promos->creerPromotion($data);
-        return redirect()->to('promo');
+        return redirect()->to('/produit/dashboard');
     }
     
     public function modifier(){
@@ -99,13 +99,13 @@ class PromotionController extends Controller
 		$data = [
 			'titredocument' => $this->request->getPost('titrepromotion'),
             'descriptiondocument' => $this->request->getPost('DescriptionPromotion'),
-			'active' => $this->request->getPost('active'),
+			'active' => $this->request->getPost('active')?? false,
             'reductionpromo' => $this->request->getPost('reduc'),
 			'codepromo' => $this->request->getPost('code'),
 		];
 
 		if ($promos->majPromotion($idPromo, $data)) {
-			return redirect()->to('promo')->with('message', 'Projet modifié avec succès.');
+			return redirect()->to('/produit/dashboard')->with('message', 'Projet modifié avec succès.');
 		} else {
 			return redirect()->back()->with('error', 'Erreur lors de la modification du projet.');
 		}

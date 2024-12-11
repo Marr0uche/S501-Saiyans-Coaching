@@ -23,6 +23,9 @@
 			<a href="/produit/dashboard" class="menu-gear-button text-light">
 				<i class="fa-solid fa-cog fa-2xl"></i>
 			</a>
+			<a href="/" class="menu-gear-button text-light">
+				<i class="fas fa-home"></i>
+			</a>
 			</div>
 		</div>
 	</header>
