@@ -31,33 +31,33 @@
 
 			<div class="form-row">
 				<div class="form-group col-md-6">
-					<label for="nom">Nom</label>
+					<label for="nom">Nom *</label>
 					<input type="text" class="form-control" id="nom" name="nom" placeholder="Entrez votre nom" required>
 				</div>
 				<div class="form-group col-md-6">
-					<label for="prenom">Prénom</label>
+					<label for="prenom">Prénom *</label>
 					<input type="text" class="form-control" id="prenom" name="prenom" placeholder="Entrez votre prénom" required>
 				</div>
 			</div>
 
 			<div class="form-row">
 				<div class="form-group col-md-6">
-					<label for="mail">Email</label>
+					<label for="mail">Email *</label>
 					<input type="email" class="form-control" id="mail" name="mail" placeholder="Entrez votre email" required>
 				</div>
 				<div class="form-group col-md-6">
-					<label for="motdepasse">Mot de passe</label>
+					<label for="motdepasse">Mot de passe *</label>
 					<input type="password" class="form-control" id="motdepasse" name="motdepasse" placeholder="Entrez votre mot de passe" required>
 				</div>
 			</div>
 
 			<div class="form-row">
 				<div class="form-group col-md-6">
-					<label for="mobile">Mobile</label>
+					<label for="mobile">Mobile *</label>
 					<input type="text" class="form-control" id="mobile" name="mobile" placeholder="Entrez votre numéro de mobile" required>
 				</div>
 				<div class="form-group col-md-6">
-					<label for="sexe">Sexe</label>
+					<label for="sexe">Sexe *</label>
 					<select class="form-control" id="sexe" name="sexe" required>
 						<option value="Homme">Homme</option>
 						<option value="Femme">Femme</option>
@@ -67,15 +67,15 @@
 
 			<div class="form-row">
 				<div class="form-group col-md-6">
-					<label for="datenaissance">Date de naissance</label>
+					<label for="datenaissance">Date de naissance *</label>
 					<input type="date" class="form-control" id="datenaissance" name="datenaissance" required>
 				</div>
 				<div class="form-group col-md-3">
-					<label for="taille">Taille (cm)</label>
+					<label for="taille">Taille (cm) *</label>
 					<input type="number" class="form-control" id="taille" name="taille" placeholder="Taille" required>
 				</div>
 				<div class="form-group col-md-3">
-					<label for="poidsdecorps">Poids (kg)</label>
+					<label for="poidsdecorps">Poids (kg) *</label>
 					<input type="number" class="form-control" id="poidsdecorps" name="poidsdecorps" placeholder="Poids" required>
 				</div>
 			</div>
@@ -83,7 +83,7 @@
 			<button type="submit" class="btn btn-primary btn-block">S'inscrire</button>
 		</form>
 	</div>
-	
+
 </body>
 
 </html>

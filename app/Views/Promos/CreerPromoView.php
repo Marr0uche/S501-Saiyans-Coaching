@@ -14,13 +14,13 @@
     </header>
 
 	<?= form_open('/promotion/creer'); ?>
-    <?= form_label('Titre de la promotion :', 'Titre'); ?>
+    <?= form_label('Titre de la promotion : *', 'Titre'); ?>
     <?= form_input('Titre', set_value('Titre'), 'required'); ?>
     <?= validation_show_error('Titre') ?>
     <p>Le champ titre est requis</p>
     <br>
 
-    <?= form_label('Description de la promotion :', 'descriptiondocument'); ?>
+    <?= form_label('Description de la promotion : *', 'descriptiondocument'); ?>
     <?= form_textarea('descriptiondocument', set_value('descriptiondocument'), 'required'); ?>
     <?= validation_show_error('descriptiondocument') ?>
 
@@ -31,12 +31,12 @@
     <br>
 
 
-    <?= form_label('Reduction appliquer en % :', 'reduc'); ?>
+    <?= form_label('Reduction appliquer en % : *', 'reduc'); ?>
     <?= form_input('reduc', set_value('reduc'),'required'); ?>
     <?= validation_show_error('reduc') ?>
     <br>
 
-    <?= form_label('Code Promotionnelle pour appliquer la promotion :', 'codepromo'); ?>
+    <?= form_label('Code Promotionnelle pour appliquer la promotion : *', 'codepromo'); ?>
     <?= form_textarea('codepromo', set_value('codepromo'), 'required'); ?>
     <?= validation_show_error('codepromo') ?>
     <br>
