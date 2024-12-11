@@ -93,7 +93,7 @@ class ProduitController extends Controller{
         $product = new ProduitModel();
 
 		$product->supprimerProduit($idProduit);
-		return redirect()->to('/Produit');
+		return redirect()->to('/produit/dashboard');
 	}
 
     public function creer() {

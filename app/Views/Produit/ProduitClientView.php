@@ -42,9 +42,12 @@
                             $commentaireAssocie = array_filter($commentaire, function ($achat) use ($produit) {
                                 return $achat['idproduit'] == $produit['idproduit'];
                             });
+                              // Récupérer seulement le premier commentaire (s'il existe)
+                            $commentaireAssocie = array_values($commentaireAssocie); // Réindexe le tableau
+                            $premierCommentaire = $commentaireAssocie[0] ?? null
                             ?>
                             
-                            <?php if (!empty($commentaireAssocie)): ?>
+                            <?php if (!empty($commentaireAssocie !== null)): ?>
                                 <?php foreach ($commentaireAssocie as $achat): ?>
                                     <?php if ($achat['notetemoignage'] !== null): ?>
                                         <div class="product-reviews mb-3">
