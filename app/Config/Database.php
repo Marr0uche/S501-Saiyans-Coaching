@@ -24,6 +24,7 @@ class Database extends Config
      *
      * @var array<string, mixed>
      */
+
     public array $default = [
         'DSN'          => '',
         'hostname'     => 'localhost',
@@ -36,18 +37,8 @@ class Database extends Config
         'DBDebug'      => true,
         'charset'      => 'utf8',
         'DBCollat'     => 'utf8_general_ci',
-        'swapPre'      => '',
+        'port'         => 5432, // Assurez-vous que c'est bien le bon port
         'encrypt'      => false,
-        'compress'     => false,
-        'strictOn'     => false,
-        'failover'     => [],
-        'port'         => 5432,
-        'numberNative' => false,
-        'dateFormat'   => [
-            'date'     => 'Y-m-d',
-            'datetime' => 'Y-m-d H:i:s',
-            'time'     => 'H:i:s',
-        ],
     ];
 
     public function __construct()

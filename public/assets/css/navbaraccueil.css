@@ -1,77 +1,97 @@
 /*------------------ GLOBAL STYLES ------------------*/
-.links li{
-    list-style: none; /* Supprime les puces des éléments de liste */
+.links li {
+    list-style: none;
+    /* Supprime les puces des éléments de liste */
 }
 
 .navbar a,
 .menu-burger a {
-    text-decoration: none; /* Supprime le soulignement des liens */
-    color: #fff; /* Définit la couleur blanche par défaut */
-    font-size: 1rem; /* Taille de police standard */
+    text-decoration: none;
+    /* Supprime le soulignement des liens */
+    color: #fff;
+    /* Définit la couleur blanche par défaut */
+    font-size: 1rem;
+    /* Taille de police standard */
 }
 
 a:hover {
-    color: #F4E904; /* Change la couleur au survol */
+    color: #F4E904;
+    /* Change la couleur au survol */
 }
 
 /*------------------ HEADER STYLES ------------------*/
 header {
-    position: fixed; 
+    position: fixed;
     top: 0;
     width: 100%;
-    padding: 0 2rem; /* Espacement horizontal */
-    background-color: rgba(0, 0, 0, 0.5); /* Fond noir transparent */
-    backdrop-filter: blur(100px); /* Flou de fond */
-    z-index: 10000; /* Superpose les autres éléments */
+    padding: 0 2rem;
+    /* Espacement horizontal */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fond noir transparent */
+    backdrop-filter: blur(100px);
+    /* Flou de fond */
+    z-index: 10000;
+    /* Superpose les autres éléments */
 }
 
 /*------------------ NAVBAR ------------------*/
 
 .navbar {
     width: 100%;
-    max-width: 1200px; /* Limite la largeur maximale */
+    max-width: 1200px;
+    /* Limite la largeur maximale */
     height: 85px;
-    margin: 0 auto; /* Centre horizontalement */
+    margin: 0 auto;
+    /* Centre horizontalement */
 
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Distribution égale des éléments */
+    justify-content: space-between;
+    /* Distribution égale des éléments */
 }
 
 .navbar .links {
     display: flex;
-    gap: 2rem; /* Espacement entre les liens */
+    gap: 2rem;
+    /* Espacement entre les liens */
 }
 
 .navbar .menu-burger-button {
     color: white;
-    display: none; /* Caché par défaut */
+    display: none;
+    /* Caché par défaut */
     font-size: 1.5rem;
-    cursor: pointer; /* Style de curseur interactif */
+    cursor: pointer;
+    /* Style de curseur interactif */
 }
 
 /*------------------ ACTION BUTTON ------------------*/
 .action-button {
-    background-color: rgba(115, 115, 115, 0.9); /* Fond gris transparent */
+    background-color: rgba(115, 115, 115, 0.9);
+    /* Fond gris transparent */
     border-radius: 40px;
-    border: 2px solid #F4E904; /* Bordure jaune */
+    border: 2px solid #F4E904;
+    /* Bordure jaune */
     color: white;
     padding: 0.5rem 1.2rem;
     outline: none;
     font-size: 0.9rem;
     font-weight: bold;
-    cursor: pointer; /* Indique un élément interactif */
+    cursor: pointer;
+    /* Indique un élément interactif */
 }
 
 .action-button:hover {
-    background-color: #F4E904; /* Fond jaune au survol */
+    background-color: #F4E904;
+    /* Fond jaune au survol */
     color: black;
     border: 2px solid black;
 }
 
 /*------------------ BURGER MENU ------------------*/
 .menu-burger {
-    display: none; /* Caché par défaut */
+    display: none;
+    /* Caché par défaut */
     height: 0;
 
     position: absolute;
@@ -79,8 +99,10 @@ header {
     top: 85px;
     width: 300px;
 
-    background-color: rgba(0, 0, 0, 0.5); /* Fond noir transparent */
-    backdrop-filter: blur(100px); /* Flou de fond */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fond noir transparent */
+    backdrop-filter: blur(100px);
+    /* Flou de fond */
     overflow: hidden;
     border-radius: 20px;
 
@@ -90,7 +112,7 @@ header {
 
 .menu-burger.open {
     height: 392px;
-    box-shadow: 0 0 0 1px #fff; 
+    box-shadow: 0 0 0 1px #fff;
 }
 
 .menu-burger li {
@@ -105,10 +127,12 @@ header {
 }
 
 .divider {
-    margin: 1rem auto; /* Centre la ligne */
+    margin: 1rem auto;
+    /* Centre la ligne */
     height: 2px;
     background-color: white;
-    width: 80%; /* Largeur réduite */
+    width: 80%;
+    /* Largeur réduite */
 }
 
 .menu-burger .action-button {
@@ -120,7 +144,8 @@ header {
 
 .button-burger-menu {
     display: flex;
-    flex-direction: column; /* Organise verticalement */
+    flex-direction: column;
+    /* Organise verticalement */
     justify-content: center;
     align-items: center;
 }
@@ -132,30 +157,33 @@ header {
 }
 
 .menu-burger-button i.animate {
-    transform: rotate(110deg); /* Rotation de l'icône */
-    opacity: 0; /* Disparaît progressivement */
+    transform: rotate(110deg);
+    /* Rotation de l'icône */
+    opacity: 0;
+    /* Disparaît progressivement */
 }
 
 /*------------------ RESPONSIVE DESIGN ------------------*/
 @media screen and (max-width: 990px) {
     header {
         background: none;
-        /*enlever le backdrop*/
-
         backdrop-filter: none;
     }
 
     .navbar .links,
     .navbar .action-button {
-        display: none; /* Caché pour les petits écrans */
+        display: none;
+        /* Caché pour les petits écrans */
     }
 
     .navbar .menu-burger-button {
-        display: block; /* Affiche le bouton burger */
+        display: block;
+        /* Affiche le bouton burger */
     }
 
     .menu-burger {
-        display: block; /* Permet l'affichage */
+        display: block;
+        /* Permet l'affichage */
     }
 
     .menu-burger li {
@@ -165,7 +193,8 @@ header {
 
 @media screen and (max-width: 678px) {
     .li-responsive a {
-        font-size: 0.9rem; /* Réduit la taille de police */
+        font-size: 0.9rem;
+        /* Réduit la taille de police */
     }
 
     .menu-burger li {
@@ -173,11 +202,13 @@ header {
     }
 
     .button-burger-menu a {
-        font-size: 0.8rem; /* Police plus petite */
+        font-size: 0.8rem;
+        /* Police plus petite */
     }
 
     .menu-burger.open {
-        height: 372px; /* Hauteur visible lorsqu'ouvert */
+        height: 372px;
+        /* Hauteur visible lorsqu'ouvert */
     }
 }
 
@@ -185,7 +216,8 @@ header {
     .menu-burger {
         left: 3rem;
         right: 3rem;
-        width: unset; /* Largeur dynamique */
+        width: unset;
+        /* Largeur dynamique */
     }
 
     .menu-burger li {
@@ -197,11 +229,13 @@ header {
     }
 
     .divider {
-        width: 60%; /* Réduit la largeur */
+        width: 60%;
+        /* Réduit la largeur */
     }
 
     .menu-burger.open {
-        height: 298px; /* Hauteur visible lorsqu'ouvert */
+        height: 298px;
+        /* Hauteur visible lorsqu'ouvert */
     }
 }
 
@@ -219,9 +253,9 @@ header {
     overflow: hidden;
     height: auto;
     display: block;
-	background-color: transparent;
-	width: 120% !important;
-	margin-left: -10%;
+    width: 120% !important;
+    margin-left: -10%;
+    padding-bottom: 1rem;
 }
 
 .carousel-inner {
@@ -230,20 +264,41 @@ header {
 }
 
 .carousel-item {
+    font-size: 0.9rem !important;
+    font-size: clamp(0.9rem, 0.336734693877551rem + 0.8163265306122449vw, 1.5rem) !important;
     flex: 0 0 100%;
     text-align: center;
-    background: #f9f9f9;
-	background-color: transparent;
-	color: white;
+    color: white;
 }
 
 /*pour les petits écran on mets un margin top négatif*/
 @media screen and (max-width: 990px) {
-	.carousel {
-		margin-top: -2rem;
-	}
+    .carousel {
+        margin-top: -2rem;
+    }
 
-	.carousel-item {
-		color: #F4E904 !important;
-	}
+    .carousel-item {
+        color: #F4E904 !important;
+    }
+}
+
+@media screen and (max-width: 678px) {
+    .carousel {
+        margin-top: -1.5rem !important;
+
+    }
+}
+
+@media screen and (max-width: 476px) {
+    .carousel {
+        margin-top: -1rem;
+    }
+
+}
+
+@media screen and (max-width: 330px) {
+    .carousel {
+        margin-left: -0.5rem;
+    }
+
 }

@@ -47,18 +47,22 @@ class ProduitController extends Controller{
         $product = new ProduitModel();
         $promotion = new PromotionModel();
 
+        $order = strtoupper($this->request->getVar('order')) === 'ASC' ? 'ASC' : 'DESC';
+
+
 		$configPager = config(Pager::class);
 		$perPage = 2;
 		
 
         // Utilisation de la méthode paginate
         $productListe = $product->findAll();
-        $promotionListe= $promotion->getActivePromotion();
+        $promotionListe= $promotion->findAll();
 
         // Passer les données à la vue
         return view('Admin/Gestionproduit', [
             'produits' => $productListe,
-            'promotion' =>$promotionListe
+            'promotions' =>$promotionListe,
+            'order' => $order
         ]); 
     }
 
@@ -157,7 +161,7 @@ class ProduitController extends Controller{
 		];
 
 		if ($produitModel->majProduit($idProduit, $data)) {
-			return redirect()->to('/Produit')->with('message', 'Projet modifié avec succès.');
+			return redirect()->to('/produit/dashboard')->with('message', 'Projet modifié avec succès.');
 		} else {
 			return redirect()->back()->with('error', 'Erreur lors de la modification du projet.');
 		}
