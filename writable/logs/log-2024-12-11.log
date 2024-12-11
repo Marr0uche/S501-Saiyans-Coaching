@@ -1105,3 +1105,23 @@ in APPPATH/Views/Produit/ProduitClientView.php on line 51.
 10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
 11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
 12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 12:56:02 --> ParseError: syntax error, unexpected token "<<", expecting "function"
+[Method: GET, Route: achat/17]
+in APPPATH/Config/Database.php on line 27.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 SYSTEMPATH/Debug/Toolbar/Collectors/Database.php(258): CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/Debug/Toolbar/Collectors/Database.php(75): CodeIgniter\Debug\Toolbar\Collectors\Database->getConnections()
+ 5 SYSTEMPATH/Debug/Toolbar.php(68): CodeIgniter\Debug\Toolbar\Collectors\Database->__construct()
+ 6 SYSTEMPATH/Config/Services.php(796): CodeIgniter\Debug\Toolbar->__construct()
+ 7 SYSTEMPATH/Config/BaseService.php(312): CodeIgniter\Config\Services::toolbar()
+ 8 SYSTEMPATH/Config/BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic()
+ 9 SYSTEMPATH/Config/Services.php(791): CodeIgniter\Config\BaseService::getSharedInstance()
+10 SYSTEMPATH/Config/BaseService.php(321): CodeIgniter\Config\Services::toolbar()
+11 APPPATH/Config/Events.php(47): CodeIgniter\Config\BaseService::__callStatic()
+12 SYSTEMPATH/Events/Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+13 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\Events\Events::trigger()
+14 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
