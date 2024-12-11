@@ -29,6 +29,9 @@ class ProduitController extends Controller{
         $productListe = $product->getProduitAffichage();
         $promotionListe= $promotion->getActivePromotion();
 
+        $session = session();
+        $session->remove('codepromo');
+
         // Passer les données à la vue
         return view('Produit/ProduitView', [
             'produits' => $productListe,
@@ -36,26 +39,47 @@ class ProduitController extends Controller{
         ]); 
     }
 
-	   public function indexDashboard()
-    {
+	public function indexDashboard(){
 
 
         // Chargement des modèles
         $product = new ProduitModel();
         $promotion = new PromotionModel();
 
+        $orderbyProd = $this->request->getVar('orderbyProd') ?? 'idproduit';
+        $orderProd = strtoupper($this->request->getVar('orderProd')) === 'ASC' ? 'ASC' : 'DESC';
+
+        $validColumnsProd = ['idproduit', 'titreproduit', 'descriptionproduit', 'prix'];
+		if (!in_array($orderbyProd, $validColumnsProd)) {
+			$orderbyProd = 'idproduit';
+		}
+
+
+        /*orderby Prom*/
+        $orderbyProm = $this->request->getVar('orderbyProm') ?? 'iddocument';
+        $orderProm = strtoupper($this->request->getVar('orderProm')) === 'ASC' ? 'ASC' : 'DESC';
+
+        $validColumnsProm = ['iddocument', 'titredocument', 'descriptiondocument', 'reductionpromo','codepromo'];
+		if (!in_array($orderbyProm, $validColumnsProm)) {
+			$orderbyProm = 'iddocument';
+		}
+
 		$configPager = config(Pager::class);
 		$perPage = 2;
 		
 
         // Utilisation de la méthode paginate
-        $productListe = $product->findAll();
-        $promotionListe= $promotion->getActivePromotion();
+        $productListe = $product->orderBy($orderbyProd, $orderProd)
+                                ->findAll();
+        $promotionListe= $promotion->orderBy($orderbyProm, $orderProm)
+                                   ->findAll();
 
         // Passer les données à la vue
         return view('Admin/Gestionproduit', [
             'produits' => $productListe,
-            'promotion' =>$promotionListe
+            'promotions' =>$promotionListe,
+            'orderProd' => $orderProd,
+            'orderProm' => $orderProm,
         ]); 
     }
 
@@ -86,56 +110,45 @@ class ProduitController extends Controller{
         $product = new ProduitModel();
 
 		$product->supprimerProduit($idProduit);
-		return redirect()->to('/Produit');
+		return redirect()->to('/produit/dashboard');
 	}
 
     public function creer() {
-        $validationRules = [
-            'fichier' => [
-                'rules' => 'uploaded[fichier]|mime_in[fichier,image/jpg,image/jpeg,image/png]|max_size[fichier,2048]',
-                'errors' => [
-                    'uploaded' => 'Vous devez sélectionner un fichier.',
-                    'mime_in' => 'Seuls les fichiers JPG et PNG sont autorisés.',
-                    'max_size' => 'La taille du fichier ne doit pas dépasser 2MB.'
-                ],
-            ],
-        ];
-    
-        if (!$this->validate($validationRules)) {
-            return redirect()->to('/Produit');
-        }
-    
+
         $produitModel = new ProduitModel();
     
         // Traitement de l'image
         $file = $this->request->getFile('fichier');
-		$fileName = null;
-
-		if ($file && $file->isValid() && !$file->hasMoved()) {
-			$fileName = $file->getRandomName();
-			$file->move(WRITEPATH . '../public/uploads', $fileName);
-		}
-
+        $fileName = null;
+    
+        if ($file && $file->isValid() && !$file->hasMoved()) {
+            $fileName = $file->getRandomName();
+            $file->move(WRITEPATH . '../public/uploads', $fileName);
+        }
+    
         // Récupérer les données du formulaire
         $data = [
-            'titreproduit' => $this->request->getPost('Titre'),
+            'titreproduit' => $this->request->getPost('titreproduit'),
             'descriptionproduit' => $this->request->getPost('descriptionproduit'),
             'prix' => $this->request->getPost('prix'),
-            'affichageaccueil' => $this->request->getPost('dashboard') === 'true', // Assurez-vous que c'est un booléen
-            'affichage' => $this->request->getPost('Afficher') === 'true' , // Assurez-vous que c'est un booléen
+            'affichageaccueil' => $this->request->getPost('affichageacceuil') === 'on', // Convertir booléen
+            'affichage' => $this->request->getPost('affichage') === 'on', // Convertir booléen
             'photoproduit' => $fileName
         ];
-
+    
         // Insérer les données dans la base de données
         $produitModel->creerProduit($data);
-        return redirect()->to('/Produit');
+        return redirect()->to('/produit/dashboard')->with('success', 'Produit ajouté avec succès.');
     }
+    
     
     public function creerView(){
          return view('Produit/CreerProduit');
     }
     public function modifier()
 	{
+      
+        
 		$produitModel = new ProduitModel();
 
 		$idProduit = $this->request->getPost('idproduit');
@@ -144,17 +157,35 @@ class ProduitController extends Controller{
 			return redirect()->back()->with('error', 'ID Projet invalide.');
 		}
 
-		$data = [
-			'titreproduit' => $this->request->getPost('titreproduit'),
-			'photoproduit' => $this->request->getPost('fichier'),
-            'descriptionproduit' => $this->request->getPost('descriptionproduit'),
-			'prix' => $this->request->getPost('prix'),
-            'affichage' => $this->request->getPost('affichage'),
-			'affichageaccueil' => $this->request->getPost('affichageaccueil'),
-		];
+        $affichage = $this->request->getPost('affichage');
+        $affichageAcceuil = $this->request->getPost('affichageacceuil');
 
-		if ($produitModel->majProduit($idProduit, $data)) {
-			return redirect()->to('/Produit')->with('message', 'Projet modifié avec succès.');
+
+        if (isset($affichage)) {
+            $affichage = true;
+        }else
+        {
+            $affichage = 'f';
+        }
+
+        if (isset($affichageAcceuil)) {
+            $affichageAcceuil = true;
+        }else
+        {
+            $affichageAcceuil = 'f';
+        }
+
+        $data = [
+            'titreproduit' => $this->request->getPost('titreproduit'),
+            'photoproduit' => $this->request->getPost('fichier'),
+            'descriptionproduit' => $this->request->getPost('descriptionproduit'),
+            'prix' => $this->request->getPost('prix'),
+            'affichage' => $affichage,
+            'affichageaccueil' => $affichageAcceuil
+        ];
+
+        if ($produitModel->majProduit($idProduit, $data)) {
+			return redirect()->to('/produit/dashboard')->with('message', 'Projet modifié avec succès.');
 		} else {
 			return redirect()->back()->with('error', 'Erreur lors de la modification du projet.');
 		}

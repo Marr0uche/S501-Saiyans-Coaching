@@ -20,12 +20,12 @@
     <p>Le champ titre est requis</p>
     <br>
 
-    <?= form_label('Description du produit :', 'descriptionproduit'); ?>
+    <?= form_label('Description du produit : *', 'descriptionproduit'); ?>
     <?= form_textarea('descriptionproduit', set_value('descriptionproduit'), 'required'); ?>
     <?= validation_show_error('descriptionproduit') ?>
     <br>
 
-    <?= form_label('Prix :', 'prix'); ?>
+    <?= form_label('Prix : *', 'prix'); ?>
     <?= form_input('prix', set_value('prix'),'required'); ?>
     <?= validation_show_error('prix') ?>
     <br>

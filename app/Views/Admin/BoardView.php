@@ -5,6 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Tableau de Bord Administrateur</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<link rel="stylesheet" href="<?php echo base_url('assets/css/dashboard.css'); ?>">
 </head>
@@ -18,20 +20,12 @@
 	<header class="bg-dark py-3">
 		<div class="container d-flex justify-content-between align-items-center">
 			<h1 class="text-light">Tableau de Bord Administrateur</h1>
-			<div class="menu-burger-container">
-				<div class="menu-burger-button text-light">
-					<i class="fa-solid fa-bars fa-xl"></i>
-				</div>
-				<div class="menu-burger bg-dark">
-					<ul class="list-unstyled">
-						<li><a href="produit/dashboard">Produit</a></li>
-						<li><a href="/Produit">Programmes</a></li>
-						<li><a href="#">Avant / Après</a></li>
-						<li><a href="/blog">Blog</a></li>
-						<li><a href="/actualites">Actualité</a></li>
-						<li><a href="/contact">FAQ/Contact</a></li>
-					</ul>
-				</div>
+			<a href="/produit/dashboard" class="menu-gear-button text-light">
+				<i class="fa-solid fa-cog fa-2xl"></i>
+			</a>
+			<a href="/" class="menu-gear-button text-light">
+				<i class="fas fa-home"></i>
+			</a>
 			</div>
 		</div>
 	</header>
@@ -53,8 +47,8 @@
 				<div class="card shadow-sm rounded-4 bg-gradient text-white">
 					<div class="card-body">
 						<h5 class="card-title">Poids Moyen par Sexe</h5>
-						<p>Hommes : <strong><?= round($stats['averageWeight']['Homme'], 2) ?> kg</strong></p>
-						<p>Femmes : <strong><?= round($stats['averageWeight']['Femme'], 2) ?> kg</strong></p>
+						<p>Hommes : <strong id="poidsHomme"><?= round($stats['averageWeight']['Homme'], 2) ?> kg</strong></p>
+						<p>Femmes : <strong id="poidsFemme"><?= round($stats['averageWeight']['Femme'], 2) ?> kg</strong></p>
 					</div>
 				</div>
 			</div>
@@ -229,6 +223,79 @@
 			filterPrenom.addEventListener('input', filterUsers);
 			filterSexe.addEventListener('change', filterUsers);
 			filterAge.addEventListener('input', filterUsers);
+		</script>
+
+		<script>
+			const poidsHommeElement = document.getElementById('poidsHomme'); // Élément pour poids moyen des hommes
+			const poidsFemmeElement = document.getElementById('poidsFemme'); // Élément pour poids moyen des femmes
+
+			// Fonction pour mettre à jour les poids moyens en fonction des filtres
+			function updateWeights() {
+				const visibleRows = Array.from(document.querySelectorAll('#clientsTable tbody tr'))
+					.filter(row => row.style.display !== 'none'); // Lignes visibles après filtrage
+
+				let totalPoidsHomme = 0;
+				let totalPoidsFemme = 0;
+				let countHomme = 0;
+				let countFemme = 0;
+
+				// Calcul des poids moyens pour les lignes visibles
+				visibleRows.forEach(row => {
+					const poids = parseFloat(row.querySelector('td:nth-child(6)').textContent.trim()); // Colonne Poids
+					const sexe = row.querySelector('td:nth-child(8)').textContent.trim(); // Colonne Sexe
+
+					if (sexe === 'Homme') {
+						totalPoidsHomme += poids;
+						countHomme++;
+					} else if (sexe === 'Femme') {
+						totalPoidsFemme += poids;
+						countFemme++;
+					}
+				});
+
+				// Mise à jour des poids moyens dans la carte
+				const avgPoidsHomme = countHomme > 0 ? (totalPoidsHomme / countHomme).toFixed(2) : '0';
+				const avgPoidsFemme = countFemme > 0 ? (totalPoidsFemme / countFemme).toFixed(2) : '0';
+
+				poidsHommeElement.textContent = `${avgPoidsHomme} kg`;
+				poidsFemmeElement.textContent = `${avgPoidsFemme} kg`;
+			}
+
+			// Fonction existante pour filtrer les utilisateurs
+			function filterUsers() {
+				const filterName = document.getElementById('filterName').value.toLowerCase();
+				const filterPrenom = document.getElementById('filterPrenom').value.toLowerCase();
+				const filterSexe = document.getElementById('filterSexe').value;
+				const filterAge = document.getElementById('filterAge').value;
+
+				const tableRows = document.querySelectorAll('#clientsTable tbody tr');
+
+				tableRows.forEach(row => {
+					const name = row.querySelector('.name').textContent.toLowerCase();
+					const prenom = row.querySelector('.prenom').textContent.toLowerCase();
+					const sexe = row.querySelector('.sexe').textContent.trim();
+					const age = parseInt(row.querySelector('.age').textContent.trim(), 10);
+
+					const matchesName = !filterName || name.includes(filterName);
+					const matchesPrenom = !filterPrenom || prenom.includes(filterPrenom);
+					const matchesSexe = !filterSexe || sexe === filterSexe;
+					const matchesAge = !filterAge || parseInt(filterAge, 10) === age;
+
+					if (matchesName && matchesPrenom && matchesSexe && matchesAge) {
+						row.style.display = '';
+					} else {
+						row.style.display = 'none';
+					}
+				});
+
+				updateWeights(); // Mise à jour des poids moyens après filtrage
+			}
+
+			// Ajout des écouteurs d'événements
+			document.getElementById('filterName').addEventListener('input', filterUsers);
+			document.getElementById('filterPrenom').addEventListener('input', filterUsers);
+			document.getElementById('filterSexe').addEventListener('change', filterUsers);
+			document.getElementById('filterAge').addEventListener('input', filterUsers);
 		</script>
 	</main>
 </body>

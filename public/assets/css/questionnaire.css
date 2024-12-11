@@ -1,0 +1,119 @@
+:root {
+	--noir: #0C0C0C;
+	--blanc: #fff;
+	--jaune: #F4E904;
+	--gris: #737373;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
+}
+
+p {
+	font-size: 16px; 
+	line-height: 1.5; 
+	color: #F4E904;
+	margin-bottom: 10px; 
+	font-family: Arial, sans-serif; 
+	padding: 2rem;
+}
+
+h1, h2, h3, h4 {
+	font-family: 'Bebas Neue', sans-serif;
+	color: var(--blanc);
+}
+
+body {
+	background-color: var(--noir);
+	background-image: url(../img/img-accueil.webp); 
+    background-attachment: fixed; 
+    background-size: cover; 
+    background-position: center; 
+}
+
+.container {
+	max-width: 90%;
+	width: 80%;
+	margin-top: 9rem !important;
+	margin: 2rem auto;
+	padding: 2rem;
+	background-color: rgba(0, 0, 0, 0.7);
+	border-radius: 8px;
+	border: white 2px solid;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.form-label {
+	font-size: 1rem;
+	font-weight: bold;
+	color: var(--blanc);
+	margin-bottom: 0.5rem;
+}
+
+.form-control {
+	width: 100%;
+	padding: 0.8rem;
+	margin-bottom: 1.5rem;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	background-color: #fff;
+}
+
+.form-check {
+	margin-bottom: 1rem;
+}
+
+.form-check-label {
+	color: var(--blanc);
+	font-size: 1rem;
+}
+
+.form-check-input {
+	margin-right: 0.5rem;
+}
+
+button {
+	background-color: var(--gris);
+	color: var(--blanc);
+	border: var(--blanc) 1px solid;
+	padding: 0.8rem 1.5rem;
+	font-size: 1rem;
+	border-radius: 5px;
+	transition: all 0.3s;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: rgba(12, 12, 12, 0.5);
+	color: var(--jaune);
+	border: var(--blanc) 1px solid;
+}
+
+.question {
+	margin-bottom: 2rem;
+}
+
+.question small {
+	color: var(--gris);
+	font-size: 0.9rem;
+}
+
+textarea {
+	padding: 0.8rem;
+	width: 100%;
+	margin-bottom: 1.5rem;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	background-color: #fff;
+	font-size: 1rem;
+}
+
+.mt-2 {
+	margin-top: 1rem;
+}

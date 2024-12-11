@@ -106,3 +106,31 @@ body {
 .btn-back:hover {
     background-color: #0056b3;
 }
+
+.btn-buy {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #000;
+    background-color: #ffc107;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-buy:hover {
+    background-color: #e0a800;
+}
+
+.price-original {
+    text-decoration: line-through;
+    color: #a5a5a5;
+    margin-right: 10px;
+}
+
+.price-reduced {
+    font-weight: bold;
+    color: #ffc107;
+}

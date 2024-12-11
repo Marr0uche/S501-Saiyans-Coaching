@@ -1,73 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questionnaire - Saiyans Coaching</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f8f9fa;
-            padding: 20px;
-        }
-
-        h1 {
-            color: #ffc107;
-        }
-
-        .question {
-            margin-bottom: 20px;
-        }
-
-        .btn {
-            background-color: yellow !important;
-            color: black !important;
-            border: none;
-        }
-
-        .btn:hover {
-            background-color: black !important;
-            color: yellow !important;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/questionnaire.css">
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/navbar.css'); ?>">
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/footer.css'); ?>">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+		integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
+
+    <?php echo view('elements/Navbar'); ?>
+
     <div class="container">
         <h1 class="text-center mb-4">Bienvenue !</h1>
         <p>Merci de prendre quelques minutes pour répondre à ces questions. Vos réponses nous aideront à identifier le programme de coaching qui vous conviendra le mieux.</p>
 
         <?php echo form_open('questionnaire/traitementQuestionnaire'); ?>
 
-		<div class="question">
-			<?php 
-			echo form_label('Nom', 'nom', ['class' => 'form-label']); 
-			echo form_input('nom', set_value('nom'), [
-				'class' => 'form-control',
-				'id' => 'nom',
-				'placeholder' => 'Votre nom',
-				'required' => true
-			]);
-			echo validation_show_error('nom');
-			?>
-		</div>
+        <div class="question">
+            <?php 
+            echo form_label('Nom', 'nom', ['class' => 'form-label']); 
+            echo form_input('nom', set_value('nom'), [
+                'class' => 'form-control',
+                'id' => 'nom',
+                'placeholder' => 'Votre nom',
+                'required' => true
+            ]);
+            echo validation_show_error('nom');
+            ?>
+        </div>
 
-		<div class="question">
-			<?php 
-			echo form_label('Adresse e-mail', 'email', ['class' => 'form-label']); 
-			echo form_input([
-				'type' => 'email',
-				'name' => 'email',
-				'id' => 'email',
-				'value' => set_value('email'),
-				'class' => 'form-control',
-				'placeholder' => 'Votre adresse e-mail',
-				'required' => true
-			]);
-			echo validation_show_error('email');
-			?>
-		</div>
-		
+        <div class="question">
+            <?php 
+            echo form_label('Adresse e-mail', 'email', ['class' => 'form-label']); 
+            echo form_input([
+                'type' => 'email',
+                'name' => 'email',
+                'id' => 'email',
+                'value' => set_value('email'),
+                'class' => 'form-control',
+                'placeholder' => 'Votre adresse e-mail',
+                'required' => true
+            ]);
+            echo validation_show_error('email');
+            ?>
+        </div>
+
         <!-- Question 1 -->
         <div class="question">
             <label class="form-label">1. Êtes-vous ?</label>
@@ -155,18 +142,17 @@
                 <input type="radio" class="form-check-input" id="oui_contraintes" name="contraintes" value="Oui" required>
                 <label for="oui_contraintes" class="form-check-label">Oui, j’ai des limitations physiques ou des blessures (précisez) :</label>
             </div>
-            <input type="text" class="form-control mt-2" id="details_contraintes" name="details_contraintes">
-            <div class="form-check mt-2">
+            <textarea id="limitation_physique" name="limitation_physique" class="form-control"></textarea>
+            <div class="form-check">
                 <input type="radio" class="form-check-input" id="non_contraintes" name="contraintes" value="Non" required>
-                <label for="non_contraintes" class="form-check-label">Non, aucune limitation</label>
+                <label for="non_contraintes" class="form-check-label">Non, je n’ai pas de contraintes</label>
             </div>
         </div>
 
         <!-- Question 6 -->
-		<div class="question">
-			<label class="form-label">6. Quels types d'exercices ou d'activités préférez vous ?</label>
-				
-			<?php
+        <div class="question">
+            <label class="form-label">6. Quels types d'exercices ou d'activités préférez vous ?</label>
+            <?php
             $exercices = [
                 "Cardio (course, vélo, HIIT, etc.)",
                 "Renforcement musculaire (musculation, poids libres)",
@@ -176,38 +162,36 @@
             ];
             foreach ($exercices as $exercice): ?>
                 <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="<?= $exercice ?>" name="exercices[]" value="<?= $objectif ?>">
-                    <label for="<?= $objectif ?>" class="form-check-label"><?= $exercice ?></label>
+                    <input type="checkbox" class="form-check-input" id="<?= $exercice ?>" name="exercices[]" value="<?= $exercice ?>">
+                    <label for="<?= $exercice ?>" class="form-check-label"><?= $exercice ?></label>
                 </div>
             <?php endforeach; ?>
             <div class="mt-2">
                 <label for="autre_exercice" class="form-label">Autre (précisez) :</label>
                 <input type="text" class="form-control" id="autre_exercice" name="autre_exercice">
             </div>
-		
-		</div>
+        </div>
 
-		<!-- Question 7 -->
-		<div class="question">
-			<label class="form-label">7. Avez-vous des préférences pour le suivi de votre programme ?</label>
-			
-			<?php
-			$preferences = [
-				"Coaching individuel en présentiel",
-				"Coaching individuel en ligne",
-				"Programme autonome avec support en ligne",
-				"Programme en groupe sans ou en classe",
-				"Peu importe, je suis ouvert à toutes les options"
-			];
-			foreach ($preferences as $preference):?>
-				<div class="form-check">
+        <!-- Question 7 -->
+        <div class="question">
+            <label class="form-label">7. Avez-vous des préférences pour le suivi de votre programme ?</label>
+            <?php
+            $preferences = [
+                "Coaching individuel en présentiel",
+                "Coaching individuel en ligne",
+                "Programme autonome avec support en ligne",
+                "Programme en groupe sans ou en classe",
+                "Peu importe, je suis ouvert à toutes les options"
+            ];
+            foreach ($preferences as $preference):?>
+                <div class="form-check">
                     <input type="radio" class="form-check-input" id="<?= $preference ?>" name="preference" value="<?= $preference ?>" required>
                     <label for="<?= $preference ?>" class="form-check-label"><?= $preference ?></label>
                 </div>
-			<?php endforeach; ?>
-		</div>
+            <?php endforeach; ?>
+        </div>
 
-		<!-- Question 8 -->
+        <!-- Question 8 -->
         <div class="question">
             <label class="form-label">8. Quels résultats souhaitez-vous atteindre et dans quel délai ?</label>
             <small class="text-muted d-block mb-2">Exemple : “Perdre 5 kg en 3 mois” ou “Augmenter ma force d’ici 6 mois”</small>
@@ -232,8 +216,8 @@
             <?php endforeach; ?>
         </div>
 
-			<!-- Question 10 -->
-		<div class="question">
+        <!-- Question 10 -->
+        <div class="question">
             <label class="form-label">10. Êtes-vous intéressé par des conseils nutritionnels dans le cadre de votre programme ?</label>
             <div class="form-check">
                 <input type="radio" class="form-check-input" id="nutrition_oui" name="nutrition" value="Oui" required>
@@ -256,13 +240,17 @@
             <textarea class="form-control" id="informations_supplementaires" name="informations_supplementaires" rows="4" placeholder="Votre réponse..."></textarea>
         </div>
 
-		<p> Merci pour vos réponses ! </p>
-		<p>Le coach reviendra vers vous avec le meilleur programme pour vous !</p>
+        <p>Merci pour vos réponses !<br>
+        Le coach reviendra vers vous avec le meilleur programme pour vous !</p>
 
 
-        <button type="submit" class="btn mt-4">Envoyer</button>
+        <div class="text-center">
+            <button type="submit">Soumettre</button>
+        </div>
         <?php echo form_close(); ?>
     </div>
+
+    <?php echo view('elements/Footer'); ?>
 </body>
 
 </html>

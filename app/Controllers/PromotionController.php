@@ -25,6 +25,30 @@ class PromotionController extends Controller
 
     }
 
+    public function valider()
+    {
+        $codepromo = $this->request->getPost('codepromo');
+
+        $promotionModel = new PromotionModel();
+
+        $promotion = $promotionModel->where('codepromo', $codepromo)
+                                    ->where('active', true)
+                                    ->first();
+
+        if (!$promotion) {
+            return redirect()->back()->with('error', 'Le code promo est invalide ou inactif.');
+        }
+
+        // Stocker le code promo valide dans la session
+        $session = session();
+        $session->set('codepromo', $promotion);
+
+        $promo = $session->get('codepromo');
+        echo $promo['reductionpromo'];
+
+        return redirect()->back()->with('success', 'Code promo appliqué avec succès.');
+    }
+
     public function creerView(){
         return view('Promos/CreerPromoView');
    }
@@ -33,7 +57,7 @@ class PromotionController extends Controller
         $promos = new PromotionModel();
 
 		$promos->supprimerPromotion($idPromos);
-		return redirect()->to('promo');
+		return redirect()->to('/produit/dashboard');
 	}
 
     public function creer() {
@@ -60,7 +84,7 @@ class PromotionController extends Controller
             return redirect()->back()->withInput()->with('errors', $promos->errors());
         }
         $promos->creerPromotion($data);
-        return redirect()->to('promo');
+        return redirect()->to('/produit/dashboard');
     }
     
     public function modifier(){
@@ -72,18 +96,30 @@ class PromotionController extends Controller
 			return redirect()->back()->with('error', 'ID Projet invalide.');
 		}
 
+        $active = $this->request->getPost('active');
+
+        if (isset($active)) {
+            $active = 't';
+        }else
+        {
+            $active = 'f';
+        }
+
 		$data = [
 			'titredocument' => $this->request->getPost('titrepromotion'),
             'descriptiondocument' => $this->request->getPost('DescriptionPromotion'),
-			'active' => $this->request->getPost('active'),
             'reductionpromo' => $this->request->getPost('reduc'),
 			'codepromo' => $this->request->getPost('code'),
+            'active' => $active
 		];
 
-		if ($promos->majPromotion($idPromo, $data)) {
-			return redirect()->to('promo')->with('message', 'Projet modifié avec succès.');
-		} else {
-			return redirect()->back()->with('error', 'Erreur lors de la modification du projet.');
-		}
+        echo $idPromo . '<br>';
+        foreach ($data as $key => $value) {
+            echo $key . ' : ' . $value . '<br>';
+        }
+
+		$promos->majPromotion($idPromo, $data);
+        return redirect()->to('/produit/dashboard');
+        
 	}
 }
