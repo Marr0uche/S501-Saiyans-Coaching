@@ -7,6 +7,12 @@
 	<title>Inscription</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php echo base_url('assets/css/inscription.css'); ?>">
+
+	<style>
+		.container{
+			margin-top: 9rem;
+		}
+	</style>
 </head>
 
 <body>

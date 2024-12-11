@@ -24,13 +24,12 @@ class Database extends Config
      *
      * @var array<string, mixed>
      */
-
-     public array $default = [
-        'DSN'          => 'Postgre://mm221005:Mohamad12345%@woody.iut.univ-lehavre.fr:5432',
-        'hostname'     => 'woody.iut.univ-lehavre.fr',
-        'username'     => 'mm221005',
-        'password'     => 'Mohamad12345%',
-        'database'     => 'mm221005',
+    public $default = [
+        'DSN'          => '',
+        'hostname'     => 'localhost',
+        'username'     => 'postgres', // ou votre nom d'utilisateur DB
+        'password'     => '',
+        'database'     => 'sayancoaching', // ou le nom de votre DB
         'DBDriver'     => 'Postgre',
         'DBPrefix'     => '',
         'pConnect'     => false,
