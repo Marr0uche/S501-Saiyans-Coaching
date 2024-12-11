@@ -20,7 +20,6 @@
 </head>
 
 <body>
-    <!-- Navbar (echo view Navbar.php)-->
     <?php echo view('elements/Navbar'); ?>
 
     <main>
