@@ -1,0 +1,140 @@
+:root {
+	--noir: #0C0C0C;
+	--blanc: #fff;
+	--jaune: #F4E904;
+	--gris: #737373;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
+}
+
+body {
+	background-color: var(--noir);
+	background-image: url(../img/img-accueil.webp); 
+    background-attachment: fixed; 
+    background-size: cover; 
+    background-position: center;
+}
+
+h1 {
+	font-family: 'Bebas Neue', sans-serif;
+	color: var(--jaune);
+	text-align: center;
+	margin-bottom: 2rem;
+	padding-top: 9rem;
+}
+
+form {
+	max-width: 600px;
+	margin: 2rem auto;
+	padding: 2rem;
+	background-color: rgba(0, 0, 0, 0.8);
+	border: 2px solid var(--blanc);
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+label {
+	font-size: 1rem;
+	font-weight: bold;
+	color: var(--blanc);
+	margin-bottom: 0.5rem;
+	display: block;
+}
+
+input[type="text"],
+textarea,
+input[type="file"] {
+	width: 100%;
+	padding: 0.8rem;
+	margin-bottom: 1.5rem;
+	border-radius: 5px;
+	border: 1px solid var(--gris);
+	background-color: transparent;
+	color: var(--blanc);
+	font-size: 1rem;
+}
+
+textarea {
+    padding: 1rem; /* Augmenter l'espace interne */
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+    border: 1px solid var(--gris);
+    background-color: #fff;
+    color: var(--noir);
+    resize: vertical;
+    height: 200px; /* Augmenter la hauteur du champ de texte */
+}
+
+input[type="checkbox"] {
+	margin-right: 0.5rem;
+}
+
+.error {
+	color: var(--jaune);
+	font-size: 0.9rem;
+	margin-top: -1rem;
+	margin-bottom: 1rem;
+}
+
+.imageact {
+	width: 100%;
+	max-width: 300px;
+	height: auto;
+	border-radius: 10px;
+	display: block;
+	margin: 1.5rem auto;
+	border: 3px solid var(--jaune);
+}
+
+.checkbox-group {
+	margin: 1rem 0;
+	color: var(--blanc);
+}
+
+.checkbox-group label {
+	font-size: 1rem;
+}
+
+.form-section {
+	margin-bottom: 1.5rem;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.mt-2 {
+	margin-top: 1rem;
+}
+
+/* Bouton submit */
+/* Styliser le bouton submit généré par form_submit */
+form input[type="submit"] {
+    padding: 0.5rem 1rem;   /* Taille du bouton */
+    font-size: 1.1rem;          /* Taille du texte */
+    background-color: var(--jaune); /* Couleur de fond */
+    color: var(--noir);         /* Couleur du texte */
+    border: 2px solid var(--noir);  /* Bordure */
+    border-radius: 6px;         /* Coins arrondis */
+    cursor: pointer;            /* Curseur pointer pour signaler l'action */
+    transition: all 0.3s ease-in-out; /* Transition fluide pour l'hover */
+}
+
+/* Effet de hover pour le bouton */
+form input[type="submit"]:hover {
+    background-color: var(--gris);  /* Change la couleur de fond au survol */
+    color: var(--blanc);             /* Change la couleur du texte au survol */
+    border: 2px solid var(--blanc); /* Change la bordure */
+}
+
+/* Effet de focus pour le bouton */
+form input[type="submit"]:focus {
+    outline: none;  /* Supprimer le contour par défaut */
+    border-color: var(--jaune); /* Garde la bordure jaune au focus */
+}
