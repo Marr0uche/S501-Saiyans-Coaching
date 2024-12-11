@@ -5,7 +5,7 @@
                     width="80px"></a>
         </div>
         <ul class="links">
-            <li><a href="#">Accueil</a></li>
+            <li><a href="/">Accueil</a></li>
             <li><a href="/A_propos">À propos</a></li>
             <li><a href="/Produit">Programmes</a></li>
             <li><a href="#">Avant / Après</a></li>
@@ -35,7 +35,7 @@
 
     <div class="menu-burger ">
         <ul class="links">
-            <li class="li-responsive"><a href="#">Accueil</a></li>
+            <li class="li-responsive"><a href="/">Accueil</a></li>
             <li class="li-responsive"><a href="#">À propos</a></li>
             <li class="li-responsive"><a href="/Produit">Programmes</a></li>
             <li class="li-responsive"><a href="#">Avant / Après</a></li>
