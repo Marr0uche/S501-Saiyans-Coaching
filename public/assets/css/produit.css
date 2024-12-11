@@ -6,7 +6,7 @@
     --gris: #737373;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,10 +14,10 @@
 }
 
 body {
-    background-image: url(../img/img-accueil.webp);  
-    background-attachment: fixed; 
-    background-size: cover; 
-    background-position: center; 
+    background-image: url(../img/img-accueil.webp);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
     color: #f9f9f9;
 }
 
@@ -29,14 +29,14 @@ body {
 }
 
 
-.offers h1{
+.offers h1 {
     padding-top: 10rem !important;
     padding-bottom: 2rem;
     text-align: center;
     font-size: 2.5rem;
     font-size: clamp(2.5rem, 1.683673469387755rem + 4.081632653061225vw, 4rem);
     font-family: 'Bebas Neue', sans-serif;
-    
+
 }
 
 /* Wrapper */
@@ -44,7 +44,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap : 1rem;
+    gap: 1rem;
     padding: 40px 20px;
 }
 
@@ -54,7 +54,7 @@ body {
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;
     width: auto;
     display: flex;
     flex-direction: column;
@@ -77,7 +77,8 @@ body {
     width: 100%;
     transition: all 0.3s ease;
 }
-.pricing-table:hover .head{
+
+.pricing-table:hover .head {
     background-color: rgba(12, 12, 12, 0.8);
     color: var(--jaune);
 }
@@ -147,7 +148,7 @@ body {
     font-size: 0.9em;
     color: var(--blanc) !important;
     padding: 5px 0;
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;
 }
 
 .pricing-table:hover .content ul li {
@@ -160,45 +161,62 @@ body {
 
 
 .pricing-table .footer-produit {
-    display: grid; /* Active la mise en page en grille */
-    grid-template-columns: 1fr 1fr; /* Définit deux colonnes égales */
-    gap: 20px; /* Espacement entre les colonnes */
-    justify-content: space-between ;
+    display: grid;
+    /* Active la mise en page en grille */
+    grid-template-columns: 1fr 1fr;
+    /* Définit deux colonnes égales */
+    gap: 20px;
+    /* Espacement entre les colonnes */
+    justify-content: space-between;
 
-    border-top: var(--blanc) 1px solid; /* Bordure en haut */
-    margin-top: 1rem; /* Marge en haut */
-    padding-top: 1rem; /* Espacement en haut */
+    border-top: var(--blanc) 1px solid;
+    /* Bordure en haut */
+    margin-top: 1rem;
+    /* Marge en haut */
+    padding-top: 1rem;
+    /* Espacement en haut */
 }
 
 .pricing-table .img .imgProduit {
-    max-width: 300px; /* S'adapte à la largeur de sa colonne */
-    max-height: 200px; /* Limite la hauteur */
-    width: auto; /* Conserve les proportions */
-    height: auto; /* Conserve les proportions */
-    display: block; /* Évite le comportement inline */
-    border-radius: 8px; /* Coins arrondis */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère */
+    max-width: 300px;
+    /* S'adapte à la largeur de sa colonne */
+    max-height: 200px;
+    /* Limite la hauteur */
+    width: auto;
+    /* Conserve les proportions */
+    height: auto;
+    /* Conserve les proportions */
+    display: block;
+    /* Évite le comportement inline */
+    border-radius: 8px;
+    /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Ajoute une ombre légère */
     margin-left: auto;
 }
 
 
-.periodicity, .infos, .validity {
+.periodicity,
+.infos,
+.validity {
     color: var(--blanc) !important;
-    opacity: 1; 
+    opacity: 1;
 }
 
 @keyframes lightUp {
     0% {
         color: var(--blanc);
-        opacity: 1; 
+        opacity: 1;
     }
+
     50% {
         color: var(--gris);
-        opacity: 0.6; 
+        opacity: 0.6;
     }
+
     100% {
         color: var(--blanc);
-        opacity: 1; 
+        opacity: 1;
     }
 }
 
@@ -237,14 +255,16 @@ body {
 
 /* Card styling */
 .card {
+    position: relative;
     background-color: rgba(12, 12, 12, 0.7);
     border-radius: 10px;
     border: var(--blanc) 2px solid;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 400px;
-    min-width: 300px; /* Minimum width for smaller screens */
+    width: 500px;
+    min-width: 300px;
+    /* Minimum width for smaller screens */
     color: var(--blanc);
 }
 
@@ -267,25 +287,55 @@ body {
 .card-text {
     font-size: 1rem;
     line-height: 1.6;
+    word-wrap: break-word !important;
+    /* Force les mots trop longs à se couper */
+    overflow-wrap: break-word !important;
+    /* Alternatif moderne pour couper les mots */
+    white-space: normal  !important;
+    /* Permet le retour à la ligne */
+
 }
 
 /* Product image styling */
 .product-image {
     margin: 20px 0;
 }
-
 .product-image img {
-    max-width: 100%;
+    max-width: 300px;
+    /* S'adapte à la largeur de sa colonne */
+    max-height: 200px;
+    /* Limite la hauteur */
+    width: auto;
+    /* Conserve les proportions */
     height: auto;
+    /* Conserve les proportions */
+    display: block;
+    /* Évite le comportement inline */
     border-radius: 8px;
+    /* Coins arrondis */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Ajoute une ombre légère */
+    margin: 0 auto;
+
+    margin-bottom: 5rem;
+}
+
+.card-text-price {
+    position: absolute;
+    bottom: 1rem;
+    left : 1rem;
 }
 
 /* Card footer styling */
 .card-footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
     padding: 15px 20px;
     background-color: var(--gris);
     border-top: 1px solid #e5e5e5;
+    border-radius: 10px 0 0 0;
+    border-left: 1px solid #e5e5e5;
     text-align: center;
     color: var(--blanc);
 }
@@ -310,7 +360,7 @@ body {
 }
 
 /* Buttons */
-.btn {
+.btn-comm {
     display: inline-block;
     padding: 8px 16px;
     font-size: 0.9rem;
@@ -332,15 +382,33 @@ body {
 /* Responsive design */
 @media (max-width: 768px) {
     .card {
-        width: calc(50% - 20px); /* Two cards per row */
+        width: calc(50% - 20px);
+        /* Two cards per row */
+    }
+
+    .card-footer {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+
+    .btn-comm {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+
+    .card-text-price {
+        font-size: 0.8rem;
+        bottom: 2rem;
     }
 }
 
 @media (max-width: 480px) {
     .card {
-        width: 100%; /* One card per row */
+        width: 100%;
+        /* One card per row */
     }
 }
+
 
 
 /*MODALE*/
@@ -431,4 +499,3 @@ input {
     border: var(--blanc) 1px solid;
     color: var(--jaune);
 }
-
