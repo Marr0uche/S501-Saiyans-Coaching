@@ -44,10 +44,16 @@ class AchatController extends Controller
 
     public function allachat()
     {
+        $session = session();
+		$admin = $session->get('admin');
+		$connexion = $session->get('client_id');
+		if ($admin === 'f' or $connexion === null) {
+			return redirect()->to('/');
+		}
+
         $achat = new AcheterModel();
         $listeAchat = $achat->findAll();
-
-    
+        
         return view('Achat/AllAchatView',[
             'listeachat'=>$listeAchat
         ]);

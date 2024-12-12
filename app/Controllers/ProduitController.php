@@ -41,6 +41,12 @@ class ProduitController extends Controller{
 
 	public function indexDashboard(){
 
+        $session = session();
+		$admin = $session->get('admin');
+		$connexion = $session->get('client_id');
+		if ($admin === 'f' or $connexion === null) {
+			return redirect()->to('/');
+		}
 
         // Chargement des modèles
         $product = new ProduitModel();

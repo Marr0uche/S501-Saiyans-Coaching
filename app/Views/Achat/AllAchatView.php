@@ -23,7 +23,7 @@
 
 		<!-- Section principale -->
 		<div class="dashboard-section">
-			<h1 class="dashboard-title">Gestion des Produits et Promotions</h1>
+			<h1 class="dashboard-title">Visualisation des achats</h1>
 
 		<table>
 			<thead>
