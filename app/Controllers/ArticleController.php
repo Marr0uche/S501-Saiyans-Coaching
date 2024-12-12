@@ -83,12 +83,18 @@ class ArticleController extends Controller
 		}
 
 		$articleModel = new ArticleModel();
+		$blog = $this->request->getPost('blog');
 
 		$file = $this->request->getFile('image');
 		$fileName = null;
 
 		if ($file && $file->isValid() && !$file->hasMoved()) {
-			$fileName = $file->getRandomName();
+			if ($blog === 'true') {
+				$fileName = 'blog_' . $file->getRandomName();
+			}
+			else {
+				$fileName = 'actu_' . $file->getRandomName();
+			}
 			$file->move(WRITEPATH . '../public/uploads', $fileName);
 		}
 
@@ -97,7 +103,7 @@ class ArticleController extends Controller
 			'descriptiondocument' => $this->request->getPost('descriptiondocument'),
 			'datepublication' => $this->request->getPost('datepublication'),
 			'image' => $fileName,
-			'blog' => $this->request->getPost('blog'),
+			'blog' => $blog,
 		];
 
 		$articleModel->creerArticle($data);
