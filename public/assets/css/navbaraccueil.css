@@ -252,6 +252,12 @@ header {
 	}
 }
 
+@media screen and (max-width: 600px) {
+    .carousel {
+        margin-top: -1.5rem !important;
+    }
+}
+
 @media screen and (max-width: 450px) {
 	.carousel {
 		text-align: center;
@@ -265,6 +271,7 @@ header {
 }
 
 @media screen and (max-width: 375px) {
+
 	.carousel {
 		text-align: center;
 	}

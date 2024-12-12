@@ -65,19 +65,6 @@ select option {
 	color: #ccc;
 }
 
-button {
-	background: linear-gradient(to right, #F4E904, #121212);
-	border: none;
-	color: #fff;
-	padding: 10px 20px;
-	border-radius: 25px;
-	cursor: pointer;
-}
-
-button:hover {
-	background: linear-gradient(to right, #121212, #F4E904);
-}
-
 .menu-burger-container {
 	position: relative;
 	z-index: 1000;
@@ -100,7 +87,20 @@ button:hover {
 	color: #121212;
 	transition: background-color 0.3s ease;
 }
+.table-responsive .btn {
+    background-color: #121212;
+    color: #fff;
+    border: #fff solid 2px;
+    
 
+    transition: all 0.3s ease;
+}
+
+.table-responsive .btn:hover {
+    background-color: #F4E904;
+    color: #121212;
+    border: yellow solid 2px;
+}
 .menu-burger {
 	display: none;
 	position: fixed;
@@ -230,9 +230,176 @@ body {
 }
 
 .dashboard-title {
-	font-size: 2rem;
-	font-weight: bold;
-	color: var(--text-color);
-	text-align: center;
-	margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.modal-footer .btn {
+    background-color: #F4E904;
+    color: #121212;
+    border: #0C0C0C solid 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-footer .btn:hover {
+    background-color: #121212;
+    color: #F4E904;
+    border: #F4E904 solid 2px;
+}
+
+.modal-footer .btn-1 {
+    background-color: #121212;
+
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+    border: #F4E904 solid 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-footer .btn-1:hover {
+    background-color: #0C0C0C;
+    color: #fff;
+    border: #fff solid 2px;
+    box-shadow: none;
+}
+
+.btn-danger {
+    background-color: #dc3545 !important;
+    color: #fff;
+    border: none !important;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    /* retirer les boxshadow*/
+    box-shadow: none;
+    border: none !important;
+}
+
+
+/*style modales*/
+/* Modal */
+
+.modal {
+    box-shadow: rgba(12, 12, 12, 0.7);
+}
+.modal-content {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #000; /* Black background */
+    border: #fff solid 2px;
+    color: #fff; /* White text */
+}
+
+.modal-header {
+    background-color: #737373; /* Yellow background */
+    color: #fff; /* Black text */
+    border: #fff solid 2px;
+    padding: 15px;
+    border-bottom: 1px solid #fff; /* White border */
+}
+
+.modal-header .btn-close {
+    background-color: transparent; /* Black button */
+    border: 1px solid #0C0C0C;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: #ffeb3b; /* Yellow text */
+    font-weight: bold;
+
+    transition: all 0.3s ease;
+}
+
+.modal-header .btn-close:hover {
+    background-color: #ffeb3b; /* Yellow hover */
+    color: #000; /* Black text */
+    border-color: #ffeb3b; /* Yellow border */
+    border-radius: 50%;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000; /* Black text */
+}
+
+.modal-body {
+    padding: 20px;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+}
+
+.form-group {
+    margin: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #fff; /* Yellow text */
+}
+
+.form-control {
+    border: 1px solid #fff; /* Yellow border */
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+}
+
+.form-control:focus {
+    border-color: #ffeb3b; /* Yellow focus */
+    outline: 0;
+    box-shadow: 0 0 5px rgba(255, 255, 0, 0.5); /* Yellow glow */
+}
+
+.form-check-input {
+    margin-right: 10px;
+    accent-color: #ffeb3b; /* Yellow checkbox */
+}
+
+.modal-footer {
+    padding: 15px;
+    background-color: #000; /* Black background */
+    border-top: 1px solid #fff; /* White border */
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-primary {
+    background-color: #ffeb3b; /* Yellow button */
+    border-color: #ffeb3b;
+    color: #000; /* Black text */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #fff; /* White hover */
+    color: #000; /* Black text */
+    box-shadow: 0 4px 8px rgba(255, 255, 0, 0.5);
+}
+
+.btn-secondary {
+    background-color: #fff; /* White button */
+    border-color: #fff;
+    color: #000; /* Black text */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #ffeb3b; /* Yellow hover */
+    color: #000; /* Black text */
+    box-shadow: 0 4px 8px rgba(255, 255, 0, 0.5);
 }

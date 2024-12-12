@@ -12,13 +12,14 @@
 }
 
 .footer-content-left a i {
-	font-size: 2rem;
-	background-color: var(--jaune);
-	color: var(--noir);
-	opacity: 0.9;
-	padding: 10px;
-	border-radius: 50%;
-	margin: 10px;
+    font-size: 2rem;
+    font-size: clamp(1rem, 0.5rem + 1vw, 2rem);
+    background-color: var(--jaune);
+    color: var(--noir);
+    opacity: 0.9;
+    padding: 10px;
+    border-radius: 50%;
+    margin: 10px;
 }
 
 .footer-content-left a i:hover {
