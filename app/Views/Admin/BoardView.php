@@ -67,10 +67,10 @@
 		<h3 class="mt-5 mb-4">Filtres de Recherche</h3>
 		<div class="row g-3">
 			<div class="col-lg-3 col-md-6">
-				<input type="text" id="filterName" class="form-control" placeholder="Rechercher par Nom">
+				<input type="text" id="filterName" class="form-control" placeholder="Rechercher par Nom" maxlength="30">
 			</div>
 			<div class="col-lg-3 col-md-6">
-				<input type="text" id="filterPrenom" class="form-control" placeholder="Rechercher par Prénom">
+				<input type="text" id="filterPrenom" class="form-control" placeholder="Rechercher par Prénom" maxlength="30">
 			</div>
 			<div class="col-lg-3 col-md-6">
 				<select id="filterSexe" class="form-select">

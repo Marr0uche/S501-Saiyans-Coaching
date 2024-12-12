@@ -14,14 +14,14 @@
 	<div class="container-profile">
 		<!-- Sidebar -->
 		<div class="sidebar">
-			<i class="fas fa-home" onclick="window.location='/'"></i>			
+			<i class="fas fa-home" onclick="window.location='/'"></i>
 			<?php
-			$session = session(); 
+			$session = session();
 			if ($session->get('admin') === 't'): ?>
 				<i class="fas fa-chart-line" onclick="window.location='/admin/board'"></i>
 			<?php endif; ?>
-			<i class="fas fa-sign-out-alt" onclick="window.location='/authentification/deconnexion'"></i>			<i class="fas fa-money-check" onclick="window.location='/achat/<?= $client['idclient'] ?>'"></i>
-			</div>
+			<i class="fas fa-sign-out-alt" onclick="window.location='/authentification/deconnexion'"></i> <i class="fas fa-money-check" onclick="window.location='/achat/<?= $client['idclient'] ?>'"></i>
+		</div>
 
 		<!-- Section principale -->
 		<div class="profile-section">
