@@ -16,11 +16,11 @@
 
 	<form method="post" action="<?= site_url('avis/ajouter/' . $idProduit) ?>">
 		<label for="noteTemoignage">Note :</label>
-		<input type="number" name="noteTemoignage" id="noteTemoignage" min="1" max="5" required>
+		<input type="number" name="noteTemoignage" id="noteTemoignage" min="1" max="5" maxlength="1" required>
 		<br><br>
 
 		<label for="avisTemoignage">Votre Avis :</label>
-		<textarea name="avisTemoignage" id="avisTemoignage" rows="5" required></textarea>
+		<textarea name="avisTemoignage" id="avisTemoignage" rows="5" maxlength="500" required></textarea>
 		<br><br>
 
 		<button type="submit">Envoyer</button>

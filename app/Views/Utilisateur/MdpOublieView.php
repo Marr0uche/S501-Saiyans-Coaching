@@ -27,7 +27,7 @@
 			<?= csrf_field() ?>
 			<div class="form-group">
 				<label for="email">Entrez votre adresse email</label>
-				<input type="email" name="email" id="email" class="form-control" placeholder="Votre email" required>
+				<input type="email" name="email" id="email" class="form-control" placeholder="Votre email" maxlength="50" required>
 			</div>
 			<button type="submit" class="btn btn-primary mt-3">Envoyer</button>
 		</form>

@@ -25,19 +25,19 @@
 				<div class="input-group">
 					<input type="text" name="keyword" class="input-recherche-proj form-control"
 						placeholder="Rechercher un mot-clé..."
-						value="<?= htmlspecialchars($_GET['keyword'] ?? '', ENT_QUOTES); ?>">
+						value="<?= htmlspecialchars($_GET['keyword'] ?? '', ENT_QUOTES); ?>" maxlength="30">
 					<button type="submit" class="btn-recherche btn btn-primary">Rechercher</button>
 					<?php
 					$session = session();
 					$admin = $session->get('admin');
 					if ($admin === 't') {
-						?>
+					?>
 						<button type="button" class="btn btn-primary btn-ajouter-actualite"
 							data-modal-target="#ajouterArticleModal">
 							Ajouter
 						</button>
 
-						<?php
+					<?php
 					}
 					?>
 				</div>
@@ -58,9 +58,9 @@
 
 					<?php if ($article['image'] != null) {
 						$imagePath = base_url('uploads/' . $article['image']);
-						?><img src="<?= $imagePath ?>" alt="" class="img-fluid"><?php
-					}
-					?>
+					?><img src="<?= $imagePath ?>" alt="" class="img-fluid"><?php
+																			}
+																				?>
 
 					<p class="date">
 						<?php
@@ -77,7 +77,7 @@
 					</p>
 					<?php
 					if ($admin === 't') {
-						?>
+					?>
 						<div class="container-btn">
 							<button type="button" class="btn btn-primary"
 								onclick="window.location='/blog/modif/<?= urlencode($article['iddocument']); ?>'">
@@ -89,7 +89,7 @@
 							</a>
 
 						</div>
-						<?php
+					<?php
 					}
 					?>
 				</div>
@@ -158,8 +158,8 @@
 			openModalButtons.forEach(button => {
 				button.addEventListener('click', () => {
 					const modal = document.querySelector(button.getAttribute('data-modal-target'));
-					modal.classList.add('show');  // Affiche la modale
-					document.body.style.overflow = 'hidden';  // Désactive le défilement de la page lorsque la modale est ouverte
+					modal.classList.add('show'); // Affiche la modale
+					document.body.style.overflow = 'hidden'; // Désactive le défilement de la page lorsque la modale est ouverte
 				});
 			});
 
@@ -167,8 +167,8 @@
 			closeModalButtons.forEach(button => {
 				button.addEventListener('click', () => {
 					const modal = button.closest('.modal');
-					modal.classList.remove('show');  // Masque la modale
-					document.body.style.overflow = '';  // Réactive le défilement de la page
+					modal.classList.remove('show'); // Masque la modale
+					document.body.style.overflow = ''; // Réactive le défilement de la page
 				});
 			});
 
@@ -177,12 +177,11 @@
 				overlay.addEventListener('click', (e) => {
 					if (e.target === overlay) {
 						overlay.classList.remove('show');
-						document.body.style.overflow = '';  // Réactive le défilement de la page
+						document.body.style.overflow = ''; // Réactive le défilement de la page
 					}
 				});
 			});
 		});
-
 	</script>
 
 </body>

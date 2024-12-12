@@ -27,7 +27,7 @@
 				<div class="input-group">
 					<input type="text" name="keyword" class="input-recherche-proj form-control"
 						placeholder="Rechercher un mot-clé..."
-						value="<?= htmlspecialchars($_GET['keyword'] ?? '', ENT_QUOTES); ?>">
+						value="<?= htmlspecialchars($_GET['keyword'] ?? '', ENT_QUOTES); ?>" maxlength="100">
 					<button type="submit" class="btn-recherche btn btn-primary">Rechercher</button>
 
 					<?php

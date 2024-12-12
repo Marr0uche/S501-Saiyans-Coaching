@@ -14,14 +14,14 @@
 	<div class="container-profile">
 		<!-- Sidebar -->
 		<div class="sidebar">
-			<i class="fas fa-home" onclick="window.location='/'"></i>			
+			<i class="fas fa-home" onclick="window.location='/'"></i>
 			<?php
-			$session = session(); 
+			$session = session();
 			if ($session->get('admin') === 't'): ?>
 				<i class="fas fa-chart-line" onclick="window.location='/admin/board'"></i>
 			<?php endif; ?>
-			<i class="fas fa-sign-out-alt" onclick="window.location='/authentification/deconnexion'"></i>			<i class="fas fa-money-check" onclick="window.location='/achat/<?= $client['idclient'] ?>'"></i>
-			</div>
+			<i class="fas fa-sign-out-alt" onclick="window.location='/authentification/deconnexion'"></i> <i class="fas fa-money-check" onclick="window.location='/achat/<?= $client['idclient'] ?>'"></i>
+		</div>
 
 		<!-- Section principale -->
 		<div class="profile-section">
@@ -43,19 +43,19 @@
 			<form action="<?= base_url('/profile/modifier') ?>" method="post" class="form-profile">
 				<div class="form-row">
 					<label for="nom">Nom</label>
-					<input type="text" name="nom" value="<?= esc($client['nom']) ?>" required>
+					<input type="text" name="nom" value="<?= esc($client['nom']) ?>" maxlength="25" required>
 				</div>
 				<div class="form-row">
 					<label for="prenom">Prénom</label>
-					<input type="text" name="prenom" value="<?= esc($client['prenom']) ?>" required>
+					<input type="text" name="prenom" value="<?= esc($client['prenom']) ?>" maxlength="25" required>
 				</div>
 				<div class="form-row">
 					<label for="mail">Email</label>
-					<input type="email" name="mail" value="<?= esc($client['mail']) ?>" required>
+					<input type="email" name="mail" value="<?= esc($client['mail']) ?>" maxlength="50" required>
 				</div>
 				<div class="form-row">
 					<label for="mobile">Mobile</label>
-					<input type="text" name="mobile" value="<?= esc($client['mobile']) ?>" required>
+					<input type="text" name="mobile" value="<?= esc($client['mobile']) ?>" maxlength="20" required>
 				</div>
 				<div class="form-row">
 					<label for="sexe">Sexe</label>
@@ -63,11 +63,11 @@
 				</div>
 				<div class="form-row">
 					<label for="taille">Taille (en cm)</label>
-					<input type="number" step="0.1" name="taille" value="<?= esc($client['taille']) ?>" required>
+					<input type="number" step="0.1" name="taille" value="<?= esc($client['taille']) ?>" maxlength="3" required>
 				</div>
 				<div class="form-row">
 					<label for="poidsdecorps">Poids (en kg)</label>
-					<input type="number" step="0.1" name="poidsdecorps" value="<?= esc($client['poidsdecorps']) ?>" required>
+					<input type="number" step="0.1" name="poidsdecorps" value="<?= esc($client['poidsdecorps']) ?>" maxlength="3" required>
 				</div>
 				<div class="form-row">
 					<label for="datenaissance">Date de naissance</label>
