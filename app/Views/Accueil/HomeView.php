@@ -49,7 +49,7 @@
                                 <p>Tous les mois</p>
                             </div>
                             <div class="infos" style="--order: 1;">
-                                <p class="p-infos"><?= esc($produit['valabilite']); ?><?= esc($produit['prix']); ?>
+                                <p class="p-infos"><?= esc($produit['prix']); ?>
                                     €/mois </p>
                             </div>
                             <div class="validity" style="--order: 2;">

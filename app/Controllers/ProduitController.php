@@ -165,6 +165,7 @@ class ProduitController extends Controller{
         'titreproduit' => $this->request->getPost('titreproduit'),
         'descriptionproduit' => $this->request->getPost('descriptionproduit'),
         'prix' => $this->request->getPost('prix'),
+        'valabilite' => $this->request->getPost('valabilite'),
         'affichageaccueil' => $this->request->getPost('affichageacceuil') === 'on',
         'affichage' => $this->request->getPost('affichage') === 'on',
         'photoproduit' => $fileName
@@ -215,6 +216,7 @@ class ProduitController extends Controller{
             'titreproduit' => $this->request->getPost('titreproduit'),
             'descriptionproduit' => $this->request->getPost('descriptionproduit'),
             'prix' => $this->request->getPost('prix'),
+            'valabilite' => $this->request->getPost('Valabilite'),
             'affichage' => $affichage,
             'affichageaccueil' => $affichageAcceuil
         ];

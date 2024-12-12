@@ -14,11 +14,11 @@
 	<div class="container-dashboard">
 		<div class="sidebar">
 			<i class="fas fa-home" onclick="window.location='/'"></i>
-            <i class="fas fa-arrow-left" onclick="window.location='/admin/board'"></i>
-            <i class="fas fa-chart-line" onclick="window.location='/produit/dashboard'"></i>
-            <i class="fas fa-shopping-cart" onclick="window.location='/achat/allachat'"></i>
-            <i class="fas fa-sign-out-alt" onclick="window.location='/authentification/deconnexion'"></i>
-        </div>
+			<i class="fas fa-arrow-left" onclick="window.location='/admin/board'"></i>
+			<i class="fas fa-chart-line" onclick="window.location='/produit/dashboard'"></i>
+			<i class="fas fa-shopping-cart" onclick="window.location='/achat/allachat'"></i>
+			<i class="fas fa-sign-out-alt" onclick="window.location='/authentification/deconnexion'"></i>
+		</div>
 
 		<div class="dashboard-section">
 			<h1 class="dashboard-title">Gestion des Produits et Promotions</h1>
@@ -35,17 +35,26 @@
 			<?php endif; ?>
 
 			<div class="table-responsive">
-				<button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#ajoutProduitModal">Ajouter un Produit</button>
+				<button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#ajoutProduitModal">Ajouter un
+					Produit</button>
 
 				<h2>Produits</h2>
 				<table class="table table-bordered table-hover align-middle">
 					<thead class="table-dark">
 						<tr>
-							<th><a href="?orderbyProd=idproduit&orderProd=<?= $orderProd === 'ASC' ? 'DESC' : 'ASC' ?>">ID</a></th>
+							<th><a
+									href="?orderbyProd=idproduit&orderProd=<?= $orderProd === 'ASC' ? 'DESC' : 'ASC' ?>">ID</a>
+							</th>
 							<th>Image</th>
-							<th><a href="?orderbyProd=titreproduit&orderProd=<?= $orderProd === 'ASC' ? 'DESC' : 'ASC' ?>">Nom</a></th>
-							<th><a href="?orderbyProd=descriptionproduit&orderProd=<?= $orderProd === 'ASC' ? 'DESC' : 'ASC' ?>">Description</a></th>
-							<th><a href="?orderbyProd=prix&orderProd=<?= $orderProd === 'ASC' ? 'DESC' : 'ASC' ?>">Prix</a></th>
+							<th><a
+									href="?orderbyProd=titreproduit&orderProd=<?= $orderProd === 'ASC' ? 'DESC' : 'ASC' ?>">Nom</a>
+							</th>
+							<th><a
+									href="?orderbyProd=descriptionproduit&orderProd=<?= $orderProd === 'ASC' ? 'DESC' : 'ASC' ?>">Description</a>
+							</th>
+							<th><a
+									href="?orderbyProd=prix&orderProd=<?= $orderProd === 'ASC' ? 'DESC' : 'ASC' ?>">Prix</a>
+							</th>
 							<th>Valabilité</th>
 							<th>Affichage</th>
 							<th>Affichage sur l'acceuil</th>
@@ -59,8 +68,8 @@
 								<tr>
 									<td><?= esc($produit['idproduit']); ?></td>
 									<td><?php
-										$imagePath = base_url('uploads/' . $produit['photoproduit']);
-										?><img src="<?= $imagePath ?>" alt="" style="width:20%;">
+									$imagePath = base_url('uploads/' . $produit['photoproduit']);
+									?><img src="<?= $imagePath ?>" alt="" style="width:20%;">
 									</td>
 									<td><?= esc($produit['titreproduit']); ?></td>
 									<td><?= esc($produit['descriptionproduit']); ?></td>
@@ -81,7 +90,8 @@
 											data-affichageAcceuil="<?= esc($produit['affichageaccueil']); ?>">
 											Modifier
 										</a>
-										<a href="/produit/suppression/<?= esc($produit['idproduit']); ?>" class="btn btn-danger btn-sm">Supprimer</a>
+										<a href="/produit/suppression/<?= esc($produit['idproduit']); ?>"
+											class="btn btn-danger btn-sm">Supprimer</a>
 									</td>
 								</tr>
 							<?php endforeach; ?>
@@ -95,17 +105,27 @@
 			</div>
 
 			<div class="table-responsive mt-5">
-				<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ajoutPromoModal">Ajouter une Promotion</button>
+				<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ajoutPromoModal">Ajouter une
+					Promotion</button>
 				<h2>Promotion</h2>
 
 				<table class="table table-bordered table-hover align-middle">
 					<thead class="table-dark">
 						<tr>
-							<th><a href="?orderbyProm=iddocument&orderProm=<?= $orderProm === 'ASC' ? 'DESC' : 'ASC' ?>">ID</a></th>
-							<th><a href="?orderbyProm=titredocument&orderProm=<?= $orderProm === 'ASC' ? 'DESC' : 'ASC' ?>">Nom</a></th>
-							<th><a href="?orderbyProm=descriptiondocument&orderProm=<?= $orderProm === 'ASC' ? 'DESC' : 'ASC' ?>">Description</a></th>
-							<th><a href="?orderbyProm=reductionpromo&orderProm=<?= $orderProm === 'ASC' ? 'DESC' : 'ASC' ?>">Pourcentage</a></th>
-							<th><a href="?orderbyProm=codepromo&orderProm=<?= $orderProm === 'ASC' ? 'DESC' : 'ASC' ?>">Code Promo</a></th>
+							<th><a
+									href="?orderbyProm=iddocument&orderProm=<?= $orderProm === 'ASC' ? 'DESC' : 'ASC' ?>">ID</a>
+							</th>
+							<th><a
+									href="?orderbyProm=titredocument&orderProm=<?= $orderProm === 'ASC' ? 'DESC' : 'ASC' ?>">Nom</a>
+							</th>
+							<th><a
+									href="?orderbyProm=descriptiondocument&orderProm=<?= $orderProm === 'ASC' ? 'DESC' : 'ASC' ?>">Description</a>
+							</th>
+							<th><a
+									href="?orderbyProm=reductionpromo&orderProm=<?= $orderProm === 'ASC' ? 'DESC' : 'ASC' ?>">Pourcentage</a>
+							</th>
+							<th><a href="?orderbyProm=codepromo&orderProm=<?= $orderProm === 'ASC' ? 'DESC' : 'ASC' ?>">Code
+									Promo</a></th>
 							<th>active</th>
 							<th>Actions</th>
 						</tr>
@@ -121,8 +141,8 @@
 									<td><?= esc($promotion['codepromo']); ?></td>
 									<td><?= esc($promotion['active']); ?></td>
 									<td>
-										<a class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#promotionModal"
-											data-idP="<?= esc($promotion['iddocument']); ?>"
+										<a class="btn btn-primary btn-sm" data-bs-toggle="modal"
+											data-bs-target="#promotionModal" data-idP="<?= esc($promotion['iddocument']); ?>"
 											data-titreP="<?= esc($promotion['titredocument']); ?>"
 											data-descriptionP="<?= esc($promotion['descriptiondocument']); ?>"
 											data-reductionP="<?= esc($promotion['reductionpromo']); ?>"
@@ -130,7 +150,8 @@
 											data-activeP="<?= esc($promotion['active']); ?>">
 											Modifier
 										</a>
-										<a href="/promotion/suppression/<?= esc($promotion['iddocument']); ?>" class="btn btn-danger btn-sm">Supprimer</a>
+										<a href="/promotion/suppression/<?= esc($promotion['iddocument']); ?>"
+											class="btn btn-danger btn-sm">Supprimer</a>
 									</td>
 								</tr>
 							<?php endforeach; ?>
@@ -194,6 +215,20 @@
 							'max' => '9999.99',
 						]); ?>
 					</div>
+					<br>
+					<div class="form-group">
+						<?= form_label('Valabilite', 'Valabilite'); ?>
+						<?= form_input([
+							'name' => 'Valabilite',
+							'id' => 'Valabilite',
+							'class' => 'form-control',
+							'type' => 'number',
+							'required' => true,
+							'placeholder' => 'Ex : 6 mois',
+							'min' => '0',
+							'max' => '9999',
+						]); ?>
+					</div>
 				</div>
 				<br>
 				<div class="form-group">
@@ -221,11 +256,12 @@
 					<?= validation_show_error('affichageacceuil'); ?>
 					<span id="affichageAccueilActive"></span>
 				</div>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+				<div class="modal-footer">
+				<button type="button" class="btn-1 btn-secondary" data-bs-dismiss="modal">Annuler</button>
 				<?= form_submit('submit', 'Enregistrer', ['class' => 'btn btn-primary']); ?>
 			</div>
+			</div>
+
 			<?= form_close(); ?>
 		</div>
 	</div>
@@ -299,7 +335,7 @@
 					<br>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+					<button type="button" class="btn-1 btn-secondary" data-bs-dismiss="modal">Annuler</button>
 					<?= form_submit('submit', 'Enregistrer', ['class' => 'btn btn-primary']); ?>
 				</div>
 				<?= form_close(); ?>
@@ -307,7 +343,8 @@
 		</div>
 	</div>
 
-	<div class="modal fade" id="ajoutProduitModal" tabindex="-1" aria-labelledby="ajoutProduitModalLabel" aria-hidden="true">
+	<div class="modal fade" id="ajoutProduitModal" tabindex="-1" aria-labelledby="ajoutProduitModalLabel"
+		aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -354,6 +391,18 @@
 					</div>
 					<br>
 					<div class="form-group">
+						<?= form_label('Valabilite', 'valabilite'); ?>
+						<?= form_input([
+							'name' => 'valabilite',
+							'id' => 'valabilite',
+							'class' => 'form-control',
+							'type' => 'number',
+							'required' => true,
+							'placeholder' => 'Ex : 6 mois',
+						]); ?>
+					</div>
+					<br>
+					<div class="form-group">
 						<?= form_label('Image du produit', 'fichier'); ?>
 						<?= form_upload([
 							'name' => 'fichier',
@@ -384,7 +433,7 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+					<button type="button" class="btn-1 btn-secondary" data-bs-dismiss="modal">Annuler</button>
 					<?= form_submit('submit', 'Enregistrer', ['class' => 'btn btn-primary']); ?>
 				</div>
 				<?= form_close(); ?>
@@ -437,7 +486,7 @@
 
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+					<button type="button" class="btn-1 btn-secondary" data-bs-dismiss="modal">Annuler</button>
 					<?= form_submit('submit', 'Créer la promotion', ['class' => 'btn btn-primary']); ?>
 				</div>
 				<?= form_close(); ?>
@@ -451,7 +500,7 @@
 	<script>
 		document.addEventListener('DOMContentLoaded', () => {
 			const modal = document.getElementById('produitModal');
-			modal.addEventListener('show.bs.modal', function(event) {
+			modal.addEventListener('show.bs.modal', function (event) {
 				const button = event.relatedTarget;
 
 				const id = button.getAttribute('data-id');
@@ -460,11 +509,13 @@
 				const prix = button.getAttribute('data-prix');
 				const affichage = button.getAttribute('data-affichage');
 				const affichageAcceuil = button.getAttribute('data-affichageacceuil');
+				const valabilite =button.getAttribute('data-valabilite');
 
 				modal.querySelector('input[name="idproduit"]').value = id;
 				modal.querySelector('input[name="titreproduit"]').value = titre;
 				modal.querySelector('textarea[name="descriptionproduit"]').value = description;
 				modal.querySelector('input[name="prix"]').value = prix;
+				modal.querySelector('input[name="Valabilite"]').value = valabilite;
 
 				const checkboxAffichage = modal.querySelector('input[name="affichage"]');
 				const checkboxAffichageAcceuil = modal.querySelector('input[name="affichageacceuil"]');
@@ -490,7 +541,7 @@
 	<script>
 		document.addEventListener('DOMContentLoaded', () => {
 			const modal = document.getElementById('promotionModal');
-			modal.addEventListener('show.bs.modal', function(event) {
+			modal.addEventListener('show.bs.modal', function (event) {
 				const button = event.relatedTarget;
 				const id = button.getAttribute('data-idP');
 				const titre = button.getAttribute('data-titreP');

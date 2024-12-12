@@ -303,6 +303,12 @@ header {
     }
 }
 
+@media screen and (max-width: 600px) {
+    .carousel {
+        margin-top: -1.5rem !important;
+    }
+}
+
 @media screen and (max-width: 450px) {
     .carousel {
         text-align: center;
@@ -324,7 +330,7 @@ header {
     .carousel-item {
         font-size: clamp(0.6rem, 2.8vw, 0.9rem); /* Texte plus petit pour les écrans très petits */
         line-height: 1.1; /* Lisibilité optimisée pour un contenu compact */
-        margin-left: -3rem;
+        margin-left: -2rem;
         text-align: center;
     }
 }
