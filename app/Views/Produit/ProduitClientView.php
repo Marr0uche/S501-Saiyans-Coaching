@@ -54,10 +54,10 @@
                                                 <?= esc($premierCommentaire['notetemoignage']); ?> ⭐</p>
                                             <p class="review-date mb-1"><strong>Date :</strong>
                                                 <?= esc($premierCommentaire['datetemoignage']); ?></p>
-                                            <p class="review-text"><strong>Commentaire :</strong>
+                                            <p class="review-text" onclick="showModal('<?= esc($premierCommentaire['avistemoignage']); ?>')"><strong>Commentaire :</strong>
                                                 <?= esc($premierCommentaire['avistemoignage']); ?></p>
                                         </div>
-                                        <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal"
+                                        <button type="button" class="btn btn-comm btn-outline-secondary btn-sm" data-bs-toggle="modal"
                                             data-bs-target="#ajouterAvisModal" data-idproduit="<?= $produit['idproduit'] ?>"
                                             data-note="<?= esc($premierCommentaire['notetemoignage']); ?>"
                                             data-avis="<?= esc($premierCommentaire['avistemoignage']); ?>">
@@ -83,6 +83,13 @@
                     <?php endforeach; ?>
                 <?php endif; ?>
             </div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="modal-text"></p>
         </div>
     </div>
 
@@ -153,6 +160,21 @@
                 }
             });
         });
+    </script>
+
+    <script>
+        function showModal(text) {
+    const modal = document.getElementById('modal');
+    const modalText = document.getElementById('modal-text');
+    modalText.textContent = text; // Insère le texte complet
+    modal.style.display = 'flex'; // Affiche la modale
+}
+
+function closeModal() {
+    const modal = document.getElementById('modal');
+    modal.style.display = 'none'; // Cache la modale
+}
+
     </script>
 
 </body>
