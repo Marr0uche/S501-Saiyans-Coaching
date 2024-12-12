@@ -14,9 +14,11 @@
 	<div class="container-dashboard">
 		<div class="sidebar">
 			<i class="fas fa-home" onclick="window.location='/'"></i>
-			<i class="fas fa-chart-line" onclick="window.location='/admin/board'"></i>
-			<i class="fas fa-sign-out-alt" onclick="window.location='/authentification/deconnexion'"></i>
-		</div>
+            <i class="fas fa-arrow-left" onclick="window.location='/admin/board'"></i>
+            <i class="fas fa-chart-line" onclick="window.location='/produit/dashboard'"></i>
+            <i class="fas fa-shopping-cart" onclick="window.location='/achat/allachat'"></i>
+            <i class="fas fa-sign-out-alt" onclick="window.location='/authentification/deconnexion'"></i>
+        </div>
 
 		<div class="dashboard-section">
 			<h1 class="dashboard-title">Gestion des Produits et Promotions</h1>
