@@ -2,17 +2,17 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deviens un Saiyan</title>
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css'); ?>">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/navbaraccueil.css'); ?>">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/footer.css'); ?>">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
-        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Deviens un Saiyan</title>
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/style.css'); ?>">
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/navbaraccueil.css'); ?>">
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/footer.css'); ?>">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+		integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -236,43 +236,41 @@
 </body>
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const navDots = document.querySelectorAll('.slider-nav a');
-        const slides = document.querySelectorAll('.slide .testimonial');
+	document.addEventListener('DOMContentLoaded', () => {
+		const navDots = document.querySelectorAll('.slider-nav a');
+		const slides = document.querySelectorAll('.slide .testimonial');
 
-        navDots.forEach((dot, index) => {
-            dot.addEventListener('click', (e) => {
-                e.preventDefault(); // Empêche le comportement par défaut des ancres
-                slides[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-            });
-        });
+		navDots.forEach((dot, index) => {
+			dot.addEventListener('click', (e) => {
+				e.preventDefault();
+				slides[index].scrollIntoView({
+					behavior: 'smooth',
+					block: 'nearest',
+					inline: 'center'
+				});
+			});
+		});
 
-        // Ajoute une classe active pour indiquer la slide en cours
-        const slideContainer = document.querySelector('.slide');
-        slideContainer.addEventListener('scroll', () => {
-            slides.forEach((slide, index) => {
-                const rect = slide.getBoundingClientRect();
-                const inView = rect.left >= 0 && rect.right <= window.innerWidth;
+		const slideContainer = document.querySelector('.slide');
+		slideContainer.addEventListener('scroll', () => {
+			slides.forEach((slide, index) => {
+				const rect = slide.getBoundingClientRect();
+				const inView = rect.left >= 0 && rect.right <= window.innerWidth;
 
-                navDots.forEach((dot) => dot.classList.remove('active'));
-                if (inView) {
-                    navDots[index].classList.add('active');
-                }
-            });
-        });
-    });
+				navDots.forEach((dot) => dot.classList.remove('active'));
+				if (inView) {
+					navDots[index].classList.add('active');
+				}
+			});
+		});
+	});
 
-    document.querySelectorAll('.pricing-table .footer-produit').forEach(footer => {
-        const img = footer.querySelector('.imgProduit'); // Vérifie s'il y a une image
-        if (!img) {
-            footer.classList.add('no-image'); // Ajoute la classe no-image si aucune image
-        }
-    });
-
-
-
+	document.querySelectorAll('.pricing-table .footer-produit').forEach(footer => {
+		const img = footer.querySelector('.imgProduit');
+		if (!img) {
+			footer.classList.add('no-image');
+		}
+	});
 </script>
-
-
 
 </html>
