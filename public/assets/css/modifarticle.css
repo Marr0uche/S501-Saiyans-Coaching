@@ -1,0 +1,136 @@
+:root {
+	--noir: #0C0C0C;
+	--blanc: #fff;
+	--jaune: #F4E904;
+	--gris: #737373;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
+}
+
+body {
+	background-color: var(--noir);
+	background-image: url(../img/img-accueil.webp);
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+}
+
+h1 {
+	font-family: 'Bebas Neue', sans-serif;
+	color: var(--jaune);
+	text-align: center;
+	margin-bottom: 2rem;
+	padding-top: 9rem;
+}
+
+form {
+	max-width: 600px;
+	margin: 2rem auto;
+	padding: 2rem;
+	background-color: rgba(0, 0, 0, 0.8);
+	border: 2px solid var(--blanc);
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+label {
+	font-size: 1rem;
+	font-weight: bold;
+	color: var(--blanc);
+	margin-bottom: 0.5rem;
+	display: block;
+}
+
+input[type="text"],
+textarea,
+input[type="file"] {
+	width: 100%;
+	padding: 0.8rem;
+	margin-bottom: 1.5rem;
+	border-radius: 5px;
+	border: 1px solid var(--gris);
+	background-color: transparent;
+	color: var(--blanc);
+	font-size: 1rem;
+}
+
+textarea {
+	padding: 1rem;
+	width: 100%;
+	margin-bottom: 1.5rem;
+	border-radius: 5px;
+	border: 1px solid var(--gris);
+	background-color: #fff;
+	color: var(--noir);
+	resize: vertical;
+	height: 200px;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.5rem;
+}
+
+.error {
+	color: var(--jaune);
+	font-size: 0.9rem;
+	margin-top: -1rem;
+	margin-bottom: 1rem;
+}
+
+.imageact {
+	width: 100%;
+	max-width: 300px;
+	height: auto;
+	border-radius: 10px;
+	display: block;
+	margin: 1.5rem auto;
+	border: 3px solid var(--jaune);
+}
+
+.checkbox-group {
+	margin: 1rem 0;
+	color: var(--blanc);
+}
+
+.checkbox-group label {
+	font-size: 1rem;
+}
+
+.form-section {
+	margin-bottom: 1.5rem;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.mt-2 {
+	margin-top: 1rem;
+}
+
+form input[type="submit"] {
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	background-color: var(--jaune);
+	color: var(--noir);
+	border: 2px solid var(--noir);
+	border-radius: 6px;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+form input[type="submit"]:hover {
+	background-color: var(--gris);
+	color: var(--blanc);
+	border: 2px solid var(--blanc);
+}
+
+form input[type="submit"]:focus {
+	outline: none;
+	border-color: var(--jaune);
+}

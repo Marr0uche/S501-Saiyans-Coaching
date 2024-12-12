@@ -6,20 +6,19 @@ use CodeIgniter\Model;
 
 class AppliquerModel extends Model
 {
-    protected $table = 'appliquer';
-    protected $primaryKey = 'idpromotion';
-
+	protected $table = 'appliquer';
+	protected $primaryKey = 'iddocument';
 	protected $useAutoIncrement = false;
 
-    protected $allowedFields = [
-        'idproduit'
-    ];
-	
-    protected $returnType = 'array';
+	protected $allowedFields = [
+		'idproduit'
+	];
 
-	public function getAppliquer($idpromotion,$idproduit)
+	protected $returnType = 'array';
+
+	public function getAppliquer($iddocument, $idproduit)
 	{
-		return $this->where('idpromotion', $idpromotion)->where('idproduit', $idproduit)->first();
+		return $this->where('iddocument', $iddocument)->where('idproduit', $idproduit)->first();
 	}
 
 	public function creerAppliquer($appliquerDonnee)
@@ -27,13 +26,13 @@ class AppliquerModel extends Model
 		return $this->insert($appliquerDonnee);
 	}
 
-	public function majAppliquer($idpromotion, $idproduit, $appliquerDonnee)
+	public function majAppliquer($iddocument, $idproduit, $appliquerDonnee)
 	{
-		return $this->where('idpromotion', $idpromotion)->where('idproduit', $idproduit)->set($appliquerDonnee)->update();
+		return $this->where('iddocument', $iddocument)->where('idproduit', $idproduit)->set($appliquerDonnee)->update();
 	}
 
-	public function supprimerAppliquer($idpromotion, $idproduit)
+	public function supprimerAppliquer($iddocument, $idproduit)
 	{
-		return $this->where('idpromotion', $idpromotion)->where('idproduit', $idproduit)->delete();
+		return $this->where('iddocument', $iddocument)->where('idproduit', $idproduit)->delete();
 	}
 }

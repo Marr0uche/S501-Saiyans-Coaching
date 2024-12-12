@@ -1,0 +1,1696 @@
+ERROR - 2024-12-11 08:10:52 --> ErrorException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « active » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (1, Promo de Noël, Réduction spéciale pour Noël, 1, null, 10.50, NOEL2024). in /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:204
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(204): pg_query()
+#2 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+#5 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#6 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+#7 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(865): CodeIgniter\BaseModel->update()
+#8 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Models/PromotionModel.php(39): CodeIgniter\Model->update()
+#9 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Controllers/PromotionController.php(107): App\Models\PromotionModel->majPromotion()
+#10 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+#11 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#12 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#15 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#16 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#17 {main}
+CRITICAL - 2024-12-11 08:10:52 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « active » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (1, Promo de Noël, Réduction spéciale pour Noël, 1, null, 10.50, NOEL2024).
+[Method: POST, Route: promotion/modifier]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 4 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 5 APPPATH/Models/PromotionModel.php(39): CodeIgniter\Model->update()
+ 6 APPPATH/Controllers/PromotionController.php(107): App\Models\PromotionModel->majPromotion()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 08:10:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « active » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (1, Promo de Noël, Réduction spéciale pour Noël, 1, null, 10.50, NOEL2024).
+in SYSTEMPATH/Database/Postgre/Connection.php on line 209.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 6 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 7 APPPATH/Models/PromotionModel.php(39): CodeIgniter\Model->update()
+ 8 APPPATH/Controllers/PromotionController.php(107): App\Models\PromotionModel->majPromotion()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 08:10:52 --> [Caused by] ErrorException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « active » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (1, Promo de Noël, Réduction spéciale pour Noël, 1, null, 10.50, NOEL2024).
+in SYSTEMPATH/Database/Postgre/Connection.php on line 204.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(204): pg_query()
+ 3 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 4 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 6 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 8 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 9 APPPATH/Models/PromotionModel.php(39): CodeIgniter\Model->update()
+10 APPPATH/Controllers/PromotionController.php(107): App\Models\PromotionModel->majPromotion()
+11 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+12 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-11 08:11:22 --> ErrorException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « active » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (1, Promo de Noël, Réduction spéciale pour Noël, 1, null, 10.50, NOEL2024). in /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:204
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(204): pg_query()
+#2 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+#5 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#6 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+#7 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(865): CodeIgniter\BaseModel->update()
+#8 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Models/PromotionModel.php(39): CodeIgniter\Model->update()
+#9 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Controllers/PromotionController.php(107): App\Models\PromotionModel->majPromotion()
+#10 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+#11 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#12 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#15 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#16 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#17 {main}
+CRITICAL - 2024-12-11 08:11:22 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « active » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (1, Promo de Noël, Réduction spéciale pour Noël, 1, null, 10.50, NOEL2024).
+[Method: POST, Route: promotion/modifier]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 4 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 5 APPPATH/Models/PromotionModel.php(39): CodeIgniter\Model->update()
+ 6 APPPATH/Controllers/PromotionController.php(107): App\Models\PromotionModel->majPromotion()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 08:11:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « active » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (1, Promo de Noël, Réduction spéciale pour Noël, 1, null, 10.50, NOEL2024).
+in SYSTEMPATH/Database/Postgre/Connection.php on line 209.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 6 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 7 APPPATH/Models/PromotionModel.php(39): CodeIgniter\Model->update()
+ 8 APPPATH/Controllers/PromotionController.php(107): App\Models\PromotionModel->majPromotion()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 08:11:22 --> [Caused by] ErrorException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « active » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (1, Promo de Noël, Réduction spéciale pour Noël, 1, null, 10.50, NOEL2024).
+in SYSTEMPATH/Database/Postgre/Connection.php on line 204.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(204): pg_query()
+ 3 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 4 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 6 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 8 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 9 APPPATH/Models/PromotionModel.php(39): CodeIgniter\Model->update()
+10 APPPATH/Controllers/PromotionController.php(107): App\Models\PromotionModel->majPromotion()
+11 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+12 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-11 08:16:12 --> ErrorException: pg_query(): Query failed: ERREUR:  la colonne « active » est de type boolean mais l'expression est de type integer
+LINE 1: ...ent&quot; = 'Réduction spéciale pour Noël', &quot;active&quot; = 0, &quot;reduct...
+                                                             ^
+HINT:  Vous devez réécrire l'expression ou lui appliquer une transformation de type. in /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:204
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(204): pg_query()
+#2 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+#5 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#6 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+#7 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(865): CodeIgniter\BaseModel->update()
+#8 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Models/PromotionModel.php(39): CodeIgniter\Model->update()
+#9 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Controllers/PromotionController.php(107): App\Models\PromotionModel->majPromotion()
+#10 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+#11 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#12 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#15 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#16 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#17 {main}
+CRITICAL - 2024-12-11 08:16:12 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  la colonne « active » est de type boolean mais l'expression est de type integer
+LINE 1: ...ent&quot; = 'Réduction spéciale pour Noël', &quot;active&quot; = 0, &quot;reduct...
+                                                             ^
+HINT:  Vous devez réécrire l'expression ou lui appliquer une transformation de type.
+[Method: POST, Route: promotion/modifier]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 4 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 5 APPPATH/Models/PromotionModel.php(39): CodeIgniter\Model->update()
+ 6 APPPATH/Controllers/PromotionController.php(107): App\Models\PromotionModel->majPromotion()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 08:16:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  la colonne « active » est de type boolean mais l'expression est de type integer
+LINE 1: ...ent&quot; = 'Réduction spéciale pour Noël', &quot;active&quot; = 0, &quot;reduct...
+                                                             ^
+HINT:  Vous devez réécrire l'expression ou lui appliquer une transformation de type.
+in SYSTEMPATH/Database/Postgre/Connection.php on line 209.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 6 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 7 APPPATH/Models/PromotionModel.php(39): CodeIgniter\Model->update()
+ 8 APPPATH/Controllers/PromotionController.php(107): App\Models\PromotionModel->majPromotion()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 08:16:12 --> [Caused by] ErrorException: pg_query(): Query failed: ERREUR:  la colonne « active » est de type boolean mais l'expression est de type integer
+LINE 1: ...ent&quot; = 'Réduction spéciale pour Noël', &quot;active&quot; = 0, &quot;reduct...
+                                                             ^
+HINT:  Vous devez réécrire l'expression ou lui appliquer une transformation de type.
+in SYSTEMPATH/Database/Postgre/Connection.php on line 204.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(204): pg_query()
+ 3 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 4 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 6 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 8 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 9 APPPATH/Models/PromotionModel.php(39): CodeIgniter\Model->update()
+10 APPPATH/Controllers/PromotionController.php(107): App\Models\PromotionModel->majPromotion()
+11 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+12 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 08:16:22 --> Error: Undefined constant "App\Controllers\f"
+[Method: POST, Route: promotion/modifier]
+in APPPATH/Controllers/PromotionController.php on line 102.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 08:30:21 --> ParseError: syntax error, unexpected identifier "Valabilitéa", expecting "," or ";"
+[Method: GET, Route: produit/dashboard]
+in APPPATH/Views/Admin/Gestionproduit.php on line 57.
+ 1 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/ProduitController.php(62): view()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProduitController->indexDashboard()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-11 08:40:30 --> ErrorException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...on du produit C', &quot;prix&quot; = '15.99', &quot;affichage&quot; = '', &quot;affic...
+                                                             ^ in /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:204
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(204): pg_query()
+#2 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+#5 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#6 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+#7 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(865): CodeIgniter\BaseModel->update()
+#8 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Models/ProduitModel.php(44): CodeIgniter\Model->update()
+#9 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Controllers/ProduitController.php(163): App\Models\ProduitModel->majProduit()
+#10 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\ProduitController->modifier()
+#11 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#12 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#15 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#16 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#17 {main}
+CRITICAL - 2024-12-11 08:40:30 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...on du produit C', &quot;prix&quot; = '15.99', &quot;affichage&quot; = '', &quot;affic...
+                                                             ^
+[Method: POST, Route: produit/modification]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 4 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 5 APPPATH/Models/ProduitModel.php(44): CodeIgniter\Model->update()
+ 6 APPPATH/Controllers/ProduitController.php(163): App\Models\ProduitModel->majProduit()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProduitController->modifier()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 08:40:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...on du produit C', &quot;prix&quot; = '15.99', &quot;affichage&quot; = '', &quot;affic...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 209.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 6 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 7 APPPATH/Models/ProduitModel.php(44): CodeIgniter\Model->update()
+ 8 APPPATH/Controllers/ProduitController.php(163): App\Models\ProduitModel->majProduit()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProduitController->modifier()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 08:40:30 --> [Caused by] ErrorException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...on du produit C', &quot;prix&quot; = '15.99', &quot;affichage&quot; = '', &quot;affic...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 204.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(204): pg_query()
+ 3 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 4 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 6 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 8 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 9 APPPATH/Models/ProduitModel.php(44): CodeIgniter\Model->update()
+10 APPPATH/Controllers/ProduitController.php(163): App\Models\ProduitModel->majProduit()
+11 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProduitController->modifier()
+12 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-11 08:57:22 --> ErrorException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...on du produit C', &quot;prix&quot; = '15.99', &quot;affichage&quot; = '', &quot;affic...
+                                                             ^ in /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:204
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(204): pg_query()
+#2 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+#5 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#6 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+#7 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(865): CodeIgniter\BaseModel->update()
+#8 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Models/ProduitModel.php(44): CodeIgniter\Model->update()
+#9 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Controllers/ProduitController.php(163): App\Models\ProduitModel->majProduit()
+#10 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\ProduitController->modifier()
+#11 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#12 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#15 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#16 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#17 {main}
+CRITICAL - 2024-12-11 08:57:23 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...on du produit C', &quot;prix&quot; = '15.99', &quot;affichage&quot; = '', &quot;affic...
+                                                             ^
+[Method: POST, Route: produit/modification]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 4 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 5 APPPATH/Models/ProduitModel.php(44): CodeIgniter\Model->update()
+ 6 APPPATH/Controllers/ProduitController.php(163): App\Models\ProduitModel->majProduit()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProduitController->modifier()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 08:57:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...on du produit C', &quot;prix&quot; = '15.99', &quot;affichage&quot; = '', &quot;affic...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 209.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 6 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 7 APPPATH/Models/ProduitModel.php(44): CodeIgniter\Model->update()
+ 8 APPPATH/Controllers/ProduitController.php(163): App\Models\ProduitModel->majProduit()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProduitController->modifier()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 08:57:23 --> [Caused by] ErrorException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...on du produit C', &quot;prix&quot; = '15.99', &quot;affichage&quot; = '', &quot;affic...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 204.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(204): pg_query()
+ 3 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 4 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 6 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 8 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 9 APPPATH/Models/ProduitModel.php(44): CodeIgniter\Model->update()
+10 APPPATH/Controllers/ProduitController.php(163): App\Models\ProduitModel->majProduit()
+11 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProduitController->modifier()
+12 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-11 10:00:04 --> ErrorException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...on du produit C', &quot;prix&quot; = '15.99', &quot;affichage&quot; = '', &quot;affic...
+                                                             ^ in /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:204
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(204): pg_query()
+#2 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+#5 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#6 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+#7 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(865): CodeIgniter\BaseModel->update()
+#8 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Models/ProduitModel.php(44): CodeIgniter\Model->update()
+#9 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Controllers/ProduitController.php(175): App\Models\ProduitModel->majProduit()
+#10 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\ProduitController->modifier()
+#11 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#12 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#15 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#16 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#17 {main}
+CRITICAL - 2024-12-11 10:00:04 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...on du produit C', &quot;prix&quot; = '15.99', &quot;affichage&quot; = '', &quot;affic...
+                                                             ^
+[Method: POST, Route: produit/modification]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 4 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 5 APPPATH/Models/ProduitModel.php(44): CodeIgniter\Model->update()
+ 6 APPPATH/Controllers/ProduitController.php(175): App\Models\ProduitModel->majProduit()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProduitController->modifier()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 10:00:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...on du produit C', &quot;prix&quot; = '15.99', &quot;affichage&quot; = '', &quot;affic...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 209.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 6 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 7 APPPATH/Models/ProduitModel.php(44): CodeIgniter\Model->update()
+ 8 APPPATH/Controllers/ProduitController.php(175): App\Models\ProduitModel->majProduit()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProduitController->modifier()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 10:00:04 --> [Caused by] ErrorException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...on du produit C', &quot;prix&quot; = '15.99', &quot;affichage&quot; = '', &quot;affic...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 204.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(204): pg_query()
+ 3 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 4 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 6 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 8 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 9 APPPATH/Models/ProduitModel.php(44): CodeIgniter\Model->update()
+10 APPPATH/Controllers/ProduitController.php(175): App\Models\ProduitModel->majProduit()
+11 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProduitController->modifier()
+12 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-11 10:00:36 --> ErrorException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...on du produit C', &quot;prix&quot; = '15.99', &quot;affichage&quot; = '', &quot;affic...
+                                                             ^ in /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:204
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(204): pg_query()
+#2 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+#5 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#6 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+#7 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(865): CodeIgniter\BaseModel->update()
+#8 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Models/ProduitModel.php(44): CodeIgniter\Model->update()
+#9 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Controllers/ProduitController.php(175): App\Models\ProduitModel->majProduit()
+#10 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\ProduitController->modifier()
+#11 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#12 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#15 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#16 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#17 {main}
+CRITICAL - 2024-12-11 10:00:36 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...on du produit C', &quot;prix&quot; = '15.99', &quot;affichage&quot; = '', &quot;affic...
+                                                             ^
+[Method: POST, Route: produit/modification]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 4 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 5 APPPATH/Models/ProduitModel.php(44): CodeIgniter\Model->update()
+ 6 APPPATH/Controllers/ProduitController.php(175): App\Models\ProduitModel->majProduit()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProduitController->modifier()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 10:00:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...on du produit C', &quot;prix&quot; = '15.99', &quot;affichage&quot; = '', &quot;affic...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 209.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 6 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 7 APPPATH/Models/ProduitModel.php(44): CodeIgniter\Model->update()
+ 8 APPPATH/Controllers/ProduitController.php(175): App\Models\ProduitModel->majProduit()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProduitController->modifier()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 10:00:36 --> [Caused by] ErrorException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...on du produit C', &quot;prix&quot; = '15.99', &quot;affichage&quot; = '', &quot;affic...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 204.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(204): pg_query()
+ 3 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 4 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 6 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 8 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 9 APPPATH/Models/ProduitModel.php(44): CodeIgniter\Model->update()
+10 APPPATH/Controllers/ProduitController.php(175): App\Models\ProduitModel->majProduit()
+11 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProduitController->modifier()
+12 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-11 10:00:46 --> ErrorException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...on du produit C', &quot;prix&quot; = '15.99', &quot;affichage&quot; = '', &quot;affic...
+                                                             ^ in /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:204
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(204): pg_query()
+#2 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+#5 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#6 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+#7 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(865): CodeIgniter\BaseModel->update()
+#8 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Models/ProduitModel.php(44): CodeIgniter\Model->update()
+#9 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Controllers/ProduitController.php(175): App\Models\ProduitModel->majProduit()
+#10 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\ProduitController->modifier()
+#11 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#12 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#15 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#16 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#17 {main}
+CRITICAL - 2024-12-11 10:00:46 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...on du produit C', &quot;prix&quot; = '15.99', &quot;affichage&quot; = '', &quot;affic...
+                                                             ^
+[Method: POST, Route: produit/modification]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 4 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 5 APPPATH/Models/ProduitModel.php(44): CodeIgniter\Model->update()
+ 6 APPPATH/Controllers/ProduitController.php(175): App\Models\ProduitModel->majProduit()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProduitController->modifier()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 10:00:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...on du produit C', &quot;prix&quot; = '15.99', &quot;affichage&quot; = '', &quot;affic...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 209.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 6 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 7 APPPATH/Models/ProduitModel.php(44): CodeIgniter\Model->update()
+ 8 APPPATH/Controllers/ProduitController.php(175): App\Models\ProduitModel->majProduit()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProduitController->modifier()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 10:00:46 --> [Caused by] ErrorException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...on du produit C', &quot;prix&quot; = '15.99', &quot;affichage&quot; = '', &quot;affic...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 204.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(204): pg_query()
+ 3 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 4 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 6 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 8 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 9 APPPATH/Models/ProduitModel.php(44): CodeIgniter\Model->update()
+10 APPPATH/Controllers/ProduitController.php(175): App\Models\ProduitModel->majProduit()
+11 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProduitController->modifier()
+12 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-11 10:03:36 --> ErrorException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...on du produit C', &quot;prix&quot; = '15.99', &quot;affichage&quot; = '', &quot;affic...
+                                                             ^ in /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:204
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(204): pg_query()
+#2 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+#5 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#6 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+#7 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(865): CodeIgniter\BaseModel->update()
+#8 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Models/ProduitModel.php(44): CodeIgniter\Model->update()
+#9 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Controllers/ProduitController.php(175): App\Models\ProduitModel->majProduit()
+#10 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\ProduitController->modifier()
+#11 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#12 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#15 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#16 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#17 {main}
+CRITICAL - 2024-12-11 10:03:36 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...on du produit C', &quot;prix&quot; = '15.99', &quot;affichage&quot; = '', &quot;affic...
+                                                             ^
+[Method: POST, Route: produit/modification]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 4 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 5 APPPATH/Models/ProduitModel.php(44): CodeIgniter\Model->update()
+ 6 APPPATH/Controllers/ProduitController.php(175): App\Models\ProduitModel->majProduit()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProduitController->modifier()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 10:03:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...on du produit C', &quot;prix&quot; = '15.99', &quot;affichage&quot; = '', &quot;affic...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 209.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 6 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 7 APPPATH/Models/ProduitModel.php(44): CodeIgniter\Model->update()
+ 8 APPPATH/Controllers/ProduitController.php(175): App\Models\ProduitModel->majProduit()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProduitController->modifier()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 10:03:36 --> [Caused by] ErrorException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...on du produit C', &quot;prix&quot; = '15.99', &quot;affichage&quot; = '', &quot;affic...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 204.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(204): pg_query()
+ 3 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 4 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 6 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 8 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 9 APPPATH/Models/ProduitModel.php(44): CodeIgniter\Model->update()
+10 APPPATH/Controllers/ProduitController.php(175): App\Models\ProduitModel->majProduit()
+11 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProduitController->modifier()
+12 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-11 10:03:44 --> ErrorException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...on du produit C', &quot;prix&quot; = '15.99', &quot;affichage&quot; = '', &quot;affic...
+                                                             ^ in /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:204
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(204): pg_query()
+#2 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+#5 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#6 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+#7 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(865): CodeIgniter\BaseModel->update()
+#8 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Models/ProduitModel.php(44): CodeIgniter\Model->update()
+#9 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Controllers/ProduitController.php(175): App\Models\ProduitModel->majProduit()
+#10 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\ProduitController->modifier()
+#11 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#12 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#15 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#16 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#17 {main}
+CRITICAL - 2024-12-11 10:03:44 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...on du produit C', &quot;prix&quot; = '15.99', &quot;affichage&quot; = '', &quot;affic...
+                                                             ^
+[Method: POST, Route: produit/modification]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 4 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 5 APPPATH/Models/ProduitModel.php(44): CodeIgniter\Model->update()
+ 6 APPPATH/Controllers/ProduitController.php(175): App\Models\ProduitModel->majProduit()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProduitController->modifier()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 10:03:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...on du produit C', &quot;prix&quot; = '15.99', &quot;affichage&quot; = '', &quot;affic...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 209.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 6 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 7 APPPATH/Models/ProduitModel.php(44): CodeIgniter\Model->update()
+ 8 APPPATH/Controllers/ProduitController.php(175): App\Models\ProduitModel->majProduit()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProduitController->modifier()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 10:03:44 --> [Caused by] ErrorException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...on du produit C', &quot;prix&quot; = '15.99', &quot;affichage&quot; = '', &quot;affic...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 204.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(204): pg_query()
+ 3 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 4 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 6 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 8 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 9 APPPATH/Models/ProduitModel.php(44): CodeIgniter\Model->update()
+10 APPPATH/Controllers/ProduitController.php(175): App\Models\ProduitModel->majProduit()
+11 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProduitController->modifier()
+12 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-11 10:19:10 --> ErrorException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « reductionpromo » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (9, null, test du test, 4, f, null, 20TEST). in /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:204
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(204): pg_query()
+#2 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+#5 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/BaseModel.php(840): CodeIgniter\Model->doInsert()
+#7 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(802): CodeIgniter\BaseModel->insert()
+#8 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Models/PromotionModel.php(34): CodeIgniter\Model->insert()
+#9 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Controllers/PromotionController.php(86): App\Models\PromotionModel->creerPromotion()
+#10 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+#11 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#12 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#15 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#16 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#17 {main}
+CRITICAL - 2024-12-11 10:19:10 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « reductionpromo » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (9, null, test du test, 4, f, null, 20TEST).
+[Method: POST, Route: promotion/creer]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 5 APPPATH/Models/PromotionModel.php(34): CodeIgniter\Model->insert()
+ 6 APPPATH/Controllers/PromotionController.php(86): App\Models\PromotionModel->creerPromotion()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 10:19:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « reductionpromo » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (9, null, test du test, 4, f, null, 20TEST).
+in SYSTEMPATH/Database/Postgre/Connection.php on line 209.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 6 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 7 APPPATH/Models/PromotionModel.php(34): CodeIgniter\Model->insert()
+ 8 APPPATH/Controllers/PromotionController.php(86): App\Models\PromotionModel->creerPromotion()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 10:19:10 --> [Caused by] ErrorException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « reductionpromo » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (9, null, test du test, 4, f, null, 20TEST).
+in SYSTEMPATH/Database/Postgre/Connection.php on line 204.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(204): pg_query()
+ 3 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 4 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 6 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 8 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 9 APPPATH/Models/PromotionModel.php(34): CodeIgniter\Model->insert()
+10 APPPATH/Controllers/PromotionController.php(86): App\Models\PromotionModel->creerPromotion()
+11 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+12 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-11 10:20:59 --> ErrorException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...'rzz', &quot;descriptiondocument&quot; = 'zzzz', &quot;active&quot; = '', &quot;reduc...
+                                                             ^ in /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:204
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(204): pg_query()
+#2 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+#5 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#6 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+#7 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(865): CodeIgniter\BaseModel->update()
+#8 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Models/PromotionModel.php(39): CodeIgniter\Model->update()
+#9 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Controllers/PromotionController.php(107): App\Models\PromotionModel->majPromotion()
+#10 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+#11 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#12 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#15 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#16 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#17 {main}
+CRITICAL - 2024-12-11 10:20:59 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...'rzz', &quot;descriptiondocument&quot; = 'zzzz', &quot;active&quot; = '', &quot;reduc...
+                                                             ^
+[Method: POST, Route: promotion/modifier]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 4 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 5 APPPATH/Models/PromotionModel.php(39): CodeIgniter\Model->update()
+ 6 APPPATH/Controllers/PromotionController.php(107): App\Models\PromotionModel->majPromotion()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 10:20:59 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...'rzz', &quot;descriptiondocument&quot; = 'zzzz', &quot;active&quot; = '', &quot;reduc...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 209.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 6 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 7 APPPATH/Models/PromotionModel.php(39): CodeIgniter\Model->update()
+ 8 APPPATH/Controllers/PromotionController.php(107): App\Models\PromotionModel->majPromotion()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 10:20:59 --> [Caused by] ErrorException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...'rzz', &quot;descriptiondocument&quot; = 'zzzz', &quot;active&quot; = '', &quot;reduc...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 204.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(204): pg_query()
+ 3 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 4 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 6 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 8 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 9 APPPATH/Models/PromotionModel.php(39): CodeIgniter\Model->update()
+10 APPPATH/Controllers/PromotionController.php(107): App\Models\PromotionModel->majPromotion()
+11 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+12 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-11 11:26:56 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: connection to server at &quot;localhost&quot; (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at &quot;localhost&quot; (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections? in /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:77
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(77): pg_connect()
+#2 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\Postgre\Connection->connect()
+#3 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#4 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#5 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#6 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#7 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Models/ProduitModel.php(34): CodeIgniter\BaseModel->findAll()
+#8 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Controllers/AccueilController.php(10): App\Models\ProduitModel->getProduitAffichageAcceuil()
+#9 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\AccueilController->index()
+#10 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#11 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#12 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#14 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#15 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#16 {main}
+CRITICAL - 2024-12-11 11:26:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: connection to server at &quot;localhost&quot; (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at &quot;localhost&quot; (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Models/ProduitModel.php(34): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/AccueilController.php(10): App\Models\ProduitModel->getProduitAffichageAcceuil()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AccueilController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 12:54:44 --> ErrorException: Undefined array key "notetemoignage"
+[Method: GET, Route: achat/17]
+in APPPATH/Views/Produit/ProduitClientView.php on line 51.
+ 1 APPPATH/Views/Produit/ProduitClientView.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Views/Produit/ProduitClientView.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/AchatController.php(20): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AchatController->indexAchat()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 12:54:46 --> ErrorException: Undefined array key "notetemoignage"
+[Method: GET, Route: achat/17]
+in APPPATH/Views/Produit/ProduitClientView.php on line 51.
+ 1 APPPATH/Views/Produit/ProduitClientView.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Views/Produit/ProduitClientView.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/AchatController.php(20): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AchatController->indexAchat()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 12:54:47 --> ErrorException: Undefined array key "notetemoignage"
+[Method: GET, Route: achat/17]
+in APPPATH/Views/Produit/ProduitClientView.php on line 51.
+ 1 APPPATH/Views/Produit/ProduitClientView.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Views/Produit/ProduitClientView.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/AchatController.php(20): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AchatController->indexAchat()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 12:54:47 --> ErrorException: Undefined array key "notetemoignage"
+[Method: GET, Route: achat/17]
+in APPPATH/Views/Produit/ProduitClientView.php on line 51.
+ 1 APPPATH/Views/Produit/ProduitClientView.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Views/Produit/ProduitClientView.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/AchatController.php(20): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AchatController->indexAchat()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 12:54:47 --> ErrorException: Undefined array key "notetemoignage"
+[Method: GET, Route: achat/17]
+in APPPATH/Views/Produit/ProduitClientView.php on line 51.
+ 1 APPPATH/Views/Produit/ProduitClientView.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Views/Produit/ProduitClientView.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/AchatController.php(20): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AchatController->indexAchat()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 12:55:05 --> ErrorException: Undefined array key "notetemoignage"
+[Method: GET, Route: achat/17]
+in APPPATH/Views/Produit/ProduitClientView.php on line 51.
+ 1 APPPATH/Views/Produit/ProduitClientView.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Views/Produit/ProduitClientView.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/AchatController.php(20): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AchatController->indexAchat()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 12:56:02 --> ParseError: syntax error, unexpected token "<<", expecting "function"
+[Method: GET, Route: achat/17]
+in APPPATH/Config/Database.php on line 27.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 SYSTEMPATH/Debug/Toolbar/Collectors/Database.php(258): CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/Debug/Toolbar/Collectors/Database.php(75): CodeIgniter\Debug\Toolbar\Collectors\Database->getConnections()
+ 5 SYSTEMPATH/Debug/Toolbar.php(68): CodeIgniter\Debug\Toolbar\Collectors\Database->__construct()
+ 6 SYSTEMPATH/Config/Services.php(796): CodeIgniter\Debug\Toolbar->__construct()
+ 7 SYSTEMPATH/Config/BaseService.php(312): CodeIgniter\Config\Services::toolbar()
+ 8 SYSTEMPATH/Config/BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic()
+ 9 SYSTEMPATH/Config/Services.php(791): CodeIgniter\Config\BaseService::getSharedInstance()
+10 SYSTEMPATH/Config/BaseService.php(321): CodeIgniter\Config\Services::toolbar()
+11 APPPATH/Config/Events.php(47): CodeIgniter\Config\BaseService::__callStatic()
+12 SYSTEMPATH/Events/Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+13 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\Events\Events::trigger()
+14 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-11 13:35:25 --> ErrorException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...ent&quot; = 'Réduction spéciale pour Noël', &quot;active&quot; = '', &quot;reduc...
+                                                             ^ in /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:204
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(204): pg_query()
+#2 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+#5 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#6 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+#7 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(865): CodeIgniter\BaseModel->update()
+#8 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Models/PromotionModel.php(39): CodeIgniter\Model->update()
+#9 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Controllers/PromotionController.php(107): App\Models\PromotionModel->majPromotion()
+#10 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+#11 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#12 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#15 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#16 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#17 {main}
+CRITICAL - 2024-12-11 13:35:25 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...ent&quot; = 'Réduction spéciale pour Noël', &quot;active&quot; = '', &quot;reduc...
+                                                             ^
+[Method: POST, Route: promotion/modifier]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 4 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 5 APPPATH/Models/PromotionModel.php(39): CodeIgniter\Model->update()
+ 6 APPPATH/Controllers/PromotionController.php(107): App\Models\PromotionModel->majPromotion()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 13:35:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...ent&quot; = 'Réduction spéciale pour Noël', &quot;active&quot; = '', &quot;reduc...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 209.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 6 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 7 APPPATH/Models/PromotionModel.php(39): CodeIgniter\Model->update()
+ 8 APPPATH/Controllers/PromotionController.php(107): App\Models\PromotionModel->majPromotion()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 13:35:25 --> [Caused by] ErrorException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...ent&quot; = 'Réduction spéciale pour Noël', &quot;active&quot; = '', &quot;reduc...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 204.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(204): pg_query()
+ 3 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 4 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 6 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 8 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 9 APPPATH/Models/PromotionModel.php(39): CodeIgniter\Model->update()
+10 APPPATH/Controllers/PromotionController.php(107): App\Models\PromotionModel->majPromotion()
+11 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+12 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-11 14:05:06 --> ErrorException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...ent&quot; = 'Réduction spéciale pour Noël', &quot;active&quot; = '', &quot;reduc...
+                                                             ^ in /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:204
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(204): pg_query()
+#2 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+#5 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#6 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+#7 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(865): CodeIgniter\BaseModel->update()
+#8 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Models/PromotionModel.php(39): CodeIgniter\Model->update()
+#9 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Controllers/PromotionController.php(107): App\Models\PromotionModel->majPromotion()
+#10 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+#11 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#12 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#15 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#16 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#17 {main}
+CRITICAL - 2024-12-11 14:05:06 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...ent&quot; = 'Réduction spéciale pour Noël', &quot;active&quot; = '', &quot;reduc...
+                                                             ^
+[Method: POST, Route: promotion/modifier]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 4 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 5 APPPATH/Models/PromotionModel.php(39): CodeIgniter\Model->update()
+ 6 APPPATH/Controllers/PromotionController.php(107): App\Models\PromotionModel->majPromotion()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 14:05:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...ent&quot; = 'Réduction spéciale pour Noël', &quot;active&quot; = '', &quot;reduc...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 209.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 6 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 7 APPPATH/Models/PromotionModel.php(39): CodeIgniter\Model->update()
+ 8 APPPATH/Controllers/PromotionController.php(107): App\Models\PromotionModel->majPromotion()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 14:05:06 --> [Caused by] ErrorException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...ent&quot; = 'Réduction spéciale pour Noël', &quot;active&quot; = '', &quot;reduc...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 204.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(204): pg_query()
+ 3 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 4 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 6 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 8 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 9 APPPATH/Models/PromotionModel.php(39): CodeIgniter\Model->update()
+10 APPPATH/Controllers/PromotionController.php(107): App\Models\PromotionModel->majPromotion()
+11 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+12 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-11 14:51:49 --> ErrorException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...ent&quot; = 'Réduction spéciale pour Noël', &quot;active&quot; = '', &quot;reduc...
+                                                             ^ in /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:204
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(204): pg_query()
+#2 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+#5 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#6 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+#7 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(865): CodeIgniter\BaseModel->update()
+#8 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Models/PromotionModel.php(39): CodeIgniter\Model->update()
+#9 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Controllers/PromotionController.php(107): App\Models\PromotionModel->majPromotion()
+#10 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+#11 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#12 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#15 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#16 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#17 {main}
+CRITICAL - 2024-12-11 14:51:49 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...ent&quot; = 'Réduction spéciale pour Noël', &quot;active&quot; = '', &quot;reduc...
+                                                             ^
+[Method: POST, Route: promotion/modifier]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 4 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 5 APPPATH/Models/PromotionModel.php(39): CodeIgniter\Model->update()
+ 6 APPPATH/Controllers/PromotionController.php(107): App\Models\PromotionModel->majPromotion()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 14:51:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...ent&quot; = 'Réduction spéciale pour Noël', &quot;active&quot; = '', &quot;reduc...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 209.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 6 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 7 APPPATH/Models/PromotionModel.php(39): CodeIgniter\Model->update()
+ 8 APPPATH/Controllers/PromotionController.php(107): App\Models\PromotionModel->majPromotion()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 14:51:49 --> [Caused by] ErrorException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...ent&quot; = 'Réduction spéciale pour Noël', &quot;active&quot; = '', &quot;reduc...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 204.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(204): pg_query()
+ 3 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 4 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 6 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 8 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 9 APPPATH/Models/PromotionModel.php(39): CodeIgniter\Model->update()
+10 APPPATH/Controllers/PromotionController.php(107): App\Models\PromotionModel->majPromotion()
+11 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+12 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-11 14:52:04 --> ErrorException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...ent&quot; = 'Réduction spéciale pour Noël', &quot;active&quot; = '', &quot;reduc...
+                                                             ^ in /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:204
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(204): pg_query()
+#2 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+#5 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#6 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+#7 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(865): CodeIgniter\BaseModel->update()
+#8 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Models/PromotionModel.php(39): CodeIgniter\Model->update()
+#9 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Controllers/PromotionController.php(107): App\Models\PromotionModel->majPromotion()
+#10 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+#11 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#12 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#15 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#16 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#17 {main}
+CRITICAL - 2024-12-11 14:52:04 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...ent&quot; = 'Réduction spéciale pour Noël', &quot;active&quot; = '', &quot;reduc...
+                                                             ^
+[Method: POST, Route: promotion/modifier]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 4 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 5 APPPATH/Models/PromotionModel.php(39): CodeIgniter\Model->update()
+ 6 APPPATH/Controllers/PromotionController.php(107): App\Models\PromotionModel->majPromotion()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 14:52:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...ent&quot; = 'Réduction spéciale pour Noël', &quot;active&quot; = '', &quot;reduc...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 209.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 6 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 7 APPPATH/Models/PromotionModel.php(39): CodeIgniter\Model->update()
+ 8 APPPATH/Controllers/PromotionController.php(107): App\Models\PromotionModel->majPromotion()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-11 14:52:04 --> [Caused by] ErrorException: pg_query(): Query failed: ERREUR:  syntaxe en entrée invalide pour le type boolean : «  »
+LINE 1: ...ent&quot; = 'Réduction spéciale pour Noël', &quot;active&quot; = '', &quot;reduc...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 204.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(204): pg_query()
+ 3 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 4 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query()
+ 6 SYSTEMPATH/Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH/BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 8 SYSTEMPATH/Model.php(865): CodeIgniter\BaseModel->update()
+ 9 APPPATH/Models/PromotionModel.php(39): CodeIgniter\Model->update()
+10 APPPATH/Controllers/PromotionController.php(107): App\Models\PromotionModel->majPromotion()
+11 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->modifier()
+12 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-11 14:53:01 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: connection to server at &quot;localhost&quot; (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at &quot;localhost&quot; (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections? in /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:77
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(77): pg_connect()
+#2 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\Postgre\Connection->connect()
+#3 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#4 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#5 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#6 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#7 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Models/ProduitModel.php(34): CodeIgniter\BaseModel->findAll()
+#8 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Controllers/AccueilController.php(10): App\Models\ProduitModel->getProduitAffichageAcceuil()
+#9 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\AccueilController->index()
+#10 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#11 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#12 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#14 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#15 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#16 {main}
+CRITICAL - 2024-12-11 14:53:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: connection to server at &quot;localhost&quot; (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at &quot;localhost&quot; (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Models/ProduitModel.php(34): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/AccueilController.php(10): App\Models\ProduitModel->getProduitAffichageAcceuil()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AccueilController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-11 14:53:03 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: connection to server at &quot;localhost&quot; (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at &quot;localhost&quot; (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections? in /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:77
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(77): pg_connect()
+#2 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(421): CodeIgniter\Database\Postgre\Connection->connect()
+#3 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#4 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#5 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#6 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#7 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Models/ProduitModel.php(34): CodeIgniter\BaseModel->findAll()
+#8 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Controllers/AccueilController.php(10): App\Models\ProduitModel->getProduitAffichageAcceuil()
+#9 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\AccueilController->index()
+#10 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#11 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#12 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#14 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#15 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#16 {main}
+CRITICAL - 2024-12-11 14:53:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: connection to server at &quot;localhost&quot; (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at &quot;localhost&quot; (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Models/ProduitModel.php(34): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/AccueilController.php(10): App\Models\ProduitModel->getProduitAffichageAcceuil()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AccueilController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-11 20:59:14 --> ErrorException: pg_query(): Query failed: ERREUR:  champ numérique en dehors des limites
+DETAIL:  Un champ de précision 10 et d'échelle 2 doit être arrondi à une valeur absolue inférieure à 10^8. in C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\system\Database\Postgre\Connection.php:204
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\IUT\\TP\\s5\\SA...', 204)
+#1 C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\system\Database\Postgre\Connection.php(204): pg_query(Object(PgSql\Connection), 'INSERT INTO "pr...')
+#2 C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\system\Database\BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pr...')
+#3 C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pr...')
+#4 C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pr...', Array, false)
+#5 C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#7 C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\app\Models\ProduitModel.php(39): CodeIgniter\Model->insert(Array)
+#9 C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\app\Controllers\ProduitController.php(140): App\Models\ProduitModel->creerProduit(Array)
+#10 C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\system\CodeIgniter.php(933): App\Controllers\ProduitController->creer()
+#11 C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProduitController))
+#12 C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\system\rewrite.php(44): require_once('C:\\IUT\\TP\\s5\\SA...')
+#17 {main}
+CRITICAL - 2024-12-11 20:59:14 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  champ numérique en dehors des limites
+DETAIL:  Un champ de précision 10 et d'échelle 2 doit être arrondi à une valeur absolue inférieure à 10^8.
+[Method: POST, Route: produit/creer]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO "produit" ("titreproduit", "descriptionproduit", "prix", "affichageaccueil", "affichage", "photoproduit") VALUES (:titreproduit:, :descriptionproduit:, :prix:, :affichageaccueil:, :affichage:, :photoproduit:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\ProduitModel.php(39): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\ProduitController.php(140): App\Models\ProduitModel->creerProduit([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProduitController->creer()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProduitController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\IUT\\TP\\s5\\SAE\\repGit\\S501-Saiyans-Coaching\\public\\index.php')
+CRITICAL - 2024-12-11 20:59:14 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  champ numérique en dehors des limites
+DETAIL:  Un champ de précision 10 et d'échelle 2 doit être arrondi à une valeur absolue inférieure à 10^8.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 209.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "produit" ("titreproduit", "descriptionproduit", "prix", "affichageaccueil", "affichage", "photoproduit") VALUES (\'test123\', \'ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\', \'1221212122\', FALSE, TRUE, \'1733950754_c33a003a9432d348dafc.jpg\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "produit" ("titreproduit", "descriptionproduit", "prix", "affichageaccueil", "affichage", "photoproduit") VALUES (\'test123\', \'ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\', \'1221212122\', FALSE, TRUE, \'1733950754_c33a003a9432d348dafc.jpg\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO "produit" ("titreproduit", "descriptionproduit", "prix", "affichageaccueil", "affichage", "photoproduit") VALUES (:titreproduit:, :descriptionproduit:, :prix:, :affichageaccueil:, :affichage:, :photoproduit:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\ProduitModel.php(39): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\ProduitController.php(140): App\Models\ProduitModel->creerProduit([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProduitController->creer()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProduitController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\IUT\\TP\\s5\\SAE\\repGit\\S501-Saiyans-Coaching\\public\\index.php')
+CRITICAL - 2024-12-11 20:59:14 --> [Caused by] ErrorException: pg_query(): Query failed: ERREUR:  champ numérique en dehors des limites
+DETAIL:  Un champ de précision 10 et d'échelle 2 doit être arrondi à une valeur absolue inférieure à 10^8.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 204.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERREUR:  champ numérique en dehors des limites
+DETAIL:  Un champ de précision 10 et d\'échelle 2 doit être arrondi à une valeur absolue inférieure à 10^8.', 'C:\\IUT\\TP\\s5\\SAE\\repGit\\S501-Saiyans-Coaching\\system\\Database\\Postgre\\Connection.php', 204)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(204): pg_query(Object(PgSql\Connection), 'INSERT INTO "produit" ("titreproduit", "descriptionproduit", "prix", "affichageaccueil", "affichage", "photoproduit") VALUES (\'test123\', \'ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\', \'1221212122\', FALSE, TRUE, \'1733950754_c33a003a9432d348dafc.jpg\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "produit" ("titreproduit", "descriptionproduit", "prix", "affichageaccueil", "affichage", "photoproduit") VALUES (\'test123\', \'ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\', \'1221212122\', FALSE, TRUE, \'1733950754_c33a003a9432d348dafc.jpg\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "produit" ("titreproduit", "descriptionproduit", "prix", "affichageaccueil", "affichage", "photoproduit") VALUES (\'test123\', \'ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\', \'1221212122\', FALSE, TRUE, \'1733950754_c33a003a9432d348dafc.jpg\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO "produit" ("titreproduit", "descriptionproduit", "prix", "affichageaccueil", "affichage", "photoproduit") VALUES (:titreproduit:, :descriptionproduit:, :prix:, :affichageaccueil:, :affichage:, :photoproduit:)', [...], false)
+ 6 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Models\ProduitModel.php(39): CodeIgniter\Model->insert([...])
+10 APPPATH\Controllers\ProduitController.php(140): App\Models\ProduitModel->creerProduit([...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProduitController->creer()
+12 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProduitController))
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('C:\\IUT\\TP\\s5\\SAE\\repGit\\S501-Saiyans-Coaching\\public\\index.php')
+ERROR - 2024-12-11 22:29:34 --> ErrorException: pg_query(): Query failed: ERREUR:  valeur trop longue pour le type character varying(255) in C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\system\Database\Postgre\Connection.php:204
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\IUT\\TP\\s5\\SA...', 204)
+#1 C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\system\Database\Postgre\Connection.php(204): pg_query(Object(PgSql\Connection), 'UPDATE "acheter...')
+#2 C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\system\Database\BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "acheter...')
+#3 C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "acheter...')
+#4 C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\system\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE "acheter...', Array, false)
+#5 C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\system\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#6 C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\system\BaseModel.php(1028): CodeIgniter\Model->doUpdate(NULL, Array)
+#7 C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\system\Model.php(865): CodeIgniter\BaseModel->update(NULL, Array)
+#8 C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\app\Models\AcheterModel.php(78): CodeIgniter\Model->update()
+#9 C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\app\Controllers\AvisController.php(29): App\Models\AcheterModel->majAcheter('17', '1', Array)
+#10 C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\system\CodeIgniter.php(933): App\Controllers\AvisController->ajouter('1')
+#11 C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AvisController))
+#12 C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 C:\IUT\TP\s5\SAE\repGit\S501-Saiyans-Coaching\system\rewrite.php(44): require_once('C:\\IUT\\TP\\s5\\SA...')
+#17 {main}
+CRITICAL - 2024-12-11 22:29:34 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  valeur trop longue pour le type character varying(255)
+[Method: POST, Route: avis/ajouter/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE "acheter" SET "idproduit" = :idproduit.1:, "notetemoignage" = :notetemoignage:, "datetemoignage" = :datetemoignage:, "avistemoignage" = :avistemoignage:
+WHERE "idclient" = :idclient:
+AND "idproduit" = :idproduit:', [...], false)
+ 2 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate(null, [...])
+ 4 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update(null, [...])
+ 5 APPPATH\Models\AcheterModel.php(78): CodeIgniter\Model->update()
+ 6 APPPATH\Controllers\AvisController.php(29): App\Models\AcheterModel->majAcheter('17', '1', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AvisController->ajouter('1')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AvisController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\IUT\\TP\\s5\\SAE\\repGit\\S501-Saiyans-Coaching\\public\\index.php')
+CRITICAL - 2024-12-11 22:29:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  valeur trop longue pour le type character varying(255)
+in SYSTEMPATH\Database\Postgre\Connection.php on line 209.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "acheter" SET "idproduit" = \'1\', "notetemoignage" = \'4\', "datetemoignage" = \'2024-12-11 22:29:34\', "avistemoignage" = \'zefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzef\'
+WHERE "idclient" = \'17\'
+AND "idproduit" = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "acheter" SET "idproduit" = \'1\', "notetemoignage" = \'4\', "datetemoignage" = \'2024-12-11 22:29:34\', "avistemoignage" = \'zefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzef\'
+WHERE "idclient" = \'17\'
+AND "idproduit" = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE "acheter" SET "idproduit" = :idproduit.1:, "notetemoignage" = :notetemoignage:, "datetemoignage" = :datetemoignage:, "avistemoignage" = :avistemoignage:
+WHERE "idclient" = :idclient:
+AND "idproduit" = :idproduit:', [...], false)
+ 4 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate(null, [...])
+ 6 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update(null, [...])
+ 7 APPPATH\Models\AcheterModel.php(78): CodeIgniter\Model->update()
+ 8 APPPATH\Controllers\AvisController.php(29): App\Models\AcheterModel->majAcheter('17', '1', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AvisController->ajouter('1')
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AvisController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\IUT\\TP\\s5\\SAE\\repGit\\S501-Saiyans-Coaching\\public\\index.php')
+CRITICAL - 2024-12-11 22:29:34 --> [Caused by] ErrorException: pg_query(): Query failed: ERREUR:  valeur trop longue pour le type character varying(255)
+in SYSTEMPATH\Database\Postgre\Connection.php on line 204.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERREUR:  valeur trop longue pour le type character varying(255)', 'C:\\IUT\\TP\\s5\\SAE\\repGit\\S501-Saiyans-Coaching\\system\\Database\\Postgre\\Connection.php', 204)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(204): pg_query(Object(PgSql\Connection), 'UPDATE "acheter" SET "idproduit" = \'1\', "notetemoignage" = \'4\', "datetemoignage" = \'2024-12-11 22:29:34\', "avistemoignage" = \'zefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzef\'
+WHERE "idclient" = \'17\'
+AND "idproduit" = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "acheter" SET "idproduit" = \'1\', "notetemoignage" = \'4\', "datetemoignage" = \'2024-12-11 22:29:34\', "avistemoignage" = \'zefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzef\'
+WHERE "idclient" = \'17\'
+AND "idproduit" = \'1\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "acheter" SET "idproduit" = \'1\', "notetemoignage" = \'4\', "datetemoignage" = \'2024-12-11 22:29:34\', "avistemoignage" = \'zefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzef\'
+WHERE "idclient" = \'17\'
+AND "idproduit" = \'1\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE "acheter" SET "idproduit" = :idproduit.1:, "notetemoignage" = :notetemoignage:, "datetemoignage" = :datetemoignage:, "avistemoignage" = :avistemoignage:
+WHERE "idclient" = :idclient:
+AND "idproduit" = :idproduit:', [...], false)
+ 6 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate(null, [...])
+ 8 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update(null, [...])
+ 9 APPPATH\Models\AcheterModel.php(78): CodeIgniter\Model->update()
+10 APPPATH\Controllers\AvisController.php(29): App\Models\AcheterModel->majAcheter('17', '1', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AvisController->ajouter('1')
+12 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AvisController))
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('C:\\IUT\\TP\\s5\\SAE\\repGit\\S501-Saiyans-Coaching\\public\\index.php')

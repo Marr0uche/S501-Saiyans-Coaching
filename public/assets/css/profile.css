@@ -1,0 +1,156 @@
+:root {
+	--main-bg: #f8f9fa;
+	--sidebar-bg: #121212;
+	--highlight: #F4E904;
+	--highlightRed :red;
+	--text-color: #333;
+	--form-bg: #fff;
+	--button-gradient: linear-gradient(to right, #F4E904, #121212);
+}
+
+body {
+	background-image: url('../img/img-accueil.webp');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	font-family: 'Lato', sans-serif;
+	background-color: var(--main-bg);
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.container-profile {
+	display: flex;
+	width: 80%;
+	max-width: 1200px;
+	background: var(--form-bg);
+	border-radius: 20px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+	background: var(--sidebar-bg);
+	width: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1.5rem 0;
+	border-radius: 20px 0 0 20px;
+}
+
+.sidebar i {
+	font-size: 1.5rem;
+	color: #fff;
+	margin: 1.5rem 0;
+	cursor: pointer;
+	transition: transform 0.3s, color 0.3s;
+}
+
+.sidebar i:hover {
+	transform: scale(1.2);
+	color: var(--highlight);
+}
+
+.sidebar .fas fa-lock :hover {
+	transform: scale(1.2);
+	color: var(--highlightRed);
+}
+
+.profile-section {
+	flex: 1;
+	padding: 2rem;
+}
+
+.profile-title {
+	font-size: 2rem;
+	font-weight: bold;
+	color: var(--text-color);
+	text-align: center;
+	margin-bottom: 1.5rem;
+}
+
+.form-profile {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.form-row {
+	width: calc(50% - 1rem);
+	display: flex;
+	flex-direction: column;
+}
+
+.form-row label {
+	font-weight: bold;
+	color: var(--text-color);
+	margin-bottom: 0.5rem;
+}
+
+.form-row input {
+	padding: 0.75rem;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	background-color: var(--main-bg);
+}
+
+.btn-save {
+	margin: 2rem auto 0;
+	background: #0C0C0C;
+	color: #F4E904;
+	padding: 0.75rem 2rem;
+	border: transparent 2px solid;
+	border-radius: 20px;
+	font-size: 1rem;
+	font-weight: bold;
+	cursor: pointer;
+	display: block;
+	text-align: center;
+
+	transition: all 0.5s ease;
+}
+
+.btn-save:hover {
+	
+	border: #F4E904 2px solid;
+}
+
+/*responsif*/
+@media screen and (max-width: 768px) {
+	.container-profile {
+		flex-direction: column;
+		border-radius: 20px;
+	}
+
+	.sidebar {
+		width: 100%;
+		flex-direction: row;
+		justify-content: space-around;
+		border-radius: 20px 20px 0 0;
+	}
+
+	.sidebar i {
+		margin: 0;
+	}
+
+	.profile-section {
+		padding: 1rem;
+	}
+
+	.form-row {
+		width: 100%;
+	}
+}
+
+
+@media screen and (max-width: 500px) {
+	.sidebar {
+		flex-direction: row;
+		justify-content: space-around;
+	}
+}
+
+

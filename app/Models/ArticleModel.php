@@ -6,35 +6,36 @@ use CodeIgniter\Model;
 
 class ArticleModel extends Model
 {
-    protected $table = 'article';
-    protected $primaryKey = 'iddocument';
-    protected $allowedFields = [
+	protected $table = 'article';
+	protected $primaryKey = 'iddocument';
+
+	protected $allowedFields = [
 		'titredocument',
 		'descriptiondocument',
 		'datepublication',
-        'image'
-    ];
+		'image',
+		'blog'
+	];
 
-    protected $returnType = 'array';
+	protected $returnType = 'array';
 
-    public function getArticle($idDocument)
-    {
-        return $this->where('iddocument', $idDocument)->first();
-    }
+	public function getArticle($idDocument)
+	{
+		return $this->where('iddocument', $idDocument)->first();
+	}
 
-    public function creerArticle($articleDonnee)
-    {
-        return $this->insert($articleDonnee);
-    }
+	public function creerArticle($articleDonnee)
+	{
+		return $this->insert($articleDonnee);
+	}
 
-    public function majArticle($idDocument, $articleDonnee)
-    {
-        return $this->update($idDocument, $articleDonnee);
-    }
+	public function majArticle($idDocument, $articleDonnee)
+	{
+		return $this->where('iddocument', $idDocument)->set($articleDonnee)->update();
+	}
 
-    public function supprimerArticle($idDocument)
-    {
-        return $this->delete($idDocument);
-    }
-
+	public function supprimerArticle($idDocument)
+	{
+		return $this->delete($idDocument);
+	}
 }
