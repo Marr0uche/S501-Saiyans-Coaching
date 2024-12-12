@@ -14,10 +14,10 @@
 
 body {
 	background-color: var(--noir);
-	background-image: url(../img/img-accueil.webp); 
-    background-attachment: fixed; 
-    background-size: cover; 
-    background-position: center;
+	background-image: url(../img/img-accueil.webp);
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
 }
 
 h1 {
@@ -60,15 +60,15 @@ input[type="file"] {
 }
 
 textarea {
-    padding: 1rem; /* Augmenter l'espace interne */
-    width: 100%;
-    margin-bottom: 1.5rem;
-    border-radius: 5px;
-    border: 1px solid var(--gris);
-    background-color: #fff;
-    color: var(--noir);
-    resize: vertical;
-    height: 200px; /* Augmenter la hauteur du champ de texte */
+	padding: 1rem;
+	width: 100%;
+	margin-bottom: 1.5rem;
+	border-radius: 5px;
+	border: 1px solid var(--gris);
+	background-color: #fff;
+	color: var(--noir);
+	resize: vertical;
+	height: 200px;
 }
 
 input[type="checkbox"] {
@@ -113,28 +113,24 @@ input[type="checkbox"] {
 	margin-top: 1rem;
 }
 
-/* Bouton submit */
-/* Styliser le bouton submit généré par form_submit */
 form input[type="submit"] {
-    padding: 0.5rem 1rem;   /* Taille du bouton */
-    font-size: 1.1rem;          /* Taille du texte */
-    background-color: var(--jaune); /* Couleur de fond */
-    color: var(--noir);         /* Couleur du texte */
-    border: 2px solid var(--noir);  /* Bordure */
-    border-radius: 6px;         /* Coins arrondis */
-    cursor: pointer;            /* Curseur pointer pour signaler l'action */
-    transition: all 0.3s ease-in-out; /* Transition fluide pour l'hover */
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	background-color: var(--jaune);
+	color: var(--noir);
+	border: 2px solid var(--noir);
+	border-radius: 6px;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
 }
 
-/* Effet de hover pour le bouton */
 form input[type="submit"]:hover {
-    background-color: var(--gris);  /* Change la couleur de fond au survol */
-    color: var(--blanc);             /* Change la couleur du texte au survol */
-    border: 2px solid var(--blanc); /* Change la bordure */
+	background-color: var(--gris);
+	color: var(--blanc);
+	border: 2px solid var(--blanc);
 }
 
-/* Effet de focus pour le bouton */
 form input[type="submit"]:focus {
-    outline: none;  /* Supprimer le contour par défaut */
-    border-color: var(--jaune); /* Garde la bordure jaune au focus */
+	outline: none;
+	border-color: var(--jaune);
 }

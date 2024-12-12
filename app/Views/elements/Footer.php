@@ -19,6 +19,7 @@
 					<li><a href="/blog">Blog</a></li>
 					<li><a href="/actualites">Actualité</a></li>
 					<li><a href="/contact">FAQ/Contact</a></li>
+					<li><a href="/conditions-generales">Conditions d'utilisations</a></li>
 				</ul>
 			</div>
 		</div>
