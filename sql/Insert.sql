@@ -365,8 +365,7 @@ INSERT INTO
 		idProduit,
 		noteTemoignage,
 		dateTemoignage,
-		avisTemoignage,
-		idDocument
+		avisTemoignage
 	)
 VALUES
 	(

@@ -30,6 +30,11 @@ class ClientModel extends Model
 		return $this->where('idclient', $idclient)->first();
 	}
 
+	public function getAdmin()
+	{
+		return $this->where('admin', true)->first();
+	}
+
 	public function creerClient($clientDonnee)
 	{
 		return $this->insert($clientDonnee);
