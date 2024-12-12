@@ -26,13 +26,12 @@
 			<a href="/" class="menu-gear-button text-light">
 				<i class="fas fa-home"></i>
 			</a>
-			</div>
+		</div>
 		</div>
 	</header>
 
 	<main class="container mt-5">
 		<div class="row g-4">
-			<!-- Carte 1 : Répartition par Âge -->
 			<div class="col-lg-4 col-md-6">
 				<div class="card shadow-sm rounded-4 bg-gradient text-white">
 					<div class="card-body">
@@ -42,7 +41,6 @@
 				</div>
 			</div>
 
-			<!-- Carte 2 : Poids Moyen par Sexe -->
 			<div class="col-lg-4 col-md-6">
 				<div class="card shadow-sm rounded-4 bg-gradient text-white">
 					<div class="card-body">
@@ -53,7 +51,6 @@
 				</div>
 			</div>
 
-			<!-- Carte 3 : Répartition par Sexe -->
 			<div class="col-lg-4 col-md-6">
 				<div class="card shadow-sm rounded-4 bg-gradient text-white">
 					<div class="card-body">
@@ -131,7 +128,6 @@
 			const filterAge = document.getElementById('filterAge');
 			const tableRows = document.querySelectorAll('#clientsTable tbody tr');
 
-			// Initialisation des graphiques
 			const ageChart = new Chart(document.getElementById('ageChart'), {
 				type: 'pie',
 				data: {
@@ -156,7 +152,6 @@
 				}
 			});
 
-			// Fonction de mise à jour des graphiques
 			function updateCharts() {
 				const visibleRows = Array.from(tableRows).filter(row => row.style.display !== 'none');
 
@@ -190,7 +185,6 @@
 				sexChart.update();
 			}
 
-			// Fonction de filtrage
 			function filterUsers() {
 				const nameValue = filterName.value.toLowerCase();
 				const prenomValue = filterPrenom.value.toLowerCase();
@@ -218,7 +212,6 @@
 				updateCharts();
 			}
 
-			// Ajout des écouteurs d'événements
 			filterName.addEventListener('input', filterUsers);
 			filterPrenom.addEventListener('input', filterUsers);
 			filterSexe.addEventListener('change', filterUsers);
@@ -226,23 +219,21 @@
 		</script>
 
 		<script>
-			const poidsHommeElement = document.getElementById('poidsHomme'); // Élément pour poids moyen des hommes
-			const poidsFemmeElement = document.getElementById('poidsFemme'); // Élément pour poids moyen des femmes
+			const poidsHommeElement = document.getElementById('poidsHomme');
+			const poidsFemmeElement = document.getElementById('poidsFemme');
 
-			// Fonction pour mettre à jour les poids moyens en fonction des filtres
 			function updateWeights() {
 				const visibleRows = Array.from(document.querySelectorAll('#clientsTable tbody tr'))
-					.filter(row => row.style.display !== 'none'); // Lignes visibles après filtrage
+					.filter(row => row.style.display !== 'none');
 
 				let totalPoidsHomme = 0;
 				let totalPoidsFemme = 0;
 				let countHomme = 0;
 				let countFemme = 0;
 
-				// Calcul des poids moyens pour les lignes visibles
 				visibleRows.forEach(row => {
-					const poids = parseFloat(row.querySelector('td:nth-child(6)').textContent.trim()); // Colonne Poids
-					const sexe = row.querySelector('td:nth-child(8)').textContent.trim(); // Colonne Sexe
+					const poids = parseFloat(row.querySelector('td:nth-child(6)').textContent.trim());
+					const sexe = row.querySelector('td:nth-child(8)').textContent.trim();
 
 					if (sexe === 'Homme') {
 						totalPoidsHomme += poids;
@@ -253,7 +244,6 @@
 					}
 				});
 
-				// Mise à jour des poids moyens dans la carte
 				const avgPoidsHomme = countHomme > 0 ? (totalPoidsHomme / countHomme).toFixed(2) : '0';
 				const avgPoidsFemme = countFemme > 0 ? (totalPoidsFemme / countFemme).toFixed(2) : '0';
 
@@ -261,7 +251,6 @@
 				poidsFemmeElement.textContent = `${avgPoidsFemme} kg`;
 			}
 
-			// Fonction existante pour filtrer les utilisateurs
 			function filterUsers() {
 				const filterName = document.getElementById('filterName').value.toLowerCase();
 				const filterPrenom = document.getElementById('filterPrenom').value.toLowerCase();
@@ -288,10 +277,9 @@
 					}
 				});
 
-				updateWeights(); // Mise à jour des poids moyens après filtrage
+				updateWeights();
 			}
 
-			// Ajout des écouteurs d'événements
 			document.getElementById('filterName').addEventListener('input', filterUsers);
 			document.getElementById('filterPrenom').addEventListener('input', filterUsers);
 			document.getElementById('filterSexe').addEventListener('change', filterUsers);

@@ -6,17 +6,19 @@ use CodeIgniter\Model;
 
 class PromotionModel extends Model
 {
-    protected $table = 'promotion';
-    protected $primaryKey = 'iddocument';
-    protected $allowedFields = [
+	protected $table = 'promotion';
+	protected $primaryKey = 'iddocument';
+
+	protected $allowedFields = [
 		'titredocument',
 		'descriptiondocument',
 		'idpromotion',
-        'active',
-        'reductionpromo',
-        'codepromo'
-    ];
-    protected $returnType = 'array';
+		'active',
+		'reductionpromo',
+		'codepromo'
+	];
+
+	protected $returnType = 'array';
 
 	public function getPromotion($idDocument)
 	{
@@ -25,9 +27,8 @@ class PromotionModel extends Model
 
 	public function getActivePromotion()
 	{
-		return $this->where('active',true)->findAll();
+		return $this->where('active', true)->findAll();
 	}
-	
 
 	public function creerPromotion($promotionDonnee)
 	{

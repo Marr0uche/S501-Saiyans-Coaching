@@ -20,20 +20,21 @@ DROP TABLE IF EXISTS Document CASCADE;
 DROP TABLE IF EXISTS Adresse CASCADE;
 
 -- Table Client
-CREATE TABLE Client (
-    idClient  SERIAL PRIMARY KEY,
-    admin BOOLEAN NOT NULL,
-    nom         VARCHAR(15)NOT NULL,
-    prenom      VARCHAR(15)NOT NULL,
-    mail        VARCHAR(255)NOT NULL ,
-    motDePasse  VARCHAR(255)NOT NULL ,
-    mobile      VARCHAR(15)NOT NULL,
-    sexe        VARCHAR(10)NOT NULL,
-    datenaissance DATE NOT NULL,
-    taille      FLOAT NOT NULL,
-    poidsdecorps FLOAT NOT NULL,
-    token VARCHAR(255)
-);
+CREATE TABLE
+	Client (
+		idClient SERIAL PRIMARY KEY,
+		admin BOOLEAN NOT NULL,
+		nom VARCHAR(15) NOT NULL,
+		prenom VARCHAR(15) NOT NULL,
+		mail VARCHAR(255) NOT NULL,
+		motDePasse VARCHAR(255) NOT NULL,
+		mobile VARCHAR(15) NOT NULL,
+		sexe VARCHAR(10) NOT NULL,
+		datenaissance DATE NOT NULL,
+		taille FLOAT NOT NULL,
+		poidsdecorps FLOAT NOT NULL,
+		token VARCHAR(255)
+	);
 
 -- Table Adresse
 CREATE TABLE
@@ -96,11 +97,12 @@ CREATE TABLE
 	);
 
 -- Table Article : hérite de Document
-CREATE TABLE Article (
-    DatePublication TIMESTAMP,
-    Image VARCHAR(255),
-    blog BOOLEAN
-)INHERITS (Document);
+CREATE TABLE
+	Article (
+		DatePublication TIMESTAMP,
+		Image VARCHAR(255),
+		blog BOOLEAN
+	) INHERITS (Document);
 
 -- Table Acheter : relation entre Client et Produit
 CREATE TABLE

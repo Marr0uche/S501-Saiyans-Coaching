@@ -49,7 +49,6 @@ class MdpOublieController extends BaseController
 		}
 	}
 
-
 	public function afficherFormulaireReinitialisation($token)
 	{
 		$clientModel = new ClientModel();

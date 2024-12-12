@@ -1,15 +1,20 @@
 <?php
+
 namespace App\Models;
+
 use CodeIgniter\Model;
+
 class DocumentModel extends Model
 {
-    protected $table = 'document';
-    protected $primaryKey = 'iddocument';
-    protected $allowedFields = [
-        'titredocument',
-        'descriptiondocument'
-    ];
-    protected $returnType = 'array';
+	protected $table = 'document';
+	protected $primaryKey = 'iddocument';
+
+	protected $allowedFields = [
+		'titredocument',
+		'descriptiondocument'
+	];
+
+	protected $returnType = 'array';
 
 	public function getDocument($idDocument)
 	{

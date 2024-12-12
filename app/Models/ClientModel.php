@@ -8,6 +8,7 @@ class ClientModel extends Model
 {
 	protected $table = 'client';
 	protected $primaryKey = 'idclient';
+
 	protected $allowedFields = [
 		'admin',
 		'nom',
@@ -21,6 +22,7 @@ class ClientModel extends Model
 		'poidsdecorps',
 		'token'
 	];
+
 	protected $returnType = 'array';
 
 	public function getClient($idclient)
