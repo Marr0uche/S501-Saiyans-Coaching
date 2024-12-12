@@ -209,19 +209,28 @@ class ProduitController extends Controller{
             $affichageAcceuil = 'f';
         }
 
+        $file = $this->request->getFile('fichier');
+        $fileName = null;
         $data = [
             'titreproduit' => $this->request->getPost('titreproduit'),
-            'photoproduit' => $this->request->getPost('fichier'),
             'descriptionproduit' => $this->request->getPost('descriptionproduit'),
             'prix' => $this->request->getPost('prix'),
             'affichage' => $affichage,
             'affichageaccueil' => $affichageAcceuil
         ];
 
+		if ($file && $file->isValid() && !$file->hasMoved()) {
+            echo 'inhere';
+			$fileName = 'produit_' . $file->getRandomName();
+			$file->move(WRITEPATH . '../public/uploads', $fileName);
+            $data['photoproduit'] = $fileName;
+		}
+
         if ($produitModel->majProduit($idProduit, $data)) {
 			return redirect()->to('/produit/dashboard')->with('message', 'Projet modifié avec succès.');
 		} else {
-			return redirect()->back()->with('error', 'Erreur lors de la modification du projet.');
+			echo 'non';
+            //return redirect()->back()->with('error', 'Erreur lors de la modification du projet.');
 		}
 	}
 }

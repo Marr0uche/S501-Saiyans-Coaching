@@ -206,7 +206,7 @@
                     <br>
                     <!-- Image -->
                     <div class="form-group">
-                        <?= form_label('Image du produit', 'fichier'); ?>
+                        <?= form_label('Nouvelle Image : ', 'fichier'); ?>
                         <?= form_upload([
                             'name' => 'fichier',
                             'id' => 'fichier',
@@ -488,12 +488,14 @@
             const prix = button.getAttribute('data-prix');
             const affichage = button.getAttribute('data-affichage');
             const affichageAcceuil = button.getAttribute('data-affichageacceuil');
+            const photo = button.getAttribute('data-photo');
 
             // Charger les données dans la modal
             modal.querySelector('input[name="idproduit"]').value = id;
             modal.querySelector('input[name="titreproduit"]').value = titre;
             modal.querySelector('textarea[name="descriptionproduit"]').value = description;
             modal.querySelector('input[name="prix"]').value = prix;
+            modal.querySelector('input[name="fichier"]').value = photo;
 
             const checkboxAffichage = modal.querySelector('input[name="affichage"]');
             const checkboxAffichageAcceuil = modal.querySelector('input[name="affichageacceuil"]');
@@ -539,6 +541,7 @@
             modal.querySelector('textarea[name="DescriptionPromotion"]').value = description;
             modal.querySelector('input[name="reduc"]').value = reduc;
             modal.querySelector('textarea[name="code"]').value = code;
+            
 
             // Conversion de 't' en 'true' et 'f' en 'false'
             const activeStatus = active === 't' ? 'True' : (active === 'f' ? 'False' : 'Unknown');
