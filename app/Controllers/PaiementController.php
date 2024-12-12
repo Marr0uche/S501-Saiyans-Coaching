@@ -7,7 +7,7 @@ use App\Models\ProduitModel;
 
 class PaiementController extends BaseController
 {
-	public function afficherPagePaiement($produitId,$prixreel)
+	public function afficherPagePaiement($produitId, $prixreel)
 	{
 		$session = session();
 		$clientId = $session->get('client_id');

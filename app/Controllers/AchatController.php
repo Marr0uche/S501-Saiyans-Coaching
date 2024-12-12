@@ -7,43 +7,38 @@ use App\Models\AcheterModel;
 use CodeIgniter\Controller;
 use App\Models\ProduitModel;
 
-class AchatController extends Controller{
+class AchatController extends Controller
+{
+	public function indexAchat($clientId)
+	{
+		$achat = new AcheterModel();
+		$listeAchat = $achat->getProduitsAchetes($clientId);
+		$commentaire = $achat->getCommentaire($clientId);
 
+		return view('Produit/ProduitClientView', [
+			'achat' => $listeAchat,
+			'commentaire' => $commentaire
+		]);
+	}
 
-    public function indexAchat($clientId)
-    {
-        $achat = new AcheterModel();
-        $listeAchat = $achat->getProduitsAchetes($clientId);
-        $commentaire = $achat->getCommentaire($clientId);
+	public function ajouter($produitId)
+	{
+		$acheterModel = new AcheterModel();
 
-    
-        return view('Produit/ProduitClientView',[
-            'achat'=>$listeAchat,
-            'commentaire'=>$commentaire
-        ]);
-    }
+		$session = session();
+		$clientId = $session->get('client_id');
 
-    public function ajouter($produitId)
-    {
-        $acheterModel = new AcheterModel();
+		$promo = $session->get('codepromo');
+		$idDocument = $promo ? $promo['iddocument'] : null;
 
-        $session = session();
-        $clientId = $session->get('client_id');
+		$acheterModel->ajouterAchat($produitId, $clientId, $idDocument);
 
-        $promo = $session->get('codepromo');
-        $idDocument = $promo ? $promo['iddocument'] : null;
+		$session->remove('codepromo');
+		return view('Achat/AchatConfirme');
+	}
 
-        $acheterModel->ajouterAchat($produitId, $clientId, $idDocument);
-
-        $session->remove('codepromo');
-        return view('Achat/AchatConfirme');
-    }
-
-    public function confirme()
-    {
-        return view('Achat/AchatConfirme');
-    }
+	public function confirme()
+	{
+		return view('Achat/AchatConfirme');
+	}
 }
-
-
-?>

@@ -7,12 +7,13 @@ use CodeIgniter\Controller;
 
 class BoardController extends Controller
 {
-	public function board(){
+	public function board()
+	{
 
 		$session = session();
 		$admin = $session->get('admin');
 		$connexion = $session->get('client_id');
-		if($admin === 'f' or $connexion === null){
+		if ($admin === 'f' or $connexion === null) {
 			return redirect()->to('/');
 		}
 
@@ -66,9 +67,6 @@ class BoardController extends Controller
 		foreach ($weightBySex as $sex => $totalWeight) {
 			$stats['averageWeight'][$sex] = $totalWeight / max($stats['sexDistribution'][$sex], 1);
 		}
-
-		
-	
 
 		return view('Admin/BoardView', [
 			'clients' => $clients,

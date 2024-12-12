@@ -12,7 +12,6 @@
 
 <body>
 	<div class="container-profile">
-		<!-- Sidebar -->
 		<div class="sidebar">
 			<i class="fas fa-home" onclick="window.location='/'"></i>
 			<?php
@@ -23,11 +22,9 @@
 			<i class="fas fa-sign-out-alt" onclick="window.location='/authentification/deconnexion'"></i> <i class="fas fa-money-check" onclick="window.location='/achat/<?= $client['idclient'] ?>'"></i>
 		</div>
 
-		<!-- Section principale -->
 		<div class="profile-section">
 			<h1 class="profile-title">Profil de <?= esc($client['prenom']) ?> <?= esc($client['nom']) ?></h1>
 
-			<!-- Notifications -->
 			<?php if (session()->getFlashdata('success')): ?>
 				<div class="alert alert-success" role="alert">
 					<?= session()->getFlashdata('success') ?>
@@ -39,7 +36,6 @@
 				</div>
 			<?php endif; ?>
 
-			<!-- Formulaire -->
 			<form action="<?= base_url('/profile/modifier') ?>" method="post" class="form-profile">
 				<div class="form-row">
 					<label for="nom">Nom</label>

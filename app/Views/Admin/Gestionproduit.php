@@ -12,18 +12,15 @@
 
 <body>
 	<div class="container-dashboard">
-		<!-- Barre latérale -->
 		<div class="sidebar">
 			<i class="fas fa-home" onclick="window.location='/'"></i>
 			<i class="fas fa-chart-line" onclick="window.location='/admin/board'"></i>
 			<i class="fas fa-sign-out-alt" onclick="window.location='/authentification/deconnexion'"></i>
 		</div>
 
-		<!-- Section principale -->
 		<div class="dashboard-section">
 			<h1 class="dashboard-title">Gestion des Produits et Promotions</h1>
 
-			<!-- Notifications -->
 			<?php if (session()->getFlashdata('success')): ?>
 				<div class="alert alert-success" role="alert">
 					<?= session()->getFlashdata('success') ?>
@@ -35,11 +32,8 @@
 				</div>
 			<?php endif; ?>
 
-			<!-- Tableau des produits -->
 			<div class="table-responsive">
-				<!-- Bouton pour ouvrir la modal d'ajout de produit -->
 				<button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#ajoutProduitModal">Ajouter un Produit</button>
-
 
 				<h2>Produits</h2>
 				<table class="table table-bordered table-hover align-middle">
@@ -98,9 +92,7 @@
 				</table>
 			</div>
 
-			<!-- Tableau des promotions -->
 			<div class="table-responsive mt-5">
-				<!-- Bouton pour ouvrir la modal d'ajout de promotion -->
 				<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ajoutPromoModal">Ajouter une Promotion</button>
 				<h2>Promotion</h2>
 
@@ -151,7 +143,6 @@
 		</div>
 	</div>
 
-	<!-- Modal pour modification -->
 	<div class="modal fade" id="produitModal" tabindex="-1" aria-labelledby="produitModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -162,7 +153,6 @@
 				<?= form_open('/produit/modification', ['enctype' => 'multipart/form-data', 'id' => 'produitForm']); ?>
 				<?= form_hidden('idproduit', ''); ?>
 				<div class="modal-body">
-					<!-- Nom -->
 					<div class="form-group">
 						<?= form_label('Nom du produit', 'titreproduit'); ?>
 						<?= form_input([
@@ -175,7 +165,6 @@
 						]); ?>
 					</div>
 					<br>
-					<!-- Description -->
 					<div class="form-group">
 						<?= form_label('Description', 'descriptionproduit'); ?>
 						<?= form_textarea([
@@ -189,7 +178,6 @@
 						]); ?>
 					</div>
 					<br>
-					<!-- Prix -->
 					<div class="form-group">
 						<?= form_label('Prix (€)', 'prix'); ?>
 						<?= form_input([
@@ -206,7 +194,6 @@
 					</div>
 				</div>
 				<br>
-				<!-- Image -->
 				<div class="form-group">
 					<?= form_label('Image du produit', 'fichier'); ?>
 					<?= form_upload([
@@ -217,19 +204,17 @@
 					]); ?>
 				</div>
 				<br>
-				<!-- Affichage -->
 				<div class="form-check form-switch">
 					<?= form_label('Affichage : ', 'affichage', ['class' => 'form-label']); ?>
-					<?= form_checkbox('affichage', 'true', false); // Par défaut décoché
+					<?= form_checkbox('affichage', 'true', false);
 					?>
 					<?= validation_show_error('affichage'); ?>
 					<span id="affichageActive"></span>
 				</div>
 				<br>
-				<!-- Affichage sur l'accueil -->
 				<div class="form-check form-switch">
 					<?= form_label('Affichage sur l\'accueil : ', 'affichageacceuil', ['class' => 'form-label']); ?>
-					<?= form_checkbox('affichageacceuil', 'true', false); // Par défaut décoché
+					<?= form_checkbox('affichageacceuil', 'true', false);
 					?>
 					<?= validation_show_error('affichageacceuil'); ?>
 					<span id="affichageAccueilActive"></span>
@@ -266,7 +251,6 @@
 						]); ?>
 					</div>
 					<br>
-					<!-- Description -->
 					<div class="form-group">
 						<?= form_label('Description', 'DescriptionPromotion'); ?>
 						<?= form_textarea([
@@ -279,7 +263,6 @@
 						]); ?>
 					</div>
 					<br>
-					<!-- Prix -->
 					<div class="form-group">
 						<?= form_label('Reduction (%)', 'reduc'); ?>
 						<?= form_input([
@@ -293,7 +276,6 @@
 						]); ?>
 					</div>
 					<br>
-					<!-- Description -->
 					<div class="form-group">
 						<?= form_label('Code de reduction', 'code'); ?>
 						<?= form_textarea([
@@ -305,11 +287,9 @@
 						]); ?>
 					</div>
 					<br>
-					<!-- Affichage -->
-
 					<div class="form-check form-switch">
 						<?= form_label('Active', 'active', ['class' => 'form-label']); ?>
-						<?= form_checkbox('active', 'true', false); // Par défaut décoché
+						<?= form_checkbox('active', 'true', false);
 						?>
 						<?= validation_show_error('active'); ?>
 						<span id="activeStatus"></span>
@@ -346,7 +326,6 @@
 						]); ?>
 					</div>
 					<br>
-					<!-- Description -->
 					<div class="form-group">
 						<?= form_label('Description', 'descriptionproduit'); ?>
 						<?= form_textarea([
@@ -359,7 +338,6 @@
 						]); ?>
 					</div>
 					<br>
-					<!-- Prix -->
 					<div class="form-group">
 						<?= form_label('Prix (€)', 'prix'); ?>
 						<?= form_input([
@@ -373,7 +351,6 @@
 						]); ?>
 					</div>
 					<br>
-					<!-- Image -->
 					<div class="form-group">
 						<?= form_label('Image du produit', 'fichier'); ?>
 						<?= form_upload([
@@ -384,7 +361,6 @@
 						]); ?>
 					</div>
 					<br>
-					<!-- Affichage -->
 					<div class="form-check form-switch">
 						<?= form_checkbox([
 							'name' => 'affichage',
@@ -395,7 +371,6 @@
 						<?= form_label('Afficher le produit', 'affichage'); ?>
 					</div>
 					<br>
-					<!-- Affichage sur l'accueil -->
 					<div class="form-check form-switch">
 						<?= form_checkbox([
 							'name' => 'affichageacceuil',
@@ -414,8 +389,6 @@
 			</div>
 		</div>
 	</div>
-
-
 
 	<div class="modal fade" id="ajoutPromoModal" tabindex="-1" aria-labelledby="promotionModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
@@ -470,14 +443,7 @@
 		</div>
 	</div>
 
-
-	<!-- Script pour charger la modal Bootstrap -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-
-
-
-
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 	<script>
@@ -486,7 +452,6 @@
 			modal.addEventListener('show.bs.modal', function(event) {
 				const button = event.relatedTarget;
 
-				// Récupération des attributs data-* du bouton
 				const id = button.getAttribute('data-id');
 				const titre = button.getAttribute('data-titre');
 				const description = button.getAttribute('data-description');
@@ -494,7 +459,6 @@
 				const affichage = button.getAttribute('data-affichage');
 				const affichageAcceuil = button.getAttribute('data-affichageacceuil');
 
-				// Charger les données dans la modal
 				modal.querySelector('input[name="idproduit"]').value = id;
 				modal.querySelector('input[name="titreproduit"]').value = titre;
 				modal.querySelector('textarea[name="descriptionproduit"]').value = description;
@@ -503,20 +467,16 @@
 				const checkboxAffichage = modal.querySelector('input[name="affichage"]');
 				const checkboxAffichageAcceuil = modal.querySelector('input[name="affichageacceuil"]');
 
-				checkboxAffichage.checked = (affichage === 't'); // Si 't', coche la case
-				checkboxAffichageAcceuil.checked = (affichageAcceuil === 't'); // Si 't', coche la case
+				checkboxAffichage.checked = (affichage === 't');
+				checkboxAffichageAcceuil.checked = (affichageAcceuil === 't');
 
-				// Désactive ou active la case "Affichage sur l'accueil" selon l'état de "Affichage"
 				checkboxAffichageAcceuil.disabled = !checkboxAffichage.checked;
 
-				// Événements pour gérer le comportement dynamique
 				checkboxAffichage.addEventListener('change', () => {
 					if (!checkboxAffichage.checked) {
-						// Si "Affichage" est décoché, décocher aussi "Affichage sur l'accueil"
 						checkboxAffichageAcceuil.checked = false;
 						checkboxAffichageAcceuil.disabled = true;
 					} else {
-						// Si "Affichage" est coché, permettre la modification de "Affichage sur l'accueil"
 						checkboxAffichageAcceuil.disabled = false;
 					}
 				});
@@ -529,30 +489,25 @@
 		document.addEventListener('DOMContentLoaded', () => {
 			const modal = document.getElementById('promotionModal');
 			modal.addEventListener('show.bs.modal', function(event) {
-				const button = event.relatedTarget; // Bouton qui a déclenché la modal
+				const button = event.relatedTarget;
 				const id = button.getAttribute('data-idP');
 				const titre = button.getAttribute('data-titreP');
 				const description = button.getAttribute('data-descriptionP');
-				const active = button.getAttribute('data-activeP'); // Récupère la valeur de `active`
+				const active = button.getAttribute('data-activeP');
 				const reduc = button.getAttribute('data-reductionP');
 				const code = button.getAttribute('data-codepromoP');
 
-				// Remplir les champs de la modal
 				modal.querySelector('input[name="idpromotion"]').value = id;
 				modal.querySelector('input[name="titrepromotion"]').value = titre;
 				modal.querySelector('textarea[name="DescriptionPromotion"]').value = description;
 				modal.querySelector('input[name="reduc"]').value = reduc;
 				modal.querySelector('textarea[name="code"]').value = code;
 
-				// Conversion de 't' en 'true' et 'f' en 'false'
 				const activeStatus = active === 't' ? 'True' : (active === 'f' ? 'False' : 'Unknown');
-
-				// Met à jour le label avec la valeur actuelle de `active`
 				const activeStatusLabel = document.getElementById('activeStatus');
-
-				// Gérer la case à cocher pour "active"
 				const checkbox = modal.querySelector('input[name="active"]');
-				checkbox.checked = (active === 't'); // Si active est 't', la case est cochée
+
+				checkbox.checked = (active === 't');
 			});
 		});
 	</script>

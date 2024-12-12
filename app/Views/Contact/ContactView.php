@@ -19,9 +19,7 @@
 </head>
 
 <body>
-	<!-- Navbar (echo view Navbar.php)-->
 	<?php echo view('elements/Navbar'); ?>
-
 	<main>
 		<section class="container my-5">
 			<h2 class="text-center mb-4 h2-1">FAQ - Questions Fréquentes</h2>
@@ -148,36 +146,31 @@
 	</main>
 
 	<script>
-		document.addEventListener("DOMContentLoaded", function () {
+		document.addEventListener("DOMContentLoaded", function() {
 			const accordionButtons = document.querySelectorAll(".accordion-button");
 
 			accordionButtons.forEach(button => {
-				button.addEventListener("click", function () {
+				button.addEventListener("click", function() {
 					const target = document.querySelector(this.dataset.target);
 					const isOpen = target.classList.contains("show");
 
-					// Close all accordions
 					document.querySelectorAll(".accordion-collapse").forEach(collapse => {
 						collapse.classList.remove("show");
-						collapse.style.maxHeight = null; // Réinitialise la max-height
+						collapse.style.maxHeight = null;
 					});
 
-					// Remove active state from all buttons
 					document.querySelectorAll(".accordion-button").forEach(btn => {
 						btn.classList.remove("active");
 					});
 
-					// Open the current accordion if it wasn't already open
 					if (!isOpen) {
 						target.classList.add("show");
-						target.style.maxHeight = target.scrollHeight + "px"; // Donne la hauteur totale du contenu
+						target.style.maxHeight = target.scrollHeight + "px";
 						this.classList.add("active");
 					}
 				});
 			});
 		});
-
-
 	</script>
 
 </body>

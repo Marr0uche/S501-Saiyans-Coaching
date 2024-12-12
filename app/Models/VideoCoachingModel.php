@@ -7,14 +7,15 @@ use CodeIgniter\Model;
 class VideoCoachingModel extends Model
 {
 	protected $table = 'videocoaching';
-    protected $primaryKey = 'iddocument';
-    protected $allowedFields = [
+	protected $primaryKey = 'iddocument';
+
+	protected $allowedFields = [
 		'titredocument',
 		'descriptiondocument',
 		'video'
-    ];
+	];
 
-    protected $returnType = 'array';
+	protected $returnType = 'array';
 
 	public function getVideoCoaching($idDocument)
 	{
@@ -36,5 +37,3 @@ class VideoCoachingModel extends Model
 		return $this->delete($idDocument);
 	}
 }
-
-?>

@@ -9,14 +9,14 @@ class ProfileController extends Controller
 {
 	public function index()
 	{
-		$clientId = session()->get('client_id'); // On suppose que l'ID du client est stocké en session
+		$clientId = session()->get('client_id');
 		if (!$clientId) {
 			return redirect()->to('/authentification');
 		}
 
 		$clientModel = new ClientModel();
 		$client = $clientModel->find($clientId);
-		
+
 
 		if (!$client) {
 			session()->setFlashdata('error', 'Utilisateur introuvable.');

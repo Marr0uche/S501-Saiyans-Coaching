@@ -44,23 +44,20 @@
 			</form>
 		</div>
 
-
 		<div class="article-container">
 			<?php
 
 			foreach ($articles as $article): ?>
 				<div class="article">
 
-
 					<h2><?= $article['titredocument'] ?></h2>
 					<p><?= $article['descriptiondocument'] ?></p>
-
 
 					<?php if ($article['image'] != null) {
 						$imagePath = base_url('uploads/' . $article['image']);
 					?><img src="<?= $imagePath ?>" alt="" class="img-fluid"><?php
-																			}
-																				?>
+																		}
+																			?>
 
 					<p class="date">
 						<?php
@@ -93,7 +90,6 @@
 					}
 					?>
 				</div>
-
 
 			<?php endforeach; ?>
 		</div>
@@ -145,8 +141,6 @@
 		</div>
 	</div>
 
-
-
 	<?php echo view('elements/Footer'); ?>
 	<script>
 		document.addEventListener('DOMContentLoaded', () => {
@@ -154,37 +148,32 @@
 			const closeModalButtons = document.querySelectorAll('[data-modal-close]');
 			const overlays = document.querySelectorAll('.modal-overlay');
 
-			// Ouvrir la modale
 			openModalButtons.forEach(button => {
 				button.addEventListener('click', () => {
 					const modal = document.querySelector(button.getAttribute('data-modal-target'));
-					modal.classList.add('show'); // Affiche la modale
-					document.body.style.overflow = 'hidden'; // Désactive le défilement de la page lorsque la modale est ouverte
+					modal.classList.add('show');
+					document.body.style.overflow = 'hidden';
 				});
 			});
 
-			// Fermer la modale en cliquant sur le bouton de fermeture
 			closeModalButtons.forEach(button => {
 				button.addEventListener('click', () => {
 					const modal = button.closest('.modal');
-					modal.classList.remove('show'); // Masque la modale
-					document.body.style.overflow = ''; // Réactive le défilement de la page
+					modal.classList.remove('show');
+					document.body.style.overflow = '';
 				});
 			});
 
-			// Fermer la modale en cliquant en dehors de celle-ci
 			overlays.forEach(overlay => {
 				overlay.addEventListener('click', (e) => {
 					if (e.target === overlay) {
 						overlay.classList.remove('show');
-						document.body.style.overflow = ''; // Réactive le défilement de la page
+						document.body.style.overflow = '';
 					}
 				});
 			});
 		});
 	</script>
-
 </body>
-
 
 </html>

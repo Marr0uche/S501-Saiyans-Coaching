@@ -8,7 +8,6 @@ class AcheterModel extends Model
 {
 	protected $table = 'acheter';
 	protected $primaryKey = 'idclient';
-
 	protected $useAutoIncrement = false;
 
 	protected $allowedFields = [
@@ -36,8 +35,9 @@ class AcheterModel extends Model
 			->findAll();
 	}
 
-	public function getCommentaire($idclient){
-		return $this->where('idclient',$idclient)->findAll();
+	public function getCommentaire($idclient)
+	{
+		return $this->where('idclient', $idclient)->findAll();
 	}
 
 	public function getAcheterProduit($idproduit)
@@ -50,7 +50,7 @@ class AcheterModel extends Model
 		return $this->insert($acheterDonnee);
 	}
 
-	public function ajouterAchat($idproduit, $idclient,$idDocument = null)
+	public function ajouterAchat($idproduit, $idclient, $idDocument = null)
 	{
 		$acheterDonnee = [
 			'idclient' => $idclient,
@@ -64,23 +64,21 @@ class AcheterModel extends Model
 		return $this->insert($acheterDonnee);
 	}
 
-	
-    public function majAcheter($idclient, $idproduit, $acheterDonnee)
-    {
-        $existingRow = $this->where('idclient', $idclient)
-            ->where('idproduit', $idproduit)
-            ->first();
+	public function majAcheter($idclient, $idproduit, $acheterDonnee)
+	{
+		$existingRow = $this->where('idclient', $idclient)
+			->where('idproduit', $idproduit)
+			->first();
 
-        if ($existingRow) {
-            return $this->where('idclient', $idclient)
-                ->where('idproduit', $idproduit)
-                ->set($acheterDonnee)
-                ->update();
-        } else {
-            return false;
-        }
-    }
-
+		if ($existingRow) {
+			return $this->where('idclient', $idclient)
+				->where('idproduit', $idproduit)
+				->set($acheterDonnee)
+				->update();
+		} else {
+			return false;
+		}
+	}
 
 	public function supprimerAcheter($idclient, $idproduit)
 	{

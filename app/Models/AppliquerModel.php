@@ -6,18 +6,17 @@ use CodeIgniter\Model;
 
 class AppliquerModel extends Model
 {
-    protected $table = 'appliquer';
-    protected $primaryKey = 'iddocument';
-
+	protected $table = 'appliquer';
+	protected $primaryKey = 'iddocument';
 	protected $useAutoIncrement = false;
 
-    protected $allowedFields = [
-        'idproduit'
-    ];
-	
-    protected $returnType = 'array';
+	protected $allowedFields = [
+		'idproduit'
+	];
 
-	public function getAppliquer($iddocument,$idproduit)
+	protected $returnType = 'array';
+
+	public function getAppliquer($iddocument, $idproduit)
 	{
 		return $this->where('iddocument', $iddocument)->where('idproduit', $idproduit)->first();
 	}

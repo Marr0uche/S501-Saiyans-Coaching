@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="<?php echo base_url('assets/css/inscription.css'); ?>">
 
 	<style>
-		.container{
+		.container {
 			margin-top: 9rem;
 		}
 	</style>

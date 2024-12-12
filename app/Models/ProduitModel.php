@@ -6,18 +6,20 @@ use CodeIgniter\Model;
 
 class ProduitModel extends Model
 {
-    protected $table = 'produit';
-    protected $primaryKey = 'idproduit';
-    protected $allowedFields = [
-        'titreproduit',
-        'photoproduit',
-        'descriptionproduit',
-        'prix',
+	protected $table = 'produit';
+	protected $primaryKey = 'idproduit';
+
+	protected $allowedFields = [
+		'titreproduit',
+		'photoproduit',
+		'descriptionproduit',
+		'prix',
 		'valabilite',
 		'affichage',
 		'affichageaccueil'
-    ];
-    protected $returnType = 'array';
+	];
+
+	protected $returnType = 'array';
 
 	public function getProduit($idproduit)
 	{
@@ -26,12 +28,12 @@ class ProduitModel extends Model
 
 	public function getProduitAffichage()
 	{
-		return $this->where('affichage',true)->findAll();
+		return $this->where('affichage', true)->findAll();
 	}
 
 	public function getProduitAffichageAcceuil()
 	{
-		return $this->where('affichageaccueil','t')->findAll();
+		return $this->where('affichageaccueil', 't')->findAll();
 	}
 
 	public function creerProduit($produitDonnee)

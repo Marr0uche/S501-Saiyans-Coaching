@@ -6,18 +6,20 @@ use CodeIgniter\Model;
 
 class UtilisateurModel extends Model
 {
-    protected $table = 'utilisateur';
-    protected $primaryKey = 'idutilisateur';
-    protected $allowedFields = [
-        'type',
-        'nom',
-        'prenom',
-        'adresse_email',
-        'motdepasse',
-        'adresse',
-        'Tel'
-    ];
-    protected $returnType = 'array';
+	protected $table = 'utilisateur';
+	protected $primaryKey = 'idutilisateur';
+
+	protected $allowedFields = [
+		'type',
+		'nom',
+		'prenom',
+		'adresse_email',
+		'motdepasse',
+		'adresse',
+		'Tel'
+	];
+
+	protected $returnType = 'array';
 
 	public function getUtil($utilId)
 	{
@@ -38,5 +40,4 @@ class UtilisateurModel extends Model
 	{
 		return $this->delete($utilId);
 	}
-
 }
