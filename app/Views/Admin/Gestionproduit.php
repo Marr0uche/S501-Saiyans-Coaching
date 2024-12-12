@@ -1,3 +1,4 @@
+
 <!DOCTYPE html> 
 <html lang="fr">
 
@@ -15,8 +16,6 @@
         <!-- Barre latérale -->
         <div class="sidebar">
             <i class="fas fa-home" onclick="window.location='/'"></i>
-            <i class="fas fa-boxes" onclick="window.location='/Produit'"></i>
-            <i class="fas fa-percentage" onclick="window.location=' /promo'"></i>
             <i class="fas fa-chart-line" onclick="window.location='/admin/board'"></i>
             <i class="fas fa-sign-out-alt" onclick="window.location='/authentification/deconnexion'"></i>
         </div>
@@ -47,12 +46,12 @@
                 <table class="table table-bordered table-hover align-middle">
                     <thead class="table-dark">
                         <tr>
-                            <th><a href="?orderby=idproduit&order=<?= $order === 'ASC' ? 'DESC' : 'ASC' ?>">ID</a></th>
+                            <th><a href="?orderbyProd=idproduit&orderProd=<?= $orderProd === 'ASC' ? 'DESC' : 'ASC' ?>">ID</a></th>
                             <th>Image</th>
-                            <th><a href="?orderby=titreproduit&order=<?= $order === 'ASC' ? 'DESC' : 'ASC' ?>">Nom</a></th>
-                            <th><a href="?orderby=descriptionproduit&order=<?= $order === 'ASC' ? 'DESC' : 'ASC' ?>">Description</a></th>
-                            <th><a href="?orderby=prix&order=<?= $order === 'ASC' ? 'DESC' : 'ASC' ?>">Prix</a></th>
-                            <th><a href="?orderby=valabilite&order=<?= $order === 'ASC' ? 'DESC' : 'ASC' ?>">Valabilité</a></th>
+                            <th><a href="?orderbyProd=titreproduit&orderProd=<?= $orderProd === 'ASC' ? 'DESC' : 'ASC' ?>">Nom</a></th>
+                            <th><a href="?orderbyProd=descriptionproduit&orderProd=<?= $orderProd === 'ASC' ? 'DESC' : 'ASC' ?>">Description</a></th>
+                            <th><a href="?orderbyProd=prix&orderProd=<?= $orderProd === 'ASC' ? 'DESC' : 'ASC' ?>">Prix</a></th>
+                            <th>Valabilité</th>
                             <th>Affichage</th>
                             <th>Affichage sur l'acceuil</th>
 
@@ -104,15 +103,16 @@
             <div class="table-responsive mt-5">
            <!-- Bouton pour ouvrir la modal d'ajout de promotion -->
             <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ajoutPromoModal">Ajouter une Promotion</button>
+            <h2>Promotion</h2>
 
                 <table class="table table-bordered table-hover align-middle">
                     <thead class="table-dark">
                         <tr>
-                            <th><a href="?orderby=iddocument&order=<?= $order === 'ASC' ? 'DESC' : 'ASC' ?>">ID</a></th>
-                            <th><a href="?orderby=titredocument&order=<?= $order === 'ASC' ? 'DESC' : 'ASC' ?>">Nom</a></th>
-                            <th><a href="?orderby=descriptiondocument&order=<?= $order === 'ASC' ? 'DESC' : 'ASC' ?>">Description</a></th>
-                            <th><a href="?orderby=reductionpromo&order=<?= $order === 'ASC' ? 'DESC' : 'ASC' ?>">Pourcentage</a></th>
-                            <th><a href="?orderby=codepromo&order=<?= $order === 'ASC' ? 'DESC' : 'ASC' ?>">Code Promo</a></th>
+                            <th><a href="?orderbyProm=iddocument&orderProm=<?= $orderProm === 'ASC' ? 'DESC' : 'ASC' ?>">ID</a></th>
+                            <th><a href="?orderbyProm=titredocument&orderProm=<?= $orderProm === 'ASC' ? 'DESC' : 'ASC' ?>">Nom</a></th>
+                            <th><a href="?orderbyProm=descriptiondocument&orderProm=<?= $orderProm === 'ASC' ? 'DESC' : 'ASC' ?>">Description</a></th>
+                            <th><a href="?orderbyProm=reductionpromo&orderProm=<?= $orderProm === 'ASC' ? 'DESC' : 'ASC' ?>">Pourcentage</a></th>
+                            <th><a href="?orderbyProm=codepromo&orderProm=<?= $orderProm === 'ASC' ? 'DESC' : 'ASC' ?>">Code Promo</a></th>
                             <th>active</th>
                             <th>Actions</th>
                         </tr>
@@ -129,7 +129,7 @@
                                     <td><?= esc($promotion['active']); ?></td>
                                     <td>
                                         <a class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#promotionModal"
-                                            data-idP="<?= esc($promotion['idpromotion']); ?>"
+                                            data-idP="<?= esc($promotion['iddocument']); ?>"
                                             data-titreP="<?= esc($promotion['titredocument']); ?>"
                                             data-descriptionP="<?= esc($promotion['descriptiondocument']); ?>"
                                             data-reductionP="<?= esc($promotion['reductionpromo']); ?>"
@@ -138,7 +138,7 @@
                                             >
                                                 Modifier
                                         </a>
-                                        <a href="/promotion/suppression/<?= esc(data: $promotion['iddocument']); ?>" class="btn btn-danger btn-sm">Supprimer</a>
+                                        <a href="/promotion/suppression/<?= esc( $promotion['iddocument']); ?>" class="btn btn-danger btn-sm">Supprimer</a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
@@ -216,22 +216,18 @@
                     <br>
                     <!-- Affichage -->
                     <div class="form-check form-switch">
-                        <?= form_checkbox([
-                            'name' => 'affichage',
-                            'id' => 'affichage',
-                            'class' => 'form-check-input',
-                        ]); ?>
-                        <?= form_label('Afficher le produit', 'affichage'); ?>
+                        <?= form_label('Affichage : ', 'affichage', ['class' => 'form-label']); ?>
+                        <?= form_checkbox('affichage', 'true', false); // Par défaut décoché ?>
+                        <?= validation_show_error('affichage'); ?>
+                        <span id="affichageActive"></span>
                     </div>
                     <br>
                     <!-- Affichage sur l'accueil -->
                     <div class="form-check form-switch">
-                        <?= form_checkbox([
-                            'name' => 'affichageacceuil',
-                            'id' => 'affichageacceuil',
-                            'class' => 'form-check-input',
-                        ]); ?>
-                        <?= form_label('Afficher sur l\'accueil', 'affichageacceuil'); ?>
+                        <?= form_label('Affichage sur l\'accueil : ', 'affichageacceuil', ['class' => 'form-label']); ?>
+                        <?= form_checkbox('affichageacceuil', 'true', false); // Par défaut décoché ?>
+                        <?= validation_show_error('affichageacceuil'); ?>
+                        <span id="affichageAccueilActive"></span>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -307,12 +303,10 @@
                     <!-- Affichage -->
                      
                     <div class="form-check form-switch">
-                        <?= form_checkbox([
-                            'name' => 'active',
-                            'id' => 'active',
-                            'class' => 'form-check-input',
-                        ]); ?>
-                        <?= form_label('Active', 'active'); ?>
+                        <?= form_label('Active', 'active', ['class' => 'form-label']); ?>
+                        <?= form_checkbox('active', 'true', false); // Par défaut décoché ?>
+                        <?= validation_show_error('active'); ?>
+                        <span id="activeStatus"></span>
                     </div>
                     <br>          
                 </div>
@@ -325,96 +319,98 @@
         </div>
     </div>
 
-    <!-- Modal pour l'ajout de produit -->
     <div class="modal fade" id="ajoutProduitModal" tabindex="-1" aria-labelledby="ajoutProduitModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="ajoutProduitModalLabel">Ajouter un Produit</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <?= form_open('/produit/creer', ['enctype' => 'multipart/form-data', 'id' => 'ajoutProduitForm']); ?>
-                <div class="modal-body">
-                    <!-- Nom -->
-                    <div class="form-group">
-                        <?= form_label('Nom du produit', 'titreproduit'); ?>
-                        <?= form_input([
-                            'name' => 'titreproduit',
-                            'id' => 'titreproduit',
-                            'class' => 'form-control',
-                            'required' => true,
-                            'placeholder' => 'Ex : Nom du produit...',
-                        ]); ?>
-                    </div>
-                    <br>
-                    <!-- Description -->
-                    <div class="form-group">
-                        <?= form_label('Description', 'descriptionproduit'); ?>
-                        <?= form_textarea([
-                            'name' => 'descriptionproduit',
-                            'id' => 'descriptionproduit',
-                            'class' => 'form-control',
-                            'rows' => 3,
-                            'required' => true,
-                            'placeholder' => 'Brève description du produit...',
-                        ]); ?>
-                    </div>
-                    <br>
-                    <!-- Prix -->
-                    <div class="form-group">
-                        <?= form_label('Prix (€)', 'prix'); ?>
-                        <?= form_input([
-                            'name' => 'prix',
-                            'id' => 'prix',
-                            'class' => 'form-control',
-                            'type' => 'number',
-                            'step' => '0.01',
-                            'required' => true,
-                            'placeholder' => 'Ex : 19.99',
-                        ]); ?>
-                    </div>
-                    <br>
-                    <!-- Image -->
-                    <div class="form-group">
-                        <?= form_label('Image du produit', 'fichier'); ?>
-                        <?= form_upload([
-                            'name' => 'fichier',
-                            'id' => 'fichier',
-                            'class' => 'form-control',
-                            'accept' => 'image/*',
-                        ]); ?>
-                    </div>
-                    <br>
-                    <!-- Affichage -->
-                    <div class="form-check form-switch">
-                        <?= form_checkbox([
-                            'name' => 'affichage',
-                            'id' => 'affichage',
-                            'class' => 'form-check-input',
-                        ]); ?>
-                        <?= form_label('Afficher le produit', 'affichage'); ?>
-                    </div>
-                    <br>
-                    <!-- Affichage sur l'accueil -->
-                    <div class="form-check form-switch">
-                        <?= form_checkbox([
-                            'name' => 'affichageacceuil',
-                            'id' => 'affichageacceuil',
-                            'class' => 'form-check-input',
-                        ]); ?>
-                        <?= form_label('Afficher sur l\'accueil', 'affichageacceuil'); ?>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                    <?= form_submit('submit', 'Enregistrer', ['class' => 'btn btn-primary']); ?>
-                </div>
-                <?= form_close(); ?>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ajoutProduitModalLabel">Ajouter un Produit</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+            <?= form_open('/produit/creer', ['enctype' => 'multipart/form-data', 'id' => 'ajoutProduitForm']); ?>
+            <div class="modal-body">
+                <!-- Nom -->
+                <div class="form-group">
+                    <?= form_label('Nom du produit', 'titreproduit'); ?>
+                    <?= form_input([
+                        'name' => 'titreproduit',
+                        'id' => 'titreproduit',
+                        'class' => 'form-control',
+                        'required' => true,
+                        'placeholder' => 'Ex : Nom du produit...',
+                    ]); ?>
+                </div>
+                <br>
+                <!-- Description -->
+                <div class="form-group">
+                    <?= form_label('Description', 'descriptionproduit'); ?>
+                    <?= form_textarea([
+                        'name' => 'descriptionproduit',
+                        'id' => 'descriptionproduit',
+                        'class' => 'form-control',
+                        'rows' => 3,
+                        'required' => true,
+                        'placeholder' => 'Brève description du produit...',
+                    ]); ?>
+                </div>
+                <br>
+                <!-- Prix -->
+                <div class="form-group">
+                    <?= form_label('Prix (€)', 'prix'); ?>
+                    <?= form_input([
+                        'name' => 'prix',
+                        'id' => 'prix',
+                        'class' => 'form-control',
+                        'type' => 'number',
+                        'step' => '0.01',
+                        'required' => true,
+                        'placeholder' => 'Ex : 19.99',
+                    ]); ?>
+                </div>
+                <br>
+                <!-- Image -->
+                <div class="form-group">
+                    <?= form_label('Image du produit', 'fichier'); ?>
+                    <?= form_upload([
+                        'name' => 'fichier',
+                        'id' => 'fichier',
+                        'class' => 'form-control',
+                        'accept' => 'image/*',
+                    ]); ?>
+                </div>
+                <br>
+                <!-- Affichage -->
+                <div class="form-check form-switch">
+                    <?= form_checkbox([
+                        'name' => 'affichage',
+                        'id' => 'affichage',
+                        'class' => 'form-check-input',
+                        'value' => 'on',
+                    ]); ?>
+                    <?= form_label('Afficher le produit', 'affichage'); ?>
+                </div>
+                <br>
+                <!-- Affichage sur l'accueil -->
+                <div class="form-check form-switch">
+                    <?= form_checkbox([
+                        'name' => 'affichageacceuil',
+                        'id' => 'affichageacceuil',
+                        'class' => 'form-check-input',
+                        'value' => 'on',
+                    ]); ?>
+                    <?= form_label('Afficher sur l\'accueil', 'affichageacceuil'); ?>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                <?= form_submit('submit', 'Enregistrer', ['class' => 'btn btn-primary']); ?>
+            </div>
+            <?= form_close(); ?>
         </div>
     </div>
-    <!-- Modal pour l'ajout de promotion -->
-    <!-- Modal pour la création de promotion -->
+</div>
+
+
+
     <div class="modal fade" id="ajoutPromoModal" tabindex="-1" aria-labelledby="promotionModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -498,20 +494,26 @@
             modal.querySelector('textarea[name="descriptionproduit"]').value = description;
             modal.querySelector('input[name="prix"]').value = prix;
 
-            // Gestion des switches
-            const affichageActive = affichage === 't' ? 'True' : (affichage === 'f' ? 'False' : 'Unknown');
-            const affichageAcceuilActive = affichageAcceuil === 't' ? 'True' : (affichageAcceuil === 'f' ? 'False' : 'Unknown');
-
-            const activeStatusLabel1 = document.getElementById('affichageActive');
-            const activeStatusLabel2 = document.getElementById('affichageAcceuilActive');
-
-
-            // Gestion des cases à cocher
             const checkboxAffichage = modal.querySelector('input[name="affichage"]');
-            checkboxAffichage.checked = (affichage === 't'); // Si 't', coche la case
-
             const checkboxAffichageAcceuil = modal.querySelector('input[name="affichageacceuil"]');
+
+            checkboxAffichage.checked = (affichage === 't'); // Si 't', coche la case
             checkboxAffichageAcceuil.checked = (affichageAcceuil === 't'); // Si 't', coche la case
+
+            // Désactive ou active la case "Affichage sur l'accueil" selon l'état de "Affichage"
+            checkboxAffichageAcceuil.disabled = !checkboxAffichage.checked;
+
+            // Événements pour gérer le comportement dynamique
+            checkboxAffichage.addEventListener('change', () => {
+                if (!checkboxAffichage.checked) {
+                    // Si "Affichage" est décoché, décocher aussi "Affichage sur l'accueil"
+                    checkboxAffichageAcceuil.checked = false;
+                    checkboxAffichageAcceuil.disabled = true;
+                } else {
+                    // Si "Affichage" est coché, permettre la modification de "Affichage sur l'accueil"
+                    checkboxAffichageAcceuil.disabled = false;
+                }
+            });
             
         });
     });

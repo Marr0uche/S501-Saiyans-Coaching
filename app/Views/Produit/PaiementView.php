@@ -5,11 +5,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Paiement</title>
-	<link rel="stylesheet" href="/assets/css/styleProduit.css">
+	<link rel="stylesheet" href="/assets/css/paiement.css">
 </head>
 
 <body>
-	<div class="container mt-5">
+	<div class="page-container">
 		<h2 class="text-center">Page de Paiement</h2>
 
 		<?php if (session()->getFlashdata('error')): ?>
@@ -32,6 +32,7 @@
 		</div>
 
 		<a href="/achat/ajouter/<?= esc($produit['idproduit']); ?>" class="btn-buy">Payer</a>
+		<a href="/Produit" class="btn-back">Retour</a>
 	</div>
 </body>
 

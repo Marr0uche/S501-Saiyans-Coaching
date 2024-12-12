@@ -32,7 +32,7 @@
                                     ?>
                                     <img src="<?= $imagePath ?>" alt="" class="img-fluid rounded">
                                 </div>
-                                <p class="card-text"><strong>Prix :</strong> <?= esc($produit['prix']); ?> €</p>
+                                <p class="card-text-price"><strong>Prix :</strong> <?= esc($produit['prix']); ?> €</p>
                             </div>
 
                             <!-- Section commentaires -->
@@ -54,17 +54,17 @@
                                                 <?= esc($premierCommentaire['notetemoignage']); ?> ⭐</p>
                                             <p class="review-date mb-1"><strong>Date :</strong>
                                                 <?= esc($premierCommentaire['datetemoignage']); ?></p>
-                                            <p class="review-text"><strong>Commentaire :</strong>
+                                            <p class="review-text" onclick="showModal('<?= esc($premierCommentaire['avistemoignage']); ?>')"><strong>Commentaire :</strong>
                                                 <?= esc($premierCommentaire['avistemoignage']); ?></p>
                                         </div>
-                                        <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal"
+                                        <button type="button" class="btn btn-comm btn-outline-secondary btn-sm" data-bs-toggle="modal"
                                             data-bs-target="#ajouterAvisModal" data-idproduit="<?= $produit['idproduit'] ?>"
                                             data-note="<?= esc($premierCommentaire['notetemoignage']); ?>"
                                             data-avis="<?= esc($premierCommentaire['avistemoignage']); ?>">
                                             Modifier votre commentaire
                                         </button>
                                     <?php else: ?>
-                                        <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal"
+                                        <button type="button" class="btn btn-comm btn-outline-secondary btn-sm" data-bs-toggle="modal"
                                             data-bs-target="#ajouterAvisModal" data-idproduit="<?= $produit['idproduit'] ?>">
                                             Ajouter un commentaire
                                         </button>
@@ -72,7 +72,7 @@
                                     <?php endif; ?>
                                 <?php else: ?>
                                     <p class="text-muted">Aucun commentaire pour ce produit.</p>
-                                    <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal"
+                                    <button type="button" class="btn btn-comm btn-outline-secondary btn-sm" data-bs-toggle="modal"
                                         data-bs-target="#ajouterAvisModal" data-idproduit="<?= $produit['idproduit'] ?>">
                                         Ajouter un commentaire
                                     </button>
@@ -83,6 +83,13 @@
                     <?php endforeach; ?>
                 <?php endif; ?>
             </div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="modal-text"></p>
         </div>
     </div>
 
@@ -97,7 +104,7 @@
                 </div>
                 <div class="custom-modal-body">
                     <!-- Formulaire pour ajouter un avis -->
-                    <form method="post" action="" id="formAvis">
+                    <form method="post" action="/avis/ajouter/" id="formAvis">
                         <div class="mb-3">
                             <label for="noteTemoignage" class="form-label">Note :</label>
                             <input type="number" name="noteTemoignage" id="noteTemoignage" min="1" max="5" required>
@@ -108,7 +115,6 @@
                         </div>
                         <!-- Champ caché pour l'ID du produit -->
                         <input type="hidden" name="idProduit" id="idProduit" value="">
-
                         <button type="submit" class="btn-primary">Envoyer</button>
                     </form>
                 </div>
@@ -118,14 +124,14 @@
 
     <!-- JavaScript pour le fonctionnement de la modale -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
             const modal = document.getElementById('ajouterAvisModal');
             const closeModalBtn = modal.querySelector('.custom-modal-close');
             const triggers = document.querySelectorAll('[data-bs-toggle="modal"]');
 
             // Ouvrir la modale
             triggers.forEach(trigger => {
-                trigger.addEventListener('click', function () {
+                trigger.addEventListener('click', function() {
                     const idProduit = this.getAttribute('data-idproduit');
                     const note = this.getAttribute('data-note');
                     const avis = this.getAttribute('data-avis');
@@ -134,22 +140,41 @@
                     modal.querySelector('#noteTemoignage').value = note || '';
                     modal.querySelector('#avisTemoignage').value = avis || '';
 
+                    // Mettre à jour l'URL du formulaire avec l'ID du produit
+                    const form = document.getElementById('formAvis');
+                    form.setAttribute('action', '/avis/ajouter/' + idProduit);
+
                     modal.style.display = 'flex';
                 });
             });
 
             // Fermer la modale
-            closeModalBtn.addEventListener('click', function () {
+            closeModalBtn.addEventListener('click', function() {
                 modal.style.display = 'none';
             });
 
             // Fermer la modale en cliquant en dehors
-            modal.addEventListener('click', function (e) {
+            modal.addEventListener('click', function(e) {
                 if (e.target === modal) {
                     modal.style.display = 'none';
                 }
             });
         });
+    </script>
+
+    <script>
+        function showModal(text) {
+    const modal = document.getElementById('modal');
+    const modalText = document.getElementById('modal-text');
+    modalText.textContent = text; // Insère le texte complet
+    modal.style.display = 'flex'; // Affiche la modale
+}
+
+function closeModal() {
+    const modal = document.getElementById('modal');
+    modal.style.display = 'none'; // Cache la modale
+}
+
     </script>
 
 </body>

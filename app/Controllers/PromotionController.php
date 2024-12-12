@@ -96,18 +96,30 @@ class PromotionController extends Controller
 			return redirect()->back()->with('error', 'ID Projet invalide.');
 		}
 
+        $active = $this->request->getPost('active');
+
+        if (isset($active)) {
+            $active = 't';
+        }else
+        {
+            $active = 'f';
+        }
+
 		$data = [
 			'titredocument' => $this->request->getPost('titrepromotion'),
             'descriptiondocument' => $this->request->getPost('DescriptionPromotion'),
-			'active' => $this->request->getPost('active')?? false,
             'reductionpromo' => $this->request->getPost('reduc'),
 			'codepromo' => $this->request->getPost('code'),
+            'active' => $active
 		];
 
-		if ($promos->majPromotion($idPromo, $data)) {
-			return redirect()->to('/produit/dashboard')->with('message', 'Projet modifié avec succès.');
-		} else {
-			return redirect()->back()->with('error', 'Erreur lors de la modification du projet.');
-		}
+        echo $idPromo . '<br>';
+        foreach ($data as $key => $value) {
+            echo $key . ' : ' . $value . '<br>';
+        }
+
+		$promos->majPromotion($idPromo, $data);
+        return redirect()->to('/produit/dashboard');
+        
 	}
 }
