@@ -8,7 +8,6 @@
 body {
 	background-color: var(--noir);
 	background-image: url(../img/img-paiement.webp);
-	/* Remplacer avec l'image de fond souhaitée */
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: center;

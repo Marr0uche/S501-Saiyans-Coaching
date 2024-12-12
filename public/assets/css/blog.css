@@ -1,718 +1,661 @@
 :root {
-    --noir: #0C0C0C;
-    --blanc: #fff;
-    --jaune: #F4E904;
-    --gris: #737373;
+	--noir: #0C0C0C;
+	--blanc: #fff;
+	--jaune: #F4E904;
+	--gris: #737373;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
 }
 
 body {
-    background-image: url(../img/img-accueil.webp);  /* L'image de fond que tu veux */
-    background-attachment: fixed; /* Empêche le défilement du fond */
-    background-size: cover; /* Assure que l'image couvre tout l'écran */
-    background-position: center; /* Centre l'image */
+	background-image: url(../img/img-accueil.webp);
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
 }
 
 main {
-
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-    padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
+	padding: 20px;
 }
 
-/*TITRE*/
 .titre-blog {
-    padding-top: 9rem;
-    color: var(--blanc);
-    text-align: center;
-    font-size: 2rem;
-    font-size: clamp(2rem, 1.683673469387755rem + 4.081632653061225vw, 3.5rem);
+	padding-top: 9rem;
+	color: var(--blanc);
+	text-align: center;
+	font-size: 2rem;
+	font-size: clamp(2rem, 1.683673469387755rem + 4.081632653061225vw, 3.5rem);
 }
 
-/*BARRE DE RECHERCHE*/
-/* Container styles */
 .container {
-    margin-top: 1rem !important;
-    margin: 0 auto;
-    padding: 1rem;
-    max-width: 600px;
-    background-color: rgba(12, 12, 12, 0.8);
-    border: 2px solid var(--blanc);
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	margin-top: 1rem !important;
+	margin: 0 auto;
+	padding: 1rem;
+	max-width: 600px;
+	background-color: rgba(12, 12, 12, 0.8);
+	border: 2px solid var(--blanc);
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/*media max width 990px container margin:0 auto;*/
 @media (max-width: 990px) {
-    .article{
-        margin: 0 auto !important;
-    }
+	.article {
+		margin: 0 auto !important;
+	}
 }
 
-/* Input group styles */
 .input-group {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
 }
 
-/* Input styles */
 .input-recherche-proj {
-    flex: 1;
-    padding: 0.5rem 1rem;
-    border: 1px solid var(--blanc);
-    border-radius: 4px;
-    font-size: 1rem;
-    transition: border-color 0.2s ease-in-out;
+	flex: 1;
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--blanc);
+	border-radius: 4px;
+	font-size: 1rem;
+	transition: border-color 0.2s ease-in-out;
 }
 
-/* Button styles */
 .btn-recherche {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    background-color: var(--jaune);
-    color: var(--noir);
-    border: 1px solid var(--noir);
-    border-radius: 4px;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out background-color 0.2s ease-in-out;
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
+	background-color: var(--jaune);
+	color: var(--noir);
+	border: 1px solid var(--noir);
+	border-radius: 4px;
+	cursor: pointer;
+	transition: transform 0.3s ease-in-out background-color 0.2s ease-in-out;
 }
 
 .btn-recherche:hover {
-    background-color: var(--noir);
-    color: var(--blanc);
-    border: var(--blanc) 1px solid;
-    transform: scale(1.02);
+	background-color: var(--noir);
+	color: var(--blanc);
+	border: var(--blanc) 1px solid;
+	transform: scale(1.02);
 }
 
-/* Ajouter une actualité - Bouton styles */
 .btn-ajouter-actualite {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    background-color: var(--gris);
-    color: var(--blanc);
-    border: 1px solid var(--jaune);
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
+	background-color: var(--gris);
+	color: var(--blanc);
+	border: 1px solid var(--jaune);
+	border-radius: 4px;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
 }
 
 .btn-ajouter-actualite:hover {
-    background-color: var(--gris);
-    border-color: var(--jaune);
-    transform: scale(1.02);
+	background-color: var(--gris);
+	border-color: var(--jaune);
+	transform: scale(1.02);
 }
 
-/* Ajuste la disposition pour les boutons dans l'input-group */
 .input-group {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
 }
-
 
 @media (max-width: 700px) {
-    .input-recherche-proj {
-        padding: 0.5rem 0.5rem;
-        font-size: 0.8rem;
-    }
+	.input-recherche-proj {
+		padding: 0.5rem 0.5rem;
+		font-size: 0.8rem;
+	}
 
-    .btn-recherche {
-        padding: 0.5rem 0.5rem;
-        font-size: 0.8rem;
-    }
+	.btn-recherche {
+		padding: 0.5rem 0.5rem;
+		font-size: 0.8rem;
+	}
 
-    .btn-ajouter-actualite {
-        padding: 0.5rem 0.5rem;
-        font-size: 0.8rem;
-    }
+	.btn-ajouter-actualite {
+		padding: 0.5rem 0.5rem;
+		font-size: 0.8rem;
+	}
 }
 
 @media (max-width: 500px) {
-    .input-recherche-proj {
-        padding: 0.5rem 0.5rem;
-        font-size: 0.7rem;
-    }
+	.input-recherche-proj {
+		padding: 0.5rem 0.5rem;
+		font-size: 0.7rem;
+	}
 
-    .btn-recherche {
-        padding: 0.5rem 0.5rem;
-        font-size: 0.7rem;
-    }
+	.btn-recherche {
+		padding: 0.5rem 0.5rem;
+		font-size: 0.7rem;
+	}
 
-    .btn-ajouter-actualite {
-        padding: 0.5rem 0.5rem;
-        font-size: 0.7rem;
-    }
+	.btn-ajouter-actualite {
+		padding: 0.5rem 0.5rem;
+		font-size: 0.7rem;
+	}
 }
 
 @media (max-width: 430px) {
-    .input-recherche-proj {
-        padding: 0.5rem 0.5rem;
-        font-size: 0.6rem;
-    }
+	.input-recherche-proj {
+		padding: 0.5rem 0.5rem;
+		font-size: 0.6rem;
+	}
 
-    .btn-recherche {
-        padding: 0.5rem 0.5rem;
-        font-size: 0.6rem;
-    }
+	.btn-recherche {
+		padding: 0.5rem 0.5rem;
+		font-size: 0.6rem;
+	}
 
-    .btn-ajouter-actualite {
-        padding: 0.5rem 0.5rem;
-        font-size: 0.6rem;
-    }
+	.btn-ajouter-actualite {
+		padding: 0.5rem 0.5rem;
+		font-size: 0.6rem;
+	}
 }
 
 @media (max-width: 350px) {
-    .input-recherche-proj {
-        padding: 0.5rem 0.5rem;
-        font-size: 0.5rem;
-    }
+	.input-recherche-proj {
+		padding: 0.5rem 0.5rem;
+		font-size: 0.5rem;
+	}
 
-    .btn-recherche {
-        padding: 0.5rem 0.5rem;
-        font-size: 0.5rem;
-    }
+	.btn-recherche {
+		padding: 0.5rem 0.5rem;
+		font-size: 0.5rem;
+	}
 
-    .btn-ajouter-actualite {
-        padding: 0.5rem 0.5rem;
-        font-size: 0.5rem;
-    }
+	.btn-ajouter-actualite {
+		padding: 0.5rem 0.5rem;
+		font-size: 0.5rem;
+	}
 
-    .input-group {
-        gap: 0.2rem;
-    }
+	.input-group {
+		gap: 0.2rem;
+	}
 }
 
-
-
-
-
-/*STYLE ARTICLES*/
 .article-container {
-    display: grid;
-    grid-template-columns: 1fr; /* Une seule colonne */
-    color: var(--blanc);
-    gap: 20px; /* Espacement entre les articles */
-    border-radius: 10px;
+	display: grid;
+	grid-template-columns: 1fr;
+	color: var(--blanc);
+	gap: 20px;
+	border-radius: 10px;
 }
 
 .article {
-    background-color: rgba(12, 12, 12, 0.8);
-    border: 2px solid var(--blanc);
-    border-radius: 8px;
-    padding: 0.938rem;
-    padding-bottom: 3.125rem !important;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 70%; /* Ajuste la largeur maximale à 100% */
-    position: relative; /* Nécessaire pour positionner les boutons */
-    height: auto; /* Ajuste automatiquement la hauteur au contenu */
-    margin: 0 auto; /* Centre la grille dans la page */
-    width: 70%; /* Ajuste la largeur à 100% de la grille parente */
+	background-color: rgba(12, 12, 12, 0.8);
+	border: 2px solid var(--blanc);
+	border-radius: 8px;
+	padding: 0.938rem;
+	padding-bottom: 3.125rem !important;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	max-width: 70%;
+	position: relative;
+	height: auto;
+	margin: 0 auto;
+	width: 70%;
 }
-
 
 .article:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transform: translateY(-5px);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Boutons en haut à droite */
 .article .container-btn {
-    position: absolute;
-    display: grid;
-    gap: 6px;
-    grid-template-columns: 1fr 1fr;
-    top: 0.938rem;
-    right: 0.938rem;
+	position: absolute;
+	display: grid;
+	gap: 6px;
+	grid-template-columns: 1fr 1fr;
+	top: 0.938rem;
+	right: 0.938rem;
 
 }
+
 .article .container-btn .btn {
-    background-color: var(--jaune);
-    color: var(--noir);
-    border: var(--noir) 2px solid;
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.5s ease;
+	background-color: var(--jaune);
+	color: var(--noir);
+	border: var(--noir) 2px solid;
+	padding: 5px 10px;
+	border-radius: 4px;
+	font-size: 0.9rem;
+	font-weight: bold;
+	cursor: pointer;
+	text-decoration: none;
+	transition: all 0.5s ease;
 }
+
 .article .container-btn .btn-2 {
-    background-color: var(--gris);
-    color: var(--blanc);
-    border: var(--jaune) 2px solid;
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    cursor: pointer;
-    text-decoration: none !important; /* Supprime le soulignement */
-    transition: all 0.5s ease;
+	background-color: var(--gris);
+	color: var(--blanc);
+	border: var(--jaune) 2px solid;
+	padding: 5px 10px;
+	border-radius: 4px;
+	font-size: 0.9rem;
+	font-weight: bold;
+	cursor: pointer;
+	text-decoration: none !important;
+	transition: all 0.5s ease;
 }
 
 .article .btn:hover {
-    background-color: var(--noir);
-    color: var(--blanc);
-    border: var(--blanc) 2px solid;
+	background-color: var(--noir);
+	color: var(--blanc);
+	border: var(--blanc) 2px solid;
 }
+
 .article .btn-2:hover {
-    background-color: red;
-    border: red 2px solid;
+	background-color: red;
+	border: red 2px solid;
 }
 
-/* Contenu de l'article (texte et image) */
 .article-content {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
 }
 
-/* Image */
 .article-container .article img {
-    max-width: 300px; /* Limite la largeur à 300px */
-    max-height: 300px; /* Limite la hauteur à 300px */
-    width: auto; /* Maintient les proportions */
-    height: auto; /* Maintient les proportions */
-    display: block; /* Évite tout comportement inline non désiré */
-    border-radius: 8px; /* Ajoute un léger arrondi aux coins pour un style agréable */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajoute une ombre pour améliorer la lisibilité */
+	max-width: 300px;
+	max-height: 300px;
+	width: auto;
+	height: auto;
+	display: block;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Titre de l'article */
 .article h2 {
-    font-size: 1.5rem;
-    margin-bottom: 5px;
+	font-size: 1.5rem;
+	margin-bottom: 5px;
 }
 
-/* Description */
 .article p {
-    font-size: 1rem;
-    line-height: 1.5;
+	font-size: 1rem;
+	line-height: 1.5;
 }
 
-/* Date de publication */
 .article .date {
-    position : absolute;
-    bottom: 10px;
-    left: 10px;
-    color: var(--jaune);
-    /* Bleu pour la date */
-    font-style: italic;
-    /* Style différencié */
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	color: var(--jaune);
+	font-style: italic;
 }
 
-/*//MEDIA QUERIES*/
-/*taille des police, image, boutons*/
 @media (max-width: 700px) {
-    .article h2 {
-        font-size: 1.2rem;
-    }
+	.article h2 {
+		font-size: 1.2rem;
+	}
 
-    .article p {
-        font-size: 0.9rem;
-    }
+	.article p {
+		font-size: 0.9rem;
+	}
 
-    .article .date {
-        font-size: 0.8rem;
-    }
+	.article .date {
+		font-size: 0.8rem;
+	}
 
-    .article img {
-        max-width: 200px;
-        max-height: 200px;
-    }
+	.article img {
+		max-width: 200px;
+		max-height: 200px;
+	}
 
-    .article .container-btn .btn {
-        padding: 5px 5px;
-        font-size: 0.8rem;
-    }
+	.article .container-btn .btn {
+		padding: 5px 5px;
+		font-size: 0.8rem;
+	}
 
-    .article .container-btn .btn-2 {
-        padding: 5px 5px;
-        font-size: 0.8rem;
-    }
+	.article .container-btn .btn-2 {
+		padding: 5px 5px;
+		font-size: 0.8rem;
+	}
 
-    .article-container {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    }
+	.article-container {
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	}
 }
 
 @media (max-width: 500px) {
-    .article h2 {
-        font-size: 1rem;
-    }
+	.article h2 {
+		font-size: 1rem;
+	}
 
-    .article p {
-        font-size: 0.8rem;
-    }
+	.article p {
+		font-size: 0.8rem;
+	}
 
-    .article .date {
-        font-size: 0.7rem;
-    }
+	.article .date {
+		font-size: 0.7rem;
+	}
 
-    .article img {
-        max-width: 100px;
-        max-height: 100px;
-    }
+	.article img {
+		max-width: 100px;
+		max-height: 100px;
+	}
 
-
-    .article-container {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
+	.article-container {
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	}
 }
 
 @media (max-width: 430px) {
 
-    .article img {
-        max-width: 50px;
-        max-height: 50px;
-    }
+	.article img {
+		max-width: 50px;
+		max-height: 50px;
+	}
 
-    .article-container {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
+	.article-container {
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	}
 
 }
 
 @media (max-width: 350px) {
 
-    .article img {
-        max-width: 15px;
-        max-height: 15px;
-    }
+	.article img {
+		max-width: 15px;
+		max-height: 15px;
+	}
 
 }
 
-/*PAGINATION*/
 .pagination-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
 }
 
 .pagination {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    gap: 10px; /* Espacement entre les boutons */
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	gap: 10px;
 }
 
 .pagination li {
-    display: inline-block;
+	display: inline-block;
 }
 
-.pagination a, 
+.pagination a,
 .pagination span {
-    display: block;
-    padding: 8px 12px;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: #fff;
-    transition: all 0.3s ease;
+	display: block;
+	padding: 8px 12px;
+	text-decoration: none;
+	font-size: 1rem;
+	font-weight: bold;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	background-color: #fff;
+	transition: all 0.3s ease;
 }
 
-
-
-
-
-
-
-
-
-
-/*STYLE MODALE*/
-/* style inspiré du style de ce fichier css*/
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.8);
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: 10% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	background-color: #fefefe;
+	margin: 10% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
 }
 
-
-
-/* Afficher la modale quand la classe "show" est ajoutée */
 .modal.show {
-    display: block;
-    opacity: 1;
+	display: block;
+	opacity: 1;
 }
 
-/* Modale */
 .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
-    z-index: 1050; /* Assurez-vous que la modale soit au-dessus des autres éléments */
-    align-items: center;
-    justify-content: center;
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1050;
+	align-items: center;
+	justify-content: center;
 }
 
-/* Container de la modale */
 .modal-dialog {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-/* Contenu de la modale */
 .modal-content {
-    background-color: rgba(12, 12, 12, 0.9);
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 600px;
-    width: 100%;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    color: var(--blanc);
+	background-color: rgba(12, 12, 12, 0.9);
+	padding: 20px;
+	border-radius: 8px;
+	max-width: 600px;
+	width: 100%;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+	color: var(--blanc);
 }
 
-/* En-tête de la modale */
 .modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
-    border-bottom: 2px solid var(--blanc);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+	border-bottom: 2px solid var(--blanc);
 }
 
 .modal-title {
-    font-size: 1.5rem;
-    color: var(--blanc);
+	font-size: 1.5rem;
+	color: var(--blanc);
 }
 
 .btn-close {
-    background: none;
-    border: none;
-    color: var(--blanc);
-    font-size: 2rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
+	background: none;
+	border: none;
+	color: var(--blanc);
+	font-size: 2rem;
+	cursor: pointer;
+	transition: all 0.3s ease;
 }
 
 .btn-close:hover {
-    color: var(--jaune);
-    transform: rotate(90deg);
+	color: var(--jaune);
+	transform: rotate(90deg);
 }
 
-/* Corps de la modale */
 .modal-body {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    margin-left: 1rem;
-    gap: 15px;
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	margin-left: 1rem;
+	gap: 15px;
 }
 
-/* Formulaire */
 .form-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem; /* Ajouter un peu d'espace entre chaque champ */
-    color: var(--blanc);
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 1rem;
+	color: var(--blanc);
 }
 
 .form-group label {
-    color: var(--blanc);
-    margin-bottom: 5px;
-    font-size: 1rem;
-    text-align: left; /* Assurer que le texte est aligné à gauche */
+	color: var(--blanc);
+	margin-bottom: 5px;
+	font-size: 1rem;
+	text-align: left;
 }
 
 
 .form-group-img {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem; /* Ajouter un peu d'espace entre chaque champ */
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 1rem;
 }
 
 .form-group-img label {
-    color: var(--blanc);
-    margin-bottom: 5px;
-    font-size: 1rem;
-    text-align: left; /* Assurer que le texte est aligné à gauche */
+	color: var(--blanc);
+	margin-bottom: 5px;
+	font-size: 1rem;
+	text-align: left;
 }
 
 
-/* Bouton soumettre */
 .modal-footer {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
 }
 
-
-
-/* Bouton submit */
-/* Styliser le bouton submit généré par form_submit */
 form input[type="submit"] {
-    padding: 0.5rem 1rem;   /* Taille du bouton */
-    font-size: 1.1rem;          /* Taille du texte */
-    background-color: var(--jaune); /* Couleur de fond */
-    color: var(--noir);         /* Couleur du texte */
-    border: 2px solid var(--noir);  /* Bordure */
-    border-radius: 6px;         /* Coins arrondis */
-    cursor: pointer;            /* Curseur pointer pour signaler l'action */
-    transition: all 0.3s ease-in-out; /* Transition fluide pour l'hover */
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	background-color: var(--jaune);
+	color: var(--noir);
+	border: 2px solid var(--noir);
+	border-radius: 6px;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
 }
 
-/* Effet de hover pour le bouton */
 form input[type="submit"]:hover {
-    background-color: var(--gris);  /* Change la couleur de fond au survol */
-    color: var(--blanc);             /* Change la couleur du texte au survol */
-    border: 2px solid var(--blanc); /* Change la bordure */
+	background-color: var(--gris);
+	color: var(--blanc);
+	border: 2px solid var(--blanc);
 }
 
-/* Effet de focus pour le bouton */
 form input[type="submit"]:focus {
-    outline: none;  /* Supprimer le contour par défaut */
-    border-color: var(--jaune); /* Garde la bordure jaune au focus */
+	outline: none;
+	border-color: var(--jaune);
 }
 
-
-
-/* Media Queries */
-/* Ajuster la taille du texte et des éléments pour les écrans plus petits */
 @media (max-width: 768px) {
-    .modal-dialog {
-        width: 90% !important;
+	.modal-dialog {
+		width: 90% !important;
+		margin: auto;
+	}
 
-        margin: auto;
-    }
-    .modal-content {
-        padding: 10px;
-    }
+	.modal-content {
+		padding: 10px;
+	}
 
-    .modal-title {
-        font-size: 1.2rem;
-    }
+	.modal-title {
+		font-size: 1.2rem;
+	}
 
-    .modal-body {
-        margin-left: 0;
-    }
+	.modal-body {
+		margin-left: 0;
+	}
 
-    .form-group label {
-        font-size: 0.9rem;
-    }
+	.form-group label {
+		font-size: 0.9rem;
+	}
 
-    form input[type="submit"] {
-        padding: 0.4rem 0.8rem;
-        font-size: 1rem;
-    }
+	form input[type="submit"] {
+		padding: 0.4rem 0.8rem;
+		font-size: 1rem;
+	}
 }
 
 @media (max-width: 500px) {
-    .modal-content {
-        padding: 10px;
-    }
+	.modal-content {
+		padding: 10px;
+	}
 
-    .modal-title {
-        font-size: 1rem;
-    }
+	.modal-title {
+		font-size: 1rem;
+	}
 
-    .modal-body {
-        margin-left: 0;
-    }
+	.modal-body {
+		margin-left: 0;
+	}
 
-    .form-group label {
-        font-size: 0.8rem;
-    }
+	.form-group label {
+		font-size: 0.8rem;
+	}
 
-    form input[type="submit"] {
-        padding: 0.4rem 0.8rem;
-        font-size: 1rem;
-    }
+	form input[type="submit"] {
+		padding: 0.4rem 0.8rem;
+		font-size: 1rem;
+	}
 }
 
 @media (max-width: 430px) {
-    .modal-content {
-        padding: 10px;
-    }
+	.modal-content {
+		padding: 10px;
+	}
 
-    .modal-title {
-        font-size: 0.8rem;
-    }
+	.modal-title {
+		font-size: 0.8rem;
+	}
 
-    .modal-body {
-        margin-left: 0;
-    }
+	.modal-body {
+		margin-left: 0;
+	}
 
-    .form-group label {
-        font-size: 0.7rem;
-    }
+	.form-group label {
+		font-size: 0.7rem;
+	}
 
-    form input[type="submit"] {
-        padding: 0.4rem 0.8rem;
-        font-size: 1rem;
-    }
+	form input[type="submit"] {
+		padding: 0.4rem 0.8rem;
+		font-size: 1rem;
+	}
 }
 
 @media (max-width: 350px) {
-    .modal-content {
-        padding: 10px;
-    }
+	.modal-content {
+		padding: 10px;
+	}
 
-    .modal-title {
-        font-size: 0.7rem;
-    }
+	.modal-title {
+		font-size: 0.7rem;
+	}
 
-    .modal-body {
-        margin-left: 0;
-    }
+	.modal-body {
+		margin-left: 0;
+	}
 
-    .form-group label {
-        font-size: 0.6rem;
-    }
+	.form-group label {
+		font-size: 0.6rem;
+	}
 
-    form input[type="submit"] {
-        padding: 0.4rem 0.8rem;
-        font-size: 1rem;
-    }
+	form input[type="submit"] {
+		padding: 0.4rem 0.8rem;
+		font-size: 1rem;
+	}
 }
