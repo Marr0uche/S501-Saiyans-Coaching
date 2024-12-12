@@ -24,7 +24,7 @@
             <h1>Entraîne-toi comme un <span class="h1-span" style="color : #F4E904;">Saiyan</span></h1>
             <p>Progresse comme un guerrier : ta transformation commence <span class="h3-span"
                     style="color : #F4E904;">aujourd'hui</span> !</p>
-            <a href="/Produit" class="btn">Commencer maintenant !</a>
+            <a href="/Produit" class="btn-hero">Commencer maintenant !</a>
             <p class="petit-txt-hero">Nous ne partagerons jamais vos informations à qui que ce soit.</p>
             <div class="container mt-5">
         </section>
@@ -103,128 +103,130 @@
                     style="color : #F4E904;">skills</span></h1>
             <!-- vidéo de présentation dans img/video.mp4 -->
             <video controls class="video-presentation">
-                <source src="<?php echo base_url('assets/img/video.mp4'); ?>" type="video/mp4">
+                <source src="<?php echo base_url('assets/img/video_acceuil.webm'); ?>" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-
-
         </section>
 
-        <section class="caroussel">
-            <div class="caroussel-slide">
-                <img class="img-caroussel"
-                    src="/assets/img/caroussel-testimonial/caroussel-testimonial-1/partie-1/carousse1.png"
-                    style="width: 21%;" />
-                <img class="img-caroussel"
-                    src="/assets/img/caroussel-testimonial/caroussel-testimonial-1/partie-1/carousse4.png"
-                    style="width: 21%;" />
-                <img class="img-caroussel"
-                    src="/assets/img/caroussel-testimonial/caroussel-testimonial-1/partie-1/carousse5.png"
-                    style="width: 21%;" />
-                <img class="img-caroussel"
-                    src="/assets/img/caroussel-testimonial/caroussel-testimonial-1/partie-1/carousse6.png"
-                    style="width: 21%;" />
-            </div>
-            <div class="caroussel-slide">
-                <img class="img-caroussel"
-                    src="/assets/img/caroussel-testimonial/caroussel-testimonial-1/partie-1/carousse1.png"
-                    style="width: 21%;" />
-                <img class="img-caroussel"
-                    src="/assets/img/caroussel-testimonial/caroussel-testimonial-1/partie-1/carousse4.png"
-                    style="width: 21%;" />
-                <img class="img-caroussel"
-                    src="/assets/img/caroussel-testimonial/caroussel-testimonial-1/partie-1/carousse5.png"
-                    style="width: 21%;" />
-                <img class="img-caroussel"
-                    src="/assets/img/caroussel-testimonial/caroussel-testimonial-1/partie-1/carousse6.png"
-                    style="width: 21%;" />
-            </div>
+        <div class="test-wrapper">
+            <section class="caroussel">
+                <div class="caroussel-slide">
+                    <img class="img-caroussel"
+                        src="/assets/img/caroussel-testimonial/caroussel-testimonial-1/partie-1/carousse1.png"
+                        style="width: 21%;" />
+                    <img class="img-caroussel"
+                        src="/assets/img/caroussel-testimonial/caroussel-testimonial-1/partie-1/carousse4.png"
+                        style="width: 21%;" />
+                    <img class="img-caroussel"
+                        src="/assets/img/caroussel-testimonial/caroussel-testimonial-1/partie-1/carousse5.png"
+                        style="width: 21%;" />
+                    <img class="img-caroussel"
+                        src="/assets/img/caroussel-testimonial/caroussel-testimonial-1/partie-1/carousse6.png"
+                        style="width: 21%;" />
+                </div>
+                <div class="caroussel-slide">
+                    <img class="img-caroussel"
+                        src="/assets/img/caroussel-testimonial/caroussel-testimonial-1/partie-1/carousse1.png"
+                        style="width: 21%;" />
+                    <img class="img-caroussel"
+                        src="/assets/img/caroussel-testimonial/caroussel-testimonial-1/partie-1/carousse4.png"
+                        style="width: 21%;" />
+                    <img class="img-caroussel"
+                        src="/assets/img/caroussel-testimonial/caroussel-testimonial-1/partie-1/carousse5.png"
+                        style="width: 21%;" />
+                    <img class="img-caroussel"
+                        src="/assets/img/caroussel-testimonial/caroussel-testimonial-1/partie-1/carousse6.png"
+                        style="width: 21%;" />
+                </div>
 
-            <div class="opacity"></div>
+                <div class="opacity"></div>
 
 
-        </section>
+            </section>
 
-        <section class="caroussel-2">
+            <section class="caroussel-2">
 
-            <div class="caroussel-slide-2">
-                <img class="img-caroussel"
-                    src="/assets/img/caroussel-testimonial/caroussel-testimonial-1/partie-1/carousse5.png"
-                    style="width: 21%;" />
-                <img class="img-caroussel"
-                    src="/assets/img/caroussel-testimonial/caroussel-testimonial-1/partie-1/carousse6.png"
-                    style="width: 21%;" />
+                <div class="caroussel-slide-2">
+                    <img class="img-caroussel"
+                        src="/assets/img/caroussel-testimonial/caroussel-testimonial-1/partie-1/carousse5.png"
+                        style="width: 21%;" />
+                    <img class="img-caroussel"
+                        src="/assets/img/caroussel-testimonial/caroussel-testimonial-1/partie-1/carousse6.png"
+                        style="width: 21%;" />
 
-                <img class="img-caroussel"
-                    src="/assets/img/caroussel-testimonial/caroussel-testimonial-1/partie-1/carousse4.png"
-                    style="width: 21%;" />
-                <img class="img-caroussel"
-                    src="/assets/img/caroussel-testimonial/caroussel-testimonial-1/partie-1/carousse1.png"
-                    style="width: 21%;" />
-            </div>
+                    <img class="img-caroussel"
+                        src="/assets/img/caroussel-testimonial/caroussel-testimonial-1/partie-1/carousse4.png"
+                        style="width: 21%;" />
+                    <img class="img-caroussel"
+                        src="/assets/img/caroussel-testimonial/caroussel-testimonial-1/partie-1/carousse1.png"
+                        style="width: 21%;" />
+                </div>
 
-            <div class="caroussel-slide-2">
-                <img class="img-caroussel"
-                    src="/assets/img/caroussel-testimonial/caroussel-testimonial-1/partie-1/carousse5.png"
-                    style="width: 21%;" />
-                <img class="img-caroussel"
-                    src="/assets/img/caroussel-testimonial/caroussel-testimonial-1/partie-1/carousse6.png"
-                    style="width: 21%;" />
+                <div class="caroussel-slide-2">
+                    <img class="img-caroussel"
+                        src="/assets/img/caroussel-testimonial/caroussel-testimonial-1/partie-1/carousse5.png"
+                        style="width: 21%;" />
+                    <img class="img-caroussel"
+                        src="/assets/img/caroussel-testimonial/caroussel-testimonial-1/partie-1/carousse6.png"
+                        style="width: 21%;" />
 
-                <img class="img-caroussel"
-                    src="/assets/img/caroussel-testimonial/caroussel-testimonial-1/partie-1/carousse4.png"
-                    style="width: 21%;" />
-                <img class="img-caroussel"
-                    src="/assets/img/caroussel-testimonial/caroussel-testimonial-1/partie-1/carousse1.png"
-                    style="width: 21%;" />
-            </div>
-        </section>
+                    <img class="img-caroussel"
+                        src="/assets/img/caroussel-testimonial/caroussel-testimonial-1/partie-1/carousse4.png"
+                        style="width: 21%;" />
+                    <img class="img-caroussel"
+                        src="/assets/img/caroussel-testimonial/caroussel-testimonial-1/partie-1/carousse1.png"
+                        style="width: 21%;" />
+                </div>
+            </section>
 
-        <section id="content">
-            <div class="slide-wrapper">
-                <div class="slide">
-                    <div id="slide-1" class="testimonial">
-                        <blockquote>
-                            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-                        </blockquote>
-                        <div></div>
-                        <p>John Doe &mdash; Worcestershire, UK</p>
+            <section id="content">
+                <div class="slide-wrapper">
+                    <div class="slide">
+                        <div id="slide-1" class="testimonial">
+                            <blockquote>
+                                Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                            </blockquote>
+                            <div></div>
+                            <p>John Doe &mdash; Worcestershire, UK</p>
+                        </div>
+                        <div id="slide-2" class="testimonial">
+                            <blockquote>
+                                Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                            </blockquote>
+                            <div></div>
+                            <p>John Doe &mdash; Worcestershire, UK</p>
+                        </div>
+                        <div id="slide-3" class="testimonial">
+                            <blockquote>
+                                Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                            </blockquote>
+                            <div></div>
+                            <p>John Doe &mdash; Worcestershire, UK</p>
+                        </div>
+                        <div id="slide-4" class="testimonial">
+                            <blockquote>
+                                Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                            </blockquote>
+                            <div></div>
+                            <p>John Doe &mdash; Worcestershire, UK</p>
+                        </div>
                     </div>
-                    <div id="slide-2" class="testimonial">
-                        <blockquote>
-                            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-                        </blockquote>
-                        <div></div>
-                        <p>John Doe &mdash; Worcestershire, UK</p>
-                    </div>
-                    <div id="slide-3" class="testimonial">
-                        <blockquote>
-                            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-                        </blockquote>
-                        <div></div>
-                        <p>John Doe &mdash; Worcestershire, UK</p>
-                    </div>
-                    <div id="slide-4" class="testimonial">
-                        <blockquote>
-                            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-                        </blockquote>
-                        <div></div>
-                        <p>John Doe &mdash; Worcestershire, UK</p>
+                    <div class="slider-nav">
+                        <a href="#slide-1"></a>
+                        <a href="#slide-2"></a>
+                        <a href="#slide-3"></a>
+                        <a href="#slide-4"></a>
                     </div>
                 </div>
-                <div class="slider-nav">
-                    <a href="#slide-1"></a>
-                    <a href="#slide-2"></a>
-                    <a href="#slide-3"></a>
-                    <a href="#slide-4"></a>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
+
+
     </main>
     <section class="wrapper-footer">
         <section class="section-infos">
             <h1>Prêt à embarquer dans cette <span class="h1-span" style="color : #F4E904;">Aventure</span>?</h1>
-            <a href="/Produit" class="btn btn-lato btn-infos">Plus d'informations</a>
+            <a href="/Produit" class="btn btn-lato btn-infos-1">Plus d'informations</a>
             <a href="/questionnaire" class="btn btn-lato btn-infos"> aller au questionnaire </a>
         </section>
 

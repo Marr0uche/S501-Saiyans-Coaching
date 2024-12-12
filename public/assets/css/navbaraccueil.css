@@ -79,6 +79,7 @@ header {
     font-weight: bold;
     cursor: pointer;
     /* Indique un élément interactif */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .action-button:hover {
@@ -269,8 +270,10 @@ header {
     text-align: center;
     padding: 0.5rem; /* Espacement interne */
     color: white;
-    font-size: clamp(0.8rem, 2.5vw, 1.2rem); /* Adaptation dynamique de la taille de la police */
+    font-size: clamp(0.8rem, 2.5vw, 1rem); /* Adaptation dynamique de la taille de la police */
     word-wrap: break-word; /* Coupe les longues chaînes */
+    /*mettre un effet de surbrillance blanche*/
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
 }
 
 @media screen and (max-width: 980px) {

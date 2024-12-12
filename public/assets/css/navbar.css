@@ -61,6 +61,8 @@ header {
     font-size: 0.9rem;
     font-weight: bold;
     cursor: pointer; /* Indique un élément interactif */
+
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .action-button:hover {
