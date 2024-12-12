@@ -171,6 +171,7 @@
 							'class' => 'form-control',
 							'required' => true,
 							'placeholder' => 'Ex : Nom du produit...',
+							'maxlength' => '50',
 						]); ?>
 					</div>
 					<br>
@@ -184,6 +185,7 @@
 							'rows' => 3,
 							'required' => true,
 							'placeholder' => 'Brève description du produit...',
+							'maxlength' => '250',
 						]); ?>
 					</div>
 					<br>
@@ -198,45 +200,48 @@
 							'step' => '0.01',
 							'required' => true,
 							'placeholder' => 'Ex : 19.99',
+							'min' => '0.01',
+							'max' => '9999.99',
 						]); ?>
 					</div>
-					<br>
-					<!-- Image -->
-					<div class="form-group">
-						<?= form_label('Image du produit', 'fichier'); ?>
-						<?= form_upload([
-							'name' => 'fichier',
-							'id' => 'fichier',
-							'class' => 'form-control',
-							'accept' => 'image/*',
-						]); ?>
-					</div>
-					<br>
-					<!-- Affichage -->
-					<div class="form-check form-switch">
-						<?= form_label('Affichage : ', 'affichage', ['class' => 'form-label']); ?>
-						<?= form_checkbox('affichage', 'true', false); // Par défaut décoché
-						?>
-						<?= validation_show_error('affichage'); ?>
-						<span id="affichageActive"></span>
-					</div>
-					<br>
-					<!-- Affichage sur l'accueil -->
-					<div class="form-check form-switch">
-						<?= form_label('Affichage sur l\'accueil : ', 'affichageacceuil', ['class' => 'form-label']); ?>
-						<?= form_checkbox('affichageacceuil', 'true', false); // Par défaut décoché
-						?>
-						<?= validation_show_error('affichageacceuil'); ?>
-						<span id="affichageAccueilActive"></span>
-					</div>
 				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-					<?= form_submit('submit', 'Enregistrer', ['class' => 'btn btn-primary']); ?>
+				<br>
+				<!-- Image -->
+				<div class="form-group">
+					<?= form_label('Image du produit', 'fichier'); ?>
+					<?= form_upload([
+						'name' => 'fichier',
+						'id' => 'fichier',
+						'class' => 'form-control',
+						'accept' => 'image/*',
+					]); ?>
 				</div>
-				<?= form_close(); ?>
+				<br>
+				<!-- Affichage -->
+				<div class="form-check form-switch">
+					<?= form_label('Affichage : ', 'affichage', ['class' => 'form-label']); ?>
+					<?= form_checkbox('affichage', 'true', false); // Par défaut décoché
+					?>
+					<?= validation_show_error('affichage'); ?>
+					<span id="affichageActive"></span>
+				</div>
+				<br>
+				<!-- Affichage sur l'accueil -->
+				<div class="form-check form-switch">
+					<?= form_label('Affichage sur l\'accueil : ', 'affichageacceuil', ['class' => 'form-label']); ?>
+					<?= form_checkbox('affichageacceuil', 'true', false); // Par défaut décoché
+					?>
+					<?= validation_show_error('affichageacceuil'); ?>
+					<span id="affichageAccueilActive"></span>
+				</div>
 			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+				<?= form_submit('submit', 'Enregistrer', ['class' => 'btn btn-primary']); ?>
+			</div>
+			<?= form_close(); ?>
 		</div>
+	</div>
 	</div>
 
 	<div class="modal fade" id="promotionModal" tabindex="-1" aria-labelledby="promotionModalLabel" aria-hidden="true">

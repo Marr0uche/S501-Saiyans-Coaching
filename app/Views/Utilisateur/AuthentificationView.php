@@ -17,7 +17,7 @@
 
 <body>
 	<?php echo view('elements/Navbar'); ?>
-	
+
 	<div class="container">
 		<h2 class="text-center mt-5">Page de Connexion</h2>
 
@@ -31,7 +31,7 @@
 			<?= csrf_field() ?>
 			<div class="form-group">
 				<label for="email">Email</label>
-				<input type="email" class="form-control" id="email" name="email" placeholder="Entrez votre email" required>
+				<input type="email" class="form-control" id="email" name="email" placeholder="Entrez votre email" maxlength="50" required>
 			</div>
 			<div class="form-group">
 				<label for="motdepasse">Mot de passe</label>

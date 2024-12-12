@@ -38,18 +38,18 @@
 			<div class="form-row">
 				<div class="form-group col-md-6">
 					<label for="nom">Nom *</label>
-					<input type="text" class="form-control" id="nom" name="nom" placeholder="Entrez votre nom" required>
+					<input type="text" class="form-control" id="nom" name="nom" placeholder="Entrez votre nom" maxlength="25" required>
 				</div>
 				<div class="form-group col-md-6">
 					<label for="prenom">Prénom *</label>
-					<input type="text" class="form-control" id="prenom" name="prenom" placeholder="Entrez votre prénom" required>
+					<input type="text" class="form-control" id="prenom" name="prenom" placeholder="Entrez votre prénom" maxlength="25" required>
 				</div>
 			</div>
 
 			<div class="form-row">
 				<div class="form-group col-md-6">
 					<label for="mail">Email *</label>
-					<input type="email" class="form-control" id="mail" name="mail" placeholder="Entrez votre email" required>
+					<input type="email" class="form-control" id="mail" name="mail" placeholder="Entrez votre email" maxlength="50" required>
 				</div>
 				<div class="form-group col-md-6">
 					<label for="motdepasse">Mot de passe *</label>
@@ -60,7 +60,7 @@
 			<div class="form-row">
 				<div class="form-group col-md-6">
 					<label for="mobile">Mobile *</label>
-					<input type="text" class="form-control" id="mobile" name="mobile" placeholder="Entrez votre numéro de mobile" required>
+					<input type="text" class="form-control" id="mobile" name="mobile" placeholder="Entrez votre numéro de mobile" maxlength="20" required>
 				</div>
 				<div class="form-group col-md-6">
 					<label for="sexe">Sexe *</label>
@@ -78,11 +78,11 @@
 				</div>
 				<div class="form-group col-md-3">
 					<label for="taille">Taille (cm) *</label>
-					<input type="number" class="form-control" id="taille" name="taille" placeholder="Taille" required>
+					<input type="number" class="form-control" id="taille" name="taille" placeholder="Taille" maxlength="3" required>
 				</div>
 				<div class="form-group col-md-3">
 					<label for="poidsdecorps">Poids (kg) *</label>
-					<input type="number" class="form-control" id="poidsdecorps" name="poidsdecorps" placeholder="Poids" required>
+					<input type="number" class="form-control" id="poidsdecorps" name="poidsdecorps" placeholder="Poids" maxlength="3" required>
 				</div>
 			</div>
 			<button type="submit" class="btn btn-primary btn-block">Retour</button>
