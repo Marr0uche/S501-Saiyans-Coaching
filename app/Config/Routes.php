@@ -78,6 +78,7 @@ $routes->post('questionnaire/traitementQuestionnaire', 'QuestionnaireController:
 $routes->get('/achat/(:num)', 'AchatController::indexAchat/$1');
 $routes->get('/achat/ajouter/(:num)', 'AchatController::ajouter/$1');
 $routes->get('/achat/confirme', 'AchatController::confirme');
+$routes->get('/achat/allachat', 'AchatController::allachat');
 
 // A propos
 $routes->get('/A_propos', 'AProposController::index');

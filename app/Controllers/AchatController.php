@@ -43,6 +43,17 @@ class AchatController extends Controller{
     {
         return view('Achat/AchatConfirme');
     }
+
+    public function allachat()
+    {
+        $achat = new AcheterModel();
+        $listeAchat = $achat->findAll();
+
+    
+        return view('Achat/AllAchatView',[
+            'listeachat'=>$listeAchat
+        ]);
+    }   
 }
 
 
