@@ -189,7 +189,6 @@
 				<section class="presentation">
 					<h1> <span class="h1-span" style="color : #F4E904;">Mindset</span> et <span class="h1-span"
 							style="color : #F4E904;">skills</span></h1>
-					<!-- vidéo de présentation dans img/video.mp4 -->
 					<video controls class="video-presentation">
 						<source src="<?php echo base_url('assets/img/video_acceuil.webm'); ?>" type="video/mp4">
 						Your browser does not support the video tag.
@@ -356,7 +355,6 @@
 			</div>
 		</section>
 		</div>
-
 
 		</main>
 		<section class="wrapper-footer">
