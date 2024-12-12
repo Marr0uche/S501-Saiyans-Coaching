@@ -99,18 +99,58 @@ body {
 
 .btn-save {
 	margin: 2rem auto 0;
-	background: radial-gradient(circle, #F4E904 70%, #121212 100%);
-	color: #fff;
+	background: #0C0C0C;
+	color: #F4E904;
 	padding: 0.75rem 2rem;
-	border: none;
+	border: transparent 2px solid;
 	border-radius: 20px;
-	font-size: 1.2rem;
+	font-size: 1rem;
+	font-weight: bold;
 	cursor: pointer;
 	display: block;
 	text-align: center;
+
+	transition: all 0.5s ease;
 }
 
 .btn-save:hover {
-	opacity: 0.9;
-	background: radial-gradient(circle, #F4E904 60%, #121212 100%);
+	
+	border: #F4E904 2px solid;
 }
+
+/*responsif*/
+@media screen and (max-width: 768px) {
+	.container-profile {
+		flex-direction: column;
+		border-radius: 20px;
+	}
+
+	.sidebar {
+		width: 100%;
+		flex-direction: row;
+		justify-content: space-around;
+		border-radius: 20px 20px 0 0;
+	}
+
+	.sidebar i {
+		margin: 0;
+	}
+
+	.profile-section {
+		padding: 1rem;
+	}
+
+	.form-row {
+		width: 100%;
+	}
+}
+
+
+@media screen and (max-width: 500px) {
+	.sidebar {
+		flex-direction: row;
+		justify-content: space-around;
+	}
+}
+
+
