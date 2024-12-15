@@ -21,6 +21,11 @@ class DocumentModel extends Model
 		return $this->where('iddocument', $idDocument)->first();
 	}
 
+	public function getDocumentFromTitre($titreDocument)
+	{
+		return $this->where('titredocument', $titreDocument)->first();
+	}
+
 	public function creerDocument($documentDonnee)
 	{
 		return $this->insert($documentDonnee);

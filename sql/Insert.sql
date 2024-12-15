@@ -253,61 +253,31 @@ VALUES
 	(2, 2),
 	(3, 3);
 
+INSERT INTO Produit (TitreProduit, photoProduit, descriptionProduit, prix, valabilite, affichage, affichageAccueil)
+VALUES 
+('Programme Fitness Débutant', 'fitness.jpg', 'Un programme complet pour débutants.', 49.99, 6, TRUE, TRUE),
+('Programme Perte de Poids', 'weightloss.webp', 'Un programme pour brûler les graisses.', 59.99, 6, TRUE, TRUE),
+('Programme Gain de Masse', 'massgain.webp', 'Un programme pour prendre de la masse.', 69.99, 6, TRUE, TRUE);
+
 INSERT INTO
-	Document (titreDocument, descriptionDocument)
+	Document (
+		titreDocument,
+		descriptionDocument
+	)
 VALUES
-	('Promo de Noël', 'Réduction spéciale pour Noël'),
+	(
+		'Promo de Noël',
+		'Réduction spéciale pour Noël'
+	),
 	(
 		'Promo de Printemps',
 		'Réduction pour le printemps'
 	),
-	('Article A', 'Description de l''article A'),
-	('Article B', 'Description de l''article B'),
 	(
-		'Vidéo Coaching 1',
-		'Description de la vidéo de coaching 1'
-	),
-	(
-		'Vidéo Coaching 2',
-		'Description de la vidéo de coaching 2'
+		'Promo de Rentrée',
+		'Réduction pour la rentrée'
 	);
 
-INSERT INTO
-	Produit (
-		TitreProduit,
-		photoProduit,
-		descriptionProduit,
-		prix,
-		affichage,
-		affichageAccueil
-	)
-VALUES
-	(
-		'Produit A',
-		'photo_a.jpg',
-		'Description du produit A',
-		19.99,
-		TRUE,
-		TRUE
-	),
-	(
-		'Produit B',
-		'photo_b.jpg',
-		'Description du produit B',
-		29.99,
-		TRUE,
-		TRUE
-	),
-	(
-		'Produit C',
-		'photo_c.jpg',
-		'Description du produit C',
-		15.99,
-		FALSE,
-		FALSE
-	);
-
--- Ensuite, insérez dans les autres tables
 -- Insertion dans Promotion
 INSERT INTO
 	Promotion (
@@ -334,29 +304,27 @@ VALUES
 		TRUE,
 		15.00,
 		'SPRING2024'
+	),
+	(
+		3,
+		'Promo de Rentrée',
+		'Réduction pour la rentrée',
+		FALSE,
+		10.00,
+		'RENTREE2024'
 	);
 
--- Insertion dans Article
-INSERT INTO
-	Article (idDocument, DatePublication, Image)
-VALUES
-	(3, '2024-12-01 10:00:00', 'article_a.jpg'),
-	(4, '2024-12-02 11:00:00', 'article_b.jpg');
+-- Insérer quelques articles
+INSERT INTO Article (titreDocument, descriptionDocument, DatePublication, Image, blog)
+VALUES 
+('Comment débuter ?', 'Pas évident de choisir une activité physique quand votre dernier contact avec le sport remonte à plus de 10 ans. Avec le temps, vous remarquez que votre souffle aussi prend quelques années. Les balades à vélo du dimanche deviennent plus difficiles, le bas du dos fait des siennes … Ah, les bienfaits de l’activité physique, on les avait presque oubliés. C’est décidé, aujourd’hui, vous commencez le sport !', NOW(), 'debuter.jpg', TRUE),
+('Absence du 25/12', 'Bonjour, je serais absent du 23/12 au 28/12 à cause des vacances de Noel', NOW(), 'noel.jpg', FALSE);
 
--- Insertion dans VideoCoaching
-INSERT INTO
-	VideoCoaching (idDocument, video)
-VALUES
-	(5, 'video1.mp4'),
-	(6, 'video2.mp4');
-
--- Insertion dans Appliquer
-INSERT INTO
-	Appliquer (idDocument, idProduit)
-VALUES
-	(1, 1),
-	(1, 2),
-	(2, 3);
+-- Insérer quelques articles  sans image
+INSERT INTO Article (titreDocument, descriptionDocument, DatePublication, blog)
+VALUES 
+('Les bienfaits du sport', 'Lorsqu’on pratique une activité sportive, le corps sécrète des hormones telles que l’endorphine, la dopamine ou l’adrénaline qui permettent de réduire le stress, améliorer la qualité du sommeil, diminuer les douleurs et agir comme un antidépresseur, c’est donc avant tout une source de plaisir.', NOW(), TRUE),
+('Evenement à la Salle le 20/12', 'Je vous donne rendez-vous le 20 Décembre à 14h, salle Louis Blanc, pour un cours spécial ZUMBA avec Mme Gislaine.', NOW(), FALSE);
 
 -- Insertion dans Acheter
 INSERT INTO
@@ -373,22 +341,26 @@ VALUES
 		1,
 		5,
 		'2024-12-01 15:00:00',
-		'Super produit !',
-		1
+		'Super produit !'
+	),
+	(
+		2,
+		1,
+		5,
+		'2024-12-01 15:00:00',
+		'J''ai beaucoup aimé !'
 	),
 	(
 		2,
 		2,
 		4,
 		'2024-12-02 12:30:00',
-		'Bon rapport qualité-prix',
-		1
+		'Bon rapport qualité-prix'
 	),
 	(
 		3,
 		3,
 		3,
 		'2024-12-03 14:00:00',
-		'Produit correct mais peut mieux faire',
-		2
+		'Correct mais peut mieux faire'
 	);

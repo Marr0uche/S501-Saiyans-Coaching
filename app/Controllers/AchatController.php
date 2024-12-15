@@ -6,6 +6,7 @@ use App\Models\ClientModel;
 use App\Models\AcheterModel;
 use CodeIgniter\Controller;
 use App\Models\ProduitModel;
+use App\Models\DocumentModel;
 
 class AchatController extends Controller
 {
@@ -29,9 +30,10 @@ class AchatController extends Controller
 		$clientId = $session->get('client_id');
 
 		$promo = $session->get('codepromo');
-		$idDocument = $promo ? $promo['iddocument'] : null;
 
-		$acheterModel->ajouterAchat($produitId, $clientId, $idDocument);
+		$documentModel = new DocumentModel();
+		$doc = $documentModel->getDocumentFromTitre($promo['titredocument']);
+		$acheterModel->ajouterAchat($produitId, $clientId, $doc['iddocument']);
 
 		$session->remove('codepromo');
 		return view('Achat/AchatConfirme');

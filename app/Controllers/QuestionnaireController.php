@@ -97,7 +97,7 @@ class QuestionnaireController extends BaseController
 					'autre_objectif' => $data['autre_objectif'] ?? '',
 					'niveau' => $data['niveau'],
 					'temps' => $data['temps'],
-					'contraintes' => $data['contraintes'] === 'Oui' ? $data['details_contraintes'] : 'Aucune',
+					'contraintes' => $data['contraintes'] === 'Oui' ? $data['limitation_physique'] : 'Aucune',
 					'activites' => !empty($data['objectifs']) ? implode(', ', $data['objectifs']) : 'Non spécifié',
 					'autre_activite' => $data['autre_objectif'] ?? '',
 					'preference' => $data['preference'],

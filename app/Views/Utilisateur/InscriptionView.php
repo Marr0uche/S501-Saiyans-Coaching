@@ -85,9 +85,10 @@
 					<input type="number" class="form-control" id="poidsdecorps" name="poidsdecorps" placeholder="Poids" maxlength="3" required>
 				</div>
 			</div>
-			<button type="submit" class="btn btn-primary btn-block">Retour</button>
 			<button type="submit" class="btn btn-primary btn-block">S'inscrire</button>
 		</form>
+
+		<button class="btn btn-primary btn-block" onclick="window.location.href='/authentification'">Retour</button>
 	</div>
 
 </body>

@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\DocumentModel;
 use CodeIgniter\Controller;
 use Config\Pager;
 use App\Models\AcheterModel;
@@ -69,6 +70,14 @@ class PromotionController extends Controller
 		];
 
 		$promos = new PromotionModel();
+
+		$dataDoc = [
+			'titredocument' => $this->request->getPost('Titre'),
+			'descriptiondocument' => $this->request->getPost('descriptiondocument')
+		];
+		$documentModel = new DocumentModel();
+		$documentModel->creerDocument($dataDoc);
+
 		$data = [
 			'titredocument' => $this->request->getPost('Titre'),
 			'descriptiondocument' => $this->request->getPost('descriptiondocument'),
@@ -78,6 +87,7 @@ class PromotionController extends Controller
 		];
 
 		if (!$promos->validate($data)) {
+
 			return redirect()->back()->withInput()->with('errors', $promos->errors());
 		}
 		$promos->creerPromotion($data);

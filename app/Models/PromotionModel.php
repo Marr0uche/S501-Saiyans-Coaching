@@ -25,6 +25,11 @@ class PromotionModel extends Model
 		return $this->where('iddocument', $idDocument)->first();
 	}
 
+	public function getTitrePromotionFromCode($code)
+	{
+		return $this->where('codepromo', $code)->first();
+	}
+
 	public function getActivePromotion()
 	{
 		return $this->where('active', true)->findAll();
