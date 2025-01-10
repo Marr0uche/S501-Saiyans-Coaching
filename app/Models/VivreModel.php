@@ -6,18 +6,17 @@ use CodeIgniter\Model;
 
 class ProduitModel extends Model
 {
-    protected $table = 'vivre';
-    protected $primaryKey = 'idclient';
-
+	protected $table = 'vivre';
+	protected $primaryKey = 'idclient';
 	protected $useAutoIncrement = false;
 
-    protected $allowedFields = [
-        'idadresse'
-    ];
-	
-    protected $returnType = 'array';
+	protected $allowedFields = [
+		'idadresse'
+	];
 
-	public function getVivre($idclient,$idadresse)
+	protected $returnType = 'array';
+
+	public function getVivre($idclient, $idadresse)
 	{
 		return $this->where('idclient', $idclient)->where('idadresse', $idadresse)->first();
 	}

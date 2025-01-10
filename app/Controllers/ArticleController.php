@@ -1,8 +1,11 @@
 <?php
+
 namespace App\Controllers;
+
 use App\Models\ArticleModel;
 use CodeIgniter\Controller;
 use Config\Pager;
+
 class ArticleController extends Controller
 {
 
@@ -14,7 +17,7 @@ class ArticleController extends Controller
 	public function indexActu()
 	{
 		$articleModel = new ArticleModel();
-		
+
 		$keyword = $this->request->getGet('keyword');
 		if ($keyword === null) {
 			$keyword = '';
@@ -23,28 +26,31 @@ class ArticleController extends Controller
 
 		$configPager = config(Pager::class);
 		$perPage = $configPager->perPage;
-		$perPage = 3;  // Limite des tâches par statut
-    	$currentPage = $this->request->getVar('page') ?? 1; 
+		$perPage = 3;
+		$currentPage = $this->request->getVar('page') ?? 1;
 
 		$articles = $articleModel
-					->groupStart()
-						->like('LOWER(titredocument)', $keyword)
-						->orLike('LOWER(descriptiondocument)', $keyword)
-					->groupEnd()
-					->where('blog', false)
-					->paginate($perPage, 'default');
+			->groupStart()
+			->like('LOWER(titredocument)', $keyword)
+			->orLike('LOWER(descriptiondocument)', $keyword)
+			->groupEnd()
+			->where('blog', false)
+			->paginate($perPage, 'default');
 
-
-		return view('Actualite/ActualiteView.php', 
-					['articles' => $articles,
-						   'pager' => $articleModel->pager]);					
+		return view(
+			'Actualite/ActualiteView.php',
+			[
+				'articles' => $articles,
+				'pager' => $articleModel->pager
+			]
+		);
 	}
-	
+
 
 	public function indexBlog()
 	{
 		$articleModel = new ArticleModel();
-		
+
 		$keyword = $this->request->getGet('keyword');
 		if ($keyword === null) {
 			$keyword = '';
@@ -53,21 +59,24 @@ class ArticleController extends Controller
 
 		$configPager = config(Pager::class);
 		$perPage = $configPager->perPage;
-		$perPage = 3;  // Limite des tâches par statut
-    	$currentPage = $this->request->getVar('page') ?? 1; 
+		$perPage = 3;
+		$currentPage = $this->request->getVar('page') ?? 1;
 
 		$articles = $articleModel
-					->groupStart()
-						->like('LOWER(titredocument)', $keyword)
-						->orLike('LOWER(descriptiondocument)', $keyword)
-					->groupEnd()
-					->where('blog', true)
-					->paginate($perPage, 'default');
+			->groupStart()
+			->like('LOWER(titredocument)', $keyword)
+			->orLike('LOWER(descriptiondocument)', $keyword)
+			->groupEnd()
+			->where('blog', true)
+			->paginate($perPage, 'default');
 
-
-		return view('Blog/BlogView.php', 
-					['articles' => $articles,
-						   'pager' => $articleModel->pager]);					
+		return view(
+			'Blog/BlogView.php',
+			[
+				'articles' => $articles,
+				'pager' => $articleModel->pager
+			]
+		);
 	}
 
 	public function nouveauTraitement()
@@ -77,18 +86,23 @@ class ArticleController extends Controller
 			'descriptiondocument' => 'required',
 			'blog' => 'required',
 		];
-	
+
 		if (!$this->validate($validationRules)) {
 			return redirect()->back()->withInput()->with('validation', $this->validator);
 		}
 
 		$articleModel = new ArticleModel();
+		$blog = $this->request->getPost('blog');
 
 		$file = $this->request->getFile('image');
 		$fileName = null;
 
 		if ($file && $file->isValid() && !$file->hasMoved()) {
-			$fileName = $file->getRandomName();
+			if ($blog === 'true') {
+				$fileName = 'blog_' . $file->getRandomName();
+			} else {
+				$fileName = 'actu_' . $file->getRandomName();
+			}
 			$file->move(WRITEPATH . '../public/uploads', $fileName);
 		}
 
@@ -97,16 +111,13 @@ class ArticleController extends Controller
 			'descriptiondocument' => $this->request->getPost('descriptiondocument'),
 			'datepublication' => $this->request->getPost('datepublication'),
 			'image' => $fileName,
-			'blog' => $this->request->getPost('blog'),
+			'blog' => $blog,
 		];
 
 		$articleModel->creerArticle($data);
-		if($data['blog'] === true)
-		{
+		if ($data['blog'] === 'true') {
 			return redirect()->to('/blog');
-		}
-		else
-		{
+		} else {
 			return redirect()->to('/actualites');
 		}
 	}
@@ -146,7 +157,7 @@ class ArticleController extends Controller
 			if (!empty($article['image']) && file_exists('uploads/' . $article['image'])) {
 				unlink('uploads/' . $article['image']);
 			}
-			$data['image'] = null; 
+			$data['image'] = null;
 		} elseif ($image && $image->isValid() && !$image->hasMoved()) {
 			$newImageName = $image->getRandomName();
 			$image->move('uploads', $newImageName);
@@ -156,55 +167,39 @@ class ArticleController extends Controller
 			}
 			$data['image'] = $newImageName;
 		}
-		
+
 		$articleModel->majArticle($iddocument, $data);
-		
-		if($article['blog'] == true)
-		{
+
+		if ($article['blog'] === 't') {
 			return redirect()->to('/blog');
-		}
-		else
-		{
+		} else {
 			return redirect()->to('/actualites');
 		}
-		
 	}
-
-	
-	
 
 	public function suppression($idDocArticle)
 	{
-		echo 'idDocArticle' . $idDocArticle;
 		$articleModel = new ArticleModel();
 
-		// Récupérer l'article avant de le supprimer
 		$article = $articleModel->find($idDocArticle);
-		echo 'article' . $article['image'];
-    
+
 		if ($article && !empty($article['image'])) {
-			
-			
+
 			$imagePath = FCPATH . 'uploads/' . $article['image'];
 			echo 'path' . $imagePath;
-			
+
 			if (file_exists($imagePath)) {
 				echo 'exists';
-				unlink($imagePath); 
+				unlink($imagePath);
 			}
 		}
 
 		$articleModel->supprimerArticle($idDocArticle);
 
-		if($article['blog'] == 1)
-		{
+		if ($article['blog'] === 't') {
 			return redirect()->to('/blog');
-		}
-		else
-		{
+		} else {
 			return redirect()->to('/actualites');
 		}
 	}
 }
-
-?>

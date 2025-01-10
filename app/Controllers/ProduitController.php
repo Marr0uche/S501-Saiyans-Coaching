@@ -29,10 +29,63 @@ class ProduitController extends Controller{
         $productListe = $product->getProduitAffichage();
         $promotionListe= $promotion->getActivePromotion();
 
+        $session = session();
+        $session->remove('codepromo');
+
         // Passer les données à la vue
         return view('Produit/ProduitView', [
             'produits' => $productListe,
             'promotion' =>$promotionListe
+        ]); 
+    }
+
+	public function indexDashboard(){
+
+        $session = session();
+		$admin = $session->get('admin');
+		$connexion = $session->get('client_id');
+		if ($admin === 'f' or $connexion === null) {
+			return redirect()->to('/');
+		}
+
+        // Chargement des modèles
+        $product = new ProduitModel();
+        $promotion = new PromotionModel();
+
+        $orderbyProd = $this->request->getVar('orderbyProd') ?? 'idproduit';
+        $orderProd = strtoupper($this->request->getVar('orderProd')) === 'ASC' ? 'ASC' : 'DESC';
+
+        $validColumnsProd = ['idproduit', 'titreproduit', 'descriptionproduit', 'prix'];
+		if (!in_array($orderbyProd, $validColumnsProd)) {
+			$orderbyProd = 'idproduit';
+		}
+
+
+        /*orderby Prom*/
+        $orderbyProm = $this->request->getVar('orderbyProm') ?? 'iddocument';
+        $orderProm = strtoupper($this->request->getVar('orderProm')) === 'ASC' ? 'ASC' : 'DESC';
+
+        $validColumnsProm = ['iddocument', 'titredocument', 'descriptiondocument', 'reductionpromo','codepromo'];
+		if (!in_array($orderbyProm, $validColumnsProm)) {
+			$orderbyProm = 'iddocument';
+		}
+
+		$configPager = config(Pager::class);
+		$perPage = 2;
+		
+
+        // Utilisation de la méthode paginate
+        $productListe = $product->orderBy($orderbyProd, $orderProd)
+                                ->findAll();
+        $promotionListe= $promotion->orderBy($orderbyProm, $orderProm)
+                                   ->findAll();
+
+        // Passer les données à la vue
+        return view('Admin/Gestionproduit', [
+            'produits' => $productListe,
+            'promotions' =>$promotionListe,
+            'orderProd' => $orderProd,
+            'orderProm' => $orderProm,
         ]); 
     }
 
@@ -43,14 +96,19 @@ class ProduitController extends Controller{
         $product = new ProduitModel();
         $achat = new AcheterModel();
 
-        $listeAchat = $achat->getAcheterProduit($idproduit);
+		$perPage = 3;
+		$prod = $product->getProduit($idproduit);
 
-        $prod = $product->getProduit($idproduit);
+
+        $listeAchat = $achat->where('idproduit', $idproduit)->paginate($perPage,'group_achats');
+
+   	 	$pager = $achat->pager;
 
         // Passer les données à la vue
         return view('Produit/DetailsProduit', [
             'produit' => $prod,
-            'achats' => $listeAchat
+            'achats' => $listeAchat,
+			'pager' => $pager
         ]);
     }
     public function supprimer($idProduit)
@@ -58,57 +116,80 @@ class ProduitController extends Controller{
         $product = new ProduitModel();
 
 		$product->supprimerProduit($idProduit);
-		return redirect()->to('/Produit');
+		return redirect()->to('/produit/dashboard');
 	}
 
-    public function creer() {
-        $validationRules = [
-            'fichier' => [
-                'rules' => 'uploaded[fichier]|mime_in[fichier,image/jpg,image/jpeg,image/png]|max_size[fichier,2048]',
-                'errors' => [
-                    'uploaded' => 'Vous devez sélectionner un fichier.',
-                    'mime_in' => 'Seuls les fichiers JPG et PNG sont autorisés.',
-                    'max_size' => 'La taille du fichier ne doit pas dépasser 2MB.'
-                ],
-            ],
-        ];
+   public function creer() {
+    $produitModel = new ProduitModel();
     
-        if (!$this->validate($validationRules)) {
-            return redirect()->to('/Produit');
-        }
+    // Règles de validation
+    $rules = [
+        'titreproduit' => 'required|max_length[20]', // Le titre ne doit pas dépasser 100 caractères
+        'descriptionproduit' => 'required|max_length[255]', // La description ne doit pas dépasser 255 caractères
+        'prix' => 'required|numeric|greater_than[0]', // Le prix doit être un nombre positif
+        'fichier' => 'is_image[fichier]|mime_in[fichier,image/jpg,image/jpeg,image/png]|max_size[fichier,2048]', // Photo optionnelle avec vérifications
+    ];
     
-        $produitModel = new ProduitModel();
-        
-        // Récupérer les données du formulaire
-        $data = [
-            'titreproduit' => $this->request->getPost('Titre'),
-            'descriptionproduit' => $this->request->getPost('descriptionproduit'),
-            'active' => $this->request->getPost('prix'),
-            'affichageaccueil' => $this->request->getPost('dashboard') === 'true', // Assurez-vous que c'est un booléen
-            'affichage' => $this->request->getPost('Afficher') === 'true'  // Assurez-vous que c'est un booléen
-        ];
+    // Messages personnalisés
+    $messages = [
+        'titreproduit' => [
+            'required' => 'Le titre du produit est obligatoire.',
+            'max_length' => 'Le titre du produit ne peut pas dépasser 20 caractères.'
+        ],
+        'descriptionproduit' => [
+            'required' => 'La description du produit est obligatoire.',
+            'max_length' => 'La description du produit ne peut pas dépasser 255 caractères.'
+        ],
+        'prix' => [
+            'required' => 'Le prix est obligatoire.',
+            'numeric' => 'Le prix doit être un nombre.',
+            'greater_than' => 'Le prix doit être supérieur à 0.'
+        ],
+        'fichier' => [
+            'is_image' => 'Le fichier téléchargé doit être une image.',
+            'mime_in' => 'Seuls les formats JPG, JPEG et PNG sont autorisés.',
+            'max_size' => 'La taille de l\'image ne doit pas dépasser 2 Mo.'
+        ]
+    ];
     
-        // Traitement de l'image
-        $imageFile = $this->request->getFile('fichier');
-        if ($imageFile && $imageFile->isValid() && !$imageFile->hasMoved()) {
-            // Si une nouvelle image est téléchargée, déplacer le fichier
-            $newImagePath = 'public/assets/' . $imageFile->getName();
-            $imageFile->move('public/assets/', $imageFile->getName());
-            $photoproduit = $newImagePath;
-        } else {
-        // Si aucune image n'est téléchargée, conserver l'ancienne image
-        $photoproduit = $this->request->getPost('photoproduit'); // Utiliser l'image existante
+    // Validation des données
+    if (!$this->validate($rules, $messages)) {
+        return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
     }
-        // Insérer les données dans la base de données
-        $produitModel->creerProduit($data);
-        return redirect()->to('/Produit');
+    
+    // Traitement de l'image
+    $file = $this->request->getFile('fichier');
+    $fileName = null;
+    
+    if ($file && $file->isValid() && !$file->hasMoved()) {
+        $fileName = $file->getRandomName();
+        $file->move(WRITEPATH . '../public/uploads', $fileName);
     }
+    
+    // Récupérer les données du formulaire
+    $data = [
+        'titreproduit' => $this->request->getPost('titreproduit'),
+        'descriptionproduit' => $this->request->getPost('descriptionproduit'),
+        'prix' => $this->request->getPost('prix'),
+        'valabilite' => $this->request->getPost('valabilite'),
+        'affichageaccueil' => $this->request->getPost('affichageacceuil') === 'on',
+        'affichage' => $this->request->getPost('affichage') === 'on',
+        'photoproduit' => $fileName
+    ];
+    
+    // Insérer les données dans la base de données
+    $produitModel->creerProduit($data);
+    return redirect()->to('/produit/dashboard')->with('success', 'Produit ajouté avec succès.');
+}
+
     
     public function creerView(){
          return view('Produit/CreerProduit');
     }
     public function modifier()
 	{
+      
+        
 		$produitModel = new ProduitModel();
 
 		$idProduit = $this->request->getPost('idproduit');
@@ -117,19 +198,47 @@ class ProduitController extends Controller{
 			return redirect()->back()->with('error', 'ID Projet invalide.');
 		}
 
-		$data = [
-			'titreproduit' => $this->request->getPost('titreproduit'),
-			'photoproduit' => $this->request->getPost('fichier'),
-            'descriptionproduit' => $this->request->getPost('descriptionproduit'),
-			'prix' => $this->request->getPost('prix'),
-            'affichage' => $this->request->getPost('affichage'),
-			'affichageaccueil' => $this->request->getPost('affichageaccueil'),
-		];
+        $affichage = $this->request->getPost('affichage');
+        $affichageAcceuil = $this->request->getPost('affichageacceuil');
 
-		if ($produitModel->majProduit($idProduit, $data)) {
-			return redirect()->to('/Produit')->with('message', 'Projet modifié avec succès.');
+
+        if (isset($affichage)) {
+            $affichage = true;
+        }else
+        {
+            $affichage = 'f';
+        }
+
+        if (isset($affichageAcceuil)) {
+            $affichageAcceuil = true;
+        }else
+        {
+            $affichageAcceuil = 'f';
+        }
+
+        $file = $this->request->getFile('fichier');
+        $fileName = null;
+        $data = [
+            'titreproduit' => $this->request->getPost('titreproduit'),
+            'descriptionproduit' => $this->request->getPost('descriptionproduit'),
+            'prix' => $this->request->getPost('prix'),
+            'valabilite' => $this->request->getPost('Valabilite'),
+            'affichage' => $affichage,
+            'affichageaccueil' => $affichageAcceuil
+        ];
+
+		if ($file && $file->isValid() && !$file->hasMoved()) {
+            echo 'inhere';
+			$fileName = 'produit_' . $file->getRandomName();
+			$file->move(WRITEPATH . '../public/uploads', $fileName);
+            $data['photoproduit'] = $fileName;
+		}
+
+        if ($produitModel->majProduit($idProduit, $data)) {
+			return redirect()->to('/produit/dashboard')->with('message', 'Projet modifié avec succès.');
 		} else {
-			return redirect()->back()->with('error', 'Erreur lors de la modification du projet.');
+			echo 'non';
+            //return redirect()->back()->with('error', 'Erreur lors de la modification du projet.');
 		}
 	}
 }

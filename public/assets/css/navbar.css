@@ -1,211 +1,200 @@
-/*------------------ GLOBAL STYLES ------------------*/
-li {
-    list-style: none; /* Supprime les puces des éléments de liste */
+.links li {
+	list-style: none;
 }
 
-a {
-    text-decoration: none; /* Supprime le soulignement des liens */
-    color: #fff; /* Définit la couleur blanche par défaut */
-    font-size: 1rem; /* Taille de police standard */
+.navbar a,
+.menu-burger a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 1rem;
 }
 
 a:hover {
-    color: #F4E904; /* Change la couleur au survol */
+	color: #F4E904;
 }
 
-/*------------------ HEADER STYLES ------------------*/
 header {
-    position: fixed; 
-    top: 0;
-    width: 100%;
-    padding: 0 2rem; /* Espacement horizontal */
-    background-color: rgba(0, 0, 0, 0.5); /* Fond noir transparent */
-    backdrop-filter: blur(100px); /* Flou de fond */
-    z-index: 1000; /* Superpose les autres éléments */
+	position: fixed;
+	top: 0;
+	width: 100%;
+	padding: 0 2rem;
+	background-color: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(100px);
+	z-index: 1000;
 }
 
-/*------------------ NAVBAR ------------------*/
 .navbar {
-    width: 100%;
-    max-width: 1200px; /* Limite la largeur maximale */
-    height: 85px;
-    margin: 0 auto; /* Centre horizontalement */
+	width: 100%;
+	max-width: 1200px;
+	height: 85px;
+	margin: 0 auto;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Distribution égale des éléments */
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .navbar .links {
-    display: flex;
-    gap: 2rem; /* Espacement entre les liens */
+	display: flex;
+	gap: 2rem;
 }
 
 .navbar .menu-burger-button {
-    color: white;
-    display: none; /* Caché par défaut */
-    font-size: 1.5rem;
-    cursor: pointer; /* Style de curseur interactif */
+	color: white;
+	display: none;
+	font-size: 1.5rem;
+	cursor: pointer;
 }
 
-/*------------------ ACTION BUTTON ------------------*/
 .action-button {
-    background-color: rgba(115, 115, 115, 0.9); /* Fond gris transparent */
-    border-radius: 40px;
-    border: 2px solid #F4E904; /* Bordure jaune */
-    color: white;
-    padding: 0.5rem 1.2rem;
-    outline: none;
-    font-size: 0.9rem;
-    font-weight: bold;
-    cursor: pointer; /* Indique un élément interactif */
+	background-color: rgba(115, 115, 115, 0.9);
+	border-radius: 40px;
+	border: 2px solid #F4E904;
+	color: white;
+	padding: 0.5rem 1.2rem;
+	outline: none;
+	font-size: 0.9rem;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .action-button:hover {
-    background-color: #F4E904; /* Fond jaune au survol */
-    color: black;
-    border: 2px solid black;
+	background-color: #F4E904;
+	color: black;
+	border: 2px solid black;
 }
 
-/*------------------ BURGER MENU ------------------*/
 .menu-burger {
-    display: none; /* Caché par défaut */
-    height: 0;
-
-    position: absolute;
-    right: 2rem;
-    top: 85px;
-    width: 300px;
-
-    background-color: rgba(0, 0, 0, 0.5); /* Fond noir transparent */
-    backdrop-filter: blur(100px); /* Flou de fond */
-    overflow: hidden;
-    border-radius: 20px;
-
-    /* Animation */
-    transition: height 0.5s ease, box-shadow 0.5s ease;
+	display: none;
+	height: 0;
+	position: absolute;
+	right: 2rem;
+	top: 85px;
+	width: 300px;
+	background-color: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(100px);
+	overflow: hidden;
+	border-radius: 20px;
+	transition: height 0.5s ease, box-shadow 0.5s ease;
 }
 
 .menu-burger.open {
-    height: 392px;
-    box-shadow: 0 0 0 1px #fff; 
+	height: 392px;
+	box-shadow: 0 0 0 1px #fff;
 }
 
 .menu-burger li {
-    padding: 0.7rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	padding: 0.7rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .menu-burger .links {
-    padding-top: 0.75rem !important;
+	padding-top: 0.75rem !important;
 }
 
 .divider {
-    margin: 1rem auto; /* Centre la ligne */
-    height: 2px;
-    background-color: white;
-    width: 80%; /* Largeur réduite */
+	margin: 1rem auto;
+	height: 2px;
+	background-color: white;
+	width: 80%;
 }
 
 .menu-burger .action-button {
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	width: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .button-burger-menu {
-    display: flex;
-    flex-direction: column; /* Organise verticalement */
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-/* Animation de l'icône burger */
 .menu-burger-button i {
-    display: inline-block;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+	display: inline-block;
+	transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .menu-burger-button i.animate {
-    transform: rotate(110deg); /* Rotation de l'icône */
-    opacity: 0; /* Disparaît progressivement */
+	transform: rotate(110deg);
+	opacity: 0;
 }
 
-/*------------------ RESPONSIVE DESIGN ------------------*/
 @media screen and (max-width: 990px) {
-    header {
-        background: none;
-        /*enlever le backdrop*/
+	header {
+		background: none;
+		backdrop-filter: none;
+	}
 
-        backdrop-filter: none;
-    }
+	.navbar .links,
+	.navbar .action-button {
+		display: none;
+	}
 
-    .navbar .links,
-    .navbar .action-button {
-        display: none; /* Caché pour les petits écrans */
-    }
+	.navbar .menu-burger-button {
+		display: block;
+	}
 
-    .navbar .menu-burger-button {
-        display: block; /* Affiche le bouton burger */
-    }
+	.menu-burger {
+		display: block;
+	}
 
-    .menu-burger {
-        display: block; /* Permet l'affichage */
-    }
-
-    .menu-burger li {
-        padding: 0.6rem;
-    }
+	.menu-burger li {
+		padding: 0.6rem;
+	}
 }
 
 @media screen and (max-width: 678px) {
-    .li-responsive a {
-        font-size: 0.9rem; /* Réduit la taille de police */
-    }
+	.li-responsive a {
+		font-size: 0.9rem;
+	}
 
-    .menu-burger li {
-        padding: 0.6rem;
-    }
+	.menu-burger li {
+		padding: 0.6rem;
+	}
 
-    .button-burger-menu a {
-        font-size: 0.8rem; /* Police plus petite */
-    }
+	.button-burger-menu a {
+		font-size: 0.8rem;
+	}
 
-    .menu-burger.open {
-        height: 372px; /* Hauteur visible lorsqu'ouvert */
-    }
+	.menu-burger.open {
+		height: 372px;
+	}
 }
 
 @media screen and (max-width: 476px) {
-    .menu-burger {
-        left: 3rem;
-        right: 3rem;
-        width: unset; /* Largeur dynamique */
-    }
+	.menu-burger {
+		left: 3rem;
+		right: 3rem;
+		width: unset;
+	}
 
-    .menu-burger li {
-        padding: 0.4rem;
-    }
+	.menu-burger li {
+		padding: 0.4rem;
+	}
 
-    .li-responsive a {
-        font-size: 0.8rem;
-    }
+	.li-responsive a {
+		font-size: 0.8rem;
+	}
 
-    .divider {
-        width: 60%; /* Réduit la largeur */
-    }
+	.divider {
+		width: 60%;
+	}
 
-    .menu-burger.open {
-        height: 298px; /* Hauteur visible lorsqu'ouvert */
-    }
+	.menu-burger.open {
+		height: 298px;
+	}
 }
 
 @media screen and (max-width: 376px) {
-    .menu-burger {
-        left: 1.5rem;
-        right: 1.5rem;
-    }
+	.menu-burger {
+		left: 1.5rem;
+		right: 1.5rem;
+	}
 }

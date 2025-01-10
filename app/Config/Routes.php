@@ -34,6 +34,9 @@ $routes->post('/produit/creer', 'ProduitController::creer');
 // Modification d'un produit
 $routes->post('/produit/modification', 'ProduitController::modifier');
 
+//Gestion de produit
+$routes->get('/produit/dashboard', 'ProduitController::indexDashboard');
+
 // Authentification
 $routes->get('authentification', 'AuthentificationController::index');
 $routes->post('authentification/connexion', 'AuthentificationController::connexion');
@@ -50,9 +53,12 @@ $routes->post('/profile/modifier', 'ProfileController::modifier');
 // Promotion
 $routes->get('/promotion/ajoutview', 'PromotionController::creerView');
 $routes->post('/promotion/creer', 'PromotionController::creer');
-$routes->get('promo', 'PromotionController::index');
+$routes->get('/promo', 'PromotionController::index');
+$routes->get('produit/promo', 'PromotionController::index');
+
 $routes->post('promotion/modifier', 'PromotionController::modifier');
 $routes->get('/promotion/suppression/(:num)', 'PromotionController::supprimer/$1');
+$routes->post('promo/valider', 'PromotionController::valider');
 
 // Admin
 $routes->get('/admin/board', 'BoardController::board');
@@ -67,3 +73,26 @@ $routes->match(['get', 'post'], 'avis/ajouter/(:num)', 'AvisController::ajouter/
 //Questionnaire
 $routes->get('/questionnaire', 'QuestionnaireController::index');
 $routes->post('questionnaire/traitementQuestionnaire', 'QuestionnaireController::traitementQuestionnaire');
+
+//Achat
+$routes->get('/achat/(:num)', 'AchatController::indexAchat/$1');
+$routes->get('/achat/ajouter/(:num)', 'AchatController::ajouter/$1');
+$routes->get('/achat/confirme', 'AchatController::confirme');
+$routes->get('/achat/allachat', 'AchatController::allachat');
+
+// A propos
+$routes->get('/A_propos', 'AProposController::index');
+$routes->get('/avant-apres', 'AvantApresController::index');
+
+// Mot de passe oublié
+$routes->get('mdp-oublie', 'MdpOublieController::demanderEmail');
+$routes->post('mdp-oublie/envoyer', 'MdpOublieController::envoyerEmail');
+$routes->get('mdp-oublie/reinitialiser/(:segment)', 'MdpOublieController::afficherFormulaireReinitialisation/$1');
+$routes->post('mdp-oublie/reinitialiser', 'MdpOublieController::reinitialiserMotDePasse');
+
+// Paiement
+$routes->get('/paiement/(:num)/(:any)', 'PaiementController::afficherPagePaiement/$1/$2');
+$routes->post('paiement/traiter', 'PaiementController::traiterPaiement');
+
+//Cgv
+$routes->get('conditions-generales', 'CgvController::index');

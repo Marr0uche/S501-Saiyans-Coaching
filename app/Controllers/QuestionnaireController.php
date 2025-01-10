@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Controllers;
+
 class QuestionnaireController extends BaseController
 {
 	public function __construct()
@@ -18,7 +20,7 @@ class QuestionnaireController extends BaseController
 		$data = $this->request->getPost();
 
 		$validation->setRules(
-	[
+			[
 				'nom' => [
 					'label' => 'Nom',
 					'rules' => 'required|alpha_space|min_length[2]|max_length[50]',
@@ -81,56 +83,47 @@ class QuestionnaireController extends BaseController
 				]
 			]
 		);
-		
+
 		if (!$validation->withRequest($this->request)->run()) {
 			session()->setFlashdata('error', 'Merci de remplir tous les champs obligatoires.');
 			return redirect()->to('/questionnaire')->withInput()->with('validation', $validation);
-		} else 
-		{
-            // Traiter les réponses
-            $responses = 
-			[
-				'nom' => $data['nom'],
-				'email' => $data['email'],
-                'sexe' => $data['sexe'],
-                'objectifs' => !empty($data['objectifs']) ? implode(', ', $data['objectifs']) : 'Non spécifié',
-                'autre_objectif' => $data['autre_objectif'] ?? '',
-                'niveau' => $data['niveau'],
-                'temps' => $data['temps'],
-                'contraintes' => $data['contraintes'] === 'Oui' ? $data['details_contraintes'] : 'Aucune',
-                'activites' => !empty($data['objectifs']) ? implode(', ', $data['objectifs']) : 'Non spécifié',
-                'autre_activite' => $data['autre_objectif'] ?? '',
-                'preference' => $data['preference'],
-                'resultats' => $data['resultats'],
-                'style_coaching' => $data['style_coaching'],
-                'nutrition' => $data['nutrition'],
-                'informations_supplementaires' => $data['informations_supplementaires'],
-            ];
+		} else {
+			$responses =
+				[
+					'nom' => $data['nom'],
+					'email' => $data['email'],
+					'sexe' => $data['sexe'],
+					'objectifs' => !empty($data['objectifs']) ? implode(', ', $data['objectifs']) : 'Non spécifié',
+					'autre_objectif' => $data['autre_objectif'] ?? '',
+					'niveau' => $data['niveau'],
+					'temps' => $data['temps'],
+					'contraintes' => $data['contraintes'] === 'Oui' ? $data['limitation_physique'] : 'Aucune',
+					'activites' => !empty($data['objectifs']) ? implode(', ', $data['objectifs']) : 'Non spécifié',
+					'autre_activite' => $data['autre_objectif'] ?? '',
+					'preference' => $data['preference'],
+					'resultats' => $data['resultats'],
+					'style_coaching' => $data['style_coaching'],
+					'nutrition' => $data['nutrition'],
+					'informations_supplementaires' => $data['informations_supplementaires'],
+				];
 
-
-			$message="";
-			foreach ($responses as $key => $value)
-			{
+			$message = "";
+			foreach ($responses as $key => $value) {
 				$message .= $key . ' : ' . $value . '<br>';
 			}
 
-			
-
 			$emailService = \Config\Services::email();
 			$emailService->setFrom($responses['email'], $responses['nom']);
-			$emailService->setTo('mohamad.marrouche20047@gmail.com'); 
+			$emailService->setTo('mohamad.marrouche20047@gmail.com');
 			$emailService->setSubject('Questionnaire Identification Programme');
 			$emailService->setMessage("$message");
 
 			if ($emailService->send()) {
-				// Message de succès
 				return redirect()->to('/')->with('success', 'Votre message a été envoyé avec succès.');
 			} else {
-				// Récupérer les erreurs d'envoi
 				$error = $emailService->printDebugger(['headers']);
 				log_message('error', 'Erreur lors de l\'envoi de l\'e-mail : ' . $error);
 
-				// Rediriger avec un message d'erreur
 				return redirect()->to('/')->with('error', 'Une erreur est survenue lors de l\'envoi de votre message. Veuillez réessayer.');
 			}
 		}

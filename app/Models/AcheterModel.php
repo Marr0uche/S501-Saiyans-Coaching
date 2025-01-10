@@ -8,7 +8,6 @@ class AcheterModel extends Model
 {
 	protected $table = 'acheter';
 	protected $primaryKey = 'idclient';
-
 	protected $useAutoIncrement = false;
 
 	protected $allowedFields = [
@@ -30,10 +29,15 @@ class AcheterModel extends Model
 
 	public function getProduitsAchetes($idClient)
 	{
-		return $this->select('Acheter.idProduit, Produit.TitreProduit')
-			->join('Produit', 'Acheter.idProduit = Produit.idProduit')
-			->where('Acheter.idClient', $idClient)
+		return $this->select('produit.*')
+			->join('produit', 'acheter.idproduit = produit.idproduit')
+			->where('acheter.idclient', $idClient)
 			->findAll();
+	}
+
+	public function getCommentaire($idclient)
+	{
+		return $this->where('idclient', $idclient)->findAll();
 	}
 
 	public function getAcheterProduit($idproduit)
@@ -43,6 +47,20 @@ class AcheterModel extends Model
 
 	public function creerAcheter($acheterDonnee)
 	{
+		return $this->insert($acheterDonnee);
+	}
+
+	public function ajouterAchat($idproduit, $idclient, $idDocument = null)
+	{
+		$acheterDonnee = [
+			'idclient' => $idclient,
+			'idproduit' => $idproduit,
+			'notetemoignage' => null,
+			'datetemoignage' => null,
+			'avistemoignage' => null,
+			'iddocument' => $idDocument
+		];
+
 		return $this->insert($acheterDonnee);
 	}
 
@@ -61,7 +79,6 @@ class AcheterModel extends Model
 			return false;
 		}
 	}
-
 
 	public function supprimerAcheter($idclient, $idproduit)
 	{

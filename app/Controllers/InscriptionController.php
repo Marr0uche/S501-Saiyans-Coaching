@@ -29,9 +29,8 @@ class InscriptionController extends Controller
 		]);
 
 		if (!$validation->withRequest($this->request)->run()) {
-			return view('Utilisateur/InscriptionView', [
-				'validation' => $validation
-			]);
+			session()->setFlashdata('error', 'Une erreur est survenue. Veuillez réessayer.');
+			return redirect()->back()->withInput();
 		}
 
 		$data = [
