@@ -1,0 +1,108 @@
+ERROR - 2025-01-10 11:09:05 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  database &quot;sayanCoaching&quot; does not exist in C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\Database\Postgre\Connection.php:77
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\Database\Postgre\Connection.php(77): pg_connect()
+#2 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\Database\BaseConnection.php(421): CodeIgniter\Database\Postgre\Connection->connect()
+#3 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#7 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\app\Models\ProduitModel.php(34): CodeIgniter\BaseModel->findAll()
+#8 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\app\Controllers\AccueilController.php(10): App\Models\ProduitModel->getProduitAffichageAcceuil()
+#9 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\CodeIgniter.php(933): App\Controllers\AccueilController->index()
+#10 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#11 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#14 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#15 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\rewrite.php(44): require_once('...')
+#16 {main}
+CRITICAL - 2025-01-10 11:09:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  database &quot;sayanCoaching&quot; does not exist
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH\Models\ProduitModel.php(34): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\AccueilController.php(10): App\Models\ProduitModel->getProduitAffichageAcceuil()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AccueilController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\oscar\\OneDrive\\Bureau\\All\\sayanCoaching\\S501-Saiyans-Coaching\\public\\index.php')
+ERROR - 2025-01-10 11:09:08 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  database &quot;sayanCoaching&quot; does not exist in C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\Database\Postgre\Connection.php:77
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\Database\Postgre\Connection.php(77): pg_connect()
+#2 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\Database\BaseConnection.php(421): CodeIgniter\Database\Postgre\Connection->connect()
+#3 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#7 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\app\Models\ProduitModel.php(34): CodeIgniter\BaseModel->findAll()
+#8 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\app\Controllers\AccueilController.php(10): App\Models\ProduitModel->getProduitAffichageAcceuil()
+#9 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\CodeIgniter.php(933): App\Controllers\AccueilController->index()
+#10 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#11 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#14 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#15 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\rewrite.php(44): require_once('...')
+#16 {main}
+CRITICAL - 2025-01-10 11:09:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  database &quot;sayanCoaching&quot; does not exist
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH\Models\ProduitModel.php(34): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\AccueilController.php(10): App\Models\ProduitModel->getProduitAffichageAcceuil()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AccueilController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\oscar\\OneDrive\\Bureau\\All\\sayanCoaching\\S501-Saiyans-Coaching\\public\\index.php')
+ERROR - 2025-01-10 11:09:09 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  database &quot;sayanCoaching&quot; does not exist in C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\Database\Postgre\Connection.php:77
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\Database\Postgre\Connection.php(77): pg_connect()
+#2 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\Database\BaseConnection.php(421): CodeIgniter\Database\Postgre\Connection->connect()
+#3 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#7 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\app\Models\ProduitModel.php(34): CodeIgniter\BaseModel->findAll()
+#8 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\app\Controllers\AccueilController.php(10): App\Models\ProduitModel->getProduitAffichageAcceuil()
+#9 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\CodeIgniter.php(933): App\Controllers\AccueilController->index()
+#10 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#11 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#14 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#15 C:\Users\oscar\OneDrive\Bureau\All\sayanCoaching\S501-Saiyans-Coaching\system\rewrite.php(44): require_once('...')
+#16 {main}
+CRITICAL - 2025-01-10 11:09:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  database &quot;sayanCoaching&quot; does not exist
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH\Models\ProduitModel.php(34): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\AccueilController.php(10): App\Models\ProduitModel->getProduitAffichageAcceuil()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AccueilController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\oscar\\OneDrive\\Bureau\\All\\sayanCoaching\\S501-Saiyans-Coaching\\public\\index.php')

@@ -29,7 +29,7 @@ class Database extends Config
     'hostname'     => 'localhost',
     'username'     => 'postgres', // Adaptez si vous utilisez un autre utilisateur
     'password'     => '', // Remplacez par le mot de passe correct
-    'database'     => 'sayanCoaching',
+    'database'     => 'sayancoaching',
     'DBDriver'     => 'Postgre',
     'DBPrefix'     => '',
     'pConnect'     => false,

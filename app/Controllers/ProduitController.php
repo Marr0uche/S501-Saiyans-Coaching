@@ -5,9 +5,10 @@ namespace App\Controllers;
 
 use CodeIgniter\Controller;
 use App\Models\ProduitModel;
-use App\Models\UtilisateurModel;
-use App\Models\PromotionModel;
+use Config\Pager;
 use App\Models\AcheterModel;
+use App\Models\PromotionModel;
+
 
 class ProduitController extends Controller{
 
