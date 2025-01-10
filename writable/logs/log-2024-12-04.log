@@ -1,0 +1,1400 @@
+INFO - 2024-12-04 12:12:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 12:12:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 12:12:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 12:12:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 12:13:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 12:13:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 12:13:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 12:13:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 12:13:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 12:23:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 12:23:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-04 12:24:37 --> ParseError: syntax error, unexpected end of file
+[Method: GET, Route: authentification]
+in APPPATH/Config/Routes.php on line 45.
+ 1 SYSTEMPATH/CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 12:55:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 12:55:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-04 12:57:00 --> ErrorException: pg_query(): Query failed: ERREUR:  la colonne « datenaissance » de la relation « client » n'existe pas
+LINE 1: ...&quot;prenom&quot;, &quot;mail&quot;, &quot;motdepasse&quot;, &quot;mobile&quot;, &quot;sexe&quot;, &quot;datenaiss...
+                                                             ^ in /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:204
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(204): pg_query()
+#2 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+#5 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/BaseModel.php(840): CodeIgniter\Model->doInsert()
+#7 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(802): CodeIgniter\BaseModel->insert()
+#8 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Controllers/InscriptionController.php(52): CodeIgniter\Model->insert()
+#9 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\InscriptionController->creer()
+#10 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#11 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#12 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#14 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#15 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#16 {main}
+CRITICAL - 2024-12-04 12:57:00 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  la colonne « datenaissance » de la relation « client » n'existe pas
+LINE 1: ...&quot;prenom&quot;, &quot;mail&quot;, &quot;motdepasse&quot;, &quot;mobile&quot;, &quot;sexe&quot;, &quot;datenaiss...
+                                                             ^
+[Method: POST, Route: inscription/creer]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 5 APPPATH/Controllers/InscriptionController.php(52): CodeIgniter\Model->insert()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\InscriptionController->creer()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 12:57:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  la colonne « datenaissance » de la relation « client » n'existe pas
+LINE 1: ...&quot;prenom&quot;, &quot;mail&quot;, &quot;motdepasse&quot;, &quot;mobile&quot;, &quot;sexe&quot;, &quot;datenaiss...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 209.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 6 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 7 APPPATH/Controllers/InscriptionController.php(52): CodeIgniter\Model->insert()
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\InscriptionController->creer()
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 12:57:00 --> [Caused by] ErrorException: pg_query(): Query failed: ERREUR:  la colonne « datenaissance » de la relation « client » n'existe pas
+LINE 1: ...&quot;prenom&quot;, &quot;mail&quot;, &quot;motdepasse&quot;, &quot;mobile&quot;, &quot;sexe&quot;, &quot;datenaiss...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 204.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(204): pg_query()
+ 3 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 4 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 6 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 8 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 9 APPPATH/Controllers/InscriptionController.php(52): CodeIgniter\Model->insert()
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\InscriptionController->creer()
+11 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+12 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+13 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+16 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-04 12:57:05 --> ErrorException: pg_query(): Query failed: ERREUR:  la colonne « datenaissance » de la relation « client » n'existe pas
+LINE 1: ...&quot;prenom&quot;, &quot;mail&quot;, &quot;motdepasse&quot;, &quot;mobile&quot;, &quot;sexe&quot;, &quot;datenaiss...
+                                                             ^ in /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:204
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(204): pg_query()
+#2 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+#5 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/BaseModel.php(840): CodeIgniter\Model->doInsert()
+#7 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(802): CodeIgniter\BaseModel->insert()
+#8 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Controllers/InscriptionController.php(52): CodeIgniter\Model->insert()
+#9 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\InscriptionController->creer()
+#10 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#11 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#12 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#14 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#15 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#16 {main}
+CRITICAL - 2024-12-04 12:57:05 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  la colonne « datenaissance » de la relation « client » n'existe pas
+LINE 1: ...&quot;prenom&quot;, &quot;mail&quot;, &quot;motdepasse&quot;, &quot;mobile&quot;, &quot;sexe&quot;, &quot;datenaiss...
+                                                             ^
+[Method: POST, Route: inscription/creer]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 5 APPPATH/Controllers/InscriptionController.php(52): CodeIgniter\Model->insert()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\InscriptionController->creer()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 12:57:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  la colonne « datenaissance » de la relation « client » n'existe pas
+LINE 1: ...&quot;prenom&quot;, &quot;mail&quot;, &quot;motdepasse&quot;, &quot;mobile&quot;, &quot;sexe&quot;, &quot;datenaiss...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 209.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 6 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 7 APPPATH/Controllers/InscriptionController.php(52): CodeIgniter\Model->insert()
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\InscriptionController->creer()
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 12:57:05 --> [Caused by] ErrorException: pg_query(): Query failed: ERREUR:  la colonne « datenaissance » de la relation « client » n'existe pas
+LINE 1: ...&quot;prenom&quot;, &quot;mail&quot;, &quot;motdepasse&quot;, &quot;mobile&quot;, &quot;sexe&quot;, &quot;datenaiss...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 204.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(204): pg_query()
+ 3 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 4 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 6 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 8 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 9 APPPATH/Controllers/InscriptionController.php(52): CodeIgniter\Model->insert()
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\InscriptionController->creer()
+11 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+12 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+13 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+16 SYSTEMPATH/rewrite.php(44): require_once('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 10:03:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 10:04:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 10:05:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 10:05:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 10:05:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 10:05:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 10:05:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 10:06:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-04 10:06:19 --> ErrorException: Undefined array key "dateNaissance"
+[Method: GET, Route: profile]
+in APPPATH/Views/Utilisateur/ProfileView.php on line 46.
+ 1 APPPATH/Views/Utilisateur/ProfileView.php(46): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/app/Views/Utilisateur/ProfileView.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/ProfileController.php(25): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProfileController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 10:06:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-04 10:06:40 --> ErrorException: Undefined array key "dateNaissance"
+[Method: GET, Route: profile]
+in APPPATH/Views/Utilisateur/ProfileView.php on line 46.
+ 1 APPPATH/Views/Utilisateur/ProfileView.php(46): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/app/Views/Utilisateur/ProfileView.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/ProfileController.php(25): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProfileController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 10:07:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-04 10:07:13 --> ErrorException: Undefined array key "dateNaissance"
+[Method: GET, Route: profile]
+in APPPATH/Views/Utilisateur/ProfileView.php on line 46.
+ 1 APPPATH/Views/Utilisateur/ProfileView.php(46): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/app/Views/Utilisateur/ProfileView.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/ProfileController.php(25): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ProfileController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/mnt/c/Users/utilisateur/Documents/GitHub/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 10:07:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 10:08:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-04 14:19:28 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: contac]
+CRITICAL - 2024-12-04 13:46:26 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:19:31 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: contact]
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 13:46:41 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 14:20:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-04 14:20:13 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: contact]
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 13:46:44 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: admin/board]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:23:53 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: contact]
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 13:46:50 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: admin/board]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:24:18 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: contact]
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 13:46:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 13:46:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 13:47:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-04 13:47:05 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/mm221005/TP/s5/s5.01_developpement_avance/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 14:25:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 15:12:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 15:12:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 13:53:20 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:01:55 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 14:02:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 14:02:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-04 14:02:33 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:03:03 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: admin/board]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:03:10 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: admin/board]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 14:03:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-04 14:03:37 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: admin/board]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:13:16 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: admin/board]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:13:17 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: admin/board]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:13:20 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: admin/board]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 14:13:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 14:13:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-04 14:13:45 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:14:42 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:14:43 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:14:43 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:14:43 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:14:43 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:14:44 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:14:44 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:14:44 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:14:44 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:14:45 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:14:45 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:16:00 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:16:01 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:16:01 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:16:01 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:16:01 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:16:01 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:16:02 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 33
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Router/Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/Router.php(432): preg_match()
+ 3 SYSTEMPATH/Router/Router.php(210): CodeIgniter\Router\Router->checkRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:17:49 --> ParseError: syntax error, unexpected token "<<", expecting end of file
+[Method: GET, Route: admin/board]
+in APPPATH/Config/Routes.php on line 49.
+ 1 SYSTEMPATH/CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:24:41 --> ErrorException: Undefined array key "idproduit"
+[Method: GET, Route: promo]
+in APPPATH/Views/Promos/PromotionView.php on line 38.
+ 1 APPPATH/Views/Promos/PromotionView.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Views/Promos/PromotionView.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/PromotionController.php(24): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 14:25:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-04 14:25:42 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Promotion/CreerPromotionView.php"
+[Method: GET, Route: promotion/ajoutview]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/PromotionController.php(29): view()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creerView()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:26:23 --> ErrorException: Undefined array key "idpromotion   "
+[Method: GET, Route: promo]
+in APPPATH/Views/Promos/PromotionView.php on line 38.
+ 1 APPPATH/Views/Promos/PromotionView.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Views/Promos/PromotionView.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/PromotionController.php(24): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:26:24 --> ErrorException: Undefined array key "idpromotion   "
+[Method: GET, Route: promo]
+in APPPATH/Views/Promos/PromotionView.php on line 38.
+ 1 APPPATH/Views/Promos/PromotionView.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Views/Promos/PromotionView.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/PromotionController.php(24): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 14:26:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 14:27:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 14:53:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-04 14:53:46 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Promotion/CreerPromotionView.php"
+[Method: GET, Route: promotion/ajoutview]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/PromotionController.php(29): view()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creerView()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:54:35 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Promos/CreerPromotionView.php"
+[Method: GET, Route: promotion/ajoutview]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/PromotionController.php(29): view()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creerView()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 14:54:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-04 14:55:55 --> ErrorException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « idpromotion » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (3, Offre -20%, null, null, t, 20.00, PROMOSCAR). in /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:204
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(204): pg_query()
+#2 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+#5 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/BaseModel.php(840): CodeIgniter\Model->doInsert()
+#7 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(802): CodeIgniter\BaseModel->insert()
+#8 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+#9 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Controllers/PromotionController.php(51): App\Models\PromotionModel->creerPromotion()
+#10 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+#11 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#12 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#15 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#16 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#17 {main}
+CRITICAL - 2024-12-04 14:55:55 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « idpromotion » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (3, Offre -20%, null, null, t, 20.00, PROMOSCAR).
+[Method: POST, Route: promotion/creer]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 5 APPPATH/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+ 6 APPPATH/Controllers/PromotionController.php(51): App\Models\PromotionModel->creerPromotion()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:55:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « idpromotion » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (3, Offre -20%, null, null, t, 20.00, PROMOSCAR).
+in SYSTEMPATH/Database/Postgre/Connection.php on line 209.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 6 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 7 APPPATH/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+ 8 APPPATH/Controllers/PromotionController.php(51): App\Models\PromotionModel->creerPromotion()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:55:55 --> [Caused by] ErrorException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « idpromotion » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (3, Offre -20%, null, null, t, 20.00, PROMOSCAR).
+in SYSTEMPATH/Database/Postgre/Connection.php on line 204.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(204): pg_query()
+ 3 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 4 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 6 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 8 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 9 APPPATH/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+10 APPPATH/Controllers/PromotionController.php(51): App\Models\PromotionModel->creerPromotion()
+11 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+12 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-04 14:56:47 --> ErrorException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « idpromotion » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (4, Offre -20%, null, null, t, 20.00, PROMOSCAR). in /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:204
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(204): pg_query()
+#2 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+#5 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/BaseModel.php(840): CodeIgniter\Model->doInsert()
+#7 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(802): CodeIgniter\BaseModel->insert()
+#8 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+#9 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Controllers/PromotionController.php(51): App\Models\PromotionModel->creerPromotion()
+#10 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+#11 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#12 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#15 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#16 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#17 {main}
+CRITICAL - 2024-12-04 14:56:47 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « idpromotion » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (4, Offre -20%, null, null, t, 20.00, PROMOSCAR).
+[Method: POST, Route: promotion/creer]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 5 APPPATH/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+ 6 APPPATH/Controllers/PromotionController.php(51): App\Models\PromotionModel->creerPromotion()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:56:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « idpromotion » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (4, Offre -20%, null, null, t, 20.00, PROMOSCAR).
+in SYSTEMPATH/Database/Postgre/Connection.php on line 209.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 6 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 7 APPPATH/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+ 8 APPPATH/Controllers/PromotionController.php(51): App\Models\PromotionModel->creerPromotion()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:56:47 --> [Caused by] ErrorException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « idpromotion » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (4, Offre -20%, null, null, t, 20.00, PROMOSCAR).
+in SYSTEMPATH/Database/Postgre/Connection.php on line 204.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(204): pg_query()
+ 3 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 4 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 6 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 8 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 9 APPPATH/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+10 APPPATH/Controllers/PromotionController.php(51): App\Models\PromotionModel->creerPromotion()
+11 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+12 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 14:56:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-04 14:57:20 --> ErrorException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « idpromotion » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (5, promo 20, null, null, t, 20.00, PROMO2). in /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:204
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(204): pg_query()
+#2 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+#5 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/BaseModel.php(840): CodeIgniter\Model->doInsert()
+#7 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(802): CodeIgniter\BaseModel->insert()
+#8 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+#9 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Controllers/PromotionController.php(51): App\Models\PromotionModel->creerPromotion()
+#10 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+#11 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#12 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#15 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#16 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#17 {main}
+CRITICAL - 2024-12-04 14:57:20 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « idpromotion » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (5, promo 20, null, null, t, 20.00, PROMO2).
+[Method: POST, Route: promotion/creer]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 5 APPPATH/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+ 6 APPPATH/Controllers/PromotionController.php(51): App\Models\PromotionModel->creerPromotion()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:57:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « idpromotion » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (5, promo 20, null, null, t, 20.00, PROMO2).
+in SYSTEMPATH/Database/Postgre/Connection.php on line 209.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 6 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 7 APPPATH/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+ 8 APPPATH/Controllers/PromotionController.php(51): App\Models\PromotionModel->creerPromotion()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 14:57:20 --> [Caused by] ErrorException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « idpromotion » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (5, promo 20, null, null, t, 20.00, PROMO2).
+in SYSTEMPATH/Database/Postgre/Connection.php on line 204.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(204): pg_query()
+ 3 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 4 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 6 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 8 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 9 APPPATH/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+10 APPPATH/Controllers/PromotionController.php(51): App\Models\PromotionModel->creerPromotion()
+11 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+12 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-04 15:02:47 --> ErrorException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « idpromotion » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (6, promo 20, null, null, t, 20.00, PROMO2). in /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:204
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(204): pg_query()
+#2 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+#5 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/BaseModel.php(840): CodeIgniter\Model->doInsert()
+#7 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(802): CodeIgniter\BaseModel->insert()
+#8 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+#9 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Controllers/PromotionController.php(62): App\Models\PromotionModel->creerPromotion()
+#10 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+#11 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#12 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#15 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#16 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#17 {main}
+CRITICAL - 2024-12-04 15:02:47 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « idpromotion » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (6, promo 20, null, null, t, 20.00, PROMO2).
+[Method: POST, Route: promotion/creer]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 5 APPPATH/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+ 6 APPPATH/Controllers/PromotionController.php(62): App\Models\PromotionModel->creerPromotion()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 15:02:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « idpromotion » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (6, promo 20, null, null, t, 20.00, PROMO2).
+in SYSTEMPATH/Database/Postgre/Connection.php on line 209.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 6 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 7 APPPATH/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+ 8 APPPATH/Controllers/PromotionController.php(62): App\Models\PromotionModel->creerPromotion()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 15:02:47 --> [Caused by] ErrorException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « idpromotion » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (6, promo 20, null, null, t, 20.00, PROMO2).
+in SYSTEMPATH/Database/Postgre/Connection.php on line 204.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(204): pg_query()
+ 3 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 4 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 6 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 8 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 9 APPPATH/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+10 APPPATH/Controllers/PromotionController.php(62): App\Models\PromotionModel->creerPromotion()
+11 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+12 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-04 15:02:51 --> ErrorException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « idpromotion » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (7, promo 20, null, null, t, 20.00, PROMO2). in /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:204
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(204): pg_query()
+#2 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+#5 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/BaseModel.php(840): CodeIgniter\Model->doInsert()
+#7 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(802): CodeIgniter\BaseModel->insert()
+#8 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+#9 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Controllers/PromotionController.php(62): App\Models\PromotionModel->creerPromotion()
+#10 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+#11 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#12 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#15 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#16 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#17 {main}
+CRITICAL - 2024-12-04 15:02:51 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « idpromotion » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (7, promo 20, null, null, t, 20.00, PROMO2).
+[Method: POST, Route: promotion/creer]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 5 APPPATH/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+ 6 APPPATH/Controllers/PromotionController.php(62): App\Models\PromotionModel->creerPromotion()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 15:02:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « idpromotion » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (7, promo 20, null, null, t, 20.00, PROMO2).
+in SYSTEMPATH/Database/Postgre/Connection.php on line 209.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 6 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 7 APPPATH/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+ 8 APPPATH/Controllers/PromotionController.php(62): App\Models\PromotionModel->creerPromotion()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 15:02:51 --> [Caused by] ErrorException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « idpromotion » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (7, promo 20, null, null, t, 20.00, PROMO2).
+in SYSTEMPATH/Database/Postgre/Connection.php on line 204.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(204): pg_query()
+ 3 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 4 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 6 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 8 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 9 APPPATH/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+10 APPPATH/Controllers/PromotionController.php(62): App\Models\PromotionModel->creerPromotion()
+11 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+12 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 15:02:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-04 15:03:25 --> ErrorException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « idpromotion » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (8, titre, titre, null, t, 20.00, code). in /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:204
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(204): pg_query()
+#2 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+#5 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/BaseModel.php(840): CodeIgniter\Model->doInsert()
+#7 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(802): CodeIgniter\BaseModel->insert()
+#8 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+#9 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Controllers/PromotionController.php(62): App\Models\PromotionModel->creerPromotion()
+#10 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+#11 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#12 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#15 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#16 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#17 {main}
+CRITICAL - 2024-12-04 15:03:25 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « idpromotion » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (8, titre, titre, null, t, 20.00, code).
+[Method: POST, Route: promotion/creer]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 5 APPPATH/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+ 6 APPPATH/Controllers/PromotionController.php(62): App\Models\PromotionModel->creerPromotion()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 15:03:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « idpromotion » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (8, titre, titre, null, t, 20.00, code).
+in SYSTEMPATH/Database/Postgre/Connection.php on line 209.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 6 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 7 APPPATH/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+ 8 APPPATH/Controllers/PromotionController.php(62): App\Models\PromotionModel->creerPromotion()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 15:03:25 --> [Caused by] ErrorException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « idpromotion » dans la relation « promotion »
+DETAIL:  La ligne en échec contient (8, titre, titre, null, t, 20.00, code).
+in SYSTEMPATH/Database/Postgre/Connection.php on line 204.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(204): pg_query()
+ 3 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 4 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 6 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 8 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 9 APPPATH/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+10 APPPATH/Controllers/PromotionController.php(62): App\Models\PromotionModel->creerPromotion()
+11 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+12 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+ERROR - 2024-12-04 15:09:37 --> ErrorException: pg_query(): Query failed: ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « promotion_pkey »
+DETAIL:  La clé « (idpromotion)=(1) » existe déjà. in /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:204
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(204): pg_query()
+#2 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+#5 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/BaseModel.php(840): CodeIgniter\Model->doInsert()
+#7 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(802): CodeIgniter\BaseModel->insert()
+#8 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+#9 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Controllers/PromotionController.php(62): App\Models\PromotionModel->creerPromotion()
+#10 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+#11 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#12 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#15 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#16 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#17 {main}
+CRITICAL - 2024-12-04 15:09:37 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « promotion_pkey »
+DETAIL:  La clé « (idpromotion)=(1) » existe déjà.
+[Method: POST, Route: promotion/creer]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 5 APPPATH/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+ 6 APPPATH/Controllers/PromotionController.php(62): App\Models\PromotionModel->creerPromotion()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 15:09:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « promotion_pkey »
+DETAIL:  La clé « (idpromotion)=(1) » existe déjà.
+in SYSTEMPATH/Database/Postgre/Connection.php on line 209.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 6 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 7 APPPATH/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+ 8 APPPATH/Controllers/PromotionController.php(62): App\Models\PromotionModel->creerPromotion()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 15:09:37 --> [Caused by] ErrorException: pg_query(): Query failed: ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « promotion_pkey »
+DETAIL:  La clé « (idpromotion)=(1) » existe déjà.
+in SYSTEMPATH/Database/Postgre/Connection.php on line 204.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(204): pg_query()
+ 3 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 4 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 6 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 8 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 9 APPPATH/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+10 APPPATH/Controllers/PromotionController.php(62): App\Models\PromotionModel->creerPromotion()
+11 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+12 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 15:09:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-04 15:09:54 --> ErrorException: pg_query(): Query failed: ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « promotion_pkey »
+DETAIL:  La clé « (idpromotion)=(2) » existe déjà. in /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php:204
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/Postgre/Connection.php(204): pg_query()
+#2 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+#5 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/BaseModel.php(840): CodeIgniter\Model->doInsert()
+#7 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Model.php(802): CodeIgniter\BaseModel->insert()
+#8 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+#9 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/app/Controllers/PromotionController.php(62): App\Models\PromotionModel->creerPromotion()
+#10 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+#11 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#12 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#15 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#16 /home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/system/rewrite.php(44): require_once('...')
+#17 {main}
+CRITICAL - 2024-12-04 15:09:54 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « promotion_pkey »
+DETAIL:  La clé « (idpromotion)=(2) » existe déjà.
+[Method: POST, Route: promotion/creer]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 5 APPPATH/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+ 6 APPPATH/Controllers/PromotionController.php(62): App\Models\PromotionModel->creerPromotion()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 15:09:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « promotion_pkey »
+DETAIL:  La clé « (idpromotion)=(2) » existe déjà.
+in SYSTEMPATH/Database/Postgre/Connection.php on line 209.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 6 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 7 APPPATH/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+ 8 APPPATH/Controllers/PromotionController.php(62): App\Models\PromotionModel->creerPromotion()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+CRITICAL - 2024-12-04 15:09:54 --> [Caused by] ErrorException: pg_query(): Query failed: ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « promotion_pkey »
+DETAIL:  La clé « (idpromotion)=(2) » existe déjà.
+in SYSTEMPATH/Database/Postgre/Connection.php on line 204.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(204): pg_query()
+ 3 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\Postgre\Connection->execute()
+ 4 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 6 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 8 SYSTEMPATH/Model.php(802): CodeIgniter\BaseModel->insert()
+ 9 APPPATH/Models/PromotionModel.php(33): CodeIgniter\Model->insert()
+10 APPPATH/Controllers/PromotionController.php(62): App\Models\PromotionModel->creerPromotion()
+11 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\PromotionController->creer()
+12 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH/rewrite.php(44): require_once('/home/etudiant/co221148/TP/s5/s5.01_developpement_avance/SAE/S501-Saiyans-Coaching/public/index.php')
+INFO - 2024-12-04 15:10:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 15:10:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

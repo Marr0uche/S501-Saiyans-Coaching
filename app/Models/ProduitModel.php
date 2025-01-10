@@ -13,6 +13,7 @@ class ProduitModel extends Model
         'photoproduit',
         'descriptionproduit',
         'prix',
+		'valabilite',
 		'affichage',
 		'affichageaccueil'
     ];
@@ -21,6 +22,16 @@ class ProduitModel extends Model
 	public function getProduit($idproduit)
 	{
 		return $this->where('idproduit', $idproduit)->first();
+	}
+
+	public function getProduitAffichage()
+	{
+		return $this->where('affichage',true)->findAll();
+	}
+
+	public function getProduitAffichageAcceuil()
+	{
+		return $this->where('affichageaccueil','t')->findAll();
 	}
 
 	public function creerProduit($produitDonnee)

@@ -23,6 +23,12 @@ class PromotionModel extends Model
 		return $this->where('iddocument', $idDocument)->first();
 	}
 
+	public function getActivePromotion()
+	{
+		return $this->where('active',true)->findAll();
+	}
+	
+
 	public function creerPromotion($promotionDonnee)
 	{
 		return $this->insert($promotionDonnee);

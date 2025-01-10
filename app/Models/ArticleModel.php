@@ -12,7 +12,8 @@ class ArticleModel extends Model
 		'titredocument',
 		'descriptiondocument',
 		'datepublication',
-        'image'
+        'image',
+        'blog'
     ];
 
     protected $returnType = 'array';
@@ -29,7 +30,7 @@ class ArticleModel extends Model
 
     public function majArticle($idDocument, $articleDonnee)
     {
-        return $this->update($idDocument, $articleDonnee);
+        return $this->where('iddocument', $idDocument)->set($articleDonnee)->update();   
     }
 
     public function supprimerArticle($idDocument)
